@@ -13,7 +13,7 @@ var common = {
     // SERVER_IP: "http://192.168.1.247", // Windows 服务器的地址，用于配置project.manifest文件里面的地址，
     FORMAT_JSON: true, // 生成的js文件是否按照格式生成
     SERVER_PATH: "./updateServer",// 本地项目热更新文件服务器
-    COCOS_JS_PATH: "./frameworks/cocos2d-x/cocos/scripting/js-bindings/script",// 编译jsc时，cocos源码也需要编译
+    // COCOS_JS_PATH: "./frameworks/cocos2d-x/cocos/scripting/js-bindings/script",// 编译jsc时，cocos源码也需要编译
     JSON_FILE_NOTE: "\/\/ GENERATED CODE -- DO NOT EDIT! \r\n",// 生成的js文件前面加的注释行，一般不用修改
 };
 
@@ -25,7 +25,7 @@ var common = {
 var deploy = {
     DEPLOY_PATH: common.SERVER_PATH + "/" + common.PROJECT_NAME,
     JS_CMD: "cocos jscompile -s ./src -d " + common.SERVER_PATH + "/" + common.PROJECT_NAME + "/src", // 将js编译成jsc的命令行命令
-    CMD_COCOS_JS: "cocos jscompile -s " + common.COCOS_JS_PATH + " -d " + common.COCOS_JS_PATH,
+    // CMD_COCOS_JS: "cocos jscompile -s " + common.COCOS_JS_PATH + " -d " + common.COCOS_JS_PATH,
     RES_PATH: "../res", // res的相对路径
     SRC_PATH: "../src", // src的相对路径
     MANIFEST_PATH: "../res/project.manifest",
@@ -48,6 +48,21 @@ var deploy = {
             "src/"
         ]
     },
+};
+
+/**
+ * 生成apk配置
+ * @type {{}}
+ * compile -s ./src -p android --android-studio --ap android-16 -m debug -j 4 --compile-script 1 -o ../build/outputs/apk --app-abi armeabi:x86:mips
+ */
+var apk = {
+    SRC: "./src", // 编译目标路径
+    DEST: "../build/outputs/apk", // apk输出的目录
+    MODE: "debug", // debug & release
+    IDE: "--android-studio", // --android-studio & --android
+    ANDROID_VERSION: "android-" + 16,// android的编译版本
+    ANDROID_SYS_FRAMWORKS: "x86",// armeabi:x86:mips
+    CPU_CORE: 4,// 4线程编译
 };
 
 /**
@@ -107,6 +122,7 @@ var server = {
 };
 
 module.exports.e2j = e2j;
+module.exports.apk = apk;
 module.exports.server = server;
 module.exports.deploy = deploy;
 module.exports.common = common;

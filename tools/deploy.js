@@ -33,38 +33,38 @@ function main() {
 
 function start(comparePath) {
     // 0.先编译cocos-js framworks里面的js文件
-    compileJs(cfgs.deploy.CMD_COCOS_JS, () => {
-        // 1.生成jsList和resource.js文件
-        generate.generateAll(() => {
-            // 2.加载project.manifest文件,并重新生成
-            var data = file.readFromFile(comparePath);
-            var compareData = JSON.parse(data);
-            compareData.packageUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.packageUrl;
-            compareData.remoteManifestUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.remoteManifestUrl;
-            compareData.remoteVersionUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.remoteVersionUrl;
-            compareData.engineVersion = cfgs.deploy.MANIFEST_DEFAULT_DATA.engineVersion;
-            // 4.编译js文件 到发布的路径
-            compileJs(cfgs.deploy.JS_CMD, () => {
-                // 5.开始拷贝res下面的资源
-                copyResFiles();
-                // 生成project.manifest文件
-                generateManifest(compareData);
-                // 生成*.js文件
-                generate.generateSrc(() => {
-                }, false);
-            });
+    // compileJs(cfgs.deploy.CMD_COCOS_JS, () => {
+    // 1.生成jsList和resource.js文件
+    generate.generateAll(() => {
+        // 2.加载project.manifest文件,并重新生成
+        var data = file.readFromFile(comparePath);
+        var compareData = JSON.parse(data);
+        compareData.packageUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.packageUrl;
+        compareData.remoteManifestUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.remoteManifestUrl;
+        compareData.remoteVersionUrl = cfgs.deploy.MANIFEST_DEFAULT_DATA.remoteVersionUrl;
+        compareData.engineVersion = cfgs.deploy.MANIFEST_DEFAULT_DATA.engineVersion;
+        // 4.编译js文件 到发布的路径
+        compileJs(cfgs.deploy.JS_CMD, () => {
+            // 5.开始拷贝res下面的资源
+            copyResFiles();
+            // 生成project.manifest文件
+            generateManifest(compareData);
+            // 生成*.js文件
+            generate.generateSrc(() => {
+            }, false);
         });
     });
+    // });
 }
 
 function compileJs(cmd, callback) {
     var exec = require('child_process').exec;
     last = exec(cmd);
 
-    console.log("JSCompile\t=>\tStart.");
-    console.log("EXEC_CMD\t=>\t" + cfgs.deploy.JS_CMD);
+    console.log("JSCompile\t<=\tStart.");
+    console.log("EXEC_CMD\t<=\t" + cfgs.deploy.JS_CMD);
     last.stdout.on('data', function (data) {
-        console.log("JSCompile\t=>\t" + data);
+        console.log("JSCompile\t<=\t" + data);
     });
 
     last.on('exit', function (data) {
