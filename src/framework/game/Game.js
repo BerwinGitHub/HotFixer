@@ -13,7 +13,7 @@ var game = {
      * 打出log
      * @param msg
      */
-    log: function (tag, msg, color = cc.color.BLACK) {
+    log: function (tag, msg, color = cc.color.GREEN) {
         var item = {color: color, text: msg, tag: tag};
         this.logs = this.logs || [];
         this.logs.push(item);
@@ -26,8 +26,6 @@ var game = {
      */
     logClear: function () {
         this.logs.splice(0, this.logs.length);
-        if (this.consoleFrame)
-            this.consoleFrame.logUpdated();
     },
 
     makeToast: function (content, dt = 3) {

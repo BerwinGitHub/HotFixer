@@ -18,9 +18,9 @@
             "ClipAble": false,
             "ComboBoxIndex": 1,
             "SingleColor": {
-              "R": 191,
-              "G": 191,
-              "B": 191
+              "R": 20,
+              "G": 20,
+              "B": 20
             },
             "FirstColor": {
               "R": 150,
@@ -63,7 +63,11 @@
               {
                 "ClipAble": false,
                 "ComboBoxIndex": 1,
-                "SingleColor": {},
+                "SingleColor": {
+                  "R": 20,
+                  "G": 20,
+                  "B": 20
+                },
                 "FirstColor": {
                   "R": 150,
                   "G": 200
@@ -104,7 +108,7 @@
                   {
                     "FontSize": 24,
                     "IsCustomSize": true,
-                    "LabelText": "",
+                    "LabelText": "cc.director",
                     "PlaceHolderText": "Commond",
                     "MaxLengthText": 10,
                     "TouchEnable": true,
@@ -119,7 +123,6 @@
                     },
                     "CColor": {
                       "R": 0,
-                      "G": 0,
                       "B": 0
                     },
                     "IconVisible": false,
@@ -130,16 +133,15 @@
                     "PercentWidthEnable": true,
                     "PercentWidthEnabled": true,
                     "PreSize": {
-                      "X": 0.9,
+                      "X": 1.0,
                       "Y": 1.0
                     },
                     "HorizontalEdge": "LeftEdge",
                     "VerticalEdge": "TopEdge",
-                    "RightMargin": 113.6,
                     "Tag": 22,
                     "ActionTag": 1383481964,
                     "Size": {
-                      "X": 1022.4,
+                      "X": 1136.0,
                       "Y": 70.0
                     },
                     "Name": "textField",
@@ -147,17 +149,13 @@
                   },
                   {
                     "FontSize": 36,
-                    "ButtonText": "Exec",
-                    "TextColor": {
-                      "R": 65,
-                      "G": 65,
-                      "B": 70
-                    },
+                    "ButtonText": "exec",
+                    "TextColor": {},
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 6,
-                    "Scale9Width": 11,
-                    "Scale9Height": 8,
+                    "Scale9Width": 51,
+                    "Scale9Height": 30,
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -175,7 +173,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 1070.0,
+                      "X": 1080.0,
                       "Y": 35.0
                     },
                     "Scale": {
@@ -185,26 +183,200 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.9419,
+                      "X": 0.9507,
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.088,
+                      "X": 0.0704,
                       "Y": 0.7143
                     },
                     "HorizontalEdge": "RightEdge",
                     "VerticalEdge": "TopEdge",
-                    "LeftMargin": 1020.0,
+                    "LeftMargin": 1040.0,
                     "RightMargin": 16.0,
                     "TopMargin": 10.0,
                     "BottomMargin": 10.0,
                     "Tag": 11,
                     "ActionTag": -923640921,
                     "Size": {
-                      "X": 100.0,
+                      "X": 80.0,
                       "Y": 50.0
                     },
                     "Name": "btnExe",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "ButtonText": ">",
+                    "TextColor": {},
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 6,
+                    "Scale9Width": 51,
+                    "Scale9Height": 30,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 1006.0002,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8856,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0352,
+                      "Y": 0.7143
+                    },
+                    "HorizontalEdge": "RightEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 986.0002,
+                    "RightMargin": 109.9998,
+                    "TopMargin": 10.0,
+                    "BottomMargin": 10.0,
+                    "Tag": 24,
+                    "ActionTag": -1977471087,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 50.0
+                    },
+                    "Name": "btnNext",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "ButtonText": "cls",
+                    "TextColor": {},
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 6,
+                    "Scale9Width": 47,
+                    "Scale9Height": 30,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 956.0,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8415,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.044,
+                      "Y": 0.7143
+                    },
+                    "HorizontalEdge": "RightEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 931.0,
+                    "RightMargin": 155.0,
+                    "TopMargin": 10.0,
+                    "BottomMargin": 10.0,
+                    "Tag": 26,
+                    "ActionTag": 1419858084,
+                    "Size": {
+                      "X": 50.0,
+                      "Y": 50.0
+                    },
+                    "Name": "btnInputCls",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "ButtonText": "<",
+                    "TextColor": {},
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 6,
+                    "Scale9Width": 51,
+                    "Scale9Height": 30,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 901.0001,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.7931,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0352,
+                      "Y": 0.7143
+                    },
+                    "HorizontalEdge": "RightEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 881.0001,
+                    "RightMargin": 214.9999,
+                    "TopMargin": 10.0,
+                    "BottomMargin": 10.0,
+                    "Tag": 23,
+                    "ActionTag": 796677551,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 50.0
+                    },
+                    "Name": "btnPre",
                     "ctype": "ButtonObjectData"
                   }
                 ],
@@ -224,9 +396,9 @@
                 "ClipAble": true,
                 "ComboBoxIndex": 1,
                 "SingleColor": {
-                  "R": 246,
-                  "G": 246,
-                  "B": 246
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
                 },
                 "FirstColor": {
                   "R": 150,
@@ -236,6 +408,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleY": 1.0
@@ -285,6 +459,8 @@
                     "ColorVector": {
                       "ScaleY": 1.0
                     },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
                     "AnchorPoint": {},
                     "Position": {
                       "X": 0.0,
@@ -336,7 +512,6 @@
                         },
                         "CColor": {
                           "R": 0,
-                          "G": 0,
                           "B": 0
                         },
                         "IconVisible": false,
@@ -347,19 +522,19 @@
                         "PercentWidthEnable": true,
                         "PercentWidthEnabled": true,
                         "PreSize": {
-                          "X": 0.25,
+                          "X": 0.15,
                           "Y": 0.84
                         },
                         "HorizontalEdge": "LeftEdge",
                         "VerticalEdge": "BothEdge",
                         "LeftMargin": 16.0,
-                        "RightMargin": 836.0,
+                        "RightMargin": 949.6,
                         "TopMargin": 2.0,
                         "BottomMargin": 2.0,
                         "Tag": 20,
                         "ActionTag": 1022465546,
                         "Size": {
-                          "X": 284.0,
+                          "X": 170.4,
                           "Y": 21.0
                         },
                         "Name": "tag",
@@ -369,9 +544,8 @@
                         "ClipAble": false,
                         "ComboBoxIndex": 1,
                         "SingleColor": {
-                          "R": 26,
-                          "G": 26,
-                          "B": 26
+                          "R": 0,
+                          "B": 0
                         },
                         "FirstColor": {
                           "R": 150,
@@ -381,10 +555,12 @@
                         "ColorVector": {
                           "ScaleY": 1.0
                         },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
                         "TouchEnable": true,
                         "AnchorPoint": {},
                         "Position": {
-                          "X": 300.0,
+                          "X": 190.0,
                           "Y": 0.0
                         },
                         "Scale": {
@@ -393,12 +569,11 @@
                         },
                         "CColor": {
                           "R": 0,
-                          "G": 0,
                           "B": 0
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.2641,
+                          "X": 0.1673,
                           "Y": 0.0
                         },
                         "PercentHeightEnable": true,
@@ -409,8 +584,8 @@
                         },
                         "HorizontalEdge": "LeftEdge",
                         "VerticalEdge": "BothEdge",
-                        "LeftMargin": 300.0,
-                        "RightMargin": 835.0,
+                        "LeftMargin": 190.0,
+                        "RightMargin": 945.0,
                         "Tag": 27,
                         "ActionTag": -1244492284,
                         "ZOrder": 1,
@@ -440,7 +615,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 310.0,
+                          "X": 195.0,
                           "Y": 12.5
                         },
                         "Scale": {
@@ -449,30 +624,29 @@
                         },
                         "CColor": {
                           "R": 0,
-                          "G": 0,
                           "B": 0
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.2729,
+                          "X": 0.1717,
                           "Y": 0.5
                         },
                         "PercentWidthEnable": true,
                         "PercentWidthEnabled": true,
                         "PreSize": {
-                          "X": 0.72,
+                          "X": 0.8,
                           "Y": 0.84
                         },
                         "HorizontalEdge": "LeftEdge",
                         "VerticalEdge": "BothEdge",
-                        "LeftMargin": 310.0,
-                        "RightMargin": 8.0801,
+                        "LeftMargin": 195.0,
+                        "RightMargin": 32.2001,
                         "TopMargin": 2.0,
                         "BottomMargin": 2.0,
                         "Tag": 21,
                         "ActionTag": 901720539,
                         "Size": {
-                          "X": 817.92,
+                          "X": 908.7999,
                           "Y": 21.0
                         },
                         "Name": "text",
@@ -499,15 +673,11 @@
               {
                 "FontSize": 36,
                 "ButtonText": "Reload",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
+                "TextColor": {},
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 6,
-                "Scale9Width": 47,
+                "Scale9Width": 85,
                 "Scale9Height": 30,
                 "OutlineColor": {
                   "G": 0,
@@ -556,6 +726,64 @@
                   "Y": 50.0
                 },
                 "Name": "btnReload",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 36,
+                "ButtonText": "Clear",
+                "TextColor": {},
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 6,
+                "Scale9Width": 85,
+                "Scale9Height": 30,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 190.0,
+                  "Y": 41.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1673,
+                  "Y": 0.0641
+                },
+                "PreSize": {
+                  "X": 0.088,
+                  "Y": 0.0781
+                },
+                "HorizontalEdge": "LeftEdge",
+                "VerticalEdge": "BottomEdge",
+                "LeftMargin": 140.0,
+                "RightMargin": 896.0,
+                "TopMargin": 574.0,
+                "BottomMargin": 16.0,
+                "Tag": 25,
+                "ActionTag": 2109858124,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 50.0
+                },
+                "Name": "btnCls",
                 "ctype": "ButtonObjectData"
               }
             ],

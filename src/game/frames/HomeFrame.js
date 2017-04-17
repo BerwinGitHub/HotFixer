@@ -18,15 +18,14 @@ var HomeFrame = Frame.extend({
         helper.event.addClickListener(spr, () => {
             this.testProto();
         });
-        game.log("TAG", "Enter HomeScene.",  cc.color.RED);
     },
 
     testProto: function () {
         var buffer = ProtoHelper.encode("Login", {name: "tangbowen", passwd: "password"});
-        console.log("Buffer:" + buffer);
+        game.log("Tag", "Buffer:" + buffer);
         var msg = ProtoHelper.decode(buffer);
         console.log(msg);
-        game.makeToast("");
+        game.log("Tag", "msg:" + JSON.stringify(msg));
     },
 
 

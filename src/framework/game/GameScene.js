@@ -20,16 +20,7 @@ var RootFrame = Frame.extend({
         var consoleFrame = new ConsoleFrame();
         consoleFrame.setLocalZOrder(this.ZORDER.DEBUG);
         this.addChild(consoleFrame);
-        consoleFrame.setVisible(false);
         game.setConsoleFrame(consoleFrame);
-        // btn
-        var btn = new ccui.Button(res.debug_debug_png, res.debug_debug_png);
-        btn.setLocalZOrder(this.ZORDER.DEBUG);
-        helper.ve.setPosition(btn, 16, 320, helper.ve.LAYOUT.RIGHT);
-        this.addChild(btn);
-        btn.addClickEventListener(() => {
-            game.consoleFrame.setVisible(!game.consoleFrame.isVisible());
-        });
     },
 });
 

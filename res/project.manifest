@@ -1,7 +1,7 @@
 {
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
-    "version": "1.0.1492434889167",
+    "version": "1.0.1492443284013",
     "engineVersion": "3.3",
     "assets": {
         "res/HelloWorld.png": {
@@ -33,11 +33,11 @@
             "compressed": false
         },
         "src/framework/game/Game.jsc": {
-            "md5": "66aadbb046c295accdb87ed5f2a24f9a",
+            "md5": "d0c61438e8f6b8d0dc9f66690edf21dd",
             "compressed": false
         },
         "src/framework/game/GameScene.jsc": {
-            "md5": "b4e43d9b3510d1b032fe67038ecd4f1e",
+            "md5": "b99e1258a7226b90ff25112e7db2d09c",
             "compressed": false
         },
         "src/framework/helper/helper.jsc": {
@@ -69,7 +69,7 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "a9ea9060d0909d057b9818fefa5d1378",
+            "md5": "ba9767e9ff5f6e0fe247adb83e48bfd6",
             "compressed": false
         },
         "src/jsList.jsc": {
@@ -93,11 +93,11 @@
             "compressed": false
         },
         "res/protos/Login.proto": {
-            "md5": "6e9252e8c03ed1f9d1a2f1fd55b44950",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/debug/debug.json": {
-            "md5": "8aa03d633fb9459dd66c1607a5900f5f",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/debug/debug.png": {
@@ -105,7 +105,7 @@
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
-            "md5": "e3cbdb301ced47650b4053a1e83293ce",
+            "md5": "ae4d094536e2601a3317c7340ea5c925",
             "compressed": false
         }
     },
