@@ -1,4 +1,5 @@
 /simulator
+/build
 /updateServer
 /frameworks/runtime-src/proj.android/build
 /frameworks/runtime-src/proj.android/assets
@@ -6,3 +7,11 @@
 /frameworks/runtime-src/proj.android/libs/armeabi
 /frameworks/runtime-src/proj.android/libs/armeabi-v7a
 /frameworks/runtime-src/proj.android/libs/x86
+/frameworks/runtime-src/proj.android-studio/build
+/frameworks/runtime-src/proj.android-studio/app/assets
+/frameworks/runtime-src/proj.android-studio/app/obj
+/frameworks/runtime-src/proj.android-studio/app/build
+/frameworks/runtime-src/proj.android-studio/app/jniLibs
+/frameworks/runtime-src/proj.android-studio/app/libs/armeabi
+/frameworks/runtime-src/proj.android-studio/app/libs/armeabi-v7a
+/frameworks/runtime-src/proj.android-studio/app/libs/x86

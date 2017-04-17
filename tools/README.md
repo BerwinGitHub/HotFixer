@@ -19,14 +19,3 @@ configs.js,是tools下面脚本运行的配置脚本。注意修改
 在本地启动一个热更新服务器，并以deploy后的updateServer作为文件服务器目录
 
     node /tools/server.js
-    
-## node服务器监听
-    var PORT = 8867;
-    var http = require('http');
-    var server = http.createServer(function (request, response) {
-        console.log("connected.");
-        response.write("This request URL " + pathname + " was not found on this server.");
-        response.end();
-    });
-    server.listen(PORT);
-    console.log("Server runing at port: " + PORT + ".");
