@@ -12,8 +12,8 @@ var cfgs = require("./configs")
 var path = require('path');
 var async = require('async');
 var generate = require('./src-res-generate');
-var iconv = require("iconv-lite");
-var exec = require('child_process').exec;
+
+var terminal = require("./core/terminal");
 
 var comparePath = path.resolve(__dirname, cfgs.deploy.MANIFEST_PATH);
 function main() {
@@ -60,20 +60,27 @@ function start(comparePath) {
 }
 
 function compileJs(cmd, callback) {
-    last = exec(cmd, {
-        encoding: "binary"
-    });
-
     console.log("JSCompile\t<=\tStart.");
-    console.log("EXEC_CMD\t<=\t" + cfgs.deploy.JS_CMD);
-    last.stdout.on('data', function (stdout) {
-        var txt = iconv.decode(new Buffer(stdout, 'binary'), "cp936");
-        console.log("JSCompile\t<=\t" + txt.replace(/\r|\n/ig, ""));
-    });
-
-    last.on('exit', function (data) {
+    terminal.execCommand(cmd, (txt) => {
+        console.log("JSCompile\t<=\t" + txt);
+    }, (data) => {
+        console.log("JSCompile\t<=\tEnd.");
         callback();
     });
+
+    // last = exec(cmd, {
+    //     encoding: "binary"
+    // });
+    //
+    // console.log("EXEC_CMD\t<=\t" + cfgs.deploy.JS_CMD);
+    // last.stdout.on('data', function (stdout) {
+    //     var txt = iconv.decode(new Buffer(stdout, 'binary'), "cp936");
+    //     console.log("JSCompile\t<=\t" + txt.replace(/\r|\n/ig, ""));
+    // });
+    //
+    // last.on('exit', function (data) {
+    //     callback();
+    // });
 }
 
 function copyResFiles() {

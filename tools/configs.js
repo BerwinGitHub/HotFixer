@@ -57,7 +57,7 @@ var deploy = {
  */
 var apk = {
     SRC: "./src", // 编译目标路径
-    DEST: "../build/outputs/apk", // apk输出的目录
+    DEST: "./build/outputs/apk", // apk输出的目录
     MODE: "debug", // debug & release
     IDE: "--android-studio", // --android-studio & --android
     ANDROID_VERSION: "android-" + 16,// android的编译版本

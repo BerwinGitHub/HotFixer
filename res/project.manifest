@@ -1,7 +1,7 @@
 {
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
-    "version": "1.0.1492424193421",
+    "version": "1.0.1492434889167",
     "engineVersion": "3.3",
     "assets": {
         "res/HelloWorld.png": {
@@ -17,11 +17,11 @@
             "compressed": false
         },
         "src/framework/AppDelegate.jsc": {
-            "md5": "971fa0671fb5b5f3f47c6bf327870042",
+            "md5": "8cdd98ebed0586d8cfae4d3be79f4829",
             "compressed": false
         },
         "src/framework/frame/Frame.jsc": {
-            "md5": "c2d5067fd105167d0d86828e065904f7",
+            "md5": "0611ca0f42b4391ffcadb9120d1e0c3f",
             "compressed": false
         },
         "src/framework/frame/LogFrame.jsc": {
@@ -29,59 +29,59 @@
             "compressed": false
         },
         "src/framework/game/FDirector.jsc": {
-            "md5": "fe871f8df1fb874559ff6d1da5a059bb",
+            "md5": "f7783e161c54a2db18fb89e5d6e8adc5",
             "compressed": false
         },
         "src/framework/game/Game.jsc": {
-            "md5": "3502e2eeb2d7f8d9e2ca6842910c4784",
+            "md5": "66aadbb046c295accdb87ed5f2a24f9a",
             "compressed": false
         },
         "src/framework/game/GameScene.jsc": {
-            "md5": "8756cef2ec0332342c4a988ce0020b48",
+            "md5": "b4e43d9b3510d1b032fe67038ecd4f1e",
             "compressed": false
         },
         "src/framework/helper/helper.jsc": {
-            "md5": "9ece939eb78692122ddb204f7b1c56c7",
+            "md5": "c3c3c47fbf1f2e7e768c042220fce2da",
             "compressed": false
         },
         "src/framework/hotfix/HotFixScene.jsc": {
-            "md5": "4973e053840a72174093bb2b3bbaccb7",
+            "md5": "3fa404e19a7077d0e9601c6266cf5419",
             "compressed": false
         },
         "src/framework/network/SocketHelper.jsc": {
-            "md5": "27dc2b1cce938135c111853b00bb5d73",
+            "md5": "977c43228133aee3b7d96462b93a1403",
             "compressed": false
         },
         "src/framework/protobuf/ProtoHelper.jsc": {
-            "md5": "0bc6bff0c91e1d946deba83f355e25e1",
+            "md5": "451212b3db8fc5990b5a3d28319973fa",
             "compressed": false
         },
         "src/framework/protobuf/bytebuffer.jsc": {
-            "md5": "9021cb604deb1ec5a9f675e7ec6a2d98",
+            "md5": "69fe42093d0e7be1e01a845b27893707",
             "compressed": false
         },
         "src/framework/protobuf/long.jsc": {
-            "md5": "9245ab1f9114b6710d1e39cb1174d011",
+            "md5": "26d1afeafba7bcc0699157f99de82a6b",
             "compressed": false
         },
         "src/framework/protobuf/protobuf.jsc": {
-            "md5": "e176d6a053eaaa7e40bae0b3e46a0019",
+            "md5": "9bc6fb775d737bc613fe7c91b7ab9e7e",
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "63fa71ecf21180034b6bd78ce0396482",
+            "md5": "a9ea9060d0909d057b9818fefa5d1378",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "217520969c1b37ca26cb844bff6bb334",
+            "md5": "66ef4f977892ef779da302ef686f51ae",
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "c751a2c9afee14a14f2afb367d7212ab",
+            "md5": "4b3cf1c50246e2fdc5f8985671e7245d",
             "compressed": false
         },
         "src/language.jsc": {
-            "md5": "abc83ab9f06dbcf5f133cadc05222c89",
+            "md5": "ba17f49eaf77f4d5de21a53624cf7c89",
             "compressed": false
         },
         "res/protos/DataTransferProto.proto": {
@@ -97,7 +97,7 @@
             "compressed": false
         },
         "res/debug/debug.json": {
-            "md5": "d90f9ceba56134bf10298b456ccb1f5e",
+            "md5": "8aa03d633fb9459dd66c1607a5900f5f",
             "compressed": false
         },
         "res/debug/debug.png": {
@@ -105,7 +105,7 @@
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
-            "md5": "43eab16ce3d6a42ed909bc939b7fdfd3",
+            "md5": "e3cbdb301ced47650b4053a1e83293ce",
             "compressed": false
         }
     },

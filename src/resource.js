@@ -1,9 +1,9 @@
 // GENERATED CODE -- DO NOT EDIT! 
 var res = {
+    "HelloWorld_png": "res/HelloWorld.png",
     "debug_debug_json": "res/debug/debug.json",
     "debug_debug_png": "res/debug/debug.png",
     "debug_info_png": "res/debug_info.png",
-    "HelloWorld_png": "res/HelloWorld.png",
     "loading_js": "res/loading.js",
     "protos_DataTransferProto_proto": "res/protos/DataTransferProto.proto",
     "protos_Enum_proto": "res/protos/Enum.proto",
