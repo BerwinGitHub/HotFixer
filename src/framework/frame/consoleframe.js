@@ -18,8 +18,16 @@ var ConsoleFrame = Frame.extend({
         helper.ve.setPosition(btn, 16, 16, helper.ve.LAYOUT.RIGHT, helper.ve.LAYOUT.BOTTOM);
         this.addChild(btn);
         btn.addClickEventListener(() => {
+            this.dot.setVisible(false);
             this.node.setVisible(!this.node.isVisible());
         });
+        // dot
+        this.dot = new cc.Sprite(res.debug_dot_png);
+        this.dot.setPosition(cc.p(10, btn.getContentSize().height - 10));
+        this.dot.setVisible(false);
+        btn.addChild(this.dot);
+
+        // textField
         this.cmdHistory = ["cc.winSize"];
         this.textField = ccui.helper.seekWidgetByName(this.node, "textField");
         this.textField.setString(this.cmdHistory[this.cmdHistory.length - 1]);
@@ -32,6 +40,7 @@ var ConsoleFrame = Frame.extend({
             }
             var result = eval(this.textField.getString());
             game.log("JavaScript Eval", JSON.stringify(result), cc.color.GREEN);
+            this.dot.setVisible(false);
         });
         // pre
         this.btnPre = ccui.helper.seekWidgetByName(this.node, "btnPre");
@@ -68,6 +77,7 @@ var ConsoleFrame = Frame.extend({
             this.textField.setString("");
             var item = {tag: "Tag", text: "Text", color: cc.color.GREEN};
             this.addLog(item);
+            this.dot.setVisible(false);
         });
         // reload
         this.btnReload = ccui.helper.seekWidgetByName(this.node, "btnReload");
@@ -88,6 +98,7 @@ var ConsoleFrame = Frame.extend({
     },
 
     addLog: function (item) {
+        this.dot.setVisible(true);
         var cloneWidget = this.item.clone();
         cloneWidget.setVisible(true);
         var tagLbl = ccui.helper.seekWidgetByName(cloneWidget, "tag");
