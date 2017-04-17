@@ -62,7 +62,7 @@ var apk = {
     IDE: "--android-studio", // --android-studio & --android
     ANDROID_VERSION: "android-" + 16,// android的编译版本
     ANDROID_SYS_FRAMWORKS: "x86",// armeabi:x86:mips
-    CPU_CORE: 4,// 4线程编译
+    CPU_CORE: 1,// 4线程编译
 };
 
 /**
