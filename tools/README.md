@@ -4,6 +4,7 @@ configs.js,是tools下面脚本运行的配置脚本。注意修改
 ## tools 依赖的nodejs模块
     npm install express --save
     npm install async --save
+    npm install iconv-lite --save
     
 ## deploy命令
 会编译js成jsc，并拷贝jsc和res文件到项目下的updateServer文件夹下面，用于热更新
