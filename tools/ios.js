@@ -12,9 +12,9 @@ var terminal = require("./core/terminal");
         "-o " + c.DEST + " -t " + c.TARGET;//+ " --sign-identity " + c.SIGN;
     console.log("IOS <= Generate Apk Start.");
     console.log("IOS <= cmd:" + cmd);
-    terminal.execCommand(cmd, (txt) => {
-        console.log("IOS <= " + txt);
-    }, (data) => {
-        console.log("IOS <= Generate iOS Finish.");
-    });
+    // terminal.execCommand(cmd, (txt) => {
+    //     console.log("IOS <= " + txt);
+    // }, (data) => {
+    //     console.log("IOS <= Generate iOS Finish.");
+    // });
 })();
