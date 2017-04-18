@@ -10,11 +10,11 @@ var terminal = require("./core/terminal");
     var c = cfgs.ios;
     var cmd = "cocos compile -s " + c.SRC + " -p ios -m " + c.MODE + " -j " + c.CPU_CORE + " --compile-script 1 " +
         "-o " + c.DEST + " -t " + c.TARGET;//+ " --sign-identity " + c.SIGN;
-    console.log("IOS\t<=\tGenerate Apk Start.");
-    console.log("IOS\t<=\tcmd:" + cmd);
+    console.log("IOS <= Generate Apk Start.");
+    console.log("IOS <= cmd:" + cmd);
     terminal.execCommand(cmd, (txt) => {
-        console.log("IOS\t<=\t" + txt);
+        console.log("IOS <= " + txt);
     }, (data) => {
-        console.log("IOS\t<=\tGenerate iOS Finish.");
+        console.log("IOS <= Generate iOS Finish.");
     });
 })();

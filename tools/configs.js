@@ -67,7 +67,7 @@ var apk = {
 
 // 1.组合成命令 TODO cocos compile -s ./src -p ios -m debug -j 4 --compile-script 1 -o ./build/outputs/ios -t HotFixer-mobile --sign-identity
 var ios = {
-    SRC: "./src", // 编译目标路径
+    SRC: "./frameworks/runtime-src/proj.ios_mac", // 编译目标路径
     DEST: "./build/outputs/ipa", // apk输出的目录
     MODE: "debug", // debug & release
     TARGET: common.PROJECT_NAME + "-mobile",
