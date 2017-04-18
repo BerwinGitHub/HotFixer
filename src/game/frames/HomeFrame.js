@@ -16,7 +16,7 @@ var HomeFrame = Frame.extend({
         spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
         this.addChild(spr);
         helper.event.addClickListener(spr, () => {
-            this.testProto();
+            FDirector.replaceFrame(new HallFrame());
         });
     },
 

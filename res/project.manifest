@@ -1,7 +1,7 @@
 {
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
-    "version": "1.0.1492525387310",
+    "version": "1.0.1492526822179",
     "engineVersion": "3.3",
     "assets": {
         "res/HelloWorld.png": {
@@ -29,7 +29,7 @@
             "compressed": false
         },
         "src/framework/game/FDirector.jsc": {
-            "md5": "f7783e161c54a2db18fb89e5d6e8adc5",
+            "md5": "a6b776e75a54896fccad548716596fe8",
             "compressed": false
         },
         "src/framework/game/Game.jsc": {
@@ -69,11 +69,11 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "ba9767e9ff5f6e0fe247adb83e48bfd6",
+            "md5": "f24494007b927ab24eb847ecfeaa892f",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "66ef4f977892ef779da302ef686f51ae",
+            "md5": "23fbd1a60c35881876c94a00eb56a9e4",
             "compressed": false
         },
         "src/resource.jsc": {
@@ -105,11 +105,15 @@
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
-            "md5": "ad0bfeff459c72645a65b244e270c8dc",
+            "md5": "48db8be14a0dd8d233bc08d0b0d2a41f",
             "compressed": false
         },
         "res/debug/dot.png": {
             "md5": "48fc4c21498a925b7c918dd92e6ae69d",
+            "compressed": false
+        },
+        "src/game/frames/HallFrame.jsc": {
+            "md5": "074f76b6628e2f0e09bcc0b0e9869ffa",
             "compressed": false
         }
     },

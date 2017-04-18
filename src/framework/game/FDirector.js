@@ -26,10 +26,10 @@ FDirector.replaceFrame = function (frame) {
     FDirector.rootFrame.addChild(frame);
     FDirector.runningFrames.push(frame);
     // 2.再移除
-    for (var i = 0; i < FDirector.runningFrames.length - 2; i++) {
-        var frame = FDirector.runningFrames[i];
-        if (frame)
-            frame.removeFromParent();
+    while (FDirector.runningFrames.length > 1) {
+        var f = FDirector.runningFrames.splice(0, 1)[0];
+        if (f)
+            f.removeFromParent();
     }
 };
 

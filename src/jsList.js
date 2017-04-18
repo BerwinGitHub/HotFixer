@@ -11,6 +11,7 @@ var jsList = [
     "src/framework/protobuf/bytebuffer.js",
     "src/framework/protobuf/long.js",
     "src/framework/protobuf/protobuf.js",
+    "src/game/frames/HallFrame.js",
     "src/game/frames/HomeFrame.js",
     "src/language.js",
     "src/resource.js"

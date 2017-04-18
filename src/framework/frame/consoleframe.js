@@ -38,8 +38,9 @@ var ConsoleFrame = Frame.extend({
                 this.cmdHistory.push(this.textField.getString());
                 this.historyIdx = this.cmdHistory.length - 1;
             }
-            var result = eval(this.textField.getString());
-            game.log("JavaScript Eval", JSON.stringify(result), cc.color.GREEN);
+            var result = JSON.stringify(eval(this.textField.getString()));
+            result = (result == "" ? this.textField.getString() : result);
+            game.log("JavaScript Eval", result, cc.color.GREEN);
             this.dot.setVisible(false);
         });
         // pre

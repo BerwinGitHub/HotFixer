@@ -16,3 +16,11 @@
 /frameworks/runtime-src/proj.android-studio/app/libs/armeabi-v7a
 /frameworks/runtime-src/proj.android-studio/app/libs/x86
 /frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/build
+/frameworks/runtime-src/proj.ios_mac/build
+/frameworks/cocos2d-x/build/build
+/frameworks/cocos2d-x/cocos/scripting/js-bindings/proj.ios_mac/build
+
+/frameworks/cocos2d-x/build/cocos2d_libs.xcodeproj/xcuserdata/Berwin.xcuserdatad
+/frameworks/cocos2d-x/cocos/scripting/js-bindings/proj.ios_mac/cocos2d_js_bindings.xcodeproj/xcuserdata/Berwin.xcuserdatad
+/frameworks/runtime-src/proj.ios_mac/HotFixer.xcodeproj/project.xcworkspace/xcuserdata/Berwin.xcuserdatad
+/frameworks/runtime-src/proj.ios_mac/HotFixer.xcodeproj/xcuserdata/Berwin.xcuserdatad
