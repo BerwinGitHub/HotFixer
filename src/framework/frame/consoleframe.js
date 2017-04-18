@@ -15,7 +15,7 @@ var ConsoleFrame = Frame.extend({
         // btn
         var btn = new ccui.Button(res.debug_debug_png, res.debug_debug_png);
         btn.setLocalZOrder(this.ZORDER.DEBUG);
-        helper.ve.setPosition(btn, 16, 16, helper.ve.LAYOUT.RIGHT, helper.ve.LAYOUT.BOTTOM);
+        helper.ve.setPosition(btn, 16, 16, helper.ve.LAYOUT.RIGHT, helper.ve.LAYOUT.TOP);
         this.addChild(btn);
         btn.addClickEventListener(() => {
             this.dot.setVisible(false);
@@ -82,13 +82,7 @@ var ConsoleFrame = Frame.extend({
         // reload
         this.btnReload = ccui.helper.seekWidgetByName(this.node, "btnReload");
         this.btnReload.addClickEventListener(() => {
-            //load resources
-            var hotFixScene = new HotFixScene();
-            // cc.sys.cleanScript("src/framework/hotfix/HotFixScene.js");
-            hotFixScene.runWithCallback("res/project.manifest", () => {
-                var appDelegate = new AppDelegate();
-                appDelegate.applicationDidFinishLaunching();
-            });
+            cc.game.restart();
         });
         // log
         this.list = ccui.helper.seekWidgetByName(this.node, "listView");

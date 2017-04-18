@@ -8,7 +8,7 @@ var HomeFrame = Frame.extend({
         this._super();
         // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
 
-        var bg = new cc.LayerColor(cc.color(0, 0, 0));
+        var bg = new cc.LayerColor(cc.color(255, 0, 0));
         bg.setContentSize(cc.director.getVisibleSize());
         this.addChild(bg);
 
