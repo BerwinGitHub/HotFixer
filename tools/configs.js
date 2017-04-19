@@ -92,7 +92,7 @@ var generate = {
      * jsList.js 排除的文件
      */
     FILTER_EXCLUDE_SRC: [
-        /^.*(helper\.js|HotFixScene\.js|\.DS_Store|\.json|jsList\.js)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
+        /^.*(helper\.js|HotFixScene\.js|\.DS_Store|\.json|jsList\.js|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
     ],
 
     /**

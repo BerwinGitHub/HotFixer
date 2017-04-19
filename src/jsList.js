@@ -1,6 +1,9 @@
 // GENERATED CODE -- DO NOT EDIT! 
 var jsList = [
     "src/framework/AppDelegate.js",
+    "src/framework/a_mod/moduleJs.js",
+    "src/framework/a_mod/_metadata.js",
+    "src/framework/a_mod/_metadataManager.js",
     "src/framework/frame/consoleframe.js",
     "src/framework/frame/Frame.js",
     "src/framework/game/FDirector.js",
