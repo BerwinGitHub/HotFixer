@@ -131,6 +131,17 @@ var server = {
     ROOT_PATH: common.LOCAL_SERVER_PATH,// ./本地放文件的根目录/项目名字
 };
 
+var packages = {
+    SRC: "../src/framework/package",
+    /**
+     * 排除的文件
+     */
+    FILTER_EXCLUDE_SRC: [
+        /^.*(package\.js|packageData\.js|packageManager\.js|\.DS_Store|\.json|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
+    ],
+
+};
+
 module.exports.e2j = e2j;
 module.exports.apk = apk;
 module.exports.ipa = ipa;
@@ -138,3 +149,4 @@ module.exports.server = server;
 module.exports.deploy = deploy;
 module.exports.common = common;
 module.exports.generate = generate;
+module.exports.packages = packages;
