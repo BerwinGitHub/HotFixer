@@ -62,7 +62,7 @@ var apk = {
     IDE: "--android-studio", // --android-studio & --android
     ANDROID_VERSION: "android-" + 16,// android的编译版本
     ANDROID_SYS_FRAMWORKS: "x86",// armeabi:x86:mips
-    CPU_CORE: 2,// 4线程编译
+    CPU_CORE: 1,// 4线程编译
 };
 
 // 1.组合成命令 TODO cocos compile -s ./src -p ios -m debug -j 4 --compile-script 1 -o ./build/outputs/ios -t HotFixer-mobile --sign-identity
@@ -72,7 +72,7 @@ var ios = {
     MODE: "debug", // debug & release
     TARGET: common.PROJECT_NAME + "-mobile",
     SIGN: "",
-    CPU_CORE: 2,// 4线程编译
+    CPU_CORE: 1,// 4线程编译
 };
 
 /**

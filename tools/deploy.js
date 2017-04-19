@@ -22,8 +22,8 @@ function main() {
         // 不存在，先创建一个
         file.writeToFile(comparePath, JSON.stringify(cfgs.deploy.MANIFEST_DEFAULT_DATA, null, 4), (err) => {
                 if (err)
-                    console.log("create file err\t=>\t" + comparePath);
-                console.log("file created\t=>\t" + comparePath);
+                    console.log("create file err => " + comparePath);
+                console.log("file created => " + comparePath);
                 // 文件创建成功
                 start(comparePath);
             }
@@ -60,27 +60,13 @@ function start(comparePath) {
 }
 
 function compileJs(cmd, callback) {
-    console.log("JSCompile\t<=\tStart.");
+    console.log("JSCompile <= Start.");
     terminal.execCommand(cmd, (txt) => {
-        console.log("JSCompile\t<=\t" + txt);
+        console.log("JSCompile <= " + txt);
     }, (data) => {
-        console.log("JSCompile\t<=\tEnd.");
+        console.log("JSCompile <= End.");
         callback();
     });
-
-    // last = exec(cmd, {
-    //     encoding: "binary"
-    // });
-    //
-    // console.log("EXEC_CMD\t<=\t" + cfgs.deploy.JS_CMD);
-    // last.stdout.on('data', function (stdout) {
-    //     var txt = iconv.decode(new Buffer(stdout, 'binary'), "cp936");
-    //     console.log("JSCompile\t<=\t" + txt.replace(/\r|\n/ig, ""));
-    // });
-    //
-    // last.on('exit', function (data) {
-    //     callback();
-    // });
 }
 
 function copyResFiles() {
@@ -137,12 +123,12 @@ function generateManifest(compareData) {
         _file.writeToFile(comparePath, manifestStr, (err) => {
             if (err)
                 console.log(err);
-            console.log("   Saved.\t=>\t" + comparePath);
+            console.log("   Saved. => " + comparePath);
             var deployPath = path.resolve(__dirname, "." + cfgs.deploy.DEPLOY_PATH + "/res/project.manifest");//../UpdateServer
             _file.writeToFile(deployPath, manifestStr, (err) => {
                 if (err)
                     console.log(err);
-                console.log("   Saved.\t=>\t" + deployPath);
+                console.log("   Saved. => " + deployPath);
             });
         });
     });
@@ -161,13 +147,13 @@ function updateManifest(name, md5, assets) {
         if (findItem["md5"] != md5) {
             update = true;
             findItem["md5"] = md5;
-            console.log("[modify]\t=>\t" + name);
+            console.log("[modify] => " + name);
         }
     } else { // 新增
         update = true;
         var item = {md5: md5, compressed: false};
         eval("assets[\"" + name + "\"]=item");
-        console.log("[ added]\t=>\t" + name);
+        console.log("[ added] => " + name);
     }
     return update;
 }

@@ -11,7 +11,7 @@ var app = express()
 app.use((req, res, next) => {
     var ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/);
     var req_path = url.parse(req.url).path;
-    console.log(ip + "\t=>\t" + req_path);
+    console.log(ip + " => " + req_path);
     next();
 });
 app.use(express.static(cfgs.common.SERVER_PATH));
