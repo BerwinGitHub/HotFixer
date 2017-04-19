@@ -123,12 +123,12 @@ function generateManifest(compareData) {
         _file.writeToFile(comparePath, manifestStr, (err) => {
             if (err)
                 console.log(err);
-            console.log("   Saved. => " + comparePath);
+            console.log("[ Saved] <= " + comparePath);
             var deployPath = path.resolve(__dirname, "." + cfgs.deploy.DEPLOY_PATH + "/res/project.manifest");//../UpdateServer
             _file.writeToFile(deployPath, manifestStr, (err) => {
                 if (err)
                     console.log(err);
-                console.log("   Saved. => " + deployPath);
+                console.log("[ Saved] <= " + deployPath);
             });
         });
     });
@@ -147,13 +147,13 @@ function updateManifest(name, md5, assets) {
         if (findItem["md5"] != md5) {
             update = true;
             findItem["md5"] = md5;
-            console.log("[modify] => " + name);
+            console.log("[modify] <= " + name);
         }
     } else { // 新增
         update = true;
         var item = {md5: md5, compressed: false};
         eval("assets[\"" + name + "\"]=item");
-        console.log("[ added] => " + name);
+        console.log("[ added] <= " + name);
     }
     return update;
 }

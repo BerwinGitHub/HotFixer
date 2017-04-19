@@ -19,4 +19,11 @@ configs.js,是tools下面脚本运行的配置脚本。注意修改
 ## 启动本地热更新服务器
 在本地启动一个热更新服务器，并以deploy后的updateServer作为文件服务器目录
 
-    node /tools/server.js
+    node ./tools/server.js
+    
+## 编译成　*.apk | *.ipa
+    node ./tools/build_apk.js
+    node ./tools/build_ipa.js
+    
+## Server本地热更新服务器
+    node ./tools/server.js
