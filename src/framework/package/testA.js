@@ -2,12 +2,12 @@
  * Created by Berwin on 2017/4/19.
  */
 ["package framework.package"];
-[imports.framework.package.testA.TestA];
+[$import.framework.package.testB.TestB];
 
-_class("TestA", (exports) => {
+$class("TestA", (exports) => {
 
 });
 
-_class("TestA_1", (exports) => {
+$class("TestA_1", (exports) => {
 
 });
