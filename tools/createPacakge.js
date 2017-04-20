@@ -16,9 +16,7 @@ var SRC = path.resolve(__dirname, cfgs.SRC);
     while ((line = reader.next())) {
         console.log(line);
     }
-
     reader.close();
-
     // recursiveFiles(SRC, () => {
     // });
 })();

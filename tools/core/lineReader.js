@@ -86,10 +86,11 @@ module.exports = function (path) {
         var _idxStart = 0;
         var idx;
         // 每次以1024个字节读取，直到读取完毕
-        if ((idx = self._leftOver.indexOf("\n", _idxStart)) == -1) {
+        if ("" === self._leftOver && (idx = self._leftOver.indexOf("\n", _idxStart)) == -1) {
             var read;
             try {
                 read = fs.readSync(self._fd, self._buffer, 0, self._bufferSize, null)
+                console.log("===============================================================>:1024");
             } catch (exception) {
                 console.log('reading file failed.');
                 self.close();
@@ -109,10 +110,15 @@ module.exports = function (path) {
                 return;
             }
         }
-        if ((idx = self._leftOver.indexOf("\n", _idxStart)) !== -1) {
+        idx = self._leftOver.indexOf("\n", _idxStart);
+        if (idx !== -1) {
             var line = self._leftOver.substring(_idxStart, idx);
             _idxStart = idx + 1;
             self._leftOver = self._leftOver.substring(_idxStart);
+            return line;
+        } else if ("" != self._leftOver) {
+            var line = self._leftOver;
+            self._leftOver = "";
             return line;
         }
     }
