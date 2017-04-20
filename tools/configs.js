@@ -133,6 +133,8 @@ var server = {
 
 var packages = {
     SRC: "../src/framework/package",
+    DATA_FILE: "../src/framework/package/packageData.js",
+    FORMAT_JSON: common.FORMAT_JSON,// 导出来的js文件是否格式化
     /**
      * 排除的文件
      */

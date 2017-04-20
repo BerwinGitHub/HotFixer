@@ -79,8 +79,8 @@ module.exports = function (path) {
     this.next = function () {
         var self = this;
 
-        if (0 == self._fd) {
-            return;
+        if (self._EOF) {
+            return null;
         }
 
         var _idxStart = 0;
@@ -90,24 +90,19 @@ module.exports = function (path) {
             var read;
             try {
                 read = fs.readSync(self._fd, self._buffer, 0, self._bufferSize, null)
-                console.log("===============================================================>:1024");
             } catch (exception) {
                 console.log('reading file failed.');
                 self.close();
-                return;
+                return null;
             }
 
             if (read !== 0) { // 读取到还有内容
                 self._leftOver += self._buffer.toString('utf8', 0, read);
             } else { // 读取结束，关闭
-                try {
-                    fs.closeSync(self._fd);
-                } catch (exception) {
-                    console.log('closing file failed.');
-                }
+                self.close();
                 self._EOF = true;
                 self._fd = 0;
-                return;
+                return null;
             }
         }
         idx = self._leftOver.indexOf("\n", _idxStart);
@@ -115,11 +110,11 @@ module.exports = function (path) {
             var line = self._leftOver.substring(_idxStart, idx);
             _idxStart = idx + 1;
             self._leftOver = self._leftOver.substring(_idxStart);
-            return line;
+            return line === "" ? "\r" : line;
         } else if ("" != self._leftOver) {
             var line = self._leftOver;
             self._leftOver = "";
-            return line;
+            return line === "" ? "\r" : line;
         }
     }
 }
