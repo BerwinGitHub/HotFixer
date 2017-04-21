@@ -1,7 +1,7 @@
 /**
  * Created by Berwin on 2017/4/19.
  */
-[$import.testA.TestA];
+[$import.testB.TestB];
 
 $class("TestA", ($export, $import) => {
 

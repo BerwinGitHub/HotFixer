@@ -133,13 +133,13 @@ var server = {
 
 var packages = {
     SRC: "../src/framework/package",
-    DATA_FILE: "../src/framework/package/packageData.js",
+    DATA_FILE: "../src/framework/package/packageMeta.js",
     FORMAT_JSON: common.FORMAT_JSON,// 导出来的js文件是否格式化
     /**
      * 排除的文件
      */
     FILTER_EXCLUDE_SRC: [
-        /^.*(package\.js|packageData\.js|packageManager\.js|\.DS_Store|\.json|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
+        /^.*(package\.js|packageMeta\.js|packageManager\.js|\.DS_Store|\.json|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
     ],
 
 };

@@ -5,18 +5,18 @@ var $import = {
         "package": "testA",
         "classes": {
             "TestA": {
-                "callback": null,
-                "exports": null,
-                "imports": null
+                "implement": null,
+                "export": null,
+                "import": null
             },
             "TestA_1": {
-                "callback": null,
-                "exports": null,
-                "imports": null
+                "implement": null,
+                "export": null,
+                "import": null
             }
         },
         "imports": [
-            "$import.testA.TestA"
+            "$import.testB.TestB"
         ],
         "TestA": "testA.classes.TestA",
         "TestA_1": "testA.classes.TestA_1"
@@ -26,9 +26,9 @@ var $import = {
         "package": "testB",
         "classes": {
             "TestB": {
-                "callback": null,
-                "exports": null,
-                "imports": null
+                "implement": null,
+                "export": null,
+                "import": null
             }
         },
         "imports": [

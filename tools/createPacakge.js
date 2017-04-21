@@ -57,6 +57,7 @@ function readJsFile(path, child) {
     var reader = new lineReader(path);
     var line;
     while ((line = reader.next())) {
+        line = line.replace(/[\r\n]/g, ""); // 在Windows上面每行有\r或\n，在这替换掉
         if (/^\[\"package\s+(.*)(\"]|\"];)$/.test(line)) {// package
             // var pkg = /^\[\"package\s+(.*)(\"]|\"];)$/.exec(line)[1];
             // child["package"] = pkg;
@@ -68,7 +69,7 @@ function readJsFile(path, child) {
         } else if (/^\$class\(\"(.*)\".*$/.test(line)) {// classes
             var clsName = /^\$class\(\"(.*)\".*$/.exec(line)[1];
             child[clsName] = child["package"] + ".classes." + clsName;
-            child["classes"][clsName] = {"callback": null, "exports": null, "imports": null};
+            child["classes"][clsName] = {"implement": null, "export": null, "import": null};
         }
     }
 }
