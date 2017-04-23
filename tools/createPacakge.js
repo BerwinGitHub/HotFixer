@@ -18,12 +18,13 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
     recursiveFiles(SRC, $import, $package, $classes);
     var saves = [$import, $package, $classes];
     var header = ["var $import = ", "var $package = ", "var $classes = "];
+    var footer = [";\r\n", ";\r\n", ";\r\n"];
     var content = cfgs.common.JSON_FILE_NOTE;
     for (var i = 0; i < saves.length; i++) {
         var obj = saves[i];
         var h = header[i];
         if (cfgs.packages.FORMAT_JSON) {
-            content += (h + JSON.stringify(obj, null, 4)) + ";\r\n";
+            content += (h + JSON.stringify(obj, null, 4)) + footer[i];
         } else {
             content += (h + JSON.stringify(obj)) + ";";
         }

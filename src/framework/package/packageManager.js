@@ -52,11 +52,8 @@ $pm.requireCls = function (requireMeta, loadFinish) {
             // 3.第一次加载的时候才执行类实现函数
             if (!this.isJsLoaded(item.file)) {
                 item.implement(item.export, item.import);
+                $pm.loaderCache[item.file] = true;
             }
-        });
-        // JS 加载成功。先设置放进缓存
-        needLoadFiles.forEach((item) => {
-            $pm.loaderCache[item] = true;
         });
         loadFinish && loadFinish(null, clsMeta.export);
     });
