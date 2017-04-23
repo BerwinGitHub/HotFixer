@@ -1,39 +1,73 @@
 // GENERATED CODE -- DO NOT EDIT! 
 var $import = {
-    "testA": {
-        "file": "testA.js",
-        "package": "testA",
-        "classes": {
-            "TestA": {
-                "implement": null,
-                "export": null,
-                "import": null
+    "framework": {
+        "package": {
+            "testA": {
+                "TestA": {
+                    "_pkg": "framework.package.testA",
+                    "_cls": "TestA"
+                }
             },
-            "TestA_1": {
-                "implement": null,
-                "export": null,
-                "import": null
+            "testB": {
+                "TestB": {
+                    "_pkg": "framework.package.testB",
+                    "_cls": "TestB"
+                }
+            },
+            "testC": {
+                "TestC": {
+                    "_pkg": "framework.package.testC",
+                    "_cls": "TestC"
+                }
             }
-        },
-        "imports": [
-            "$import.testB.TestB"
-        ],
-        "TestA": "testA.classes.TestA",
-        "TestA_1": "testA.classes.TestA_1"
-    },
-    "testB": {
-        "file": "testB.js",
-        "package": "testB",
-        "classes": {
-            "TestB": {
-                "implement": null,
-                "export": null,
-                "import": null
-            }
-        },
-        "imports": [
-            "$import.testA.TestA"
-        ],
-        "TestB": "testB.classes.TestB"
+        }
     }
-}
+};
+var $package = {
+    "framework.package.testA": "framework.package.testA",
+    "framework.package.testB": "framework.package.testB",
+    "framework.package.testC": "framework.package.testC"
+};
+var $classes = {
+    "TestA": [
+        {
+            "file": "framework/package/testA.js",
+            "name": "TestA",
+            "package": "framework.package.testA",
+            "implement": null,
+            "export": {},
+            "import": [],
+            "ref": [
+                "$import.framework.package.testB.TestB"
+            ]
+        }
+    ],
+    "TestB": [
+        {
+            "file": "framework/package/testB.js",
+            "name": "TestB",
+            "package": "framework.package.testB",
+            "implement": null,
+            "export": {},
+            "import": [],
+            "ref": [
+                "$import.framework.package.testC.TestC"
+            ]
+        }
+    ],
+    "TestC": [
+        {
+            "file": "framework/package/testC.js",
+            "name": "TestC",
+            "package": "framework.package.testC",
+            "implement": null,
+            "export": {},
+            "import": [],
+            "ref": [
+                "$import.framework.package.testB.TestB"
+            ]
+        }
+    ]
+};
+
+var $require = $import;

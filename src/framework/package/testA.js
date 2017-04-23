@@ -1,12 +1,12 @@
 /**
  * Created by Berwin on 2017/4/19.
  */
-[$import.testB.TestB];
+[$import.framework.package.testB.TestB];
 
 $class("TestA", ($export, $import) => {
 
-});
-
-$class("TestA_1", ($export, $import) => {
-
+    var logA = function () {
+        $import[0].logB();
+    };
+    $export.logA = logA;
 });

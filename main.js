@@ -67,15 +67,19 @@ cc.game.onStart = function () {
 
     // Setup the resolution policy and design resolution size
     // cc.view.setDesignResolutionSize(1136, 640, cc.ResolutionPolicy.SHOW_ALL);
-    helper.ve.setupVisibleRect(960, 640);
+    // helper.ve.setupVisibleRect(960, 640);
 
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
     //load resources
-    var hotFixScene = new HotFixScene();
-    hotFixScene.runWithCallback("res/project.manifest", () => {
-        var appDelegate = new AppDelegate();
-        appDelegate.applicationDidFinishLaunching();
+    // var hotFixScene = new HotFixScene();
+    // hotFixScene.runWithCallback("res/project.manifest", () => {
+    //     var appDelegate = new AppDelegate();
+    //     appDelegate.applicationDidFinishLaunching();
+    // });
+
+    $pm.requireCls($require.framework.package.testA.TestA, (err, data) => {
+        data.logA();
     });
 
 };
