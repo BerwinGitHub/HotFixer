@@ -5,9 +5,6 @@
 
 $class("TestC", ($export, $import) => {
 
-    $export.c = "c";
-    console.log($import[0].b);
-
     var logC = function () {
         console.log("log C");
     };
