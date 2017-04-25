@@ -38,7 +38,8 @@ var $classes = {
             "export": {},
             "import": [],
             "ref": [
-                "$import.framework.package.testB.TestB"
+                "$import.framework.package.testB.TestB",
+                "$import.framework.package.testC.TestC"
             ]
         }
     ],

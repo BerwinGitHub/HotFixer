@@ -81,10 +81,10 @@ function readJsFile(p, $package, $classes, child) {
         if (/^\[\"package\s+(.*)(\"]|\"];)$/.test(line)) {// package
             // var pkg = /^\[\"package\s+(.*)(\"]|\"];)$/.exec(line)[1];
             // child["package"] = pkg;
-        } else if (/^\[\$import.*(\]|\];)$/.test(line)) {// import
+        } else if (/^\$include\(.*(\)|\);)$/.test(line)) {// import
             // 先把两边括号去掉
-            var content = /^\[(\$import.*)(\]|\];)$/.exec(line)[1];
-            var imp = content.split(",");// js语法规则只有','可行
+            var content = /^\$include\((\$import.*)(\)|\);)$/.exec(line)[1].replace(/\s+/g, "");;
+            var imp = content.split(",")// js语法规则只有','可行
             imports = imports.concat(imp);
         } else if (/^\$class\(\"(.*)\".*$/.test(line)) {// classes
             var clsName = /^\$class\(\"(.*)\".*$/.exec(line)[1];

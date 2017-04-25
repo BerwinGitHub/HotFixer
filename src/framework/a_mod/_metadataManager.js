@@ -44,7 +44,7 @@ var $metamgr = {};
 
     var fc = mgr.fileConfig = {};
 
-    var gc=mgr.groupConfig={};
+    var gc = mgr.groupConfig = {};
 
     var warn = function (str) {
         cc.warn("[META] WARNNING :" + str)
@@ -137,12 +137,12 @@ var $metamgr = {};
         return resPkg;
     }
 
-    function _addToGroup(group,file){
-        var gp=gc[group];
-        if(!gp){
-            gp=gc[group]={};
+    function _addToGroup(group, file) {
+        var gp = gc[group];
+        if (!gp) {
+            gp = gc[group] = {};
         }
-        gp[file]=true;
+        gp[file] = true;
     }
 
     //===============parser==============
@@ -169,10 +169,10 @@ var $metamgr = {};
         var str = contex.replace(/\s/g, "");
         var arr = str.split(";");
         //过滤掉空的
-        arr=arr.filter((it)=>it)
+        arr = arr.filter((it) => it)
         var trueImports = arr;
 
-        trueImports = trueImports.filter(it=> {
+        trueImports = trueImports.filter(it => {
             var impstr = it;
             if (mc[it]) {
                 //有这个模块
@@ -200,8 +200,9 @@ var $metamgr = {};
 
         fc[file].imports = trueImports;
     }
+
     //解析 group
-    function _parseGroup(file,contex){
+    function _parseGroup(file, contex) {
 
         if (!contex) {
             warn(file + " group 缺少组名字");
@@ -209,10 +210,10 @@ var $metamgr = {};
         }
         var str = contex.replace(/\s/g, "");
         var arr = str.split(";");
-        for(var i in arr){
-            var gp=arr[i];
-            if(gp){
-                _addToGroup(gp,file);
+        for (var i in arr) {
+            var gp = arr[i];
+            if (gp) {
+                _addToGroup(gp, file);
             }
         }
 
@@ -225,9 +226,9 @@ var $metamgr = {};
         var arr = meta.split(" ")
         var head = arr[0];
         var contex = arr[1];
-        if (head == "mod" || head=="module") {
+        if (head == "mod" || head == "module") {
             _parseMod(file, contex);
-        }else if(head=="group" || head=="grp"){
+        } else if (head == "group" || head == "grp") {
             _parseGroup(file, contex);
         }
     }
@@ -237,7 +238,7 @@ var $metamgr = {};
         var arr = meta.split(" ")
         var head = arr[0];
         var contex = arr[1];
-        if (head == "imports" || head=="import" || head=="imp") {
+        if (head == "imports" || head == "import" || head == "imp") {
             _parseImports(file, contex);
         }
     }
@@ -260,13 +261,12 @@ var $metamgr = {};
     }
 
     //处理组  把组变成数组
-    for(var i in gc){
-        gc[i]=Object.keys(gc[i]).sort();
+    for (var i in gc) {
+        gc[i] = Object.keys(gc[i]).sort();
     }
 
 
     //创建包
-
 
 
     mgr.getmodule = function (id) {
@@ -286,32 +286,32 @@ var $metamgr = {};
     }
 
     //加载某个组
-    mgr.loadGroup = function (id,cb,baseDir="") {
-        if(!gc[id]){
+    mgr.loadGroup = function (id, cb, baseDir = "") {
+        if (!gc[id]) {
 
-            err("没有这个加载组 "+id);
+            err("没有这个加载组 " + id);
         }
-        cc.loader.loadJs(baseDir,gc[id],cb) ;
+        cc.loader.loadJs(baseDir, gc[id], cb);
     }
 
     //加载某个组
-    mgr.loadGroups = function (ids,cb,baseDir="") {
-        var loaders=[];
-        for(var i in ids){
-            var id=ids[i];
-            if(!gc[id]){
-                err("没有这个加载组 "+id);
-            }else{
-                loaders= loaders.concat(gc[id]);
+    mgr.loadGroups = function (ids, cb, baseDir = "") {
+        var loaders = [];
+        for (var i in ids) {
+            var id = ids[i];
+            if (!gc[id]) {
+                err("没有这个加载组 " + id);
+            } else {
+                loaders = loaders.concat(gc[id]);
             }
         }
-        cc.loader.loadJs(baseDir,loaders,cb) ;
+        cc.loader.loadJs(baseDir, loaders, cb);
     }
 
-    mgr.loadAllGroups=function () {
-        var arr=[]
-        for(var i in gc){
-           arr.push(i);
+    mgr.loadAllGroups = function () {
+        var arr = []
+        for (var i in gc) {
+            arr.push(i);
         }
         mgr.loadGroups(arr);
     }

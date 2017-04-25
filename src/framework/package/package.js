@@ -1,4 +1,11 @@
 /**
+ *
+ * @param params
+ */
+var $include = function (...params) {
+
+};
+/**
  * 声明class
  * @param clsName
  * @param clsImplement
