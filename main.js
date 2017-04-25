@@ -78,8 +78,18 @@ cc.game.onStart = function () {
     //     appDelegate.applicationDidFinishLaunching();
     // });
 
-    $pm.requireCls($require.framework.package.testA.TestA, (err, data) => {
-        data.logA();
+    $pm.requireCls($require.framework.global.app, (err, app) => {
+        app.helper.ve.setupVisibleRect(960, 640);
+        $pm.requireCls($require.framework.hotfix.HotFixScene, (err, HotFixScene) => {
+            //load resources
+            var hotFixScene = new HotFixScene();
+            hotFixScene.runWithCallback("res/project.manifest", () => {
+                $pm.requireCls($require.framework.AppDelegate, (err, AppDelegate) => {
+                    var appDelegate = new AppDelegate();
+                    appDelegate.applicationDidFinishLaunching();
+                });
+            });
+        });
     });
 
 };

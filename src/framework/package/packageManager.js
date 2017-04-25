@@ -13,7 +13,7 @@ $pm.loaderCache = {};
 $pm.requireCls = function (requireMeta, loadFinish) {
     var clsMeta = this._findClassMeta(requireMeta._cls, requireMeta._pkg);
     if (!clsMeta) {
-        loadFinish && loadFinish("Require不能找到:" + requireMeta._pkg + requireMeta._cls, null);
+        loadFinish && loadFinish.apply(null, ["Require不能找到:" + requireMeta._pkg + requireMeta._cls]);
         return;
     }
     // 需要加载的类
@@ -23,11 +23,12 @@ $pm.requireCls = function (requireMeta, loadFinish) {
     // 加载Classes
     var needLoadFiles = [];
     needImportClasses.forEach((item) => {
-        if (!this.isJsLoaded(item.file))
+        if (!this.isJsLoaded(item.file)) {
             needLoadFiles.push("src/" + item.file);
+        }
     });
     if (needLoadFiles.length == 0) {
-        loadFinish && loadFinish(null, clsMeta.export);
+        loadFinish && loadFinish.apply(null, [null].concat($pm._expansionExports(clsMeta.export)));
         return;
     }
 
@@ -35,9 +36,10 @@ $pm.requireCls = function (requireMeta, loadFinish) {
     cc.loader.loadJs(needLoadFiles, (err) => {
         if (err) {
             cc.log("加载JS文件错误 err:" + err);
-            loadFinish && loadFinish(err, null);
+            loadFinish && loadFinish.apply(null, [err]);
             return;
         }
+        cc.log("JS文件夹加载完成:" + needLoadFiles);
         // 执行类函数
         needImportClasses.forEach((item) => {
             // 1.先得到该类的所有import
@@ -51,12 +53,30 @@ $pm.requireCls = function (requireMeta, loadFinish) {
             item.export = (item.export ? item.export : {});
             // 3.第一次加载的时候才执行类实现函数
             if (!this.isJsLoaded(item.file)) {
-                item.implement(item.export, item.import);
+                item.implement.apply(null, [item.export].concat(this._expansionImports(item.import)));
                 $pm.loaderCache[item.file] = true;
             }
         });
-        loadFinish && loadFinish(null, clsMeta.export);
+        loadFinish && loadFinish.apply(null, [null].concat(this._expansionExports(clsMeta.export)));
     });
+};
+
+$pm._expansionImports = function (imports) {
+    var arr = [];
+    imports.forEach(($import) => {
+        for (var key in $import) {
+            arr.push($import[key]);
+        }
+    });
+    return arr;
+};
+
+$pm._expansionExports = function (exports) {
+    var arr = [];
+    for (var key in exports) {
+        arr.push(exports[key]);
+    }
+    return arr;
 };
 
 /**
@@ -78,6 +98,9 @@ $pm._searchImports = function (clsMeta, needImportClasses) {
             for (var j = 0; j < needImportClasses.length; j++) {
                 if (needImportClasses[j]["name"] == clsMeta2["name"] &&
                     needImportClasses[j]["package"] == clsMeta2["package"]) {
+                    // 把这个交换到最后
+                    var temp = needImportClasses.splice(j, 1);
+                    needImportClasses.push(clsMeta2);
                     isInclude = true;
                     break;
                 }

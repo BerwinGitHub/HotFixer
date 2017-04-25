@@ -78,19 +78,22 @@ function readJsFile(p, $package, $classes, child) {
     var hasClass = false;
     while ((line = reader.next())) {
         line = line.replace(/[\r\n]/g, ""); // 在Windows上面每行有\r或\n，在这替换掉
-        if (/^\[\"package\s+(.*)(\"]|\"];)$/.test(line)) {// package
-            // var pkg = /^\[\"package\s+(.*)(\"]|\"];)$/.exec(line)[1];
-            // child["package"] = pkg;
-        } else if (/^\$include\(.*(\)|\);)$/.test(line)) {// import
+        // if (/^\[\"package\s+(.*)(\"]|\"];)$/.test(line)) {// package
+        //     // var pkg = /^\[\"package\s+(.*)(\"]|\"];)$/.exec(line)[1];
+        //     // child["package"] = pkg;
+        // } else
+        if (/^\$include\(.*(\)|\);)$/.test(line)) {// import
             // 先把两边括号去掉
-            var content = /^\$include\((\$import.*)(\)|\);)$/.exec(line)[1].replace(/\s+/g, "");;
+            var content = /^\$include\((\$import.*)(\)|\);)$/.exec(line)[1].replace(/\s+/g, "");
+            ;
             var imp = content.split(",")// js语法规则只有','可行
             imports = imports.concat(imp);
         } else if (/^\$class\(\"(.*)\".*$/.test(line)) {// classes
             var clsName = /^\$class\(\"(.*)\".*$/.exec(line)[1];
             if (!isSamePkg$ClsName($classes, pkg, clsName)) {
                 hasClass = true;
-                child[clsName] = {_pkg: pkg, _cls: clsName};
+                child._pkg = pkg;
+                child._cls = clsName;
                 //
                 var meta = {
                     "file": rltFile,
