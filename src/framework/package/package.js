@@ -2,9 +2,9 @@
  *
  * @param params
  */
-var $include = function (...params) {
-
+var $include = function ($import) {
 };
+
 /**
  * 声明class
  * @param clsName

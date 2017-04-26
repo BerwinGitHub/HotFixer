@@ -100,7 +100,7 @@ $pm._searchImports = function (clsMeta, needImportClasses) {
                     needImportClasses[j]["package"] == clsMeta2["package"]) {
                     // 把这个交换到最后
                     var temp = needImportClasses.splice(j, 1);
-                    needImportClasses.push(clsMeta2);
+                    needImportClasses.push(temp);
                     isInclude = true;
                     break;
                 }

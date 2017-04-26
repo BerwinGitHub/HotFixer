@@ -2,9 +2,8 @@
  * Created by Berwin on 2017/4/16.
  */
 $include($import.framework.frame.Frame);
-$include($import.framework.helper.helper);
 
-$class("ConsoleFrame", function ($export, Frame, helper) {
+$class("ConsoleFrame", function ($export, Frame) {
 
     var ConsoleFrame = Frame.extend({
 
@@ -20,7 +19,7 @@ $class("ConsoleFrame", function ($export, Frame, helper) {
             // btn
             var btn = new ccui.Button(res.debug_debug_png, res.debug_debug_png);
             btn.setLocalZOrder(this.ZORDER.DEBUG);
-            helper.ve.setPosition(btn, 16, 16, helper.ve.LAYOUT.RIGHT, helper.ve.LAYOUT.TOP);
+            cc.app.helper.ve.setPosition(btn, 16, 16, cc.app.helper.ve.LAYOUT.RIGHT, cc.app.helper.ve.LAYOUT.TOP);
             this.addChild(btn);
             btn.addClickEventListener(() => {
                 this.dot.setVisible(false);
