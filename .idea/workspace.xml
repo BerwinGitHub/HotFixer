@@ -811,10 +811,12 @@
       <workItem from="1493043847966" duration="1775000" />
       <workItem from="1493127227861" duration="11653000" />
       <workItem from="1493171286957" duration="1086000" />
+      <workItem from="1493173143624" duration="1150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="161059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
