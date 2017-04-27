@@ -29,7 +29,7 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
             content += (h + JSON.stringify(obj)) + ";";
         }
     }
-    content += "\r\n" + "var $require = $import;";
+    content += "\r\n" + "var $req = $import;";
     file.writeToFile(path.resolve(__dirname, cfgs.packages.DATA_FILE), content, () => {
         console.log("packageData.js保存成功");
     })

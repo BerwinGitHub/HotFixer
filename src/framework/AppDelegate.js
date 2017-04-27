@@ -4,7 +4,7 @@
 $include($import.game.frames.HomeFrame);
 $include($import.framework.game.FDirector);
 
-$class("AppDelegate", function ($export, HomeFrame, FDirector) {
+$class("AppDelegate", function ($export, {HomeFrame, FDirector}) {
 
     var AppDelegate = cc.Class.extend({
 

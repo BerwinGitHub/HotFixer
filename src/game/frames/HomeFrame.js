@@ -5,7 +5,7 @@ $include($import.framework.frame.Frame);
 $include($import.game.frames.HallFrame);
 $include($import.framework.game.FDirector);
 
-$class("HomeFrame", function ($export, Frame, HallFrame, FDirector) {
+$class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
 
     var HomeFrame = Frame.extend({
 

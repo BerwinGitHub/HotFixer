@@ -4,7 +4,7 @@
 $include($import.framework.frame.Frame);
 $include($import.framework.frame.consoleframe);
 
-$class("RootFrame", function ($export, Frame, ConsoleFrame) {
+$class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
 
     var RootFrame = Frame.extend({
 

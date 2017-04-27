@@ -10,46 +10,83 @@ var $pm = {};
  */
 $pm.loaderCache = {};
 
-$pm.requireCls = function (requireMeta, loadFinish) {
-    var clsMeta = this._findClassMeta(requireMeta._cls, requireMeta._pkg);
+/**
+ * 多个同时加载
+ * @param metas
+ * @param loadFinish
+ */
+$pm.requires = function (metas, loadFinish) {
+
+};
+
+/**
+ * 异步加载class。会去loadJS
+ * @param meta $require.xxx.xxx
+ * @param loadFinish
+ */
+$pm.require = function (meta, loadFinish) {
+    var clsMeta = this._findClassMeta(meta._cls, meta._pkg);
     if (!clsMeta) {
-        loadFinish && loadFinish.apply(null, ["Require不能找到:" + requireMeta._pkg + requireMeta._cls]);
+        loadFinish && loadFinish.apply(null, [{err: "Require不能找到:" + meta._pkg + meta._cls}]);
         return;
     }
     // 需要加载的类
     var needImportClasses = [];
     this._searchImports(clsMeta, needImportClasses);
     needImportClasses.reverse(); // 逆序加载
+
+    this._loadClasses(needImportClasses, (err) => {
+        if (err) {
+            loadFinish && loadFinish.apply(null, [{err: err}]);
+        }
+        loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
+    });
+};
+
+/**
+ * 同步加载class。不会loadJS文件
+ * @param meta $require.xxx.xxx
+ * @returns {*}
+ */
+$pm.requireSync = function (meta) {
+    var clsMeta = this._findClassMeta(meta._cls, meta._pkg);
+    if (!clsMeta) {
+        return {err: "Require不能找到:" + meta._pkg + meta._cls};
+    }
+    return clsMeta.export;
+};
+
+$pm._loadClasses = function (needImportClasses, loadFinish) {
     // 加载Classes
     var needLoadFiles = [];
     needImportClasses.forEach((item) => {
-        if (!this.isJsLoaded(item.file)) {
+        if (!this.isJsLoaded(item.file)) {// 当前的JS文件是否已经加载过了
             needLoadFiles.push("src/" + item.file);
         }
     });
-    if (needLoadFiles.length == 0) {
-        loadFinish && loadFinish.apply(null, [null].concat($pm._expansionExports(clsMeta.export)));
+    if (needLoadFiles.length == 0) { // 没有需要加载的文件直接返回
+        loadFinish();
         return;
     }
-
     // 加载JS文件
     cc.loader.loadJs(needLoadFiles, (err) => {
         if (err) {
             cc.log("加载JS文件错误 err:" + err);
-            loadFinish && loadFinish.apply(null, [err]);
+            loadFinish({err: err});
             return;
         }
+        // 加载完成之后，设置export和import关系
         cc.log("JS文件夹加载完成:" + needLoadFiles);
         // 执行类函数
         needImportClasses.forEach((item) => {
             // 1.先得到该类的所有import
             item.import = (item.import ? item.import : []);
-            item.ref.forEach((im) => {
-                var importRef = eval(im);
-                var imClass = this._findClassMeta(importRef._cls, importRef._pkg);
-                item.import.push(imClass.export);
+            item.ref.forEach((ref) => {
+                var importRef = eval(ref);
+                var refClass = this._findClassMeta(importRef._cls, importRef._pkg);
+                item.import.push(refClass.export);
             });
-            // 2.新建export对象
+            // 2.没有export对象，就新建export对象
             item.export = (item.export ? item.export : {});
             // 3.第一次加载的时候才执行类实现函数
             if (!this.isJsLoaded(item.file)) {
@@ -57,26 +94,26 @@ $pm.requireCls = function (requireMeta, loadFinish) {
                 $pm.loaderCache[item.file] = true;
             }
         });
-        loadFinish && loadFinish.apply(null, [null].concat(this._expansionExports(clsMeta.export)));
+        loadFinish();
     });
 };
 
 $pm._expansionImports = function (imports) {
-    var arr = [];
+    var data = {};
     imports.forEach(($import) => {
         for (var key in $import) {
-            arr.push($import[key]);
+            data[key] = $import[key]
         }
     });
-    return arr;
+    return [data];
 };
 
 $pm._expansionExports = function (exports) {
-    var arr = [];
+    var data = {};
     for (var key in exports) {
-        arr.push(exports[key]);
+        data[key] = exports[key];
     }
-    return arr;
+    return [data];
 };
 
 /**
@@ -100,7 +137,7 @@ $pm._searchImports = function (clsMeta, needImportClasses) {
                     needImportClasses[j]["package"] == clsMeta2["package"]) {
                     // 把这个交换到最后
                     var temp = needImportClasses.splice(j, 1);
-                    needImportClasses.push(temp);
+                    needImportClasses.push(temp[0]);
                     isInclude = true;
                     break;
                 }

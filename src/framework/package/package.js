@@ -18,3 +18,29 @@ var $class = function (clsName, clsImplement, pkg = "") {
         cls.implement = clsImplement;
     }
 };
+
+/**
+ * 加载单个class
+ * @param meta
+ * @param loadFinish
+ */
+var $require = function (meta, loadFinish) {
+    $pm.require(meta, loadFinish);
+};
+
+/**
+ * 同时加载多个类
+ * @param metas
+ * @param loadFinish
+ */
+var $requires = function (metas, loadFinish) {
+    $pm.requires(metas, loadFinish);
+};
+
+/**
+ * 请确定需要加载的类在前面已经加载过
+ * @param meta
+ */
+var $requireSync = function (meta) {
+    $pm.requireSync(meta);
+};

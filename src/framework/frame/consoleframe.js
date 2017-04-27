@@ -3,7 +3,7 @@
  */
 $include($import.framework.frame.Frame);
 
-$class("ConsoleFrame", function ($export, Frame) {
+$class("ConsoleFrame", function ($export, {Frame}) {
 
     var ConsoleFrame = Frame.extend({
 

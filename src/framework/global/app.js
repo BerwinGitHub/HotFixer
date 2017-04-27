@@ -5,7 +5,7 @@
 $include($import.framework.game.Console);
 $include($import.framework.helper.helper);
 
-$class("app", function ($export, Console, helper) {
+$class("app", function ($export, {Console, helper}) {
     /**
      *
      */

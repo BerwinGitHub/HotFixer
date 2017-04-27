@@ -4,7 +4,7 @@
 $include($import.framework.frame.Frame);
 $include($import.framework.game.GameScene);
 
-$class("FDirector", function ($export, Frame, GameScene) {
+$class("FDirector", function ($export, {Frame, GameScene}) {
 
     var FDirector = {
 

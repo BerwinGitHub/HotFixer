@@ -16,78 +16,26 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="HotFixer" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+            <state relative-caret-position="394">
+              <caret line="84" column="48" lean-forward="true" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/framework/helper/helper.js">
+      <file leaf-file-name="createPacakge.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/createPacakge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4608">
-              <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manifest.webapp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.webapp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="packageMeta.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/framework/package/packageMeta.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-              <folding>
-                <marker date="1493171135148" expanded="true" signature="68:79" ph="{...}" />
-                <marker date="1493171135148" expanded="true" signature="6852:6867" ph="[...]" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFrame.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/frames/HomeFrame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <marker date="1493171135188" expanded="true" signature="1249:1251" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HallFrame.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/frames/HallFrame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consoleframe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/framework/frame/consoleframe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -96,8 +44,71 @@
       <file leaf-file-name="packageManager.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/framework/package/packageManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="102" column="49" lean-forward="true" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
+            <state relative-caret-position="259">
+              <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Console.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/framework/game/Console.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/framework/helper/helper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="813">
+              <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packageMeta.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/framework/package/packageMeta.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="227" column="49" lean-forward="true" selection-start-line="227" selection-start-column="49" selection-end-line="227" selection-end-column="49" />
+              <folding>
+                <marker date="1493198460008" expanded="true" signature="68:79" ph="{...}" />
+                <marker date="1493198460008" expanded="true" signature="6916:6931" ph="[...]" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HallFrame.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/frames/HallFrame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.manifest" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/updateServer/HotFixer/res/project.manifest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotFixScene.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/framework/hotfix/HotFixScene.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="85" column="85" lean-forward="false" selection-start-line="85" selection-start-column="85" selection-end-line="85" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -106,18 +117,8 @@
       <file leaf-file-name="package.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/framework/package/package.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/framework/global/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="113">
+              <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -136,8 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nodify</find>
-      <find>readfile</find>
       <find>FILTER_EXCLUDE_SRC</find>
       <find>recursiveFiles</find>
       <find>open</find>
@@ -166,6 +165,8 @@
       <find>_getmodsexport</find>
       <find>game</find>
       <find>helper</find>
+      <find>_expansionExports</find>
+      <find>requ</find>
     </findStrings>
     <replaceStrings>
       <replace>consoleFrame</replace>
@@ -215,19 +216,19 @@
         <option value="$PROJECT_DIR$/src/framework/game/Game.js" />
         <option value="$PROJECT_DIR$/src/framework/game/Console.js" />
         <option value="$PROJECT_DIR$/src/framework/hotfix/HotFixScene.js" />
-        <option value="$PROJECT_DIR$/tools/createPacakge.js" />
         <option value="$PROJECT_DIR$/src/resource.js" />
-        <option value="$PROJECT_DIR$/src/framework/AppDelegate.js" />
+        <option value="$PROJECT_DIR$/src/framework/frame/consoleframe.js" />
         <option value="$PROJECT_DIR$/src/framework/game/FDirector.js" />
         <option value="$PROJECT_DIR$/src/framework/game/GameScene.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/src/framework/package/packageMeta.js" />
         <option value="$PROJECT_DIR$/src/framework/global/app.js" />
+        <option value="$PROJECT_DIR$/src/framework/AppDelegate.js" />
         <option value="$PROJECT_DIR$/src/game/frames/HomeFrame.js" />
-        <option value="$PROJECT_DIR$/src/game/frames/HallFrame.js" />
-        <option value="$PROJECT_DIR$/src/framework/frame/consoleframe.js" />
-        <option value="$PROJECT_DIR$/src/framework/package/package.js" />
         <option value="$PROJECT_DIR$/src/framework/package/packageManager.js" />
+        <option value="$PROJECT_DIR$/src/game/frames/HallFrame.js" />
+        <option value="$PROJECT_DIR$/src/framework/package/package.js" />
+        <option value="$PROJECT_DIR$/src/framework/package/packageMeta.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/tools/createPacakge.js" />
       </list>
     </option>
   </component>
@@ -369,7 +370,87 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="updateServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="updateServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,6 +548,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotfix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotFixer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -543,7 +668,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tools/createPacakge.js" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -625,7 +750,7 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="createPackageMeta" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/createPacakge.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="createPackageMeta" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="tools/createPacakge.js" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -653,7 +778,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="test" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="src/framework/package/test.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="test" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="src/framework/package/test.js" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -681,7 +806,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="deploy" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/deploy.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="deploy" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="tools/deploy.js" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -709,7 +834,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="HotFixServer" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/server.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="HotFixServer" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="tools/server.js" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -737,7 +862,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="excel2Js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/excel-to-json.js" working-dir="$PROJECT_DIR$">
+    <configuration default="false" name="excel2Js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/Program Files/nodejs/node" path-to-js-file="tools/excel-to-json.js" working-dir="$PROJECT_DIR$">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -772,6 +897,12 @@
       <item index="3" class="java.lang.String" itemvalue="Node.js.HotFixServer" />
       <item index="4" class="java.lang.String" itemvalue="Node.js.excel2Js" />
     </list>
+  </component>
+  <component name="SFStoredExecutionPersistentComponent">
+    <executions>
+      <execution name="Default" sourceToExecute="" />
+    </executions>
+    <lastSelectedExecutionName>Default</lastSelectedExecutionName>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -811,26 +942,36 @@
       <workItem from="1493043847966" duration="1775000" />
       <workItem from="1493127227861" duration="11653000" />
       <workItem from="1493171286957" duration="1086000" />
-      <workItem from="1493173143624" duration="1150000" />
+      <workItem from="1493173143624" duration="13508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161059000" />
+    <option name="totallyTimeSpent" value="173417000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19791667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40254238" sideWeight="0.50282484" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12041885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21892655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19791667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41949153" sideWeight="0.49717513" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -839,7 +980,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -863,43 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tools/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="58" lean-forward="false" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/core/lineReader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="100" column="21" lean-forward="false" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/core/files/file.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="84" column="22" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/excel-to-json.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -916,13 +1019,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/test.js" />
-    <entry file="file://$PROJECT_DIR$/tools/configs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="134" column="16" lean-forward="false" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/createMeta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -949,13 +1045,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/package/modulejs.js" />
     <entry file="file://$PROJECT_DIR$/src/framework/a_mod/README.md" />
-    <entry file="file://$PROJECT_DIR$/tools/deploy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/package/test.js" />
     <entry file="file://$PROJECT_DIR$/src/framework/a_mod/_metadata.js" />
     <entry file="file://$PROJECT_DIR$/src/framework/a_mod/_metadataManager.js" />
@@ -966,95 +1055,11 @@
     <entry file="file://$PROJECT_DIR$/src/framework/a_mod/aTest.js" />
     <entry file="file://$PROJECT_DIR$/src/framework/a_mod/Test.js" />
     <entry file="file://$PROJECT_DIR$/src/framework/game/Game.js" />
-    <entry file="file://$PROJECT_DIR$/src/language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/hotfix/HotFixScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="145" column="37" lean-forward="false" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/package/README.md" />
-    <entry file="file://$PROJECT_DIR$/tools/createPacakge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="95" column="37" lean-forward="false" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/frame/Frame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/AppDelegate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/game/Console.js" />
-    <entry file="file://$PROJECT_DIR$/src/framework/game/FDirector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/game/GameScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="56" column="3" lean-forward="false" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
-          <folding>
-            <marker date="1493171135016" expanded="true" signature="1292:1294" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/network/SocketHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/helper/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4608">
-          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,71 +1071,217 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/package/packageMeta.js">
+    <entry file="file://$PROJECT_DIR$/src/framework/frame/Frame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-          <folding>
-            <marker date="1493171135148" expanded="true" signature="68:79" ph="{...}" />
-            <marker date="1493171135148" expanded="true" signature="6852:6867" ph="[...]" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/game/FDirector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/global/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="216">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/frames/HomeFrame.js">
+    <entry file="file://$PROJECT_DIR$/src/framework/network/SocketHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/game/GameScene.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding>
-            <marker date="1493171135188" expanded="true" signature="1249:1251" ph="{...}" />
+            <marker date="1493179119835" expanded="true" signature="1294:1296" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/frames/HallFrame.js">
+    <entry file="file://$PROJECT_DIR$/tools/build_apk.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/tools/src-res-generate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+        <state relative-caret-position="576">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/framework/package/package.js">
+    <entry file="file://$PROJECT_DIR$/tools/deploy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="216">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/core/files/file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/frame/consoleframe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-9">
+          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/frames/HomeFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+          <folding>
+            <marker date="1493179162263" expanded="true" signature="1251:1253" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/AppDelegate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/game/Console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updateServer/HotFixer/res/project.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/hotfix/HotFixScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="85" column="85" lean-forward="false" selection-start-line="85" selection-start-column="85" selection-end-line="85" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/helper/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/frames/HallFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/package/package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/createPacakge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="84" column="48" lean-forward="true" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/framework/package/packageMeta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="227" column="49" lean-forward="true" selection-start-line="227" selection-start-column="49" selection-end-line="227" selection-end-column="49" />
+          <folding>
+            <marker date="1493198460008" expanded="true" signature="68:79" ph="{...}" />
+            <marker date="1493198460008" expanded="true" signature="6916:6931" ph="[...]" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/framework/package/packageManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="102" column="49" lean-forward="true" selection-start-line="102" selection-start-column="49" selection-end-line="102" selection-end-column="49" />
+        <state relative-caret-position="259">
+          <caret line="45" column="3" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
           <folding />
         </state>
       </provider>

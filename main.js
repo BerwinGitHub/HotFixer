@@ -78,13 +78,13 @@ cc.game.onStart = function () {
     //     appDelegate.applicationDidFinishLaunching();
     // });
 
-    $pm.requireCls($require.framework.global.app, (err, app) => {
+    $require($req.framework.global.app, ({app}) => {
         app.helper.ve.setupVisibleRect(960, 640);
-        $pm.requireCls($require.framework.hotfix.HotFixScene, (err, HotFixScene) => {
+        $require($req.framework.hotfix.HotFixScene, ({HotFixScene}) => {
             //load resources
             var hotFixScene = new HotFixScene();
             hotFixScene.runWithCallback("res/project.manifest", () => {
-                $pm.requireCls($require.framework.AppDelegate, (err, AppDelegate) => {
+                $require($req.framework.AppDelegate, ({AppDelegate}) => {
                     var appDelegate = new AppDelegate();
                     appDelegate.applicationDidFinishLaunching();
                 });
