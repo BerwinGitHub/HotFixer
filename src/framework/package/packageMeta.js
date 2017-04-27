@@ -2,9 +2,9 @@
 var $classes = {
     "AppDelegate": [
         {
-            "file": "framework\\AppDelegate.js",
+            "file": "framework/AppDelegate.js",
             "name": "AppDelegate",
-            "package": "framework\\AppDelegate",
+            "package": "framework.AppDelegate",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -15,11 +15,23 @@ var $classes = {
             ]
         }
     ],
+    "Frame": [
+        {
+            "file": "framework/frame/Frame.js",
+            "name": "Frame",
+            "package": "framework.frame.Frame",
+            "loaded": false,
+            "implement": null,
+            "export": {},
+            "import": [],
+            "ref": []
+        }
+    ],
     "ConsoleFrame": [
         {
-            "file": "framework\\frame\\consoleframe.js",
+            "file": "framework/frame/consoleframe.js",
             "name": "ConsoleFrame",
-            "package": "framework\\frame\\consoleframe",
+            "package": "framework.frame.consoleframe",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -29,23 +41,11 @@ var $classes = {
             ]
         }
     ],
-    "Frame": [
-        {
-            "file": "framework\\frame\\Frame.js",
-            "name": "Frame",
-            "package": "framework\\frame\\Frame",
-            "loaded": false,
-            "implement": null,
-            "export": {},
-            "import": [],
-            "ref": []
-        }
-    ],
     "Console": [
         {
-            "file": "framework\\game\\Console.js",
+            "file": "framework/game/Console.js",
             "name": "Console",
-            "package": "framework\\game\\Console",
+            "package": "framework.game.Console",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -55,9 +55,9 @@ var $classes = {
     ],
     "FDirector": [
         {
-            "file": "framework\\game\\FDirector.js",
+            "file": "framework/game/FDirector.js",
             "name": "FDirector",
-            "package": "framework\\game\\FDirector",
+            "package": "framework.game.FDirector",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -70,9 +70,9 @@ var $classes = {
     ],
     "RootFrame": [
         {
-            "file": "framework\\game\\GameScene.js",
+            "file": "framework/game/GameScene.js",
             "name": "RootFrame",
-            "package": "framework\\game\\GameScene",
+            "package": "framework.game.GameScene",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -85,9 +85,9 @@ var $classes = {
     ],
     "app": [
         {
-            "file": "framework\\global\\app.js",
+            "file": "framework/global/app.js",
             "name": "app",
-            "package": "framework\\global\\app",
+            "package": "framework.global.app",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -100,9 +100,9 @@ var $classes = {
     ],
     "helper": [
         {
-            "file": "framework\\helper\\helper.js",
+            "file": "framework/helper/helper.js",
             "name": "helper",
-            "package": "framework\\helper\\helper",
+            "package": "framework.helper.helper",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -112,9 +112,9 @@ var $classes = {
     ],
     "HotFixScene": [
         {
-            "file": "framework\\hotfix\\HotFixScene.js",
+            "file": "framework/hotfix/HotFixScene.js",
             "name": "HotFixScene",
-            "package": "framework\\hotfix\\HotFixScene",
+            "package": "framework.hotfix.HotFixScene",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -124,9 +124,9 @@ var $classes = {
     ],
     "SocketHelper": [
         {
-            "file": "framework\\network\\SocketHelper.js",
+            "file": "framework/network/SocketHelper.js",
             "name": "SocketHelper",
-            "package": "framework\\network\\SocketHelper",
+            "package": "framework.network.SocketHelper",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -136,9 +136,9 @@ var $classes = {
     ],
     "HallFrame": [
         {
-            "file": "game\\frames\\HallFrame.js",
+            "file": "game/frames/HallFrame.js",
             "name": "HallFrame",
-            "package": "game\\frames\\HallFrame",
+            "package": "game.frames.HallFrame",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -152,9 +152,9 @@ var $classes = {
     ],
     "HomeFrame": [
         {
-            "file": "game\\frames\\HomeFrame.js",
+            "file": "game/frames/HomeFrame.js",
             "name": "HomeFrame",
-            "package": "game\\frames\\HomeFrame",
+            "package": "game.frames.HomeFrame",
             "loaded": false,
             "implement": null,
             "export": {},
@@ -170,54 +170,54 @@ var $classes = {
 var $import = {
     "framework": {
         "AppDelegate": {
-            "_pkg": "framework\\AppDelegate",
+            "_pkg": "framework.AppDelegate",
             "_cls": "AppDelegate"
         },
         "frame": {
-            "consoleframe": {
-                "_pkg": "framework\\frame\\consoleframe",
-                "_cls": "ConsoleFrame"
-            },
             "Frame": {
-                "_pkg": "framework\\frame\\Frame",
+                "_pkg": "framework.frame.Frame",
                 "_cls": "Frame"
+            },
+            "consoleframe": {
+                "_pkg": "framework.frame.consoleframe",
+                "_cls": "ConsoleFrame"
             }
         },
         "game": {
             "Console": {
-                "_pkg": "framework\\game\\Console",
+                "_pkg": "framework.game.Console",
                 "_cls": "Console"
             },
             "FDirector": {
-                "_pkg": "framework\\game\\FDirector",
+                "_pkg": "framework.game.FDirector",
                 "_cls": "FDirector"
             },
             "GameScene": {
-                "_pkg": "framework\\game\\GameScene",
+                "_pkg": "framework.game.GameScene",
                 "_cls": "RootFrame"
             }
         },
         "global": {
             "app": {
-                "_pkg": "framework\\global\\app",
+                "_pkg": "framework.global.app",
                 "_cls": "app"
             }
         },
         "helper": {
             "helper": {
-                "_pkg": "framework\\helper\\helper",
+                "_pkg": "framework.helper.helper",
                 "_cls": "helper"
             }
         },
         "hotfix": {
             "HotFixScene": {
-                "_pkg": "framework\\hotfix\\HotFixScene",
+                "_pkg": "framework.hotfix.HotFixScene",
                 "_cls": "HotFixScene"
             }
         },
         "network": {
             "SocketHelper": {
-                "_pkg": "framework\\network\\SocketHelper",
+                "_pkg": "framework.network.SocketHelper",
                 "_cls": "SocketHelper"
             }
         }
@@ -225,29 +225,29 @@ var $import = {
     "game": {
         "frames": {
             "HallFrame": {
-                "_pkg": "game\\frames\\HallFrame",
+                "_pkg": "game.frames.HallFrame",
                 "_cls": "HallFrame"
             },
             "HomeFrame": {
-                "_pkg": "game\\frames\\HomeFrame",
+                "_pkg": "game.frames.HomeFrame",
                 "_cls": "HomeFrame"
             }
         }
     }
 };
 var $package = {
-    "framework\\AppDelegate": "framework\\AppDelegate",
-    "framework\\frame\\consoleframe": "framework\\frame\\consoleframe",
-    "framework\\frame\\Frame": "framework\\frame\\Frame",
-    "framework\\game\\Console": "framework\\game\\Console",
-    "framework\\game\\FDirector": "framework\\game\\FDirector",
-    "framework\\game\\GameScene": "framework\\game\\GameScene",
-    "framework\\global\\app": "framework\\global\\app",
-    "framework\\helper\\helper": "framework\\helper\\helper",
-    "framework\\hotfix\\HotFixScene": "framework\\hotfix\\HotFixScene",
-    "framework\\network\\SocketHelper": "framework\\network\\SocketHelper",
-    "game\\frames\\HallFrame": "game\\frames\\HallFrame",
-    "game\\frames\\HomeFrame": "game\\frames\\HomeFrame"
+    "framework.AppDelegate": "framework.AppDelegate",
+    "framework.frame.Frame": "framework.frame.Frame",
+    "framework.frame.consoleframe": "framework.frame.consoleframe",
+    "framework.game.Console": "framework.game.Console",
+    "framework.game.FDirector": "framework.game.FDirector",
+    "framework.game.GameScene": "framework.game.GameScene",
+    "framework.global.app": "framework.global.app",
+    "framework.helper.helper": "framework.helper.helper",
+    "framework.hotfix.HotFixScene": "framework.hotfix.HotFixScene",
+    "framework.network.SocketHelper": "framework.network.SocketHelper",
+    "game.frames.HallFrame": "game.frames.HallFrame",
+    "game.frames.HomeFrame": "game.frames.HomeFrame"
 };
 
 var $req = $import;

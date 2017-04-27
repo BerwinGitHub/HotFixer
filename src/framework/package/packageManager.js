@@ -24,14 +24,13 @@ $pm.require = function (meta, loadFinish) {
         loadFinish && loadFinish.apply(null, [{err: "Require不能找到:" + meta._pkg + meta._cls}]);
         return;
     }
-    // 需要加载的类
-    // var needImportClasses = [];
-    // this._searchImports(clsMeta, needImportClasses);
-    // needImportClasses.reverse(); // 逆序加载
 
     // 找出没有加载的Js文件
     var needLoadJs = [];
     this._requireIncludeNeedLoadJs(clsMeta, needLoadJs);
+    needLoadJs.forEach((item, idx) => {
+        needLoadJs[idx] = "src/" + item;
+    });
 
     if (needLoadJs.length > 0) { // 去加载文件
         cc.loader.loadJs(needLoadJs, (err) => {
@@ -39,16 +38,12 @@ $pm.require = function (meta, loadFinish) {
                 loadFinish && loadFinish.apply(null, [{err: err}]);
                 return;
             }
-            // TODO 加载成功后，做引用关系处理
+            this._handleIncludesRelationship(clsMeta, []);
+            loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
         });
-        // this._loadClasses(needLoadJs, (err) => {
-        //     if (err) {
-        //         loadFinish && loadFinish.apply(null, [{err: err}]);
-        //     }
-        //     loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
-        // });
     } else {
-        // TODO 做引用关系处理
+        this._handleIncludesRelationship(clsMeta, []);
+        loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
     }
 };
 
@@ -65,71 +60,58 @@ $pm.requireSync = function (meta) {
     return clsMeta.export;
 };
 
+/**
+ * 引入需要加载js文件
+ * @param meta
+ * @param loadNeeds
+ * @private
+ */
 $pm._requireIncludeNeedLoadJs = function (meta, loadNeeds) {
     if (!meta.loaded)
-        loadNeeds.push("src/" + meta.file);
-    var imports = meta["ref"];
+        loadNeeds.push(meta.file);
+    var imports = meta.ref;
     for (var i = 0; i < imports.length; i++) {
         var importMeta = eval(imports[i]);// eval("$import.testB.TestB")
         var clsMeta = this._findClassMeta(importMeta._cls, importMeta._pkg);
         if (clsMeta) {
             // 是否已经添加过了
-            var isInclude = false;
-            for (var j = 0; j < loadNeeds.length; j++) {
-                if (loadNeeds[j] === clsMeta.file) {
-                    isInclude = true;
-                    break;
-                }
-            }
-            if (!isInclude) {
-                this._searchImports(clsMeta, loadNeeds);
-            }
+            var exist = loadNeeds.some((item) => {
+                return item == clsMeta.file;
+            });
+            if (!exist)
+                this._requireIncludeNeedLoadJs(clsMeta, loadNeeds);
         }
     }
 };
 
-$pm._loadClasses = function (needLoadFiles, loadFinish) {
-    // 加载Classes
-    // var needLoadFiles = [];
-    // needImportClasses.forEach((item) => {
-    //     if (!item.loaded) {// 当前的JS文件是否已经加载过了
-    //         needLoadFiles.push("src/" + item.file);
-    //     }
-    // });
-    // if (needLoadFiles.length == 0) { // 没有需要加载的文件直接返回
-    //     loadFinish();
-    //     return;
-    // }
-    // 加载JS文件
-    cc.loader.loadJs(needLoadFiles, (err) => {
-        if (err) {
-            cc.log("加载JS文件错误 err:" + err);
-            loadFinish({err: err});
-            return;
-        }
-        // 加载完成之后，设置export和import关系
-        // cc.log("JS文件夹加载完成:" + needLoadFiles);
-        // // 执行类函数
-        // needImportClasses.forEach((item) => {
-        //     // 1.先得到该类的所有import
-        //     item.import = (item.import ? item.import : []);
-        //     item.ref.forEach((ref) => {
-        //         var importRef = eval(ref);
-        //         var refClass = this._findClassMeta(importRef._cls, importRef._pkg);
-        //         item.import.push(refClass.export);
-        //     });
-        //     // 2.没有export对象，就新建export对象
-        //     item.export = (item.export ? item.export : {});
-        //     // 3.第一次加载的时候才执行类实现函数
-        //     if (!item.loaded) {
-        //         item.implement.apply(null, [item.export].concat(this._expansionImports(item.import)));
-        //         item.loaded = true;
-        //     }
-        // });
-        loadFinish();
-    });
+/**
+ * 处理引入关系
+ * @param meta
+ * @param cache
+ * @private
+ */
+$pm._handleIncludesRelationship = function (meta, cache) {
+    if (!meta)
+        return;
+    var refs = meta.ref;
+    for (var i = 0; i < refs.length; i++) {
+        var importRef = eval(refs[i]);
+        var refMeta = this._findClassMeta(importRef._cls, importRef._pkg);
+        var exist = cache.some((item) => {
+            return item.file == refMeta.file;
+        });
+        if (!exist)
+            this._handleIncludesRelationship(refMeta, cache);
+        meta.import.push(refMeta.export);
+        cache.push(refMeta);
+    }
+    if (!meta.loaded) {
+        meta.loaded = true;
+        meta.implement.apply(null, [meta.export].concat(this._expansionImports(meta.import)));
+    }
 };
 
+// 展开引入数据
 $pm._expansionImports = function (imports) {
     var data = {};
     imports.forEach(($import) => {
@@ -140,46 +122,13 @@ $pm._expansionImports = function (imports) {
     return [data];
 };
 
+// 展开导出数据
 $pm._expansionExports = function (exports) {
     var data = {};
     for (var key in exports) {
         data[key] = exports[key];
     }
     return [data];
-};
-
-/**
- * 遍历查找引入该类需要的其他索引类
- * @param clsMeta
- * @param needImportClasses
- * @returns {*}
- * @private
- */
-$pm._searchImports = function (clsMeta, needImportClasses) {
-    needImportClasses.push(clsMeta);
-    var imports = clsMeta["ref"];
-    for (var i = 0; i < imports.length; i++) {
-        var importMeta = eval(imports[i]);// eval("$import.testB.TestB")
-        var clsMeta2 = this._findClassMeta(importMeta._cls, importMeta._pkg);
-        if (clsMeta2) {
-            // 是否已经添加过了
-            var isInclude = false;
-            for (var j = 0; j < needImportClasses.length; j++) {
-                if (needImportClasses[j]["name"] == clsMeta2["name"] &&
-                    needImportClasses[j]["package"] == clsMeta2["package"]) {
-                    // 把这个交换到最后
-                    // var temp = needImportClasses.splice(j, 1);
-                    // needImportClasses.push(temp[0]);
-                    isInclude = true;
-                    break;
-                }
-            }
-            if (!isInclude) {
-                this._searchImports(clsMeta2, needImportClasses);
-            }
-        }
-    }
-    return needImportClasses;
 };
 
 /**
