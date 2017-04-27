@@ -5,12 +5,6 @@
 var $pm = {};
 
 /**
- *
- * @type {{}}
- */
-$pm.loaderCache = {};
-
-/**
  * 多个同时加载
  * @param metas
  * @param loadFinish
@@ -60,7 +54,7 @@ $pm._loadClasses = function (needImportClasses, loadFinish) {
     // 加载Classes
     var needLoadFiles = [];
     needImportClasses.forEach((item) => {
-        if (!this.isJsLoaded(item.file)) {// 当前的JS文件是否已经加载过了
+        if (!item.loaded) {// 当前的JS文件是否已经加载过了
             needLoadFiles.push("src/" + item.file);
         }
     });
@@ -89,9 +83,9 @@ $pm._loadClasses = function (needImportClasses, loadFinish) {
             // 2.没有export对象，就新建export对象
             item.export = (item.export ? item.export : {});
             // 3.第一次加载的时候才执行类实现函数
-            if (!this.isJsLoaded(item.file)) {
+            if (!item.loaded) {
                 item.implement.apply(null, [item.export].concat(this._expansionImports(item.import)));
-                $pm.loaderCache[item.file] = true;
+                item.loaded = true;
             }
         });
         loadFinish();
@@ -136,8 +130,8 @@ $pm._searchImports = function (clsMeta, needImportClasses) {
                 if (needImportClasses[j]["name"] == clsMeta2["name"] &&
                     needImportClasses[j]["package"] == clsMeta2["package"]) {
                     // 把这个交换到最后
-                    var temp = needImportClasses.splice(j, 1);
-                    needImportClasses.push(temp[0]);
+                    // var temp = needImportClasses.splice(j, 1);
+                    // needImportClasses.push(temp[0]);
                     isInclude = true;
                     break;
                 }
@@ -174,12 +168,6 @@ $pm._findClassMeta = function (clsName, pkg) {
         }
         return null;
     }
-};
-
-$pm.isJsLoaded = function (file) {
-    if ($pm.loaderCache[file])
-        return true;
-    return false;
 };
 
 var $packageManager = $pm;

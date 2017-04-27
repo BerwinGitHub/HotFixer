@@ -16,8 +16,8 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
     var $package = {};
     var $classes = {};
     recursiveFiles(SRC, $import, $package, $classes);
-    var saves = [$import, $package, $classes];
-    var header = ["var $import = ", "var $package = ", "var $classes = "];
+    var saves = [$classes, $import, $package ];
+    var header = ["var $classes = ", "var $import = ", "var $package = "];
     var footer = [";\r\n", ";\r\n", ";\r\n"];
     var content = cfgs.common.JSON_FILE_NOTE;
     for (var i = 0; i < saves.length; i++) {
@@ -99,6 +99,7 @@ function readJsFile(p, $package, $classes, child) {
                     "file": rltFile,
                     "name": clsName,
                     "package": pkg,
+                    "loaded":false,
                     "implement": null,
                     "export": {},
                     "import": [],
