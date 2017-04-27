@@ -25,16 +25,31 @@ $pm.require = function (meta, loadFinish) {
         return;
     }
     // 需要加载的类
-    var needImportClasses = [];
-    this._searchImports(clsMeta, needImportClasses);
-    needImportClasses.reverse(); // 逆序加载
+    // var needImportClasses = [];
+    // this._searchImports(clsMeta, needImportClasses);
+    // needImportClasses.reverse(); // 逆序加载
 
-    this._loadClasses(needImportClasses, (err) => {
-        if (err) {
-            loadFinish && loadFinish.apply(null, [{err: err}]);
-        }
-        loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
-    });
+    // 找出没有加载的Js文件
+    var needLoadJs = [];
+    this._requireIncludeNeedLoadJs(clsMeta, needLoadJs);
+
+    if (needLoadJs.length > 0) { // 去加载文件
+        cc.loader.loadJs(needLoadJs, (err) => {
+            if (err) {
+                loadFinish && loadFinish.apply(null, [{err: err}]);
+                return;
+            }
+            // TODO 加载成功后，做引用关系处理
+        });
+        // this._loadClasses(needLoadJs, (err) => {
+        //     if (err) {
+        //         loadFinish && loadFinish.apply(null, [{err: err}]);
+        //     }
+        //     loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
+        // });
+    } else {
+        // TODO 做引用关系处理
+    }
 };
 
 /**
@@ -50,18 +65,41 @@ $pm.requireSync = function (meta) {
     return clsMeta.export;
 };
 
-$pm._loadClasses = function (needImportClasses, loadFinish) {
-    // 加载Classes
-    var needLoadFiles = [];
-    needImportClasses.forEach((item) => {
-        if (!item.loaded) {// 当前的JS文件是否已经加载过了
-            needLoadFiles.push("src/" + item.file);
+$pm._requireIncludeNeedLoadJs = function (meta, loadNeeds) {
+    if (!meta.loaded)
+        loadNeeds.push("src/" + meta.file);
+    var imports = meta["ref"];
+    for (var i = 0; i < imports.length; i++) {
+        var importMeta = eval(imports[i]);// eval("$import.testB.TestB")
+        var clsMeta = this._findClassMeta(importMeta._cls, importMeta._pkg);
+        if (clsMeta) {
+            // 是否已经添加过了
+            var isInclude = false;
+            for (var j = 0; j < loadNeeds.length; j++) {
+                if (loadNeeds[j] === clsMeta.file) {
+                    isInclude = true;
+                    break;
+                }
+            }
+            if (!isInclude) {
+                this._searchImports(clsMeta, loadNeeds);
+            }
         }
-    });
-    if (needLoadFiles.length == 0) { // 没有需要加载的文件直接返回
-        loadFinish();
-        return;
     }
+};
+
+$pm._loadClasses = function (needLoadFiles, loadFinish) {
+    // 加载Classes
+    // var needLoadFiles = [];
+    // needImportClasses.forEach((item) => {
+    //     if (!item.loaded) {// 当前的JS文件是否已经加载过了
+    //         needLoadFiles.push("src/" + item.file);
+    //     }
+    // });
+    // if (needLoadFiles.length == 0) { // 没有需要加载的文件直接返回
+    //     loadFinish();
+    //     return;
+    // }
     // 加载JS文件
     cc.loader.loadJs(needLoadFiles, (err) => {
         if (err) {
@@ -70,24 +108,24 @@ $pm._loadClasses = function (needImportClasses, loadFinish) {
             return;
         }
         // 加载完成之后，设置export和import关系
-        cc.log("JS文件夹加载完成:" + needLoadFiles);
-        // 执行类函数
-        needImportClasses.forEach((item) => {
-            // 1.先得到该类的所有import
-            item.import = (item.import ? item.import : []);
-            item.ref.forEach((ref) => {
-                var importRef = eval(ref);
-                var refClass = this._findClassMeta(importRef._cls, importRef._pkg);
-                item.import.push(refClass.export);
-            });
-            // 2.没有export对象，就新建export对象
-            item.export = (item.export ? item.export : {});
-            // 3.第一次加载的时候才执行类实现函数
-            if (!item.loaded) {
-                item.implement.apply(null, [item.export].concat(this._expansionImports(item.import)));
-                item.loaded = true;
-            }
-        });
+        // cc.log("JS文件夹加载完成:" + needLoadFiles);
+        // // 执行类函数
+        // needImportClasses.forEach((item) => {
+        //     // 1.先得到该类的所有import
+        //     item.import = (item.import ? item.import : []);
+        //     item.ref.forEach((ref) => {
+        //         var importRef = eval(ref);
+        //         var refClass = this._findClassMeta(importRef._cls, importRef._pkg);
+        //         item.import.push(refClass.export);
+        //     });
+        //     // 2.没有export对象，就新建export对象
+        //     item.export = (item.export ? item.export : {});
+        //     // 3.第一次加载的时候才执行类实现函数
+        //     if (!item.loaded) {
+        //         item.implement.apply(null, [item.export].concat(this._expansionImports(item.import)));
+        //         item.loaded = true;
+        //     }
+        // });
         loadFinish();
     });
 };
