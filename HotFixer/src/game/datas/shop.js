@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var shop = {
+cc.app.datas.shop = {
     "Sheet1": [
         {
             "id": 0,

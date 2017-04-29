@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var mulwin = {
+cc.app.datas.mulwin = {
     "lotty": [
         {
             "id": 0,

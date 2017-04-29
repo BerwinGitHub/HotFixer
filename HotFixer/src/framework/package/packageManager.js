@@ -5,20 +5,26 @@
 var $pm = {};
 
 /**
- * 异步加载class。会去loadJS
- * @param meta $require.xxx.xxx
+ * 多个同时加载
+ * @param metas
  * @param loadFinish
  */
-$pm.require = function (meta, loadFinish) {
-    var clsMeta = this._findClassMeta(meta._cls, meta._pkg);
-    if (!clsMeta) {
-        loadFinish && loadFinish.apply(null, [{err: "Require不能找到:" + meta._pkg + meta._cls}]);
-        return;
-    }
-
+$pm.requires = function (reqs, loadFinish) {
     // 找出没有加载的Js文件
     var needLoadJs = [];
-    this._requireIncludeNeedLoadJs(clsMeta, needLoadJs);
+    var metas = [];
+    for (var i = 0; i < reqs.length; i++) {
+        var req = reqs[i];
+        var meta = this._findClassMeta(req._cls, req._pkg);
+        if (!meta) {
+            loadFinish && loadFinish.apply(null, [{err: "Require不能找到:" + meta._pkg + meta._cls}]);
+            return;
+        }
+        metas.push(meta);
+        //
+        this._requireIncludeNeedLoadJs(meta, needLoadJs);
+    }
+    // 在前面添加src/
     needLoadJs.forEach((item, idx) => {
         needLoadJs[idx] = "src/" + item;
     });
@@ -29,12 +35,20 @@ $pm.require = function (meta, loadFinish) {
                 loadFinish && loadFinish.apply(null, [{err: err}]);
                 return;
             }
-            this._handleIncludesRelationship(clsMeta, []);
-            loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
+            var datas = {};
+            metas.forEach((meta) => {
+                this._handleIncludesRelationship(meta, []);
+                this._expansionExports(meta.export, datas);
+            });
+            loadFinish && loadFinish.apply(null, [datas]);
         });
     } else {
-        this._handleIncludesRelationship(clsMeta, []);
-        loadFinish && loadFinish.apply(null, this._expansionExports(clsMeta.export));
+        var datas = {};
+        metas.forEach((meta) => {
+            this._handleIncludesRelationship(meta, []);
+            this._expansionExports(meta.export, datas);
+        });
+        loadFinish && loadFinish.apply(null, [datas]);
     }
 };
 
@@ -51,17 +65,11 @@ $pm.requireSync = function (meta) {
     return clsMeta.export;
 };
 
-/**
- * 多个同时加载
- * @param metas
- * @param loadFinish
- */
-$pm.requires = function (metas, loadFinish) {
-
-};
-
 $pm.loadGroup = function (name, cb) {
     var group = $groups[name];
+    for (var i = 0; i < group.length; i++) {
+        group[i] = "src/" + group[i];
+    }
     if (!group) {
         cc.log("loadGroup失败，没有找到group:" + name);
         return;
@@ -117,7 +125,7 @@ $pm._handleIncludesRelationship = function (meta, cache) {
     }
     if (!meta.loaded) {
         meta.loaded = true;
-        console.log("loaded:" + meta.file);
+        // console.log("loaded:" + meta.file);
         meta.factory.apply(null, [meta.export].concat(this._expansionImports(meta)));
     }
     delete meta._$_inCircle;
@@ -141,12 +149,10 @@ $pm._expansionImports = function (meta) {
 };
 
 // 展开导出数据
-$pm._expansionExports = function (exports) {
-    var data = {};
+$pm._expansionExports = function (exports, data) {
     for (var key in exports) {
         data[key] = exports[key];
     }
-    return [data];
 };
 
 /**

@@ -2,17 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a98217b-60ed-4e34-867f-59a4eba615b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HotFixer/src/framework/core/dataManager.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HotFixer/src/framework/global/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HotFixer/src/framework/core/appManager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HotFixer/src/framework/core/dataManager.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studio/cocosstudio/HelloWorld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studio/cocosstudio/MainScene.csd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studio/cocosstudio/MainScene.udf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studio/res/HelloWorld.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studio/res/MainScene.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/AppDelegate.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/AppDelegate.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/frame/Frame.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/frame/Frame.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/frame/consoleframe.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/frame/consoleframe.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/Console.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/Console.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/FDirector.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/FDirector.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/GameScene.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/game/GameScene.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/helper/helper.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/helper/helper.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/hotfix/HotFixScene.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/hotfix/HotFixScene.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/network/SocketHelper.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/network/SocketHelper.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/package.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/package.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/packageManager.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/packageManager.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/packageMeta.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/framework/package/packageMeta.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/game/frames/HallFrame.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/game/frames/HallFrame.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/game/frames/HomeFrame.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/game/frames/HomeFrame.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/jsList.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/jsList.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/resource.jsc" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/src/resource.jsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/main.js" afterPath="$PROJECT_DIR$/HotFixer/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/res/project.manifest" afterPath="$PROJECT_DIR$/HotFixer/res/project.manifest" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/framework/package/package.js" afterPath="$PROJECT_DIR$/HotFixer/src/framework/package/package.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js" afterPath="$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js" afterPath="$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/ad.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/ad.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/buff.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/buff.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/chamption.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/chamption.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/fakes.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/fakes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/global.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/item.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/item.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/jackpots.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/jackpots.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/mulwin.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/mulwin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/newbieEffect.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/newbieEffect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/onlineReward.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/onlineReward.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/shop.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/shop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/datas/sound.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/datas/sound.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/game/frames/HomeFrame.js" afterPath="$PROJECT_DIR$/HotFixer/src/game/frames/HomeFrame.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/jsList.js" afterPath="$PROJECT_DIR$/HotFixer/src/jsList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/src/resource.js" afterPath="$PROJECT_DIR$/HotFixer/src/resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/tools/configs.js" afterPath="$PROJECT_DIR$/HotFixer/tools/configs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/tools/createPacakge.js" afterPath="$PROJECT_DIR$/HotFixer/tools/createPacakge.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/tools/excel-to-json.js" afterPath="$PROJECT_DIR$/HotFixer/tools/excel-to-json.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/res/project.manifest" afterPath="$PROJECT_DIR$/HotFixer/updateServer/HotFixer/res/project.manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studio/studio.ccs" afterPath="$PROJECT_DIR$/studio/studio.ccs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studio/studio.cfg" afterPath="$PROJECT_DIR$/studio/studio.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studio/studio.udf" afterPath="$PROJECT_DIR$/studio/studio.udf" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +69,71 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ad.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/game/datas/ad.js">
+      <file leaf-file-name="packageManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="121">
+              <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeScene.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/res/studio/HomeScene/HomeScene.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="139" column="36" lean-forward="false" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jsList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/jsList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/resource.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HallFrame.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/game/frames/HallFrame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeFrame.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/game/frames/HomeFrame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/helper/helper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -43,91 +142,28 @@
       <file leaf-file-name="excel-to-json.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HotFixer/tools/excel-to-json.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="171">
+              <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/tools/configs.js">
+      <file leaf-file-name="src-res-generate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotFixer/tools/src-res-generate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="137" column="17" lean-forward="false" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createPacakge.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/tools/createPacakge.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="119" column="43" lean-forward="false" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="packageMeta.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7130">
-              <caret line="310" column="19" lean-forward="false" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buff.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/game/datas/buff.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-2098">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/package.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="80" column="2" lean-forward="false" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="packageManager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotFixScene.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/hotfix/HotFixScene.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3092">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -145,6 +181,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ROW_INFO</find>
+      <find>_expansionExports</find>
+      <find>console.log</find>
+      <find>Button_1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,16 +192,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HotFixer/src/framework/core/appManager.js" />
-        <option value="$PROJECT_DIR$/HotFixer/main.js" />
         <option value="$PROJECT_DIR$/HotFixer/src/framework/core/dataManager.js" />
         <option value="$PROJECT_DIR$/HotFixer/src/game/data/ad.js" />
-        <option value="$PROJECT_DIR$/HotFixer/tools/excel-to-json.js" />
-        <option value="$PROJECT_DIR$/HotFixer/tools/createPacakge.js" />
         <option value="$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js" />
-        <option value="$PROJECT_DIR$/HotFixer/tools/configs.js" />
-        <option value="$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js" />
+        <option value="$PROJECT_DIR$/HotFixer/src/framework/core/appManager.js" />
         <option value="$PROJECT_DIR$/HotFixer/src/framework/package/package.js" />
+        <option value="$PROJECT_DIR$/HotFixer/tools/configs.js" />
+        <option value="$PROJECT_DIR$/HotFixer/tools/excel-to-json.js" />
+        <option value="$PROJECT_DIR$/HotFixer/src/framework/core/datas.js" />
+        <option value="$PROJECT_DIR$/HotFixer/src/framework/core/app.js" />
+        <option value="$PROJECT_DIR$/HotFixer/tools/createPacakge.js" />
+        <option value="$PROJECT_DIR$/HotFixer/main.js" />
+        <option value="$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js" />
+        <option value="$PROJECT_DIR$/HotFixer/res/studio/HomeScene/HomeScene.json" />
+        <option value="$PROJECT_DIR$/HotFixer/src/resource.js" />
+        <option value="$PROJECT_DIR$/HotFixer/src/game/frames/HomeFrame.js" />
       </list>
     </option>
   </component>
@@ -301,186 +345,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="updateServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="datas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="package" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotFixer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hotfix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -496,7 +360,7 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.package">
+  <component name="RunManager" selected="Node.js.deploy">
     <configuration default="true" type="ApexTest" factoryName="Apex Test">
       <method />
     </configuration>
@@ -581,7 +445,7 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="data" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/excel-to-json.js" working-dir="$PROJECT_DIR$/HotFixer">
+    <configuration default="false" name="datas" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/excel-to-json.js" working-dir="$PROJECT_DIR$/HotFixer">
       <profiling v8-profiler-path="" />
       <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
         <option name="envVars">
@@ -609,9 +473,67 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="res_sList" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/src-res-generate.js" working-dir="$PROJECT_DIR$/HotFixer">
+      <profiling v8-profiler-path="" />
+      <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
+        <option name="envVars">
+          <list />
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="bridge" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list />
+        </option>
+      </EXTENSION>
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+        <profiling v8-profiler-path="" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="deploy" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="tools/deploy.js" working-dir="$PROJECT_DIR$/HotFixer">
+      <profiling v8-profiler-path="" />
+      <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
+        <option name="envVars">
+          <list />
+        </option>
+        <option name="extraHosts">
+          <list />
+        </option>
+        <option name="links">
+          <list />
+        </option>
+        <option name="networkDisabled" value="false" />
+        <option name="networkMode" value="bridge" />
+        <option name="portBindings">
+          <list />
+        </option>
+        <option name="publishAllPorts" value="false" />
+        <option name="version" value="1" />
+        <option name="volumeBindings">
+          <list />
+        </option>
+      </EXTENSION>
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+        <profiling v8-profiler-path="" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Node.js.package" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.data" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.datas" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.res_sList" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.deploy" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -624,23 +546,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493461366618</updated>
-      <workItem from="1493461369652" duration="5025000" />
+      <workItem from="1493461369652" duration="9068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5025000" />
+    <option name="totallyTimeSpent" value="9068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1239" height="777" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -664,7 +586,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -733,68 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/appManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/helper/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/dataManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/jsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HotFixer/src/game/data/sound.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/tools/excel-to-json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -815,34 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/game/datas/ad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HotFixer/src/game/datas/buff.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/tools/createPacakge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="119" column="43" lean-forward="false" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/tools/configs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="137" column="17" lean-forward="false" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -858,14 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7130">
-          <caret line="310" column="19" lean-forward="false" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/hotfix/HotFixScene.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3092">
@@ -874,18 +706,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js">
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/appManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/network/SocketHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/dataManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/tools/configs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="113" column="50" lean-forward="false" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/game/datas/ad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <marker date="1493482826000" expanded="true" signature="229:614" ph="{...}" />
+            <marker date="1493482826000" expanded="true" signature="268:533" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/core/datas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <marker date="1493482806000" expanded="true" signature="79:434" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/tools/createPacakge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="119" column="42" lean-forward="false" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <marker date="1493483204000" expanded="true" signature="2692:4000" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageMeta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/package.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="80" column="2" lean-forward="false" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
+        <state relative-caret-position="312">
+          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/package/packageManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="69" column="7" lean-forward="false" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/res/studio/HomeScene/HomeScene.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="139" column="36" lean-forward="false" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/tools/excel-to-json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/jsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/tools/src-res-generate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2098">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/framework/helper/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/game/frames/HallFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HotFixer/src/game/frames/HomeFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding />
         </state>
       </provider>

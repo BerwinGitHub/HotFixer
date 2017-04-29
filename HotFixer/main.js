@@ -66,32 +66,23 @@ cc.game.onStart = function () {
     // cc.view.setOrientation(cc.ORIENTATION_PORTRAIT);
 
     // Setup the resolution policy and design resolution size
-    // cc.view.setDesignResolutionSize(1136, 640, cc.ResolutionPolicy.SHOW_ALL);
+    cc.view.setDesignResolutionSize(1136, 640, cc.ResolutionPolicy.SHOW_ALL);
     // helper.ve.setupVisibleRect(960, 640);
 
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
-    //load resources
-    // var hotFixScene = new HotFixScene();
-    // hotFixScene.runWithCallback("res/project.manifest", () => {
-    //     var appDelegate = new AppDelegate();
-    //     appDelegate.applicationDidFinishLaunching();
-    // });
 
-    $require($req.framework.core.appManager, ({app}) => {
-        // app.helper.ve.setupVisibleRect(960, 640);
-        cc.view.setDesignResolutionSize(1136, 640, cc.ResolutionPolicy.SHOW_ALL);
-        $require($req.framework.hotfix.HotFixScene, ({HotFixScene}) => {
-            //load resources
-            var hotFixScene = new HotFixScene();
-            hotFixScene.runWithCallback("res/project.manifest", () => {
-                $require($req.framework.AppDelegate, ({AppDelegate}) => {
-                    var appDelegate = new AppDelegate();
-                    appDelegate.applicationDidFinishLaunching();
-                });
-            });
+    $requires([
+        $req.framework.core.app,
+        $req.framework.hotfix.HotFixScene,
+        $req.framework.AppDelegate], ({app, HotFixScene, AppDelegate}) => {
+        app.setUpEnvironment();
+        //load resources
+        var hotFixScene = new HotFixScene();
+        hotFixScene.runWithCallback("res/project.manifest", () => {
+            var appDelegate = new AppDelegate();
+            appDelegate.applicationDidFinishLaunching();
         });
     });
-
 };
 cc.game.run();

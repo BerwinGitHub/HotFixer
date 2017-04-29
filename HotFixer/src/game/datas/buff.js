@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var buff = {
+cc.app.datas.buff = {
     "Sheet1": [
         {
             "id": 0,

@@ -22,7 +22,7 @@ FILE.recursiveFiles(srcPath, (path, fileName, suffix) => {
     } else {
         excelStr = JSON.stringify(excelData);
     }
-    excelStr = CFGS.common.JSON_FILE_NOTE + CFGS.e2j.EXTRA_TXT + "var " + fileName + " = " + excelStr;
+    excelStr = CFGS.common.JSON_FILE_NOTE + CFGS.e2j.PREFIX_TXT + fileName + " = " + excelStr;
     // 3.写入文件
     var jsFilePath = destPath + relativePath + ".js";
     FILE.writeToFile(jsFilePath, excelStr, (err) => {

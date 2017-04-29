@@ -111,7 +111,7 @@ var e2j = {
     PATH_SRC: "../../xlsx",// 资源原路径（*/xlsx文件的路径）
     PATH_DES: "../src/game/datas",// 资源生成相对路径，生成的js文件放置的位置
     FORMAT_JSON: common.FORMAT_JSON,// 导出来的js文件是否格式化
-    EXTRA_TXT: "$group(\"datas\");\n",// 添加组
+    PREFIX_TXT: "$group(\"datas\");\ncc.app.datas.",// 添加组
     /**
      * 用来确定 字段名&类型名&备注分别在哪行。
      */

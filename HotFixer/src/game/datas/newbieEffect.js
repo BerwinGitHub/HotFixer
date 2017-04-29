@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var newbieEffect = {
+cc.app.datas.newbieEffect = {
     "level": [
         {
             "id": 1,

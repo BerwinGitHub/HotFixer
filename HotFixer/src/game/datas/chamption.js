@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var chamption = {
+cc.app.datas.chamption = {
     "prize": [
         {
             "id": 0,

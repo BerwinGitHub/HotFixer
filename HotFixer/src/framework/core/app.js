@@ -4,20 +4,24 @@
 
 $include($import.framework.game.Console);
 $include($import.framework.helper.helper);
+$include($import.framework.core.datas);
 
-$class("appManager", function ($export, {Console, helper}) {
+$class("app", function ($export, {Console, helper, datas}) {
     /**
      *
      */
-    var appManager = {
+    var app = {
         // insert code here
-        init: function () {
+        setUpEnvironment: function () {
             this.helper = $use(helper);
             this.console = $use(Console);
+            this.datas = $use(datas);
+
+            //
+            this.datas.setUpEnvironment();
         },
     };
-    appManager.init();
-    cc.am = appManager;
+    cc.app = app;
     // $export.app = app;
-    $public("appManager", appManager, $export);
+    $public("app", app, $export);
 });

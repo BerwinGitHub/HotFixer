@@ -17,31 +17,34 @@ var $classes = {
             ]
         }
     ],
-    "appManager": [
+    "app": [
         {
-            "file": "framework/core/appManager.js",
-            "name": "appManager",
-            "package": "framework.core.appManager",
+            "file": "framework/core/app.js",
+            "name": "app",
+            "package": "framework.core.app",
             "loaded": false,
             "factory": null,
             "export": {
-                "appManager": {}
+                "app": {}
             },
             "import": [],
             "ref": [
                 "$import.framework.game.Console",
-                "$import.framework.helper.helper"
+                "$import.framework.helper.helper",
+                "$import.framework.core.datas"
             ]
         }
     ],
-    "dataManager": [
+    "datas": [
         {
-            "file": "framework/core/dataManager.js",
-            "name": "dataManager",
-            "package": "framework.core.dataManager",
+            "file": "framework/core/datas.js",
+            "name": "datas",
+            "package": "framework.core.datas",
             "loaded": false,
             "factory": null,
-            "export": {},
+            "export": {
+                "datas": {}
+            },
             "import": [],
             "ref": []
         }
@@ -211,13 +214,13 @@ var $import = {
             "_cls": "AppDelegate"
         },
         "core": {
-            "appManager": {
-                "_pkg": "framework.core.appManager",
-                "_cls": "appManager"
+            "app": {
+                "_pkg": "framework.core.app",
+                "_cls": "app"
             },
-            "dataManager": {
-                "_pkg": "framework.core.dataManager",
-                "_cls": "dataManager"
+            "datas": {
+                "_pkg": "framework.core.datas",
+                "_cls": "datas"
             }
         },
         "frame": {
@@ -278,8 +281,8 @@ var $import = {
 };
 var $package = {
     "framework.AppDelegate": "framework.AppDelegate",
-    "framework.core.appManager": "framework.core.appManager",
-    "framework.core.dataManager": "framework.core.dataManager",
+    "framework.core.app": "framework.core.app",
+    "framework.core.datas": "framework.core.datas",
     "framework.frame.Frame": "framework.frame.Frame",
     "framework.frame.consoleframe": "framework.frame.consoleframe",
     "framework.game.Console": "framework.game.Console",

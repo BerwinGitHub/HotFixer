@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var item = {
+cc.app.datas.item = {
     "Sheet1": [
         {
             "id": 0,

@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var global = {
+cc.app.datas.global = {
     "Sheet1": [
         {
             "大厅音乐": "大厅音乐",

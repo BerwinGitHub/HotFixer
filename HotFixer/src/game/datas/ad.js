@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
 $group("datas");
-var ad = {
+cc.app.datas.ad = {
     "rewardedvideo": [
         {
             "id": 0,

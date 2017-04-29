@@ -51,7 +51,7 @@ var $class = function (clsName, factory, pkg = "") {
  * @param loadFinish
  */
 var $require = function (meta, loadFinish) {
-    $pm.require(meta, loadFinish);
+    $pm.requires([meta], loadFinish);
 };
 
 /**
