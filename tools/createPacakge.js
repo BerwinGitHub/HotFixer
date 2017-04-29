@@ -16,7 +16,7 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
     var $package = {};
     var $classes = {};
     recursiveFiles(SRC, $import, $package, $classes);
-    var saves = [$classes, $import, $package ];
+    var saves = [$classes, $import, $package];
     var header = ["var $classes = ", "var $import = ", "var $package = "];
     var footer = [";\r\n", ";\r\n", ";\r\n"];
     var content = cfgs.common.JSON_FILE_NOTE;
@@ -76,39 +76,44 @@ function readJsFile(p, $package, $classes, child) {
     var line;
     var lineNum = 1;
     var hasClass = false;
+    var exports = {};
     while ((line = reader.next())) {
         line = line.replace(/[\r\n]/g, ""); // 在Windows上面每行有\r或\n，在这替换掉
-        // if (/^\[\"package\s+(.*)(\"]|\"];)$/.test(line)) {// package
-        //     // var pkg = /^\[\"package\s+(.*)(\"]|\"];)$/.exec(line)[1];
-        //     // child["package"] = pkg;
-        // } else
-        if (/^\$include\(.*(\)|\);)$/.test(line)) {// import
-            // 先把两边括号去掉
-            var content = /^\$include\((\$import.*)(\)|\);)$/.exec(line)[1].replace(/\s+/g, "");
-            ;
-            var imp = content.split(",")// js语法规则只有','可行
-            imports = imports.concat(imp);
-        } else if (/^\$class\(\"(.*)\".*$/.test(line)) {// classes
-            var clsName = /^\$class\(\"(.*)\".*$/.exec(line)[1];
-            if (!isSamePkg$ClsName($classes, pkg, clsName)) {
-                hasClass = true;
-                child._pkg = pkg;
-                child._cls = clsName;
-                //
-                var meta = {
-                    "file": rltFile,
-                    "name": clsName,
-                    "package": pkg,
-                    "loaded":false,
-                    "implement": null,
-                    "export": {},
-                    "import": [],
-                    "ref": imports,
-                };
-                $classes[clsName] = $classes[clsName] || [];
-                $classes[clsName].push(meta);
-            } else {
-                console.log("跳过,同包名下不能有相同类(" + p + " => " + lineNum + "行 => " + clsName + ")");
+        line = line.replace(/(^\s*)|(\s*$)/g, ""); // 替换掉首尾的空格
+        if (line.startsWith("$")) {
+            if (/^\$include\(.*(\)|\);)$/.test(line)) {// import
+                // 先把两边括号去掉
+                var content = /^\$include\((\$import.*)(\)|\);)$/.exec(line)[1].replace(/\s+/g, "");
+                ;
+                var imp = content.split(",")// js语法规则只有','可行
+                imports = imports.concat(imp);
+            } else if (/^\$class\(\"(.*)\".*$/.test(line)) {// classes
+                var clsName = /^\$class\(\"(.*)\".*$/.exec(line)[1];
+                if (!isSamePkg$ClsName($classes, pkg, clsName)) {
+                    hasClass = true;
+                    child._pkg = pkg;
+                    child._cls = clsName;
+                    //
+                    var meta = {
+                        "file": rltFile,
+                        "name": clsName,
+                        "package": pkg,
+                        "loaded": false,
+                        "factory": null,
+                        "export": {},
+                        "import": [],
+                        "ref": imports,
+                    };
+                    exports = meta.export;
+                    $classes[clsName] = $classes[clsName] || [];
+                    $classes[clsName].push(meta);
+                } else {
+                    console.log("跳过,同包名下不能有相同类(" + p + " => " + lineNum + "行 => " + clsName + ")");
+                }
+            } else if (/^\$public\(\"(.*)\".*$/.test(line)) { // public
+                var pub = /^\$public\(\"(.*)\".*$/.exec(line)[1];
+                exports[pub] = {};
+
             }
         }
         lineNum++;

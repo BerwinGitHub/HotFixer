@@ -47,5 +47,6 @@ $class("Console", function($export){
         },
     };
 
-    $export.Console = Console;
+    // $export.Console = Console;
+    $public("Console", Console, $export);
 });

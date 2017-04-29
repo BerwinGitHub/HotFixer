@@ -5,15 +5,6 @@
 var $pm = {};
 
 /**
- * 多个同时加载
- * @param metas
- * @param loadFinish
- */
-$pm.requires = function (metas, loadFinish) {
-
-};
-
-/**
  * 异步加载class。会去loadJS
  * @param meta $require.xxx.xxx
  * @param loadFinish
@@ -61,6 +52,15 @@ $pm.requireSync = function (meta) {
 };
 
 /**
+ * 多个同时加载
+ * @param metas
+ * @param loadFinish
+ */
+$pm.requires = function (metas, loadFinish) {
+
+};
+
+/**
  * 引入需要加载js文件
  * @param meta
  * @param loadNeeds
@@ -91,8 +91,9 @@ $pm._requireIncludeNeedLoadJs = function (meta, loadNeeds) {
  * @private
  */
 $pm._handleIncludesRelationship = function (meta, cache) {
-    if (!meta)
+    if (!meta || meta._$_inCircle)
         return;
+    meta._$_inCircle = true;
     var refs = meta.ref;
     for (var i = 0; i < refs.length; i++) {
         var importRef = eval(refs[i]);
@@ -107,16 +108,24 @@ $pm._handleIncludesRelationship = function (meta, cache) {
     }
     if (!meta.loaded) {
         meta.loaded = true;
-        meta.implement.apply(null, [meta.export].concat(this._expansionImports(meta.import)));
+        console.log("loaded:" + meta.file);
+        meta.factory.apply(null, [meta.export].concat(this._expansionImports(meta)));
     }
+    delete meta._$_inCircle;
 };
 
 // 展开引入数据
-$pm._expansionImports = function (imports) {
+$pm._expansionImports = function (meta) {
+    var imports = meta.import;
     var data = {};
-    imports.forEach(($import) => {
+    imports.forEach(($import) => {// [{},{}]
         for (var key in $import) {
-            data[key] = $import[key]
+            // data[key] = $import[key];
+            (function ($import, data, key) {
+                data[key] = function () {
+                    return $import[key];
+                };
+            })($import, data, key);
         }
     });
     return [data];

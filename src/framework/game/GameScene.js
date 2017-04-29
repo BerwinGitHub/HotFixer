@@ -6,7 +6,7 @@ $include($import.framework.frame.consoleframe);
 
 $class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
 
-    var RootFrame = Frame.extend({
+    var RootFrame = $use(Frame).extend({
 
         ctor: function () {
             this._super();
@@ -21,7 +21,8 @@ $class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
         },
 
         _initDebugConsole: function () {
-            var consoleFrame = new ConsoleFrame();
+            var cf = $use(ConsoleFrame);
+            var consoleFrame = new cf();
             consoleFrame.setLocalZOrder(this.ZORDER.DEBUG);
             this.addChild(consoleFrame);
             cc.app.console.setConsoleFrame(consoleFrame);
@@ -52,6 +53,8 @@ $class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
         }
     });
 
-    $export.GameScene = GameScene;
-    $export.RootFrame = RootFrame;
+    // $export.GameScene = GameScene;
+    // $export.RootFrame = RootFrame;
+    $public("GameScene", GameScene, $export);
+    $public("RootFrame", RootFrame, $export);
 });

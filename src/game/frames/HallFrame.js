@@ -7,7 +7,7 @@ $include($import.game.frames.HomeFrame);
 
 $class("HallFrame", function ($export, {Frame, FDirector, HomeFrame}) {
 
-    var HallFrame = Frame.extend({
+    var HallFrame = $use(Frame).extend({
 
         ctor: function () {
             this._super();
@@ -19,7 +19,7 @@ $class("HallFrame", function ($export, {Frame, FDirector, HomeFrame}) {
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
             this.addChild(spr);
             cc.app.helper.event.addClickListener(spr, () => {
-                FDirector.replaceFrame(new HomeFrame());
+                $use(FDirector).replaceFrame(new ($use(HomeFrame))());
             });
         },
 
@@ -34,5 +34,6 @@ $class("HallFrame", function ($export, {Frame, FDirector, HomeFrame}) {
 
     });
 
-    $export.HallFrame = HallFrame;
+    // $export.HallFrame = HallFrame;
+    $public("HallFrame", HallFrame, $export);
 });

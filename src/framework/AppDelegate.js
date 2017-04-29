@@ -12,8 +12,8 @@ $class("AppDelegate", function ($export, {HomeFrame, FDirector}) {
          * 游戏启动
          */
         applicationDidFinishLaunching: function () {
-            FDirector.runFrame(() => {
-                return new HomeFrame();
+            $use(FDirector).runFrame(() => {
+                return new ($use(HomeFrame))();
             });
 
 
@@ -36,5 +36,6 @@ $class("AppDelegate", function ($export, {HomeFrame, FDirector}) {
         },
     });
 
-    $export.AppDelegate = AppDelegate;
+    // $export.AppDelegate = AppDelegate;
+    $public("AppDelegate", AppDelegate, $export);
 });

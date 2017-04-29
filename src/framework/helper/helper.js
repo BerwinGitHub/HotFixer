@@ -289,5 +289,6 @@ $class("helper", function($export){
             return cc.p(posX, posY);
         },
     };
-    $export.helper = helper;
+    // $export.helper = helper;
+    $public("helper", helper, $export);
 });

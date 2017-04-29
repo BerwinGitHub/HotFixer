@@ -5,17 +5,25 @@
 var $include = function ($import) {
 };
 
+var $use = function (factory) {
+    return factory();
+};
+
+var $public = function (name, data, $export) {
+    $export[name] = data;
+};
+
 /**
  * 声明class
  * @param clsName
- * @param clsImplement
+ * @param factory
  * @param pkg 备用参数防止项目名字的类出现
  */
-var $class = function (clsName, clsImplement, pkg = "") {
+var $class = function (clsName, factory, pkg = "") {
     var cls = $pm._findClassMeta(clsName, pkg);
     if (cls) {
-        console.log("$class注册:" + ("" === pkg ? "" : (pkg + ".")) + clsName + "类");
-        cls.implement = clsImplement;
+        // console.log("$class注册:" + ("" === pkg ? "" : (pkg + ".")) + clsName + "类");
+        cls.factory = factory;
     }
 };
 

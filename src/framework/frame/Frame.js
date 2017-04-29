@@ -2,7 +2,7 @@
  * Created by Berwin on 2017/3/31.
  */
 
-$class("Frame", function($export){
+$class("Frame", function ($export) {
 
     var Frame = cc.Layer.extend({
 
@@ -36,5 +36,6 @@ $class("Frame", function($export){
 
     });
 
-    $export.Frame = Frame;
+    // $export.Frame = Frame;
+    $public("Frame", Frame, $export);
 });

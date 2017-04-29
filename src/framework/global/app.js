@@ -12,11 +12,12 @@ $class("app", function ($export, {Console, helper}) {
     var app = {
         // insert code here
         init: function () {
-            this.helper = helper;
-            this.console = Console;
+            this.helper = $use(helper);
+            this.console = $use(Console);
         },
     };
     app.init();
     cc.app = app;
-    $export.app = app;
+    // $export.app = app;
+    $public("app", app, $export);
 });

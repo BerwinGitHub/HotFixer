@@ -105,5 +105,6 @@ $class("SocketHelper", function ($export) {
 
     };
 
-    $export.SocketHelper = SocketHelper;
+    // $export.SocketHelper = SocketHelper;
+    $public("SocketHelper", SocketHelper, $export);
 });

@@ -13,7 +13,8 @@ $class("FDirector", function ($export, {Frame, GameScene}) {
          * @returns {GameScene}
          */
         runFrame: function (frame) {
-            this.runningScene = new GameScene();
+            var s = $use(GameScene);
+            this.runningScene = new s();
             this.rootFrame = this.runningScene.getRootFrame();
             cc.director.runScene(this.runningScene);
             this.runningFrames = [];
@@ -74,5 +75,6 @@ $class("FDirector", function ($export, {Frame, GameScene}) {
 
     };
 
-    $export.FDirector = FDirector
+    // $export.FDirector = FDirector
+    $public("FDirector", FDirector, $export);
 });

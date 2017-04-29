@@ -164,6 +164,7 @@ $class("HotFixScene", function ($export) {
 
     });
 
-    $export.HotFixScene = HotFixScene;
+    // $export.HotFixScene = HotFixScene;
+    $public("HotFixScene", HotFixScene, $export);
 
 });

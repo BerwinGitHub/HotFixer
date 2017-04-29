@@ -6,8 +6,10 @@ var $classes = {
             "name": "AppDelegate",
             "package": "framework.AppDelegate",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "AppDelegate": {}
+            },
             "import": [],
             "ref": [
                 "$import.game.frames.HomeFrame",
@@ -21,8 +23,10 @@ var $classes = {
             "name": "Frame",
             "package": "framework.frame.Frame",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "Frame": {}
+            },
             "import": [],
             "ref": []
         }
@@ -33,8 +37,10 @@ var $classes = {
             "name": "ConsoleFrame",
             "package": "framework.frame.consoleframe",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "ConsoleFrame": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame"
@@ -47,8 +53,10 @@ var $classes = {
             "name": "Console",
             "package": "framework.game.Console",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "Console": {}
+            },
             "import": [],
             "ref": []
         }
@@ -59,8 +67,10 @@ var $classes = {
             "name": "FDirector",
             "package": "framework.game.FDirector",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "FDirector": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame",
@@ -74,8 +84,11 @@ var $classes = {
             "name": "RootFrame",
             "package": "framework.game.GameScene",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "GameScene": {},
+                "RootFrame": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame",
@@ -89,8 +102,10 @@ var $classes = {
             "name": "app",
             "package": "framework.global.app",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "app": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.game.Console",
@@ -104,8 +119,10 @@ var $classes = {
             "name": "helper",
             "package": "framework.helper.helper",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "helper": {}
+            },
             "import": [],
             "ref": []
         }
@@ -116,8 +133,10 @@ var $classes = {
             "name": "HotFixScene",
             "package": "framework.hotfix.HotFixScene",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "HotFixScene": {}
+            },
             "import": [],
             "ref": []
         }
@@ -128,8 +147,10 @@ var $classes = {
             "name": "SocketHelper",
             "package": "framework.network.SocketHelper",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "SocketHelper": {}
+            },
             "import": [],
             "ref": []
         }
@@ -140,8 +161,10 @@ var $classes = {
             "name": "HallFrame",
             "package": "game.frames.HallFrame",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "HallFrame": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame",
@@ -156,8 +179,10 @@ var $classes = {
             "name": "HomeFrame",
             "package": "game.frames.HomeFrame",
             "loaded": false,
-            "implement": null,
-            "export": {},
+            "factory": null,
+            "export": {
+                "HomeFrame": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame",

@@ -5,7 +5,7 @@ $include($import.framework.frame.Frame);
 
 $class("ConsoleFrame", function ($export, {Frame}) {
 
-    var ConsoleFrame = Frame.extend({
+    var ConsoleFrame = $use(Frame).extend({
 
         cmdHistory: null,
         historyIdx: 0,
@@ -120,5 +120,6 @@ $class("ConsoleFrame", function ($export, {Frame}) {
         },
     });
 
-    $export.ConsoleFrame = ConsoleFrame;
+    // $export.ConsoleFrame = ConsoleFrame;
+    $public("ConsoleFrame", ConsoleFrame, $export);
 });
