@@ -78,7 +78,7 @@ cc.game.onStart = function () {
     //     appDelegate.applicationDidFinishLaunching();
     // });
 
-    $require($req.framework.global.app, ({app}) => {
+    $require($req.framework.core.appManager, ({app}) => {
         // app.helper.ve.setupVisibleRect(960, 640);
         cc.view.setDesignResolutionSize(1136, 640, cc.ResolutionPolicy.SHOW_ALL);
         $require($req.framework.hotfix.HotFixScene, ({HotFixScene}) => {

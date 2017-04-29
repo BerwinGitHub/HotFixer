@@ -60,6 +60,15 @@ $pm.requires = function (metas, loadFinish) {
 
 };
 
+$pm.loadGroup = function (name, cb) {
+    var group = $groups[name];
+    if (!group) {
+        cc.log("loadGroup失败，没有找到group:" + name);
+        return;
+    }
+    cc.loader.loadJs(group, cb);
+};
+
 /**
  * 引入需要加载js文件
  * @param meta

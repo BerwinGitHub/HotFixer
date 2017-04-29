@@ -1,14 +1,32 @@
 /**
  *
+ * @param name
+ */
+var $group = function (name) {
+
+};
+
+/**
  * @param params
  */
 var $include = function ($import) {
 };
 
+/**
+ * 使用变量。执行方法，返回值
+ * @param factory
+ * @returns {*}
+ */
 var $use = function (factory) {
     return factory();
 };
 
+/**
+ * 公开的变量
+ * @param name
+ * @param data
+ * @param $export
+ */
 var $public = function (name, data, $export) {
     $export[name] = data;
 };
@@ -43,6 +61,15 @@ var $require = function (meta, loadFinish) {
  */
 var $requires = function (metas, loadFinish) {
     $pm.requires(metas, loadFinish);
+};
+
+/**
+ * 加载组
+ * @param name
+ * @param cb
+ */
+var $loadGroup = function (name, cb) {
+    $pm.loadGroup(name, cb);
 };
 
 /**

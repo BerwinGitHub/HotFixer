@@ -5,19 +5,19 @@
 $include($import.framework.game.Console);
 $include($import.framework.helper.helper);
 
-$class("app", function ($export, {Console, helper}) {
+$class("appManager", function ($export, {Console, helper}) {
     /**
      *
      */
-    var app = {
+    var appManager = {
         // insert code here
         init: function () {
             this.helper = $use(helper);
             this.console = $use(Console);
         },
     };
-    app.init();
-    cc.app = app;
+    appManager.init();
+    cc.am = appManager;
     // $export.app = app;
-    $public("app", app, $export);
+    $public("appManager", appManager, $export);
 });

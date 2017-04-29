@@ -15,10 +15,11 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
     var $import = {};
     var $package = {};
     var $classes = {};
-    recursiveFiles(SRC, $import, $package, $classes);
-    var saves = [$classes, $import, $package];
-    var header = ["var $classes = ", "var $import = ", "var $package = "];
-    var footer = [";\r\n", ";\r\n", ";\r\n"];
+    var $groups = {};
+    recursiveFiles(SRC, $import, $package, $classes, $groups);
+    var saves = [$classes, $import, $package, $groups];
+    var header = ["var $classes = ", "var $import = ", "var $package = ", "var $groups = "];
+    var footer = [";\r\n", ";\r\n", ";\r\n", ";\r\n"];
     var content = cfgs.common.JSON_FILE_NOTE;
     for (var i = 0; i < saves.length; i++) {
         var obj = saves[i];
@@ -40,7 +41,7 @@ var SRC = path.resolve(__dirname, cfgs.packages.SRC);
  * @param src
  * @param callback
  */
-function recursiveFiles(src, $import, $package, $classes) {
+function recursiveFiles(src, $import, $package, $classes, $groups) {
     var hasClass = false;
     var dirs = fs.readdirSync(src);
     for (var i = 0; i < dirs.length; i++) {
@@ -48,7 +49,7 @@ function recursiveFiles(src, $import, $package, $classes) {
         var p = src + '/' + name;
         var child = {};
         if (fs.existsSync(p) && fs.statSync(p).isDirectory()) {
-            if (recursiveFiles(p, child, $package, $classes)) {
+            if (recursiveFiles(p, child, $package, $classes, $groups)) {
                 $import[path.basename(p)] = child;
                 hasClass = true;
             } else {
@@ -57,7 +58,7 @@ function recursiveFiles(src, $import, $package, $classes) {
         } else if (fs.existsSync(p) && !isExcludeFile(p)) {
             var key = path.basename(p).replace(path.extname(p), "");
             $import[key] = child;
-            if (readJsFile(p, $package, $classes, child)) {
+            if (readJsFile(p, $package, $classes, $groups, child)) {
                 hasClass = true;
             } else {
                 delete $import[key];
@@ -67,7 +68,7 @@ function recursiveFiles(src, $import, $package, $classes) {
     return hasClass;
 }
 
-function readJsFile(p, $package, $classes, child) {
+function readJsFile(p, $package, $classes, $groups, child) {
     var rltFile = path.relative(SRC, p);
     var pkg = rltFile.replace(".js", "");
     pkg = pkg.replace(/\//g, ".");
@@ -113,7 +114,10 @@ function readJsFile(p, $package, $classes, child) {
             } else if (/^\$public\(\"(.*)\".*$/.test(line)) { // public
                 var pub = /^\$public\(\"(.*)\".*$/.exec(line)[1];
                 exports[pub] = {};
-
+            } else if(/^\$group\(.*(\)|\);)$/.test(line)){
+                var name = /^\$group\(\"(.*)\".*$/.exec(line)[1];
+                $groups[name] = $groups[name] || [];
+                $groups[name].push(rltFile);
             }
         }
         lineNum++;

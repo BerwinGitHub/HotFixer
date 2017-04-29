@@ -108,15 +108,16 @@ var generate = {
  * excel转成json格式的配置
  */
 var e2j = {
-    PATH_SRC: "../xlsx",// 资源原路径（*/xlsx文件的路径）
-    PATH_DES: "../src/game/data",// 资源生成相对路径，生成的js文件放置的位置
+    PATH_SRC: "../../xlsx",// 资源原路径（*/xlsx文件的路径）
+    PATH_DES: "../src/game/datas",// 资源生成相对路径，生成的js文件放置的位置
     FORMAT_JSON: common.FORMAT_JSON,// 导出来的js文件是否格式化
+    EXTRA_TXT: "$group(\"datas\");\n",// 添加组
     /**
      * 用来确定 字段名&类型名&备注分别在哪行。
      */
     ROW_INFO: {
-        ROW_FIELD_NAME: 0, // 字段名行
-        ROW_NOTE: 1, // 备注行 -1表示没有备注行
+        ROW_FIELD_NAME: 1, // 字段名行
+        ROW_NOTE: 0, // 备注行 -1表示没有备注行
         ROW_TYPE: 2, // 类型名行
     },
 };

@@ -17,6 +17,35 @@ var $classes = {
             ]
         }
     ],
+    "appManager": [
+        {
+            "file": "framework/core/appManager.js",
+            "name": "appManager",
+            "package": "framework.core.appManager",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "appManager": {}
+            },
+            "import": [],
+            "ref": [
+                "$import.framework.game.Console",
+                "$import.framework.helper.helper"
+            ]
+        }
+    ],
+    "dataManager": [
+        {
+            "file": "framework/core/dataManager.js",
+            "name": "dataManager",
+            "package": "framework.core.dataManager",
+            "loaded": false,
+            "factory": null,
+            "export": {},
+            "import": [],
+            "ref": []
+        }
+    ],
     "Frame": [
         {
             "file": "framework/frame/Frame.js",
@@ -93,23 +122,6 @@ var $classes = {
             "ref": [
                 "$import.framework.frame.Frame",
                 "$import.framework.frame.consoleframe"
-            ]
-        }
-    ],
-    "app": [
-        {
-            "file": "framework/global/app.js",
-            "name": "app",
-            "package": "framework.global.app",
-            "loaded": false,
-            "factory": null,
-            "export": {
-                "app": {}
-            },
-            "import": [],
-            "ref": [
-                "$import.framework.game.Console",
-                "$import.framework.helper.helper"
             ]
         }
     ],
@@ -198,6 +210,16 @@ var $import = {
             "_pkg": "framework.AppDelegate",
             "_cls": "AppDelegate"
         },
+        "core": {
+            "appManager": {
+                "_pkg": "framework.core.appManager",
+                "_cls": "appManager"
+            },
+            "dataManager": {
+                "_pkg": "framework.core.dataManager",
+                "_cls": "dataManager"
+            }
+        },
         "frame": {
             "Frame": {
                 "_pkg": "framework.frame.Frame",
@@ -220,12 +242,6 @@ var $import = {
             "GameScene": {
                 "_pkg": "framework.game.GameScene",
                 "_cls": "RootFrame"
-            }
-        },
-        "global": {
-            "app": {
-                "_pkg": "framework.global.app",
-                "_cls": "app"
             }
         },
         "helper": {
@@ -262,17 +278,34 @@ var $import = {
 };
 var $package = {
     "framework.AppDelegate": "framework.AppDelegate",
+    "framework.core.appManager": "framework.core.appManager",
+    "framework.core.dataManager": "framework.core.dataManager",
     "framework.frame.Frame": "framework.frame.Frame",
     "framework.frame.consoleframe": "framework.frame.consoleframe",
     "framework.game.Console": "framework.game.Console",
     "framework.game.FDirector": "framework.game.FDirector",
     "framework.game.GameScene": "framework.game.GameScene",
-    "framework.global.app": "framework.global.app",
     "framework.helper.helper": "framework.helper.helper",
     "framework.hotfix.HotFixScene": "framework.hotfix.HotFixScene",
     "framework.network.SocketHelper": "framework.network.SocketHelper",
     "game.frames.HallFrame": "game.frames.HallFrame",
     "game.frames.HomeFrame": "game.frames.HomeFrame"
+};
+var $groups = {
+    "datas": [
+        "game/datas/ad.js",
+        "game/datas/buff.js",
+        "game/datas/chamption.js",
+        "game/datas/fakes.js",
+        "game/datas/global.js",
+        "game/datas/item.js",
+        "game/datas/jackpots.js",
+        "game/datas/mulwin.js",
+        "game/datas/newbieEffect.js",
+        "game/datas/onlineReward.js",
+        "game/datas/shop.js",
+        "game/datas/sound.js"
+    ]
 };
 
 var $req = $import;
