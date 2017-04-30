@@ -1,7 +1,7 @@
 {
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
-    "version": "1.0.1493558943522",
+    "version": "1.0.1493575707292",
     "engineVersion": "3.3",
     "assets": {
         "res/HelloWorld.png": {
@@ -37,7 +37,7 @@
             "compressed": false
         },
         "src/framework/game/GameScene.jsc": {
-            "md5": "ce481e35184795b98a081e93f32f99d3",
+            "md5": "ad3e646270334fed1b79b2d14e59d014",
             "compressed": false
         },
         "src/framework/helper/helper.jsc": {
@@ -69,15 +69,15 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "ff011903f09f02659f66f65411213fc2",
+            "md5": "a84a098ab80cd9e161ddcdb1c794a5d6",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "e9b4a992eac52339ff99d2576a384afe",
+            "md5": "876d5c91d733c63ad654123d6c4d8f90",
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "9725eceac166dce933fd6e072540ef40",
+            "md5": "79e62f3ebdd02f7a5f49bdd4117056b5",
             "compressed": false
         },
         "src/language.jsc": {
@@ -97,7 +97,7 @@
             "compressed": false
         },
         "res/debug/debug.json": {
-            "md5": "47ef2d1513de962a1cfec39b21a1ec28",
+            "md5": "38661e0738449b4748b7cdb0e10123bf",
             "compressed": false
         },
         "res/debug/debug.png": {
@@ -105,7 +105,7 @@
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
-            "md5": "548e730b7fcf675e371edf50a826b1b4",
+            "md5": "a9fcb7d50014acbdfd241a9e282d05b0",
             "compressed": false
         },
         "res/debug/dot.png": {
@@ -157,7 +157,7 @@
             "compressed": false
         },
         "src/framework/package/packageMeta.jsc": {
-            "md5": "4511141efa77b0bfbf5512fe5853c6a1",
+            "md5": "541b037a37045d94aa84a91ecca663c5",
             "compressed": false
         },
         "res/studio/Default/Button_Disable.png": {
@@ -181,7 +181,7 @@
             "compressed": false
         },
         "src/framework/core/app.jsc": {
-            "md5": "c45dee14e5189a248e91b3bc75d868f9",
+            "md5": "a3839545696903cd24637a19c2c1236b",
             "compressed": false
         },
         "src/framework/core/datas.jsc": {
@@ -237,11 +237,11 @@
             "compressed": false
         },
         "res/studio/HallScene/node/HallScene.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "4f90ab0c56a844f43351fb508660a39a",
             "compressed": false
         },
         "res/studio/HomeScene/node/HomeScene.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "9a2b57aa25a0ca12cecc2be28e910620",
             "compressed": false
         },
         "src/framework/core/native.jsc": {
@@ -261,7 +261,7 @@
             "compressed": false
         },
         "res/debug/console.json": {
-            "md5": "d28911916c38ba899cbd5a9e6398bbed",
+            "md5": "df01bd567da549e8f056680880a50cdf",
             "compressed": false
         },
         "res/studio/console.json": {
@@ -285,11 +285,55 @@
             "compressed": false
         },
         "src/framework/core/log.jsc": {
-            "md5": "fdaafc1435b42d9dd2ca84ee9fa02147",
+            "md5": "c744c625c00e442043929129c67bcc07",
             "compressed": false
         },
         "src/framework/core/broadcast.jsc": {
-            "md5": "629fb743f5bfcccc47b7acef8e81baab",
+            "md5": "ee48ef65e1cd5c883ef57aee40b80add",
+            "compressed": false
+        },
+        "res/studio/HomeScene/amts/animation.json": {
+            "md5": "f555b7df031debdfe981c75590b5dae1",
+            "compressed": false
+        },
+        "res/studio/HomeScene/imgs/ui.plist": {
+            "md5": "fb0f6f3dfc0d699f8df885d21212eac3",
+            "compressed": false
+        },
+        "res/studio/HomeScene/imgs/ui.png": {
+            "md5": "fa825eeeeb5214a19c6ebd9b6fd3a7aa",
+            "compressed": false
+        },
+        "res/Default/Button_Disable.png": {
+            "md5": "fa79821349dd686f516187283bc2fb8c",
+            "compressed": false
+        },
+        "res/Default/Button_Normal.png": {
+            "md5": "5f8329d6525b01810d68e39036e5f066",
+            "compressed": false
+        },
+        "res/Default/Button_Press.png": {
+            "md5": "ea5e72abd451a76f62a2906abb7ef4bf",
+            "compressed": false
+        },
+        "res/studio/debug/console.json": {
+            "md5": "b184f2f70271c06f0080abe1d7a877f7",
+            "compressed": false
+        },
+        "res/studio/debug/debug.json": {
+            "md5": "915de80367fd23bbc630b60670146ba8",
+            "compressed": false
+        },
+        "res/studio/debug/debug.png": {
+            "md5": "ad1fcd4a8d3e4d435505a832c81265d2",
+            "compressed": false
+        },
+        "res/studio/debug/dot.png": {
+            "md5": "48fc4c21498a925b7c918dd92e6ae69d",
+            "compressed": false
+        },
+        "src/framework/core/prototype.jsc": {
+            "md5": "9513d6c9036242992d1691abe50d35bd",
             "compressed": false
         }
     },

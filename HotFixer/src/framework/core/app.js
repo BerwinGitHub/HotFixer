@@ -7,8 +7,9 @@ $include($import.framework.core.datas);
 $include($import.framework.core.native);
 $include($import.framework.core.log);
 $include($import.framework.core.broadcast);
+$include($import.framework.core.prototype);
 
-$class("app", function ($export, {helper, datas, native, log, broadcast}) {
+$class("app", function ($export, {helper, datas, native, log, broadcast, prototype}) {
     /**
      *
      */
@@ -20,12 +21,14 @@ $class("app", function ($export, {helper, datas, native, log, broadcast}) {
             this.native = $use(native);
             this.log = $use(log);
             this.broadcast = $use(broadcast);
+            this.prototype = $use(prototype);
 
             //
             this.datas.setUpEnvironment();
             this.native.setUpEnvironment();
             this.log.setUpEnvironment();
             this.broadcast.setUpEnvironment();
+            this.prototype.setUpEnvironment();
         },
     };
     cc.app = app;

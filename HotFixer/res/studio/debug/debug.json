@@ -37,6 +37,8 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
             "TouchEnable": true,
             "AnchorPoint": {},
             "Position": {
@@ -155,9 +157,19 @@
               "G": 0,
               "B": 0
             },
+            "DisabledFileData": {
+              "Type": "Normal",
+              "Path": "studio/debug/debug.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "studio/debug/debug.png",
+              "Plist": ""
+            },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "debug.png",
+              "Path": "studio/debug/debug.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -210,7 +222,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "dot.png",
+                  "Path": "studio/debug/dot.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -264,12 +276,12 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "console.json",
+              "Path": "studio/debug/console.json",
               "Plist": ""
             },
             "StretchWidthEnable": false,
             "StretchHeightEnable": false,
-            "InnerActionSpeed": 1.0,
+            "InnerActionSpeed": 0.0,
             "AnchorPoint": {},
             "Position": {
               "X": 568.0,
@@ -313,11 +325,11 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../Default/Button_Disable.png",
+        "../../Default/Button_Normal.png",
+        "../../Default/Button_Press.png",
         "console.json",
         "debug.png",
-        "Default/Button_Disable.png",
-        "Default/Button_Normal.png",
-        "Default/Button_Press.png",
         "dot.png"
       ],
       "ctype": "GameFileData"

@@ -1,0 +1,9 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ui" Type="Plist" ID="07d37243-6c28-48b7-96d4-85dfa1e086bb" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/HomeScene/imgs/ui/HelloWorld.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

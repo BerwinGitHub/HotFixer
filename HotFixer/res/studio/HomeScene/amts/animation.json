@@ -1,0 +1,243 @@
+{
+  "ID": "2ed03092-5c2d-4218-9f40-74b78c667be3",
+  "Version": "3.10.0.0",
+  "Name": "animation",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 60,
+        "Speed": 1.0,
+        "ActivedAnimationName": "ani",
+        "Timelines": [
+          {
+            "ActionTag": -193029410,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 0.0001,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": -216.1984,
+                "Y": 202.4001,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 0.0001,
+                "Y": 0.0,
+                "FrameIndex": 30,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 230.0015,
+                "Y": 225.4007,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 0.0001,
+                "Y": 0.0,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -193029410,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 30,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -193029410,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 30,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [
+        {
+          "StartIndex": 0,
+          "EndIndex": 60,
+          "Name": "ani",
+          "ctype": "AnimationInfoData"
+        }
+      ],
+      "ObjectData": {
+        "Tag": 197,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/HomeScene/imgs/ui/HelloWorld.png",
+              "Plist": "studio/HomeScene/imgs/ui.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0001,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -97.4999,
+            "RightMargin": -97.5001,
+            "TopMargin": -135.0,
+            "BottomMargin": -135.0,
+            "Tag": 198,
+            "ActionTag": -193029410,
+            "Size": {
+              "X": 195.0,
+              "Y": 270.0
+            },
+            "Name": "HelloWorld_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../imgs/ui.plist",
+        "../imgs/ui.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

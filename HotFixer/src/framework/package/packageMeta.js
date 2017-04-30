@@ -33,7 +33,8 @@ var $classes = {
                 "$import.framework.core.datas",
                 "$import.framework.core.native",
                 "$import.framework.core.log",
-                "$import.framework.core.broadcast"
+                "$import.framework.core.broadcast",
+                "$import.framework.core.prototype"
             ]
         }
     ],
@@ -102,6 +103,20 @@ var $classes = {
             "factory": null,
             "export": {
                 "native": {}
+            },
+            "import": [],
+            "ref": []
+        }
+    ],
+    "prototype": [
+        {
+            "file": "framework/core/prototype.js",
+            "name": "prototype",
+            "package": "framework.core.prototype",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "prototype": {}
             },
             "import": [],
             "ref": []
@@ -267,6 +282,10 @@ var $import = {
             "native": {
                 "_pkg": "framework.core.native",
                 "_cls": "native"
+            },
+            "prototype": {
+                "_pkg": "framework.core.prototype",
+                "_cls": "prototype"
             }
         },
         "frame": {
@@ -323,6 +342,7 @@ var $package = {
     "framework.core.helper": "framework.core.helper",
     "framework.core.log": "framework.core.log",
     "framework.core.native": "framework.core.native",
+    "framework.core.prototype": "framework.core.prototype",
     "framework.frame.ConsoleFrame": "framework.frame.ConsoleFrame",
     "framework.frame.Frame": "framework.frame.Frame",
     "framework.game.FDirector": "framework.game.FDirector",

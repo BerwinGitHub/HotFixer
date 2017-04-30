@@ -3,23 +3,35 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="debug" />
-        <Folder Name="HallScene">
-          <Folder Name="imgs" />
-          <Folder Name="node">
-            <Project Name="HallScene.csd" Type="Scene" />
+        <Folder Name="studio">
+          <Folder Name="HallScene">
+            <Folder Name="amts" />
+            <Folder Name="imgs" />
+            <Folder Name="node">
+              <Project Name="HallScene.csd" Type="Scene" />
+            </Folder>
+          </Folder>
+          <Folder Name="HomeScene">
+            <Folder Name="amts">
+              <Project Name="animation.csd" Type="Node" />
+            </Folder>
+            <Folder Name="imgs">
+              <Folder Name="ui">
+                <Image Name="HelloWorld.png" />
+              </Folder>
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+            <Folder Name="node">
+              <Project Name="HomeScene.csd" Type="Scene" />
+            </Folder>
+          </Folder>
+          <Folder Name="debug">
+            <Project Name="console.csd" Type="Node" />
+            <Project Name="debug.csd" Type="Scene" />
+            <Image Name="debug.png" />
+            <Image Name="dot.png" />
           </Folder>
         </Folder>
-        <Folder Name="HomeScene">
-          <Folder Name="imgs" />
-          <Folder Name="node">
-            <Project Name="HomeScene.csd" Type="Scene" />
-          </Folder>
-        </Folder>
-        <Project Name="debug.csd" Type="Scene" />
-        <Image Name="debug.png" />
-        <Image Name="dot.png" />
-        <Project Name="console.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

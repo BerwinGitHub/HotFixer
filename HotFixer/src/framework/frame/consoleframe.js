@@ -15,7 +15,7 @@ $class("ConsoleFrame", function ($export, {Frame}) {
         ctor: function () {
             this._super();
             // for debug
-            this.node = ccs.load(res.debug_debug_json).node;
+            this.node = ccs.load(res.studio_debug_debug_json).node;
             this.addChild(this.node);
 
             //

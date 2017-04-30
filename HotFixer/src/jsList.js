@@ -6,6 +6,7 @@ var jsList = [
     "src/framework/core/datas.js",
     "src/framework/core/log.js",
     "src/framework/core/native.js",
+    "src/framework/core/prototype.js",
     "src/framework/frame/ConsoleFrame.js",
     "src/framework/frame/Frame.js",
     "src/framework/game/FDirector.js",
