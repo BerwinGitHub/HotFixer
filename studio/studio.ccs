@@ -3,12 +3,23 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="HomeScene">
-          <Project Name="HomeScene.csd" Type="Scene" />
-        </Folder>
+        <Folder Name="debug" />
         <Folder Name="HallScene">
-          <Project Name="HallScene.csd" Type="Scene" />
+          <Folder Name="imgs" />
+          <Folder Name="node">
+            <Project Name="HallScene.csd" Type="Scene" />
+          </Folder>
         </Folder>
+        <Folder Name="HomeScene">
+          <Folder Name="imgs" />
+          <Folder Name="node">
+            <Project Name="HomeScene.csd" Type="Scene" />
+          </Folder>
+        </Folder>
+        <Project Name="debug.csd" Type="Scene" />
+        <Image Name="debug.png" />
+        <Image Name="dot.png" />
+        <Project Name="console.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

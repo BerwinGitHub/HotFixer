@@ -11,9 +11,9 @@ $class("HallFrame", function ($export, {Frame, FDirector, HomeFrame}) {
 
         ctor: function () {
             this._super();
-            var bg = new cc.LayerColor(cc.color(0, 0, 0));
-            bg.setContentSize(cc.director.getVisibleSize());
-            this.addChild(bg);
+
+            var data = ccs.load(res.studio_HallScene_node_HallScene_json);
+            this.addChild(data.node);
 
             var spr = new cc.Sprite(res.debug_info_png);
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);

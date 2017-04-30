@@ -1,7 +1,7 @@
 {
-  "ID": "339a82ef-ba89-4719-a68c-51f848197ac2",
+  "ID": "92e9f5ea-4fc5-4925-beb7-0747abdca16c",
   "Version": "3.10.0.0",
-  "Name": "HomeScene",
+  "Name": "HallScene",
   "Content": {
     "Content": {
       "Animation": {
@@ -12,11 +12,11 @@
       },
       "AnimationList": [],
       "ObjectData": {
-        "Tag": 4,
+        "Tag": 7,
         "Children": [
           {
             "FontSize": 48,
-            "LabelText": "Home Scene",
+            "LabelText": "Hall Scene",
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -49,50 +49,31 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.2447,
+              "X": 0.2051,
               "Y": 0.0844
             },
-            "LeftMargin": 429.0,
-            "RightMargin": 429.0,
+            "LeftMargin": 451.5,
+            "RightMargin": 451.5,
             "TopMargin": 293.0,
             "BottomMargin": 293.0,
-            "Tag": 5,
-            "ActionTag": -248596913,
+            "Tag": 8,
+            "ActionTag": -1098592895,
             "Size": {
-              "X": 278.0,
+              "X": 233.0,
               "Y": 54.0
             },
             "Name": "Text_1",
             "ctype": "TextObjectData"
           },
           {
-            "FontSize": 18,
-            "ButtonText": "大厅",
-            "TextColor": {
-              "R": 65,
-              "G": 65,
-              "B": 70
-            },
-            "DisabledFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Disable.png",
-              "Plist": ""
-            },
-            "PressedFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Press.png",
-              "Plist": ""
-            },
-            "NormalFileData": {
-              "Type": "Default",
-              "Path": "Default/Button_Normal.png",
-              "Plist": ""
-            },
+            "FontSize": 22,
+            "ButtonText": "主页",
+            "TextColor": {},
             "Scale9Enable": true,
             "Scale9OriginX": 15,
             "Scale9OriginY": 6,
-            "Scale9Width": 16,
-            "Scale9Height": 24,
+            "Scale9Width": 6,
+            "Scale9Height": 9,
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -126,21 +107,21 @@
               "Y": 0.35
             },
             "PreSize": {
-              "X": 0.0405,
-              "Y": 0.0562
+              "X": 0.088,
+              "Y": 0.0688
             },
-            "LeftMargin": 545.0,
-            "RightMargin": 545.0,
-            "TopMargin": 398.0,
-            "BottomMargin": 206.0,
+            "LeftMargin": 518.0,
+            "RightMargin": 518.0,
+            "TopMargin": 394.0,
+            "BottomMargin": 202.0,
             "CallBackType": "Click",
-            "CallBackName": "onHallClick",
-            "UserData": "{home:true,hall:false}",
-            "Tag": 6,
-            "ActionTag": 1179535068,
+            "CallBackName": "onHomeClick",
+            "UserData": "{home:false,hall:true}",
+            "Tag": 9,
+            "ActionTag": -1704429897,
             "Size": {
-              "X": 46.0,
-              "Y": 36.0
+              "X": 100.0,
+              "Y": 44.0
             },
             "Name": "Button_1",
             "ctype": "ButtonObjectData"
@@ -153,11 +134,7 @@
         "Name": "Scene",
         "ctype": "SingleNodeObjectData"
       },
-      "UsedResources": [
-        "../Default/Button_Disable.png",
-        "../Default/Button_Normal.png",
-        "../Default/Button_Press.png"
-      ],
+      "UsedResources": [],
       "ctype": "GameFileData"
     }
   },

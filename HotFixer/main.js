@@ -72,16 +72,15 @@ cc.game.onStart = function () {
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
 
-    $requires([
-        $req.framework.core.app,
-        $req.framework.hotfix.HotFixScene,
-        $req.framework.AppDelegate], ({app, HotFixScene, AppDelegate}) => {
-        app.setUpEnvironment();
+    $requires([$req.framework.hotfix.HotFixScene], ({HotFixScene}) => {
         //load resources
         var hotFixScene = new HotFixScene();
         hotFixScene.runWithCallback("res/project.manifest", () => {
-            var appDelegate = new AppDelegate();
-            appDelegate.applicationDidFinishLaunching();
+            $requires([$req.framework.core.app, $req.framework.AppDelegate], ({app, AppDelegate}) => {
+                app.setUpEnvironment();
+                var appDelegate = new AppDelegate();
+                appDelegate.applicationDidFinishLaunching();
+            });
         });
     });
 };

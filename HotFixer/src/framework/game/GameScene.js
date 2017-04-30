@@ -2,7 +2,7 @@
  * Created by Berwin on 2017/3/31.
  */
 $include($import.framework.frame.Frame);
-$include($import.framework.frame.consoleframe);
+$include($import.framework.frame.ConsoleFrame);
 
 $class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
 
@@ -25,7 +25,6 @@ $class("RootFrame", function ($export, {Frame, ConsoleFrame}) {
             var consoleFrame = new cf();
             consoleFrame.setLocalZOrder(this.ZORDER.DEBUG);
             this.addChild(consoleFrame);
-            cc.app.console.setConsoleFrame(consoleFrame);
         },
     });
 

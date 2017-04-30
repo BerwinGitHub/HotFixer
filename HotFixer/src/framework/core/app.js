@@ -2,11 +2,13 @@
  * Created by Berwin on 2017/4/25.
  */
 
-$include($import.framework.game.Console);
-$include($import.framework.helper.helper);
+$include($import.framework.core.helper);
 $include($import.framework.core.datas);
+$include($import.framework.core.native);
+$include($import.framework.core.log);
+$include($import.framework.core.broadcast);
 
-$class("app", function ($export, {Console, helper, datas}) {
+$class("app", function ($export, {helper, datas, native, log, broadcast}) {
     /**
      *
      */
@@ -14,11 +16,16 @@ $class("app", function ($export, {Console, helper, datas}) {
         // insert code here
         setUpEnvironment: function () {
             this.helper = $use(helper);
-            this.console = $use(Console);
             this.datas = $use(datas);
+            this.native = $use(native);
+            this.log = $use(log);
+            this.broadcast = $use(broadcast);
 
             //
             this.datas.setUpEnvironment();
+            this.native.setUpEnvironment();
+            this.log.setUpEnvironment();
+            this.broadcast.setUpEnvironment();
         },
     };
     cc.app = app;

@@ -1,7 +1,7 @@
 {
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
-    "version": "1.0.1493484724125",
+    "version": "1.0.1493558943522",
     "engineVersion": "3.3",
     "assets": {
         "res/HelloWorld.png": {
@@ -37,7 +37,7 @@
             "compressed": false
         },
         "src/framework/game/GameScene.jsc": {
-            "md5": "29b9c715a04bac83c8e96dd40393e749",
+            "md5": "ce481e35184795b98a081e93f32f99d3",
             "compressed": false
         },
         "src/framework/helper/helper.jsc": {
@@ -69,15 +69,15 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "26cf1274210eb406c1e72483436ede53",
+            "md5": "ff011903f09f02659f66f65411213fc2",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "02d1be78ec23ae8a1cc6dda29a931225",
+            "md5": "e9b4a992eac52339ff99d2576a384afe",
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "e7705d0d291aa74891ac22d7d913bdd4",
+            "md5": "9725eceac166dce933fd6e072540ef40",
             "compressed": false
         },
         "src/language.jsc": {
@@ -97,7 +97,7 @@
             "compressed": false
         },
         "res/debug/debug.json": {
-            "md5": "b1c6567e5a3522ae8d9d2717902d0a8d",
+            "md5": "47ef2d1513de962a1cfec39b21a1ec28",
             "compressed": false
         },
         "res/debug/debug.png": {
@@ -105,7 +105,7 @@
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
-            "md5": "a7c13230d9702c78d8fb2a407c2ea884",
+            "md5": "548e730b7fcf675e371edf50a826b1b4",
             "compressed": false
         },
         "res/debug/dot.png": {
@@ -113,7 +113,7 @@
             "compressed": false
         },
         "src/game/frames/HallFrame.jsc": {
-            "md5": "4883a1fd8fa08b4022e5ca12fbbdcc29",
+            "md5": "347a88b24d2780cb01ebea8d4ec336a3",
             "compressed": false
         },
         "src/framework/_Mod/moduleJs.jsc": {
@@ -157,7 +157,7 @@
             "compressed": false
         },
         "src/framework/package/packageMeta.jsc": {
-            "md5": "034f64f9fc885c6d809b85948307f72c",
+            "md5": "4511141efa77b0bfbf5512fe5853c6a1",
             "compressed": false
         },
         "res/studio/Default/Button_Disable.png": {
@@ -181,7 +181,7 @@
             "compressed": false
         },
         "src/framework/core/app.jsc": {
-            "md5": "f994a70385ecc44d99a008ea6ea83c0b",
+            "md5": "c45dee14e5189a248e91b3bc75d868f9",
             "compressed": false
         },
         "src/framework/core/datas.jsc": {
@@ -234,6 +234,62 @@
         },
         "src/game/datas/sound.jsc": {
             "md5": "8e1cd6ceb71b1fa1de43384a7f13ee57",
+            "compressed": false
+        },
+        "res/studio/HallScene/node/HallScene.json": {
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "compressed": false
+        },
+        "res/studio/HomeScene/node/HomeScene.json": {
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "compressed": false
+        },
+        "src/framework/core/native.jsc": {
+            "md5": "c2d21e193bd9e51ee0e850c47cfd7dd3",
+            "compressed": false
+        },
+        "res/debug/Default/Button_Disable.png": {
+            "md5": "fa79821349dd686f516187283bc2fb8c",
+            "compressed": false
+        },
+        "res/debug/Default/Button_Normal.png": {
+            "md5": "5f8329d6525b01810d68e39036e5f066",
+            "compressed": false
+        },
+        "res/debug/Default/Button_Press.png": {
+            "md5": "ea5e72abd451a76f62a2906abb7ef4bf",
+            "compressed": false
+        },
+        "res/debug/console.json": {
+            "md5": "d28911916c38ba899cbd5a9e6398bbed",
+            "compressed": false
+        },
+        "res/studio/console.json": {
+            "md5": "d28911916c38ba899cbd5a9e6398bbed",
+            "compressed": false
+        },
+        "res/studio/debug.json": {
+            "md5": "47ef2d1513de962a1cfec39b21a1ec28",
+            "compressed": false
+        },
+        "res/studio/debug.png": {
+            "md5": "ad1fcd4a8d3e4d435505a832c81265d2",
+            "compressed": false
+        },
+        "res/studio/dot.png": {
+            "md5": "48fc4c21498a925b7c918dd92e6ae69d",
+            "compressed": false
+        },
+        "src/framework/core/helper.jsc": {
+            "md5": "9e5dd1206e1e3211a1b9adf9eb4d62bb",
+            "compressed": false
+        },
+        "src/framework/core/log.jsc": {
+            "md5": "fdaafc1435b42d9dd2ca84ee9fa02147",
+            "compressed": false
+        },
+        "src/framework/core/broadcast.jsc": {
+            "md5": "629fb743f5bfcccc47b7acef8e81baab",
             "compressed": false
         }
     },

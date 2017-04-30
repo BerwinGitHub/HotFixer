@@ -9,27 +9,43 @@ $class("ConsoleFrame", function ($export, {Frame}) {
 
         cmdHistory: null,
         historyIdx: 0,
+        fontSize: 20, // log的fontSize
+        lineHeight: 0, // 先算出以上面的字号
 
         ctor: function () {
             this._super();
             // for debug
             this.node = ccs.load(res.debug_debug_json).node;
-            this.node.setVisible(false);
             this.addChild(this.node);
+
+            //
+            this.scrollView = ccui.helper.seekWidgetByName(this.node, "scrollView");
+            this.consoleView = ccui.helper.seekWidgetByName(this.node, "nodeConsole");
+            this.scrollView.setVisible(false);
+            this.consoleView.setVisible(false);
+
             // btn
-            var btn = new ccui.Button(res.debug_debug_png, res.debug_debug_png);
-            btn.setLocalZOrder(this.ZORDER.DEBUG);
-            cc.app.helper.ve.setPosition(btn, 16, 16, cc.app.helper.ve.LAYOUT.RIGHT, cc.app.helper.ve.LAYOUT.TOP);
-            this.addChild(btn);
+            var btn = ccui.helper.seekWidgetByName(this.node, "btnDebug");
+            // btn.setLocalZOrder(this.ZORDER.DEBUG);
             btn.addClickEventListener(() => {
-                this.dot.setVisible(false);
-                this.node.setVisible(!this.node.isVisible());
+                this.scrollView.setVisible(!this.scrollView.isVisible());
             });
             // dot
-            this.dot = new cc.Sprite(res.debug_dot_png);
-            this.dot.setPosition(cc.p(10, btn.getContentSize().height - 10));
+            this.dot = ccui.helper.seekWidgetByName(this.node, "dot");
             this.dot.setVisible(false);
-            btn.addChild(this.dot);
+
+            // console
+            var btnConsole = ccui.helper.seekWidgetByName(this.node, "btnConsole");
+            btnConsole.addClickEventListener(() => {
+                this.dot.setVisible(false);
+                this.consoleView.setVisible(true);
+            });
+
+            // close
+            var btnClose = ccui.helper.seekWidgetByName(this.node, "btnClose");
+            btnClose.addClickEventListener(() => {
+                this.consoleView.setVisible(false);
+            });
 
             // textField
             this.cmdHistory = ["cc.winSize"];
@@ -42,9 +58,14 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                     this.cmdHistory.push(this.textField.getString());
                     this.historyIdx = this.cmdHistory.length - 1;
                 }
-                var result = JSON.stringify(eval(this.textField.getString()));
-                result = (result == "" ? this.textField.getString() : result);
-                game.log("JavaScript Eval", result, cc.color.GREEN);
+                var result = "";
+                try {
+                    result = eval(this.textField.getString());
+                    var i = JSON.stringify(result);
+                    cc.app.log.i("js eval", typeof(i) == "undefined" ? result : i);
+                } catch (e) {
+                    cc.app.log.e("js eval", e);
+                }
                 this.dot.setVisible(false);
             });
             // pre
@@ -73,15 +94,11 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                 }
             });
             // cls
-            this.btnCls = ccui.helper.seekWidgetByName(this.node, "btnCls");
+            this.btnCls = ccui.helper.seekWidgetByName(this.node, "btnClear");
             this.btnCls.addClickEventListener(() => {
-                game.logClear();
-                // this.cmdHistory.splice(0, this.cmdHistory.length);
-                // this.historyIdx = 0;
+                cc.app.log.clear();
                 this.list.removeAllItems();
                 this.textField.setString("");
-                var item = {tag: "Tag", text: "Text", color: cc.color.GREEN};
-                this.addLog(item);
                 this.dot.setVisible(false);
             });
             // reload
@@ -91,32 +108,31 @@ $class("ConsoleFrame", function ($export, {Frame}) {
             });
             // log
             this.list = ccui.helper.seekWidgetByName(this.node, "listView");
-            this.item = ccui.helper.seekWidgetByName(this.list, "item");
-            this.item.retain();
-            // this.item.setVisible(false);
         },
 
         addLog: function (item) {
-            this.dot.setVisible(true);
-            var cloneWidget = this.item.clone();
-            cloneWidget.setVisible(true);
-            var tagLbl = ccui.helper.seekWidgetByName(cloneWidget, "tag");
-            var txtLbl = ccui.helper.seekWidgetByName(cloneWidget, "text");
-            tagLbl.string = item.tag;
-            txtLbl.string = item.text;
-            tagLbl.setTextColor(item.color);
-            txtLbl.setTextColor(item.color);
-            this.list.pushBackCustomItem(cloneWidget);
+            this.dot.setVisible(!this.scrollView.isVisible());
+            var str = item.time + "\t\t" + item.tag + "\t\t" + item.msg;
+            var txt = new cc.LabelTTF(str, null, 20, cc.size(this.list.width, 0));
+            txt.setAnchorPoint(cc.p(0, 0));
+            txt.setLineHeight(txt.getLineHeight() * 1);
+            txt.color = item.color;
+            var pan = new ccui.Layout();
+            pan.addChild(txt);
+            pan.setContentSize(cc.size(txt.width, txt.height));
+            this.list.pushBackCustomItem(pan);
             this.list.jumpToBottom();// scrollToPercentVertical
         },
 
         onEnter: function () {
             this._super();
+            this.listener = cc.app.broadcast.on(cc.app.log.BROAD_CAST_LOG, this.addLog, this);
         },
 
         onExit: function () {
-            this.item.release();
+            // this.item.release();
             this._super();
+            cc.app.broadcast.off(this.listener);
         },
     });
 

@@ -29,10 +29,26 @@ var $classes = {
             },
             "import": [],
             "ref": [
-                "$import.framework.game.Console",
-                "$import.framework.helper.helper",
-                "$import.framework.core.datas"
+                "$import.framework.core.helper",
+                "$import.framework.core.datas",
+                "$import.framework.core.native",
+                "$import.framework.core.log",
+                "$import.framework.core.broadcast"
             ]
+        }
+    ],
+    "broadcast": [
+        {
+            "file": "framework/core/broadcast.js",
+            "name": "broadcast",
+            "package": "framework.core.broadcast",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "broadcast": {}
+            },
+            "import": [],
+            "ref": []
         }
     ],
     "datas": [
@@ -49,15 +65,43 @@ var $classes = {
             "ref": []
         }
     ],
-    "Frame": [
+    "helper": [
         {
-            "file": "framework/frame/Frame.js",
-            "name": "Frame",
-            "package": "framework.frame.Frame",
+            "file": "framework/core/helper.js",
+            "name": "helper",
+            "package": "framework.core.helper",
             "loaded": false,
             "factory": null,
             "export": {
-                "Frame": {}
+                "helper": {}
+            },
+            "import": [],
+            "ref": []
+        }
+    ],
+    "log": [
+        {
+            "file": "framework/core/log.js",
+            "name": "log",
+            "package": "framework.core.log",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "log": {}
+            },
+            "import": [],
+            "ref": []
+        }
+    ],
+    "native": [
+        {
+            "file": "framework/core/native.js",
+            "name": "native",
+            "package": "framework.core.native",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "native": {}
             },
             "import": [],
             "ref": []
@@ -65,9 +109,9 @@ var $classes = {
     ],
     "ConsoleFrame": [
         {
-            "file": "framework/frame/consoleframe.js",
+            "file": "framework/frame/ConsoleFrame.js",
             "name": "ConsoleFrame",
-            "package": "framework.frame.consoleframe",
+            "package": "framework.frame.ConsoleFrame",
             "loaded": false,
             "factory": null,
             "export": {
@@ -79,15 +123,15 @@ var $classes = {
             ]
         }
     ],
-    "Console": [
+    "Frame": [
         {
-            "file": "framework/game/Console.js",
-            "name": "Console",
-            "package": "framework.game.Console",
+            "file": "framework/frame/Frame.js",
+            "name": "Frame",
+            "package": "framework.frame.Frame",
             "loaded": false,
             "factory": null,
             "export": {
-                "Console": {}
+                "Frame": {}
             },
             "import": [],
             "ref": []
@@ -124,22 +168,8 @@ var $classes = {
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame",
-                "$import.framework.frame.consoleframe"
+                "$import.framework.frame.ConsoleFrame"
             ]
-        }
-    ],
-    "helper": [
-        {
-            "file": "framework/helper/helper.js",
-            "name": "helper",
-            "package": "framework.helper.helper",
-            "loaded": false,
-            "factory": null,
-            "export": {
-                "helper": {}
-            },
-            "import": [],
-            "ref": []
         }
     ],
     "HotFixScene": [
@@ -218,26 +248,38 @@ var $import = {
                 "_pkg": "framework.core.app",
                 "_cls": "app"
             },
+            "broadcast": {
+                "_pkg": "framework.core.broadcast",
+                "_cls": "broadcast"
+            },
             "datas": {
                 "_pkg": "framework.core.datas",
                 "_cls": "datas"
+            },
+            "helper": {
+                "_pkg": "framework.core.helper",
+                "_cls": "helper"
+            },
+            "log": {
+                "_pkg": "framework.core.log",
+                "_cls": "log"
+            },
+            "native": {
+                "_pkg": "framework.core.native",
+                "_cls": "native"
             }
         },
         "frame": {
+            "ConsoleFrame": {
+                "_pkg": "framework.frame.ConsoleFrame",
+                "_cls": "ConsoleFrame"
+            },
             "Frame": {
                 "_pkg": "framework.frame.Frame",
                 "_cls": "Frame"
-            },
-            "consoleframe": {
-                "_pkg": "framework.frame.consoleframe",
-                "_cls": "ConsoleFrame"
             }
         },
         "game": {
-            "Console": {
-                "_pkg": "framework.game.Console",
-                "_cls": "Console"
-            },
             "FDirector": {
                 "_pkg": "framework.game.FDirector",
                 "_cls": "FDirector"
@@ -245,12 +287,6 @@ var $import = {
             "GameScene": {
                 "_pkg": "framework.game.GameScene",
                 "_cls": "RootFrame"
-            }
-        },
-        "helper": {
-            "helper": {
-                "_pkg": "framework.helper.helper",
-                "_cls": "helper"
             }
         },
         "hotfix": {
@@ -282,13 +318,15 @@ var $import = {
 var $package = {
     "framework.AppDelegate": "framework.AppDelegate",
     "framework.core.app": "framework.core.app",
+    "framework.core.broadcast": "framework.core.broadcast",
     "framework.core.datas": "framework.core.datas",
+    "framework.core.helper": "framework.core.helper",
+    "framework.core.log": "framework.core.log",
+    "framework.core.native": "framework.core.native",
+    "framework.frame.ConsoleFrame": "framework.frame.ConsoleFrame",
     "framework.frame.Frame": "framework.frame.Frame",
-    "framework.frame.consoleframe": "framework.frame.consoleframe",
-    "framework.game.Console": "framework.game.Console",
     "framework.game.FDirector": "framework.game.FDirector",
     "framework.game.GameScene": "framework.game.GameScene",
-    "framework.helper.helper": "framework.helper.helper",
     "framework.hotfix.HotFixScene": "framework.hotfix.HotFixScene",
     "framework.network.SocketHelper": "framework.network.SocketHelper",
     "game.frames.HallFrame": "game.frames.HallFrame",

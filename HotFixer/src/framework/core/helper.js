@@ -30,6 +30,16 @@ $class("helper", function($export){
         },
 
         /**
+         * 得到Cocosstudio里面的数据
+         * @param node
+         * @returns {*|String}
+         */
+        getWidgetUserData: function (node) {
+            var customProperty = node.getComponent("ComExtensionData");
+            return customProperty.getCustomProperty();
+        },
+
+        /**
          *
          * @param jsonFile
          * @returns {*}

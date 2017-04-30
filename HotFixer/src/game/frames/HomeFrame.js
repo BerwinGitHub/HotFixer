@@ -12,12 +12,11 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
         ctor: function () {
             this._super();
             // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
-            var data = ccs.load(res.studio_HomeScene_HomeScene_json);
+            var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
             this.addChild(data.node);
 
-            // var bg = new cc.LayerColor(cc.color(255, 0, 0));
-            // bg.setContentSize(cc.director.getVisibleSize());
-            // this.addChild(bg);
+            var btn = cc.app.helper.ui.getWidgetByName(data.node, "Button_1");
+            btn.addClickEventListener(this.onHallClick);
 
             var spr = new cc.Sprite(res.debug_info_png);
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
@@ -28,7 +27,7 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
         },
 
         onHallClick: function (data) {
-            cc.log(data);
+            cc.app.log.e("tag", cc.app.helper.ui.getWidgetUserData(data));
         },
 
         testProto: function () {
