@@ -29,6 +29,7 @@ var deploy = {
     RES_PATH: "../res", // res的相对路径
     SRC_PATH: "../src", // src的相对路径
     MANIFEST_PATH: "../res/project.manifest",
+    VERSION_MANIFEST_PATH: "../res/version.manifest",
     JSLIST_PATH: common.SERVER_PATH + "/" + common.PROJECT_NAME + "/src/jsList.js",
 
     // 排除的文件
@@ -42,12 +43,21 @@ var deploy = {
         "packageUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME,
         "remoteManifestUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME + "/res/project.manifest",
         "version": "1.0.0",
-        "engineVersion": "3.3",
+        "engineVersion": "3.10",
         "assets": {},
         "searchPaths": [
             "src/"
         ]
     },
+    VERSION_TEMPLATE: {
+        "packageUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME,
+        "remoteManifestUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME + "/res/project.manifest",
+        "remoteVersionUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME + "/res/version.manifest",
+        "version": "1.0.0",
+        "groupVersions": {
+        },
+        "engineVersion": "3.10"
+    }
 };
 
 /**

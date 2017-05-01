@@ -1230,7 +1230,9 @@
     parser.initProjectNode = function(json, resourcePath){
         var projectFile = json["FileData"];
         if(projectFile != null && projectFile["Path"]){
-            var file = resourcePath + projectFile["Path"];
+            /* bug fixed by tangbowen */
+            // var file = resourcePath + projectFile["Path"];
+            var file = "res/" + projectFile["Path"];
             if(cc.loader.getRes(file)){
                 var obj = ccs.load(file, resourcePath);
                 parser.generalAttributes(obj.node, json);
@@ -1241,6 +1243,8 @@
                         obj.action.setTimeSpeed(InnerActionSpeed);
                     obj.node.runAction(obj.action);
                     obj.action.gotoFrameAndPause(0);
+                    /* bug fixed by tangbowen */
+                    obj.node.action = obj.action;
                 }
                 return obj.node;
             } else
@@ -1340,6 +1344,8 @@
             else
                 type = 1;
             var plist = json["Plist"];
+            /* bug fixed by tangbowen */
+            resourcePath = "res/";
             if(plist){
                 if(cc.loader.getRes(resourcePath + plist)){
                     loadedPlist[resourcePath + plist] = true;

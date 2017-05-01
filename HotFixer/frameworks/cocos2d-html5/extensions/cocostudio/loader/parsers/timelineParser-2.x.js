@@ -1229,6 +1229,8 @@
                         obj.action.setTimeSpeed(InnerActionSpeed);
                     obj.node.runAction(obj.action);
                     obj.action.gotoFrameAndPause(0);
+                    /* bug fixed by tangbowen */
+                    obj.node.action = obj.action;
                 }
                 return obj.node;
             } else

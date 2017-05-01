@@ -8,10 +8,13 @@ var path = require('path');
 var file = require("./core/files/file")
 
 function generateAll(callback) {
-    generateSrc(() => {
-        generateRes();
-        callback();
-    }, true);
+    // 去掉jsList.js文件的生成
+    generateRes();
+    callback();
+    // generateSrc(() => {
+    //     generateRes();
+    //     callback();
+    // }, true);
 };
 
 // 生成jsList 文件

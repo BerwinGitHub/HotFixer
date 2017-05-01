@@ -18,6 +18,9 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
             var btn = cc.app.helper.ui.getWidgetByName(data.node, "Button_1");
             btn.addClickEventListener(this.onHallClick);
 
+            this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
+            this.nodeAmt.action.play("ani", false);
+
             var spr = new cc.Sprite(res.debug_info_png);
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
             this.addChild(spr);
@@ -27,15 +30,19 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
         },
 
         onHallClick: function (data) {
-            cc.app.log.e("tag", cc.app.helper.ui.getWidgetUserData(data));
+            var buffer = cc.app.proto.encode("Login", {name: "tangbowen", passwd: "password"});
+            cc.app.log.i("Tag", "Buffer:" + buffer);
+            var msg = cc.app.proto.decode(buffer);
+            console.log(msg);
+            cc.app.log.i("Tag", "msg:" + JSON.stringify(msg));
         },
 
         testProto: function () {
-            var buffer = ProtoHelper.encode("Login", {name: "tangbowen", passwd: "password"});
-            game.log("Tag", "Buffer:" + buffer);
-            var msg = ProtoHelper.decode(buffer);
+            var buffer = cc.app.proto.encode("Login", {name: "tangbowen", passwd: "password"});
+            cc.app.log.i("proto", "Buffer:" + buffer);
+            var msg = cc.app.proto.decode(buffer);
             console.log(msg);
-            game.log("Tag", "msg:" + JSON.stringify(msg));
+            cc.app.log.i("proto", "msg:" + JSON.stringify(msg));
         },
 
 

@@ -34,7 +34,8 @@ var $classes = {
                 "$import.framework.core.native",
                 "$import.framework.core.log",
                 "$import.framework.core.broadcast",
-                "$import.framework.core.prototype"
+                "$import.framework.core.prototype",
+                "$import.framework.core.proto"
             ]
         }
     ],
@@ -103,6 +104,20 @@ var $classes = {
             "factory": null,
             "export": {
                 "native": {}
+            },
+            "import": [],
+            "ref": []
+        }
+    ],
+    "proto": [
+        {
+            "file": "framework/core/proto.js",
+            "name": "proto",
+            "package": "framework.core.proto",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "proto": {}
             },
             "import": [],
             "ref": []
@@ -283,6 +298,10 @@ var $import = {
                 "_pkg": "framework.core.native",
                 "_cls": "native"
             },
+            "proto": {
+                "_pkg": "framework.core.proto",
+                "_cls": "proto"
+            },
             "prototype": {
                 "_pkg": "framework.core.prototype",
                 "_cls": "prototype"
@@ -342,6 +361,7 @@ var $package = {
     "framework.core.helper": "framework.core.helper",
     "framework.core.log": "framework.core.log",
     "framework.core.native": "framework.core.native",
+    "framework.core.proto": "framework.core.proto",
     "framework.core.prototype": "framework.core.prototype",
     "framework.frame.ConsoleFrame": "framework.frame.ConsoleFrame",
     "framework.frame.Frame": "framework.frame.Frame",
@@ -353,6 +373,11 @@ var $package = {
     "game.frames.HomeFrame": "game.frames.HomeFrame"
 };
 var $groups = {
+    "proto": [
+        "framework/protobuf/bytebuffer.js",
+        "framework/protobuf/long.js",
+        "framework/protobuf/protobuf.js"
+    ],
     "datas": [
         "game/datas/ad.js",
         "game/datas/buff.js",

@@ -51,9 +51,11 @@ function start(comparePath) {
             copyResFiles();
             // 生成project.manifest文件
             generateManifest(compareData);
-            // 生成*.js文件
-            generate.generateSrc(() => {
-            }, false);
+            // 生成version.manifest
+            generateVersionManifest(compareData);
+            // 生成jsList.js文件
+            // generate.generateSrc(() => {
+            // }, false);
         });
     });
     // });
@@ -130,6 +132,34 @@ function generateManifest(compareData) {
                     console.log(err);
                 console.log("[ Saved] <= " + deployPath);
             });
+        });
+    });
+}
+
+function generateVersionManifest(compareData) {
+    var obj = cfgs.deploy.VERSION_TEMPLATE;
+    obj.remoteVersionUrl = cfgs.deploy.VERSION_TEMPLATE.remoteVersionUrl;
+    obj.packageUrl = compareData.packageUrl;
+    obj.version = compareData.version;
+
+    // compareData["remoteVersionUrl"] = ;
+    // 保存生成的数据
+    var manifestStr;
+    if (cfgs.common.FORMAT_JSON) {
+        manifestStr = JSON.stringify(obj, null, 4);
+    } else {
+        manifestStr = JSON.stringify(obj);
+    }
+    var p = path.resolve(__dirname, cfgs.deploy.VERSION_MANIFEST_PATH);
+    _file.writeToFile(p, manifestStr, (err) => {
+        if (err)
+            console.log(err);
+        console.log("[ Saved] <= " + p);
+        var deployPath = path.resolve(__dirname, "." + cfgs.deploy.DEPLOY_PATH + "/res/version.manifest");//../UpdateServer
+        _file.writeToFile(deployPath, manifestStr, (err) => {
+            if (err)
+                console.log(err);
+            console.log("[ Saved] <= " + deployPath);
         });
     });
 }
