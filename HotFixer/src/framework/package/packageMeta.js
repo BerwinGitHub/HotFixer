@@ -144,9 +144,7 @@ var $classes = {
             "package": "framework.frame.ConsoleFrame",
             "loaded": false,
             "factory": null,
-            "export": {
-                "ConsoleFrame": {}
-            },
+            "export": {},
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame"

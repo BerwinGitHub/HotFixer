@@ -1,8 +1,8 @@
 {
-    "packageUrl": "http://192.168.1.247:9918/HotFixer",
-    "remoteManifestUrl": "http://192.168.1.247:9918/HotFixer/res/project.manifest",
-    "remoteVersionUrl": "http://192.168.1.247:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1494500468751",
+    "packageUrl": "http://192.168.1.80:9918/HotFixer",
+    "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
+    "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
+    "version": "1.0.1494517945193",
     "groupVersions": {},
     "engineVersion": "3.10"
 }

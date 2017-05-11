@@ -9,8 +9,8 @@
 var common = {
     PROJECT_NAME: "HotFixer", // 项目的名字，多用于下面拼接服务器文件地址路径
     SERVER_PORT: "9918",    // 服务器端口，生成project.manifest文件的时候需要
-    // SERVER_IP: "http://192.168.1.80", // Mac 服务器的地址，用于配置project.manifest文件里面的地址，
-    SERVER_IP: "http://192.168.1.247", // Windows 服务器的地址，用于配置project.manifest文件里面的地址，
+    SERVER_IP: "http://192.168.1.80", // Mac 服务器的地址，用于配置project.manifest文件里面的地址，
+    // SERVER_IP: "http://192.168.1.247", // Windows 服务器的地址，用于配置project.manifest文件里面的地址，
     // SERVER_IP: "http://127.0.0.1", // localhost，用于配置project.manifest文件里面的地址，
     FORMAT_JSON: true, // 生成的js文件是否按照格式生成
     SERVER_PATH: "./updateServer",// 本地项目热更新文件服务器
