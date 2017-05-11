@@ -62,10 +62,14 @@ ccui.helper = {
      * @returns {ccui.Widget}
      */
     seekWidgetByName: function (root, name) {
-        if (!root)
+        if (!root) {
+            cc.log("seekWidgetByName not found:" + name);
             return null;
-        if (root.getName() === name)
+        }
+        if (root.getName() === name) {
+            cc.log("seekWidgetByName found:" + name);
             return root;
+        }
         var arrayRootChildren = root.getChildren();
         var length = arrayRootChildren.length;
         for (var i = 0; i < length; i++) {
@@ -74,6 +78,7 @@ ccui.helper = {
             if (res !== null)
                 return res;
         }
+        cc.log("seekWidgetByName not found:" + name);
         return null;
     },
 
@@ -128,7 +133,7 @@ ccui.helper = {
         if (!this._activeLayout)
             return;
         var children = rootNode.getChildren(), node;
-        for(var i = 0, len = children.length;i < len; i++) {
+        for (var i = 0, len = children.length; i < len; i++) {
             node = children[i];
             var com = node.getComponent(ccui.LayoutComponent.NAME);
             var parent = node.getParent();

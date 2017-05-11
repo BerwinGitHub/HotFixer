@@ -1231,8 +1231,8 @@
         var projectFile = json["FileData"];
         if(projectFile != null && projectFile["Path"]){
             /* bug fixed by tangbowen */
-            // var file = resourcePath + projectFile["Path"];
-            var file = "res/" + projectFile["Path"];
+            resourcePath = "res/";
+            var file = resourcePath + projectFile["Path"];
             if(cc.loader.getRes(file)){
                 var obj = ccs.load(file, resourcePath);
                 parser.generalAttributes(obj.node, json);

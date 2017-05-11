@@ -18,11 +18,11 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
             var btn = cc.app.helper.ui.getWidgetByName(data.node, "Button_1");
             btn.addClickEventListener(this.onHallClick);
 
-            this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
-            this.nodeAmt.action.play("ani", false);
+            // this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
+            // this.nodeAmt.action.play("ani", false);
 
             var spr = new cc.Sprite(res.debug_info_png);
-            spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+            spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + 100);
             this.addChild(spr);
             cc.app.helper.event.addClickListener(spr, () => {
                 $use(FDirector).replaceFrame(new ($use(HallFrame))());
@@ -45,6 +45,13 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
             cc.app.log.i("proto", "msg:" + JSON.stringify(msg));
         },
 
+        onEnter: function () {
+            this._super();
+        },
+
+        onExit: function () {
+            this._super();
+        },
 
     });
 

@@ -50,9 +50,10 @@ function start(comparePath) {
             // 5.开始拷贝res下面的资源
             copyResFiles();
             // 生成project.manifest文件
-            generateManifest(compareData);
-            // 生成version.manifest
-            generateVersionManifest(compareData);
+            generateManifest(compareData, () => {
+                // 生成version.manifest
+                generateVersionManifest(compareData);
+            });
             // 生成jsList.js文件
             // generate.generateSrc(() => {
             // }, false);
@@ -82,7 +83,7 @@ function copyResFiles() {
     });
 }
 
-function generateManifest(compareData) {
+function generateManifest(compareData, callback) {
     var assets = compareData.assets;
     var RootPath = path.resolve(__dirname, "." + cfgs.deploy.DEPLOY_PATH);//../UpdateServer;
     var parallelParam = [];
@@ -131,6 +132,7 @@ function generateManifest(compareData) {
                 if (err)
                     console.log(err);
                 console.log("[ Saved] <= " + deployPath);
+                callback();
             });
         });
     });

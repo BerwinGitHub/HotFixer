@@ -18,8 +18,16 @@ $class("ConsoleFrame", function ($export, {Frame}) {
             this.node = ccs.load(res.studio_debug_debug_json).node;
             this.addChild(this.node);
 
+            // var arrayRootChildren = this.node.getChildren();
+            // var length = arrayRootChildren.length;
+            // for (var i = 0; i < length; i++) {
+            //     cc.log("===>:" + arrayRootChildren[i].getName());
+            //     if(arrayRootChildren[i].getName() === "nodeConsole"){
+            //         this.consoleView = arrayRootChildren[i];
+            //     }
+            // }
             //
-            this.scrollView = ccui.helper.seekWidgetByName(this.node, "scrollView");
+            this.scrollView = ccui.helper.seek (this.node, "scrollView");
             this.consoleView = ccui.helper.seekWidgetByName(this.node, "nodeConsole");
             this.scrollView.setVisible(false);
             this.consoleView.setVisible(false);
