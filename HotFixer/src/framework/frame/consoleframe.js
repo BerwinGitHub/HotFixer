@@ -27,7 +27,7 @@ $class("ConsoleFrame", function ($export, {Frame}) {
             //     }
             // }
             //
-            this.scrollView = ccui.helper.seek (this.node, "scrollView");
+            this.scrollView = ccui.helper.seekWidgetByName(this.node, "scrollView");
             this.consoleView = ccui.helper.seekWidgetByName(this.node, "nodeConsole");
             this.scrollView.setVisible(false);
             this.consoleView.setVisible(false);

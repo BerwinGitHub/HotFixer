@@ -76,7 +76,7 @@ cc.game.onStart = function () {
         app.setUpEnvironment();
         //load resources
         var hotFixScene = new HotFixScene();
-        hotFixScene.runWithCallback("res/project.manifest", () => {
+        hotFixScene.runWithCallback("res/version.manifest", () => {
             $requires([$req.framework.AppDelegate], ({AppDelegate}) => {
                 var appDelegate = new AppDelegate();
                 appDelegate.applicationDidFinishLaunching();

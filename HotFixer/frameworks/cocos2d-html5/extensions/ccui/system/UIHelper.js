@@ -63,11 +63,9 @@ ccui.helper = {
      */
     seekWidgetByName: function (root, name) {
         if (!root) {
-            cc.log("seekWidgetByName not found:" + name);
             return null;
         }
         if (root.getName() === name) {
-            cc.log("seekWidgetByName found:" + name);
             return root;
         }
         var arrayRootChildren = root.getChildren();
@@ -78,7 +76,6 @@ ccui.helper = {
             if (res !== null)
                 return res;
         }
-        cc.log("seekWidgetByName not found:" + name);
         return null;
     },
 

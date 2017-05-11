@@ -9,6 +9,21 @@
           <AbstractNodeData Name="scrollView" ActionTag="-2015750480" Tag="38" IconVisible="False" TouchEnable="True" ClipAble="True" BackColorAlpha="207" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
             <Size X="1136.0000" Y="640.0000" />
             <Children>
+              <AbstractNodeData Name="btnReload" ActionTag="333410297" Tag="75" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="84.3059" RightMargin="901.6941" TopMargin="65.6707" BottomMargin="884.3293" TouchEnable="True" FontSize="24" ButtonText="Relaod" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="150.0000" Y="50.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
+                <Position X="159.3059" Y="934.3293" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="128" G="0" B="128" />
+                <PrePosition X="0.1402" Y="0.9343" />
+                <PreSize X="0.1320" Y="0.0500" />
+                <TextColor A="255" R="0" G="0" B="0" />
+                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
               <AbstractNodeData Name="btnConsole" ActionTag="393080689" Tag="42" IconVisible="False" LeftMargin="845.8486" RightMargin="140.1514" TopMargin="52.1007" BottomMargin="887.8993" TouchEnable="True" FontSize="24" ButtonText="Console" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="150.0000" Y="60.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -65,7 +80,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="nodeConsole" ActionTag="-109194390" Tag="72" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="568.0000" RightMargin="568.0000" TopMargin="320.0000" BottomMargin="320.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="0.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="nodeConsole" Visible="False" ActionTag="-109194390" Tag="72" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="568.0000" RightMargin="568.0000" TopMargin="320.0000" BottomMargin="320.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="568.0000" Y="320.0000" />

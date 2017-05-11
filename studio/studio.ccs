@@ -4,6 +4,12 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="studio">
+          <Folder Name="debug">
+            <Project Name="console.csd" Type="Node" />
+            <Project Name="debug.csd" Type="Scene" />
+            <Image Name="debug.png" />
+            <Image Name="dot.png" />
+          </Folder>
           <Folder Name="HallScene">
             <Folder Name="amts" />
             <Folder Name="imgs" />
@@ -24,12 +30,6 @@
             <Folder Name="node">
               <Project Name="HomeScene.csd" Type="Scene" />
             </Folder>
-          </Folder>
-          <Folder Name="debug">
-            <Project Name="console.csd" Type="Node" />
-            <Project Name="debug.csd" Type="Scene" />
-            <Image Name="debug.png" />
-            <Image Name="dot.png" />
           </Folder>
         </Folder>
       </RootFolder>

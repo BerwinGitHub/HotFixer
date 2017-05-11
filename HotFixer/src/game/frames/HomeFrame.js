@@ -18,8 +18,8 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
             var btn = cc.app.helper.ui.getWidgetByName(data.node, "Button_1");
             btn.addClickEventListener(this.onHallClick);
 
-            // this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
-            // this.nodeAmt.action.play("ani", false);
+            this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
+            this.nodeAmt.action.play("ani", true);
 
             var spr = new cc.Sprite(res.debug_info_png);
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + 100);

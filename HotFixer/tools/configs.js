@@ -9,8 +9,9 @@
 var common = {
     PROJECT_NAME: "HotFixer", // 项目的名字，多用于下面拼接服务器文件地址路径
     SERVER_PORT: "9918",    // 服务器端口，生成project.manifest文件的时候需要
-    SERVER_IP: "http://192.168.1.80", // Mac 服务器的地址，用于配置project.manifest文件里面的地址，
-    // SERVER_IP: "http://192.168.1.247", // Windows 服务器的地址，用于配置project.manifest文件里面的地址，
+    // SERVER_IP: "http://192.168.1.80", // Mac 服务器的地址，用于配置project.manifest文件里面的地址，
+    SERVER_IP: "http://192.168.1.247", // Windows 服务器的地址，用于配置project.manifest文件里面的地址，
+    // SERVER_IP: "http://127.0.0.1", // localhost，用于配置project.manifest文件里面的地址，
     FORMAT_JSON: true, // 生成的js文件是否按照格式生成
     SERVER_PATH: "./updateServer",// 本地项目热更新文件服务器
     // COCOS_JS_PATH: "./frameworks/cocos2d-x/cocos/scripting/js-bindings/script",// 编译jsc时，cocos源码也需要编译
@@ -42,6 +43,7 @@ var deploy = {
     MANIFEST_DEFAULT_DATA: {
         "packageUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME,
         "remoteManifestUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME + "/res/project.manifest",
+        "remoteVersionUrl": common.SERVER_IP + ":" + common.SERVER_PORT + "/" + common.PROJECT_NAME + "/res/version.manifest",
         "version": "1.0.0",
         "engineVersion": "3.10",
         "assets": {},
@@ -63,7 +65,7 @@ var deploy = {
 /**
  * 生成apk配置
  * @type {{}}
- * compile -s ./src -p android --android-studio --ap android-16 -m debug -j 4 --compile-script 1 -o ../build/outputs/apk --app-abi armeabi:x86:mips
+ * TODO compile -s ./src -p android --android-studio --ap android-16 -m debug -j 4 --compile-script 1 -o ../build/outputs/apk --app-abi armeabi:x86:mips
  */
 var apk = {
     SRC: "./src", // 编译目标路径
