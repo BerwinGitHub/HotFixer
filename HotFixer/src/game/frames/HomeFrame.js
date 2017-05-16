@@ -15,11 +15,11 @@ $class("HomeFrame", function ($export, {Frame, HallFrame, FDirector}) {
             var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
             this.addChild(data.node);
 
-            var btn = cc.app.helper.ui.getWidgetByName(data.node, "Button_1");
+            var btn = cc.app.helper.ui.findNodeByName(data.node, "Button_1");
             btn.addClickEventListener(this.onHallClick);
 
-            // this.nodeAmt = cc.app.helper.ui.getWidgetByName(data.node, "amtNode");
-            // this.nodeAmt.action.play("ani", true);
+            this.nodeAmt = cc.app.helper.ui.findNodeByName(data.node, "amtNode");
+            this.nodeAmt.action.play("ani", true);
 
             var spr = new cc.Sprite(res.debug_info_png);
             spr.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 + 100);

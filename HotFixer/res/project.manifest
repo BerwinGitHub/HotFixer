@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1494517945193",
+    "version": "1.0.1494952491638",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -94,7 +94,7 @@
             "compressed": false
         },
         "src/framework/core/helper.jsc": {
-            "md5": "9e5dd1206e1e3211a1b9adf9eb4d62bb",
+            "md5": "9b1c0bbfaf435aed2e0050ce62cf69cb",
             "compressed": false
         },
         "src/framework/core/log.jsc": {
@@ -214,7 +214,7 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "bda30f3c2c449eaa2f0f9993822f0dba",
+            "md5": "afdccec860cb7344977c3b6769313618",
             "compressed": false
         },
         "src/language.jsc": {
@@ -226,7 +226,7 @@
             "compressed": false
         },
         "src/framework/frame/ConsoleFrame.jsc": {
-            "md5": "90be7bc1d3834586dce653dde192a459",
+            "md5": "814741d689c5fccfd88a0c501685e45f",
             "compressed": false
         }
     },

@@ -5455,6 +5455,15 @@ str
     return ccui.Widget;
 },
 
+/* bug fixed by tangbowen */
+seekNodeByName : function (
+node,
+str
+)
+{
+    return cc.Node;
+},
+
 /**
  * @method seekWidgetByTag
  * @param {ccui.Widget} arg0

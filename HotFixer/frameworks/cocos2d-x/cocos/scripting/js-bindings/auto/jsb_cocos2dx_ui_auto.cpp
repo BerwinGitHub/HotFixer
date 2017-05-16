@@ -13235,6 +13235,39 @@ bool js_cocos2dx_ui_Helper_seekWidgetByName(JSContext *cx, uint32_t argc, jsval 
     return false;
 }
 
+bool js_cocos2dx_ui_Helper_seekNodeByName(JSContext *cx, uint32_t argc, jsval *vp)
+{
+    JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
+    bool ok = true;
+    if (argc == 2) {
+        cocos2d::Node* arg0 = nullptr;
+        std::string arg1;
+        do {
+            if (args.get(0).isNull()) { arg0 = nullptr; break; }
+            if (!args.get(0).isObject()) { ok = false; break; }
+            js_proxy_t *jsProxy;
+            JS::RootedObject tmpObj(cx, args.get(0).toObjectOrNull());
+            jsProxy = jsb_get_js_proxy(tmpObj);
+            arg0 = (cocos2d::Node*)(jsProxy ? jsProxy->ptr : NULL);
+            JSB_PRECONDITION2( arg0, cx, false, "Invalid Native Object");
+        } while (0);
+        ok &= jsval_to_std_string(cx, args.get(1), &arg1);
+        JSB_PRECONDITION2(ok, cx, false, "js_cocos2dx_ui_Helper_seekNodeByName : Error processing arguments");
+        
+        cocos2d::Node* ret = cocos2d::ui::Helper::seekNodeByName(arg0, arg1);
+        jsval jsret = JSVAL_NULL;
+        if (ret) {
+            jsret = OBJECT_TO_JSVAL(js_get_or_create_jsobject<cocos2d::Node>(cx, (cocos2d::Node*)ret));
+        } else {
+            jsret = JSVAL_NULL;
+        };
+        args.rval().set(jsret);
+        return true;
+    }
+    JS_ReportError(cx, "js_cocos2dx_ui_Helper_seekNodeByName : wrong number of arguments");
+    return false;
+}
+
 bool js_cocos2dx_ui_Helper_seekWidgetByTag(JSContext *cx, uint32_t argc, jsval *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
@@ -13340,6 +13373,8 @@ void js_register_cocos2dx_ui_Helper(JSContext *cx, JS::HandleObject global) {
         JS_FN("changeLayoutSystemActiveState", js_cocos2dx_ui_Helper_changeLayoutSystemActiveState, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("seekActionWidgetByActionTag", js_cocos2dx_ui_Helper_seekActionWidgetByActionTag, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("seekWidgetByName", js_cocos2dx_ui_Helper_seekWidgetByName, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        /* bug fixed by tangbowen 将js和c++方法绑定*/
+        JS_FN("seekNodeByName", js_cocos2dx_ui_Helper_seekNodeByName, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("seekWidgetByTag", js_cocos2dx_ui_Helper_seekWidgetByTag, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("restrictCapInsetRect", js_cocos2dx_ui_Helper_restrictCapInsetRect, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("doLayout", js_cocos2dx_ui_Helper_doLayout, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),

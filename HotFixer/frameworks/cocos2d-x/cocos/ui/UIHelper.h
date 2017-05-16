@@ -66,6 +66,9 @@ public:
      */
     static Widget* seekWidgetByName(Widget* root, const std::string& name);
     
+    /* bug fixed by tangbowen */
+    static Node* seekNodeByName(Node* root, const std::string& name);
+    
     /**
      * Find a widget with a specific action tag from root widget
      * This search will be recursive through all child widgets.

@@ -25,8 +25,9 @@ $class("helper", function($export){
          * @param parent
          * @param name
          */
-        getWidgetByName: function (parent, name) {
-            return ccui.helper.seekWidgetByName(parent, name);
+        findNodeByName: function (parent, name) {
+            // return ccui.helper.seekWidgetByName(parent, name);
+            return ccui.helper.seekNodeByName(parent, name);
         },
 
         /**

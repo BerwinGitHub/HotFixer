@@ -27,39 +27,39 @@ $class("ConsoleFrame", function ($export, {Frame}) {
             //     }
             // }
             //
-            this.scrollView = ccui.helper.seekWidgetByName(this.node, "scrollView");
-            this.consoleView = ccui.helper.seekWidgetByName(this.node, "nodeConsole");
+            this.scrollView = ccui.helper.seekNodeByName(this.node, "scrollView");
+            this.consoleView = ccui.helper.seekNodeByName(this.node, "nodeConsole");
             this.scrollView.setVisible(false);
             this.consoleView.setVisible(false);
 
             // btn
-            var btn = ccui.helper.seekWidgetByName(this.node, "btnDebug");
+            var btn = ccui.helper.seekNodeByName(this.node, "btnDebug");
             // btn.setLocalZOrder(this.ZORDER.DEBUG);
             btn.addClickEventListener(() => {
                 this.scrollView.setVisible(!this.scrollView.isVisible());
             });
             // dot
-            this.dot = ccui.helper.seekWidgetByName(this.node, "dot");
+            this.dot = ccui.helper.seekNodeByName(this.node, "dot");
             this.dot.setVisible(false);
 
             // console
-            var btnConsole = ccui.helper.seekWidgetByName(this.node, "btnConsole");
+            var btnConsole = ccui.helper.seekNodeByName(this.node, "btnConsole");
             btnConsole.addClickEventListener(() => {
                 this.dot.setVisible(false);
                 this.consoleView.setVisible(true);
             });
 
             // close
-            var btnClose = ccui.helper.seekWidgetByName(this.node, "btnClose");
+            var btnClose = ccui.helper.seekNodeByName(this.node, "btnClose");
             btnClose.addClickEventListener(() => {
                 this.consoleView.setVisible(false);
             });
 
             // textField
             this.cmdHistory = ["cc.winSize"];
-            this.textField = ccui.helper.seekWidgetByName(this.node, "textField");
+            this.textField = ccui.helper.seekNodeByName(this.node, "textField");
             this.textField.setString(this.cmdHistory[this.cmdHistory.length - 1]);
-            this.btnExe = ccui.helper.seekWidgetByName(this.node, "btnExe");
+            this.btnExe = ccui.helper.seekNodeByName(this.node, "btnExe");
             this.btnExe.addClickEventListener(() => {
                 // 下标在最后一个 才表示是新输入的那么记录
                 if (this.historyIdx == this.cmdHistory.length - 1 || this.cmdHistory.length == 0) {
@@ -77,7 +77,7 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                 this.dot.setVisible(false);
             });
             // pre
-            this.btnPre = ccui.helper.seekWidgetByName(this.node, "btnPre");
+            this.btnPre = ccui.helper.seekNodeByName(this.node, "btnPre");
             this.btnPre.addClickEventListener(() => {
                 if (this.historyIdx - 1 >= 0) {
                     this.textField.setString(this.cmdHistory[--this.historyIdx]);
@@ -86,14 +86,14 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                 }
             });
             // btnInputCls
-            this.btnInputCls = ccui.helper.seekWidgetByName(this.node, "btnInputCls");
+            this.btnInputCls = ccui.helper.seekNodeByName(this.node, "btnInputCls");
             this.btnInputCls.addClickEventListener(() => {
                 this.textField.setString("");
                 // 在中间清除的时候，下边到最后一个
                 this.historyIdx = this.cmdHistory.length - 1;
             });
             // next
-            this.btnNext = ccui.helper.seekWidgetByName(this.node, "btnNext");
+            this.btnNext = ccui.helper.seekNodeByName(this.node, "btnNext");
             this.btnNext.addClickEventListener(() => {
                 if (this.historyIdx + 1 < this.cmdHistory.length) {
                     this.textField.setString(this.cmdHistory[++this.historyIdx]);
@@ -102,7 +102,7 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                 }
             });
             // cls
-            this.btnCls = ccui.helper.seekWidgetByName(this.node, "btnClear");
+            this.btnCls = ccui.helper.seekNodeByName(this.node, "btnClear");
             this.btnCls.addClickEventListener(() => {
                 cc.app.log.clear();
                 this.list.removeAllItems();
@@ -110,12 +110,12 @@ $class("ConsoleFrame", function ($export, {Frame}) {
                 this.dot.setVisible(false);
             });
             // reload
-            this.btnReload = ccui.helper.seekWidgetByName(this.node, "btnReload");
+            this.btnReload = ccui.helper.seekNodeByName(this.node, "btnReload");
             this.btnReload.addClickEventListener(() => {
                 cc.game.restart();
             });
             // log
-            this.list = ccui.helper.seekWidgetByName(this.node, "listView");
+            this.list = ccui.helper.seekNodeByName(this.node, "listView");
         },
 
         addLog: function (item) {
