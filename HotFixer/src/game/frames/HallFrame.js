@@ -29,7 +29,7 @@ $class("HallFrame", function ($export, {Frame, FDirector, HomeFrame}) {
         },
 
         onExit: function () {
-
+            this._super();
         },
 
     });

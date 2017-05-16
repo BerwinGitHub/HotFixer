@@ -18,7 +18,7 @@
             "IsBounceEnabled": true,
             "InnerNodeSize": {
               "Width": 1136,
-              "Height": 1000
+              "Height": 1136
             },
             "ScrollDirectionType": "Vertical",
             "ClipAble": true,
@@ -55,6 +55,10 @@
               "X": 0.0,
               "Y": 0.0
             },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
             "PreSize": {
               "X": 1.0,
               "Y": 1.0
@@ -106,8 +110,8 @@
                   "ScaleY": 1.0
                 },
                 "Position": {
-                  "X": 159.3059,
-                  "Y": 934.3293
+                  "X": 159.2672,
+                  "Y": 1061.3647
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -127,12 +131,12 @@
                 },
                 "PreSize": {
                   "X": 0.132,
-                  "Y": 0.05
+                  "Y": 0.044
                 },
-                "LeftMargin": 84.3059,
-                "RightMargin": 901.6941,
-                "TopMargin": 65.6707,
-                "BottomMargin": 884.3293,
+                "LeftMargin": 84.2672,
+                "RightMargin": 901.7328,
+                "TopMargin": 74.6353,
+                "BottomMargin": 1011.3647,
                 "Tag": 75,
                 "ActionTag": 333410297,
                 "Size": {
@@ -187,8 +191,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 920.8486,
-                  "Y": 917.8993
+                  "X": 355.7258,
+                  "Y": 1037.9241
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -201,17 +205,17 @@
                 },
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.8106,
-                  "Y": 0.9179
+                  "X": 0.3131,
+                  "Y": 0.9137
                 },
                 "PreSize": {
                   "X": 0.132,
-                  "Y": 0.06
+                  "Y": 0.0528
                 },
-                "LeftMargin": 845.8486,
-                "RightMargin": 140.1514,
-                "TopMargin": 52.1007,
-                "BottomMargin": 887.8993,
+                "LeftMargin": 280.7258,
+                "RightMargin": 705.2742,
+                "TopMargin": 68.0759,
+                "BottomMargin": 1007.9241,
                 "Tag": 42,
                 "ActionTag": 393080689,
                 "Size": {
@@ -224,8 +228,8 @@
             ],
             "ActionTag": -2015750480,
             "Size": {
-              "X": 1136.0,
-              "Y": 640.0
+              "X": 640.0,
+              "Y": 1136.0
             },
             "Name": "scrollView",
             "ctype": "ScrollViewObjectData"
@@ -275,8 +279,8 @@
               "ScaleY": 1.0
             },
             "Position": {
-              "X": 1120.0,
-              "Y": 624.0
+              "X": 630.976,
+              "Y": 1107.6
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -284,20 +288,20 @@
             },
             "CColor": {},
             "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
             "PrePosition": {
               "X": 0.9859,
               "Y": 0.975
             },
             "PreSize": {
-              "X": 0.0563,
-              "Y": 0.1
+              "X": 0.1,
+              "Y": 0.0563
             },
-            "HorizontalEdge": "RightEdge",
-            "VerticalEdge": "TopEdge",
-            "LeftMargin": 1056.0,
-            "RightMargin": 16.0,
-            "TopMargin": 16.0,
-            "BottomMargin": 560.0,
+            "LeftMargin": 566.976,
+            "RightMargin": 9.024,
+            "TopMargin": 28.4,
+            "BottomMargin": 1043.6,
             "Tag": 43,
             "Children": [
               {
@@ -365,8 +369,8 @@
             "InnerActionSpeed": 1.0,
             "AnchorPoint": {},
             "Position": {
-              "X": 568.0,
-              "Y": 320.0
+              "X": 320.0,
+              "Y": 568.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -384,10 +388,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 568.0,
-            "RightMargin": 568.0,
-            "TopMargin": 320.0,
-            "BottomMargin": 320.0,
+            "LeftMargin": 320.0,
+            "RightMargin": 320.0,
+            "TopMargin": 568.0,
+            "BottomMargin": 568.0,
             "Tag": 72,
             "ActionTag": -109194390,
             "Size": {
@@ -399,8 +403,8 @@
           }
         ],
         "Size": {
-          "X": 1136.0,
-          "Y": 640.0
+          "X": 640.0,
+          "Y": 1136.0
         },
         "Name": "Scene",
         "ctype": "SingleNodeObjectData"

@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1494952491638",
+    "version": "1.0.1494954593622",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -46,7 +46,7 @@
             "compressed": false
         },
         "res/studio/debug/debug.json": {
-            "md5": "a09a730e5e692d81267f54054dbb79d5",
+            "md5": "5c56e595aee3adedc571297d7db0b480",
             "compressed": false
         },
         "res/studio/debug/debug.png": {
@@ -54,11 +54,11 @@
             "compressed": false
         },
         "res/studio/debug/dot.png": {
-            "md5": "48fc4c21498a925b7c918dd92e6ae69d",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/HallScene/node/HallScene.json": {
-            "md5": "4f90ab0c56a844f43351fb508660a39a",
+            "md5": "3b307926e090be9648a7a722fe37bb51",
             "compressed": false
         },
         "res/studio/HomeScene/amts/animation.json": {
@@ -74,7 +74,7 @@
             "compressed": false
         },
         "res/studio/HomeScene/node/HomeScene.json": {
-            "md5": "9a2b57aa25a0ca12cecc2be28e910620",
+            "md5": "8d13d3615c67db60abf8f66624ac5da1",
             "compressed": false
         },
         "src/framework/AppDelegate.jsc": {
@@ -210,7 +210,7 @@
             "compressed": false
         },
         "src/game/frames/HallFrame.jsc": {
-            "md5": "347a88b24d2780cb01ebea8d4ec336a3",
+            "md5": "9c3a8d526ce427adbdf48273df83519c",
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
