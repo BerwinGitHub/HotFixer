@@ -228,7 +228,7 @@
             ],
             "ActionTag": -2015750480,
             "Size": {
-              "X": 640.0,
+              "X": 768.0,
               "Y": 1136.0
             },
             "Name": "scrollView",
@@ -279,7 +279,7 @@
               "ScaleY": 1.0
             },
             "Position": {
-              "X": 630.976,
+              "X": 757.1713,
               "Y": 1107.6
             },
             "Scale": {
@@ -295,11 +295,11 @@
               "Y": 0.975
             },
             "PreSize": {
-              "X": 0.1,
+              "X": 0.0833,
               "Y": 0.0563
             },
-            "LeftMargin": 566.976,
-            "RightMargin": 9.024,
+            "LeftMargin": 693.1713,
+            "RightMargin": 10.8287,
             "TopMargin": 28.4,
             "BottomMargin": 1043.6,
             "Tag": 43,
@@ -369,7 +369,7 @@
             "InnerActionSpeed": 1.0,
             "AnchorPoint": {},
             "Position": {
-              "X": 320.0,
+              "X": 384.0,
               "Y": 568.0
             },
             "Scale": {
@@ -388,8 +388,8 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 320.0,
-            "RightMargin": 320.0,
+            "LeftMargin": 384.0,
+            "RightMargin": 384.0,
             "TopMargin": 568.0,
             "BottomMargin": 568.0,
             "Tag": 72,
@@ -403,7 +403,7 @@
           }
         ],
         "Size": {
-          "X": 640.0,
+          "X": 768.0,
           "Y": 1136.0
         },
         "Name": "Scene",

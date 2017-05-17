@@ -4,7 +4,7 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="7" ctype="GameNodeObjectData">
-        <Size X="640.0000" Y="1136.0000" />
+        <Size X="768.0000" Y="1136.0000" />
         <Children>
           <AbstractNodeData Name="Text_1" ActionTag="-1098592895" Tag="8" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="451.5000" RightMargin="451.5000" TopMargin="293.0000" BottomMargin="293.0000" FontSize="48" LabelText="Hall Scene" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="233.0000" Y="54.0000" />
