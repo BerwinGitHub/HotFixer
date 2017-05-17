@@ -9,6 +9,22 @@
           <TTF Name="JosefinSans-Regular.ttf" />
         </Folder>
         <Folder Name="studio">
+          <Folder Name="common">
+            <Folder Name="amts" />
+            <Folder Name="fonts">
+              <TTF Name="JosefinSans-Bold.ttf" />
+              <TTF Name="JosefinSans-Light.ttf" />
+              <TTF Name="JosefinSans-Regular.ttf" />
+            </Folder>
+            <Folder Name="imgs">
+              <Image Name="btn_bg.png" />
+              <Image Name="btn_close.png" />
+              <Image Name="shadow.png" />
+            </Folder>
+            <Folder Name="node">
+              <Project Name="dialog_options.csd" Type="Node" />
+            </Folder>
+          </Folder>
           <Folder Name="debug">
             <Project Name="console.csd" Type="Node" />
             <Project Name="debug.csd" Type="Scene" />
@@ -34,22 +50,6 @@
             </Folder>
             <Folder Name="node">
               <Project Name="HomeScene.csd" Type="Scene" />
-            </Folder>
-          </Folder>
-          <Folder Name="common">
-            <Folder Name="amts" />
-            <Folder Name="fonts">
-              <TTF Name="JosefinSans-Bold.ttf" />
-              <TTF Name="JosefinSans-Light.ttf" />
-              <TTF Name="JosefinSans-Regular.ttf" />
-            </Folder>
-            <Folder Name="imgs">
-              <Image Name="btn_bg.png" />
-              <Image Name="btn_close.png" />
-              <Image Name="shadow.png" />
-            </Folder>
-            <Folder Name="node">
-              <Project Name="dialog_options.csd" Type="Node" />
             </Folder>
           </Folder>
         </Folder>

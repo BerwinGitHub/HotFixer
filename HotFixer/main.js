@@ -77,8 +77,7 @@ cc.game.onStart = function () {
             $req.framework.hotfix.HotFixScene],
         ({app, HotFixScene}) => {
             app.setUpEnvironment();
-            if (cc.isNative)
-                app.helper.vr.setupVisibleRect(640, 960);
+            app.helper.vr.setupVisibleRect(640, 960);
             //load resources
             var hotFixScene = new HotFixScene();
             hotFixScene.runWithCallback("res/version.manifest", () => {

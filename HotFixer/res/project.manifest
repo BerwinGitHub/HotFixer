@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1495036028688",
+    "version": "1.0.1495038604005",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -46,7 +46,7 @@
             "compressed": false
         },
         "res/studio/debug/debug.json": {
-            "md5": "5d9849cdba6ee0f7865f3e0459052ab1",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/debug.png": {
@@ -54,7 +54,7 @@
             "compressed": false
         },
         "res/studio/debug/dot.png": {
-            "md5": "48fc4c21498a925b7c918dd92e6ae69d",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/HallScene/node/HallScene.json": {
@@ -214,7 +214,7 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "a04d2829a3a150a6262b6dfca90ae52a",
+            "md5": "2440a2a8bc1a1429a29676058ea92f5b",
             "compressed": false
         },
         "src/language.jsc": {
@@ -222,7 +222,7 @@
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "f8343c00eeb822f3f602bd72a4dec18e",
+            "md5": "cb9b838b10bb1c37b5689ad89dbbd3d0",
             "compressed": false
         },
         "src/framework/frame/ConsoleFrame.jsc": {
@@ -267,6 +267,10 @@
         },
         "res/mjoys/audio/TinyButton.mp3": {
             "md5": "32fdca19b419ac87ddd591d8b2cca0de",
+            "compressed": false
+        },
+        "src/mjoys/core/mjoys.jsc": {
+            "md5": "b3e3c3f10bcde2028340cd39d29c10f6",
             "compressed": false
         }
     },
