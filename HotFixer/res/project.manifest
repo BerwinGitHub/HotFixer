@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1494954593622",
+    "version": "1.0.1495036028688",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -42,11 +42,11 @@
             "compressed": false
         },
         "res/studio/debug/console.json": {
-            "md5": "c7a6d16e056702f1536b168e99f8d21e",
+            "md5": "a2c2e09e8cc92be0ca5ca6abc29ec52a",
             "compressed": false
         },
         "res/studio/debug/debug.json": {
-            "md5": "5c56e595aee3adedc571297d7db0b480",
+            "md5": "5d9849cdba6ee0f7865f3e0459052ab1",
             "compressed": false
         },
         "res/studio/debug/debug.png": {
@@ -54,11 +54,11 @@
             "compressed": false
         },
         "res/studio/debug/dot.png": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "48fc4c21498a925b7c918dd92e6ae69d",
             "compressed": false
         },
         "res/studio/HallScene/node/HallScene.json": {
-            "md5": "3b307926e090be9648a7a722fe37bb51",
+            "md5": "19a1ab0d10354cb0a8d66c5b4d4fd803",
             "compressed": false
         },
         "res/studio/HomeScene/amts/animation.json": {
@@ -74,7 +74,7 @@
             "compressed": false
         },
         "res/studio/HomeScene/node/HomeScene.json": {
-            "md5": "8d13d3615c67db60abf8f66624ac5da1",
+            "md5": "7749735737596af8f8a2d16ec71f2566",
             "compressed": false
         },
         "src/framework/AppDelegate.jsc": {
@@ -94,7 +94,7 @@
             "compressed": false
         },
         "src/framework/core/helper.jsc": {
-            "md5": "9b1c0bbfaf435aed2e0050ce62cf69cb",
+            "md5": "0c4a7d30bc81b7493fec76383b6768fd",
             "compressed": false
         },
         "src/framework/core/log.jsc": {
@@ -110,7 +110,7 @@
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "9513d6c9036242992d1691abe50d35bd",
+            "md5": "b38f7cfdbe1b29727e14f970684e34b8",
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
@@ -146,7 +146,7 @@
             "compressed": false
         },
         "src/framework/package/packageMeta.jsc": {
-            "md5": "ea7b0be8ce5b36d1fbd816f841bf74c6",
+            "md5": "c0b54e1f5510e597ff4efd2d09887c65",
             "compressed": false
         },
         "src/framework/protobuf/bytebuffer.jsc": {
@@ -214,7 +214,7 @@
             "compressed": false
         },
         "src/game/frames/HomeFrame.jsc": {
-            "md5": "afdccec860cb7344977c3b6769313618",
+            "md5": "a04d2829a3a150a6262b6dfca90ae52a",
             "compressed": false
         },
         "src/language.jsc": {
@@ -222,11 +222,51 @@
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "79e62f3ebdd02f7a5f49bdd4117056b5",
+            "md5": "f8343c00eeb822f3f602bd72a4dec18e",
             "compressed": false
         },
         "src/framework/frame/ConsoleFrame.jsc": {
             "md5": "814741d689c5fccfd88a0c501685e45f",
+            "compressed": false
+        },
+        "res/mjoys/image/studio-name.png": {
+            "md5": "4a5474add64b97b65600e87978a73f7c",
+            "compressed": false
+        },
+        "res/studio/common/fonts/JosefinSans-Regular.ttf": {
+            "md5": "673965c55e0656d563fb1ff8200bbf86",
+            "compressed": false
+        },
+        "res/studio/common/imgs/btn_bg.png": {
+            "md5": "7e2d680d241fb67ae5eaeb20220fccd2",
+            "compressed": false
+        },
+        "res/studio/common/imgs/btn_close.png": {
+            "md5": "801cedb5fa95e00570bfc8eea2eab68e",
+            "compressed": false
+        },
+        "res/studio/common/imgs/shadow.png": {
+            "md5": "d339f26c85e939441f367f3e604ba5d2",
+            "compressed": false
+        },
+        "res/studio/common/node/dialog_options.json": {
+            "md5": "61eda8f8d660346e52f148036e996671",
+            "compressed": false
+        },
+        "src/mjoys/frame/launcher.jsc": {
+            "md5": "a010104d324dde18a53865a3c03430cf",
+            "compressed": false
+        },
+        "res/mjoys/image/studio_name.png": {
+            "md5": "4a5474add64b97b65600e87978a73f7c",
+            "compressed": false
+        },
+        "res/mjoys/audio/Tick.mp3": {
+            "md5": "b685cef5416e5914b679a70c40a0f0b7",
+            "compressed": false
+        },
+        "res/mjoys/audio/TinyButton.mp3": {
+            "md5": "32fdca19b419ac87ddd591d8b2cca0de",
             "compressed": false
         }
     },

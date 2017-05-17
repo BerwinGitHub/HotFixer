@@ -6,7 +6,8 @@ $class("prototype", function ($export) {
 
     var prototype = {
         setUpEnvironment: function () {
-            
+            // 给cc添加一个visibleSize
+            cc.visibleSize = cc.director.getVisibleSize();
         },
     };
 

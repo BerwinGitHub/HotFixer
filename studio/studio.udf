@@ -25,17 +25,7 @@
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
-        <LastRunType Value="Windows" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="studio/debug/console.csd" />
-          <FilePathData Path="studio/debug/debug.csd" />
-          <FilePathData Path="studio/common/node/dialog_options.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="studio/common/node/dialog_options.csd" />
+        <LastRunType Value="Mac" />
       </Value>
     </Item>
   </Properties>

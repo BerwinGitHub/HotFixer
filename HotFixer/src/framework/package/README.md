@@ -10,22 +10,27 @@ File->Settings->Editor->File and Code Templates
  
 // \$include(\$import.xxxx.xxx)
 
-\$class("${NAME}", function(\$export){
-    /**
-     *
-     */
+\$class("${NAME}", function(\$export, /*{data}*/){
+    // \$use(data)  use import var like this
     var ${NAME} = {
-        // insert code here
+        // insert code here...
     };
-    \$export.${NAME} = ${NAME}
+    \$public("${NAME}", ${NAME}, \$export);
 });
 ```
-
+创建launcher js文件效果如下:
 ```
-// $include($import.xxxx.xxx)
+/**
+ * Created by Berwin on 2017/5/17.
+ */
 
-$class("", function($export){
-      
-    // $export.xxx = xxx
+// $include(\$import.xxxx.xxx)
+
+$class("launcher", function ($export, /*{data}*/) {
+    // $use(data)  use import var like this
+    var launcher = {
+        // insert code here...
+    };
+    $public("launcher", launcher, $export);
 });
 ```

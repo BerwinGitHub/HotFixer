@@ -212,7 +212,7 @@ $class("helper", function($export){
      * VisibleRect
      * @type {{offsetX: number, offsetY: number, LAYOUT: {NONE: number, LEFT: number, RIGHT: number, TOP: number, BOTTOM: number}, setupVisibleRect: helper.ve.setupVisibleRect, setPosition: helper.ve.setPosition, getPosition: helper.ve.getPosition}}
      */
-    helper.ve = {
+    helper.vr = {
         offsetX: 0, // x的偏移量
         offsetY: 0, // y的偏移量
 

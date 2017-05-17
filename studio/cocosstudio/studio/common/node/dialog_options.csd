@@ -4,7 +4,7 @@
     <Content>
       <Animation Duration="0" Speed="1.0000">
         <Timeline ActionTag="-1552354127" Property="Position">
-          <PointFrame FrameIndex="0" X="0.0000" Y="446.0917">
+          <PointFrame FrameIndex="0" X="0.0000" Y="500.0000">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
@@ -22,7 +22,7 @@
       <ObjectData Name="Node" Tag="68" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="2021320814" Tag="69" IconVisible="False" LeftMargin="-384.0000" RightMargin="-384.0000" TopMargin="-568.0000" BottomMargin="-568.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="2021320814" Tag="69" IconVisible="False" LeftMargin="-384.0000" RightMargin="-384.0000" TopMargin="-568.0000" BottomMargin="-568.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="768.0000" Y="1136.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position />
@@ -35,7 +35,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_2" ActionTag="-1552354127" Tag="70" IconVisible="False" LeftMargin="-384.0000" RightMargin="-384.0000" TopMargin="-446.0917" BottomMargin="-689.9083" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_2" ActionTag="-1552354127" Tag="70" IconVisible="False" LeftMargin="-384.0000" RightMargin="-384.0000" TopMargin="-500.0000" BottomMargin="-636.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="768.0000" Y="1136.0000" />
             <Children>
               <AbstractNodeData Name="shadow_1" ActionTag="54617957" Tag="83" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-8.0000" BottomMargin="1136.0000" ctype="SpriteObjectData">
@@ -78,7 +78,7 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-            <Position Y="446.0917" />
+            <Position Y="500.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

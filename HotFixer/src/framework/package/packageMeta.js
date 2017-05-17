@@ -144,7 +144,9 @@ var $classes = {
             "package": "framework.frame.ConsoleFrame",
             "loaded": false,
             "factory": null,
-            "export": {},
+            "export": {
+                "ConsoleFrame": {}
+            },
             "import": [],
             "ref": [
                 "$import.framework.frame.Frame"
@@ -263,6 +265,20 @@ var $classes = {
                 "$import.framework.game.FDirector"
             ]
         }
+    ],
+    "mjoys": [
+        {
+            "file": "mjoys/core/mjoys.js",
+            "name": "mjoys",
+            "package": "mjoys.core.mjoys",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "mjoys": {}
+            },
+            "import": [],
+            "ref": []
+        }
     ]
 };
 var $import = {
@@ -349,6 +365,14 @@ var $import = {
                 "_cls": "HomeFrame"
             }
         }
+    },
+    "mjoys": {
+        "core": {
+            "mjoys": {
+                "_pkg": "mjoys.core.mjoys",
+                "_cls": "mjoys"
+            }
+        }
     }
 };
 var $package = {
@@ -368,7 +392,8 @@ var $package = {
     "framework.hotfix.HotFixScene": "framework.hotfix.HotFixScene",
     "framework.network.SocketHelper": "framework.network.SocketHelper",
     "game.frames.HallFrame": "game.frames.HallFrame",
-    "game.frames.HomeFrame": "game.frames.HomeFrame"
+    "game.frames.HomeFrame": "game.frames.HomeFrame",
+    "mjoys.core.mjoys": "mjoys.core.mjoys"
 };
 var $groups = {
     "proto": [
