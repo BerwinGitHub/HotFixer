@@ -262,7 +262,8 @@ var $classes = {
             "ref": [
                 "$import.framework.frame.Frame",
                 "$import.game.frames.HallFrame",
-                "$import.framework.game.FDirector"
+                "$import.framework.game.FDirector",
+                "$import.mjoys.dialog.DialogOptions"
             ]
         }
     ],
@@ -278,6 +279,36 @@ var $classes = {
             },
             "import": [],
             "ref": []
+        }
+    ],
+    "DialogBase": [
+        {
+            "file": "mjoys/dialog/DialogBase.js",
+            "name": "DialogBase",
+            "package": "mjoys.dialog.DialogBase",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "DialogBase": {}
+            },
+            "import": [],
+            "ref": []
+        }
+    ],
+    "DialogOptions": [
+        {
+            "file": "mjoys/dialog/DialogOptions.js",
+            "name": "DialogOptions",
+            "package": "mjoys.dialog.DialogOptions",
+            "loaded": false,
+            "factory": null,
+            "export": {
+                "DialogOptions": {}
+            },
+            "import": [],
+            "ref": [
+                "$import.mjoys.dialog.DialogBase"
+            ]
         }
     ]
 };
@@ -372,6 +403,16 @@ var $import = {
                 "_pkg": "mjoys.core.mjoys",
                 "_cls": "mjoys"
             }
+        },
+        "dialog": {
+            "DialogBase": {
+                "_pkg": "mjoys.dialog.DialogBase",
+                "_cls": "DialogBase"
+            },
+            "DialogOptions": {
+                "_pkg": "mjoys.dialog.DialogOptions",
+                "_cls": "DialogOptions"
+            }
         }
     }
 };
@@ -393,7 +434,9 @@ var $package = {
     "framework.network.SocketHelper": "framework.network.SocketHelper",
     "game.frames.HallFrame": "game.frames.HallFrame",
     "game.frames.HomeFrame": "game.frames.HomeFrame",
-    "mjoys.core.mjoys": "mjoys.core.mjoys"
+    "mjoys.core.mjoys": "mjoys.core.mjoys",
+    "mjoys.dialog.DialogBase": "mjoys.dialog.DialogBase",
+    "mjoys.dialog.DialogOptions": "mjoys.dialog.DialogOptions"
 };
 var $groups = {
     "proto": [

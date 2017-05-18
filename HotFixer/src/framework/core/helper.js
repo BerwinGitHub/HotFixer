@@ -241,6 +241,7 @@ $class("helper", function($export){
             this.offsetX = (rds.width - ds.width) * 0.5;
             this.offsetY = (rds.height - ds.height) * 0.5;
             cc.view.setDesignResolutionSize(rds.width, rds.height, cc.ResolutionPolicy.NO_BORDER);
+            cc.visibleSize = cc.director.getVisibleSize();
         },
 
         /**

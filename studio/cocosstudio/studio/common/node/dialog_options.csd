@@ -2,23 +2,46 @@
   <PropertyGroup Name="dialog_options" Type="Node" ID="1e52cc36-3a3f-4f2b-9a42-22e70d70e0d0" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000">
+      <Animation Duration="575" Speed="1.0000" ActivedAnimationName="enter">
         <Timeline ActionTag="-1552354127" Property="Position">
-          <PointFrame FrameIndex="0" X="0.0000" Y="500.0000">
+          <PointFrame FrameIndex="0" X="0.0000" Y="-568.0000">
             <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="25" X="0.0000" Y="500.0000">
+            <EasingData Type="29" />
+          </PointFrame>
+          <PointFrame FrameIndex="575" X="0.0000" Y="500.0000">
+            <EasingData Type="29" />
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="-1552354127" Property="Scale">
           <ScaleFrame FrameIndex="0" X="1.0000" Y="1.0000">
             <EasingData Type="0" />
           </ScaleFrame>
+          <ScaleFrame FrameIndex="25" X="1.0000" Y="1.0000">
+            <EasingData Type="29" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="575" X="1.0000" Y="1.0000">
+            <EasingData Type="29" />
+          </ScaleFrame>
         </Timeline>
         <Timeline ActionTag="-1552354127" Property="RotationSkew">
           <ScaleFrame FrameIndex="0" X="0.0000" Y="0.0000">
             <EasingData Type="0" />
           </ScaleFrame>
+          <ScaleFrame FrameIndex="25" X="0.0000" Y="0.0000">
+            <EasingData Type="29" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="575" X="0.0000" Y="0.0000">
+            <EasingData Type="29" />
+          </ScaleFrame>
         </Timeline>
       </Animation>
+      <AnimationList>
+        <AnimationInfo Name="enter" StartIndex="0" EndIndex="575">
+          <RenderColor A="150" R="128" G="0" B="0" />
+        </AnimationInfo>
+      </AnimationList>
       <ObjectData Name="Node" Tag="68" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
@@ -49,13 +72,13 @@
                 <FileData Type="Normal" Path="studio/common/imgs/shadow.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_close_3" ActionTag="1296217186" Tag="85" IconVisible="False" LeftMargin="28.6550" RightMargin="711.3450" TopMargin="1087.2999" BottomMargin="20.7001" ctype="SpriteObjectData">
+              <AbstractNodeData Name="btn_close_3" ActionTag="1296217186" Tag="85" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="7.6800" RightMargin="732.3200" TopMargin="1096.6400" BottomMargin="11.3600" ctype="SpriteObjectData">
                 <Size X="28.0000" Y="28.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="42.6550" Y="34.7001" />
+                <AnchorPoint />
+                <Position X="7.6800" Y="11.3600" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="252" G="156" B="18" />
-                <PrePosition X="0.0555" Y="0.0305" />
+                <PrePosition X="0.0100" Y="0.0100" />
                 <PreSize X="0.0365" Y="0.0246" />
                 <FileData Type="Normal" Path="studio/common/imgs/btn_close.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />

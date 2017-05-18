@@ -173,8 +173,12 @@ cc.EGLView = cc.Class.extend(/** @lends cc.view# */{
         var _t = this, d = document, _strategyer = cc.ContainerStrategy, _strategy = cc.ContentStrategy;
 
         __BrowserGetter.init(this);
-
-        _t._frame = (cc.container.parentNode === d.body) ? d.documentElement : cc.container.parentNode;
+        // tangbowen
+        if (__BrowserGetter.adaptationType == cc.sys.BROWSER_TYPE_CHROME) {
+            _t._frame = cc.container.parentNode;
+        } else {
+            _t._frame = (cc.container.parentNode === d.body) ? d.documentElement : cc.container.parentNode;
+        }
         _t._frameSize = cc.size(0, 0);
         _t._initFrameSize();
 
@@ -592,8 +596,8 @@ cc.EGLView = cc.Class.extend(/** @lends cc.view# */{
      * @return {cc.Size}
      */
     getVisibleSizeInPixel: function () {
-        return cc.size( this._visibleRect.width * this._scaleX,
-                        this._visibleRect.height * this._scaleY );
+        return cc.size(this._visibleRect.width * this._scaleX,
+            this._visibleRect.height * this._scaleY);
     },
 
     /**
@@ -609,8 +613,8 @@ cc.EGLView = cc.Class.extend(/** @lends cc.view# */{
      * @return {cc.Point}
      */
     getVisibleOriginInPixel: function () {
-        return cc.p(this._visibleRect.x * this._scaleX, 
-                    this._visibleRect.y * this._scaleY);
+        return cc.p(this._visibleRect.x * this._scaleX,
+            this._visibleRect.y * this._scaleY);
     },
 
     /**
@@ -1040,8 +1044,8 @@ cc.ContentStrategy = cc.Class.extend(/** @lends cc.ContentStrategy# */{
         Math.abs(containerH - contentH) < 2 && (contentH = containerH);
 
         var viewport = cc.rect(Math.round((containerW - contentW) / 2),
-                               Math.round((containerH - contentH) / 2),
-                               contentW, contentH);
+            Math.round((containerH - contentH) / 2),
+            contentW, contentH);
 
         // Translate the content
         if (cc._renderType === cc.game.RENDER_TYPE_CANVAS) {
