@@ -30,7 +30,7 @@ $class("DialogOptions", function ($export, {DialogBase}) {
             this._bg.addChild(this._shadow);
 
             var close = new cc.Sprite(res.studio_common_imgs_btn_close_png);
-            close = cc.mjoys.color.orange;
+            close.color = cc.mjoys.color.orange;
             close.setPosition(this._visibleSize.width / 2, 50);
             this._bg.addChild(close);
             cc.app.helper.event.addClickListener(close, () => {
