@@ -12,7 +12,7 @@
  */
 // $include($import.xxxx.xxx)
 
-$class("helper", function($export){
+$class("helper", function ($export) {
 
     var helper = {};
 
@@ -126,15 +126,24 @@ $class("helper", function($export){
      */
     helper.math = {
         /**
-         * 生成一个随机数{Number}(min < {Number} < max)
-         * @param min 最小值
-         * @param max 最大值
+         * 生成一个随机数{Number}(min <= {Number} < max)
+         * @param n 最小值
+         * @param m 最大值
          * @returns {Number} 生成的数
          */
-        randomInt: function (min, max) {
-            var ex = max - min;
-            var num = Math.random() * ex + min;
+        randomInt: function (n, m) {
+            var ex = m - n;
+            var num = Math.random() * ex + n;
             return parseInt(num, 10);
+        },
+
+        /**
+         * 打乱数组
+         */
+        random_shuffle: function (arr) {
+            arr.sort(() => {
+                return 0.5 - Math.random();
+            });
         },
     };
 
