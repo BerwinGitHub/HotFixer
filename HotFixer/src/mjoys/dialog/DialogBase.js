@@ -10,9 +10,17 @@ $class("DialogBase", function ($export /*, {data}*/) {
 
         _visibleSize: null,
 
+        _touchMask: null,
+
         ctor: function () {
             this._super();
             this._visibleSize = cc.director.getVisibleSize();
+            this.setContentSize(this._visibleSize);
+
+            this._touchMask = new ccui.Layout();
+            this._touchMask.setTouchEnabled(false);
+            this._touchMask.setContentSize(this._visibleSize);
+            this.addChild(this._touchMask);
 
         },
 
@@ -22,6 +30,10 @@ $class("DialogBase", function ($export /*, {data}*/) {
 
         hideSelf: function () {
 
+        },
+
+        setTouchEnabled: function (e) {
+            this._touchMask.setTouchEnabled(e);
         },
 
         onEnter: function () {

@@ -127,6 +127,7 @@ $class("HotFixScene", function ($export) {
                         that.loadGame();
                         break;
                     default:
+                        that.loadGame();
                         break;
                 }
 
