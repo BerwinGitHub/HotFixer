@@ -24,7 +24,7 @@ var visiblerect = cc.Class.extend({
      * @param height
      */
     setupVisibleRect: function (width, height) {
-        var ds = cc.size(width, height);
+        var ds = cc.size(width, height); // DesignSize
         // var glView = cc.director.getOpenGLView();
         var frameSize = cc.view.getFrameSize();
         var sx = frameSize.width / ds.width;
@@ -36,6 +36,7 @@ var visiblerect = cc.Class.extend({
         this.offsetY = (rds.height - ds.height) * 0.5;
         cc.view.setDesignResolutionSize(rds.width, rds.height, cc.ResolutionPolicy.NO_BORDER);
         cc.visibleSize = cc.director.getVisibleSize();
+        cc.app.log.i(JSON.stringify(rds));
     },
 
     /**

@@ -5,11 +5,9 @@ var HomeLayer = cc.Layer.extend({
 
     ctor: function () {
         this._super();
-        var bg = new cc.LayerColor();
-        bg.color = cc.mjoys.color.background;
-        bg.setContentSize(cc.visibleSize);
-        this.addChild(bg);
-
+        this.bg = new cc.LayerColor(cc.mjoys.color.background);
+        this.bg.setContentSize(cc.visibleSize);
+        this.addChild(this.bg);
 
         // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
         // var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
@@ -21,31 +19,29 @@ var HomeLayer = cc.Layer.extend({
         // this.nodeAmt = cc.app.helper.ui.findNodeByName(data.node, "amtNode");
         // this.nodeAmt.action.play("ani", true);
         //
-        var title = new ccui.Text("3 Cars", res.studio_com_fonts_JosefinSans_Light_ttf, 120);
-        title.setPosition(cc.winSize.width / 2, cc.winSize.height - 180);
-        title.color = cc.mjoys.color.subject;
-        this.addChild(title);
-
-        cc.spriteFrameCache.addSpriteFrames(res.studio_com_imgs_ui_plist, res.studio_com_imgs_ui_png);
-        var spriteFrame = cc.spriteFrameCache.getSpriteFrame("studio/com/imgs/ui/btn_options.png");
-        var spr = new cc.Sprite(spriteFrame);
-        spr.setPosition(cc.winSize.width / 2, 50);
-        this.addChild(spr);
-        cc.app.helper.event.addClickListener(spr, () => {
-            cc.audioEngine.playEffect(res.mjoys_audio_Tick_mp3);
-        });
         cc.app.dialogmgr.dialogconsole.showWithCreate();
 
-        new eventnode(this, "abc", (data) => {
-            console.log("节点收到广播数据:" + data);
-        });
-        var gradient = cc.mjoys.randGradien();
-        var gradientView = new cc.LayerGradient(gradient.start, gradient.end, cc.p(0, 0));
-        gradientView.setContentSize(cc.size(200, 200));
-        gradientView.setAnchorPoint(cc.p(0.5, 0.5));
-        gradientView.ignoreAnchorPointForPosition(false);
-        gradientView.setPosition(cc.app.math.sizeCenter(cc.winSize));
-        this.addChild(gradientView);
+        //
+        var dot = this._createDot();
+        dot.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+        this.addChild(dot);
+
+    },
+
+    _createDot: function () {
+        var circleBg = new cc.Sprite("res/images/content/circle_bg.png");
+
+        var circle = new cc.Sprite("res/images/content/circle_t" + cc.app.math.randomInt(0, 6) + ".png");
+        circleBg.addChildToCenter(circle);
+
+
+        var seq = cc.sequence(cc.delayTime(5.0), cc.callFunc(() => {
+            var texture = cc.textureCache.addImage("res/images/content/circle_t" + cc.app.math.randomInt(0, 6) + ".png");
+            circle.setTexture(texture);
+        }));
+        circle.runAction(seq.repeatForever());
+
+        return circleBg;
     },
 
     onHallClick: function (data) {

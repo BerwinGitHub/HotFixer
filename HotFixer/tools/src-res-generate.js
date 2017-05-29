@@ -78,20 +78,20 @@ function generateRes() {
         if (!isExcludeFile) {
             var k = path.replace(/[.\/-]/g, "_"); // 将路径中的./-全部替换成_
             // 保证plist 和 png 只加载一个
-            // if (k.endsWith("_plist")) { // plist结束就去找是否有png
-            //     var png = k.replace("_plist", "_png");
-            //     if (list[png]) {// 如果存在就移除
-            //         delete(list[png]);
-            //     }
-            //     list[k] = "res/" + path;
-            // } else if (k.endsWith("_png")) {
-            //     var plist = k.replace("_png", "_plist");
-            //     if (!list[plist]) {
-            //         list[k] = "res/" + path;
-            //     }
-            // } else {
-            list[k] = "res/" + path;
-            // }
+            if (k.endsWith("_plist")) { // plist结束就去找是否有png
+                var png = k.replace("_plist", "_png");
+                if (list[png]) {// 如果存在就移除
+                    delete(list[png]);
+                }
+                list[k] = "res/" + path;
+            } else if (k.endsWith("_png")) {
+                var plist = k.replace("_png", "_plist");
+                if (!list[plist]) {
+                    list[k] = "res/" + path;
+                }
+            } else {
+                list[k] = "res/" + path;
+            }
         }
     });
     var jsonStr;

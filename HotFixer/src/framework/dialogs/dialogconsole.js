@@ -59,8 +59,10 @@ var dialogconsole = Dialog.extend({
         });
 
         // textField
-        this.cmdHistory = ["cc.winSize"];
-        this._addHistoryToListView(this.cmdHistory[0]);
+        this.cmdHistory = ["cc.winSize", "cc.visibleSize", "cc.app.configs", "cc.director.getRunningScene()"];
+        this.cmdHistory.forEach((cmd) => {
+            this._addHistoryToListView(cmd);
+        });
         this.textField = ccui.helper.seekNodeByName(this.node, "textField");
         this.textField.setString(this.cmdHistory[this.cmdHistory.length - 1]);
         this.btnExe = ccui.helper.seekNodeByName(this.node, "btnExe");

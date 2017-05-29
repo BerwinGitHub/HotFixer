@@ -4,8 +4,8 @@
 var app = cc.Class.extend({
 
     ctor: function () {
-        this.proto = new proto();
         this.prototype = new prototype();
+        this.proto = new proto();
         this.configs = new configs();
         this.datas = new datas();
         this.native = new native();

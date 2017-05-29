@@ -21,16 +21,13 @@ var res = {
     "studio_HallScene_node_HallScene_json": "res/studio/HallScene/node/HallScene.json",
     "studio_HomeScene_amts_animation_json": "res/studio/HomeScene/amts/animation.json",
     "studio_HomeScene_imgs_ui_plist": "res/studio/HomeScene/imgs/ui.plist",
-    "studio_HomeScene_imgs_ui_png": "res/studio/HomeScene/imgs/ui.png",
     "studio_HomeScene_node_HomeScene_json": "res/studio/HomeScene/node/HomeScene.json",
     "studio_com_fonts_JosefinSans_Light_ttf": "res/studio/com/fonts/JosefinSans-Light.ttf",
     "studio_com_fonts_JosefinSans_Regular_ttf": "res/studio/com/fonts/JosefinSans-Regular.ttf",
     "studio_com_imgs_ui_plist": "res/studio/com/imgs/ui.plist",
-    "studio_com_imgs_ui_png": "res/studio/com/imgs/ui.png",
     "studio_com_node_dialog_options_json": "res/studio/com/node/dialog_options.json",
     "studio_debug_amts_inputHistory_json": "res/studio/debug/amts/inputHistory.json",
     "studio_debug_imgs_ui_plist": "res/studio/debug/imgs/ui.plist",
-    "studio_debug_imgs_ui_png": "res/studio/debug/imgs/ui.png",
     "studio_debug_node_console_json": "res/studio/debug/node/console.json",
     "studio_debug_node_debug_json": "res/studio/debug/node/debug.json"
 }

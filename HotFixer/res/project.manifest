@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496057664847",
+    "version": "1.0.1496068640657",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -222,7 +222,7 @@
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "797dc4ccc857d7835d0efe6ebb56c14b",
+            "md5": "2410c75888d14cbe30ad5343c8440bcf",
             "compressed": false
         },
         "src/framework/frame/ConsoleFrame.jsc": {
@@ -342,7 +342,7 @@
             "compressed": false
         },
         "src/game/sccens/HomeScene.jsc": {
-            "md5": "ebe2686cba2ed4750c56ac5da387d345",
+            "md5": "6aa2393ef1419e4ad2f3a7bd553694b3",
             "compressed": false
         },
         "src/framework/core/math.jsc": {
@@ -386,7 +386,7 @@
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "93d734b050786b5eefcd08a9a5785966",
+            "md5": "0d4717d5982fa5fece38c34a35904620",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
