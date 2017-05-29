@@ -25,13 +25,13 @@
               <AbstractNodeData Name="Panel_3" ActionTag="-152817585" Tag="65" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="6.4000" RightMargin="134.4000" TopMargin="11.3600" BottomMargin="1056.4800" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="499.2000" Y="68.1600" />
                 <Children>
-                  <AbstractNodeData Name="textField" ActionTag="-1112460923" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" RightMargin="-0.0001" TopMargin="0.0000" TouchEnable="True" FontSize="30" IsCustomSize="True" LabelText="cc.winSize" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
+                  <AbstractNodeData Name="textField" ActionTag="-1112460923" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-0.0001" TopMargin="-0.0001" BottomMargin="0.0001" TouchEnable="True" FontSize="20" IsCustomSize="True" LabelText="cc.winSize" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
                     <Size X="499.2000" Y="68.1600" />
                     <AnchorPoint />
-                    <Position />
+                    <Position X="-0.0001" Y="0.0001" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
+                    <PrePosition X="0.0000" Y="0.0000" />
                     <PreSize X="1.0000" Y="1.0000" />
                   </AbstractNodeData>
                 </Children>

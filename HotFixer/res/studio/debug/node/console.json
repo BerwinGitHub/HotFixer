@@ -172,7 +172,7 @@
                 "Tag": 65,
                 "Children": [
                   {
-                    "FontSize": 30,
+                    "FontSize": 20,
                     "IsCustomSize": true,
                     "LabelText": "cc.winSize",
                     "PlaceHolderText": "",
@@ -180,8 +180,8 @@
                     "TouchEnable": true,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 0.0,
-                      "Y": 0.0
+                      "X": -0.0001,
+                      "Y": 0.0001
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -201,8 +201,9 @@
                       "X": 1.0,
                       "Y": 1.0
                     },
-                    "RightMargin": -0.0001,
-                    "TopMargin": 0.0,
+                    "LeftMargin": -0.0001,
+                    "TopMargin": -0.0001,
+                    "BottomMargin": 0.0001,
                     "Tag": 66,
                     "ActionTag": -1112460923,
                     "Size": {

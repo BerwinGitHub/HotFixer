@@ -133,7 +133,7 @@ var dialogconsole = Dialog.extend({
     },
 
     _addHistoryToListView: function (txt) {
-        var txt = new cc.LabelTTF(txt, null, 30, cc.size(this.historyList.width, 0));
+        var txt = new cc.LabelTTF(txt, null, 25, cc.size(this.historyList.width, 0));
         txt.setName("txt");
         txt.setHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
         txt.setVerticalAlignment(cc.TEXT_ALIGNMENT_CENTER);
