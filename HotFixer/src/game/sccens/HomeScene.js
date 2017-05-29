@@ -39,6 +39,13 @@ var HomeLayer = cc.Layer.extend({
         new eventnode(this, "abc", (data) => {
             console.log("节点收到广播数据:" + data);
         });
+        var gradient = cc.mjoys.randGradien();
+        var gradientView = new cc.LayerGradient(gradient.start, gradient.end, cc.p(0, 0));
+        gradientView.setContentSize(cc.size(200, 200));
+        gradientView.setAnchorPoint(cc.p(0.5, 0.5));
+        gradientView.ignoreAnchorPointForPosition(false);
+        gradientView.setPosition(cc.app.math.sizeCenter(cc.winSize));
+        this.addChild(gradientView);
     },
 
     onHallClick: function (data) {

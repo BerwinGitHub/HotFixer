@@ -70,13 +70,12 @@ var dialogconsole = Dialog.extend({
             this._checkHistoryRepeat(txt);
             this.cmdHistory.push(txt);
             this._addHistoryToListView(txt);
-            var result = "";
             try {
-                result = eval(this.textField.getString());
+                var result = eval(this.textField.getString());
                 var i = JSON.stringify(result);
-                cc.app.log.i("js eval", typeof(i) == "undefined" ? result : i);
+                cc.app.log.i("eval", typeof(i) == "undefined" ? result : i);
             } catch (e) {
-                cc.app.log.e("js eval", e);
+                cc.app.log.e("eval", e);
             }
             this.dot.setVisible(false);
         });

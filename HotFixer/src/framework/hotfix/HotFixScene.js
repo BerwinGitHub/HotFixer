@@ -143,10 +143,12 @@ var HotFixScene = cc.Scene.extend({
                 // var needLoadJs = ["src/language.js", "src/resource.js"];
                 // cc.loader.loadJs(needLoadJs, () => {
                 this._loadJavaScriptFinishCallback && this._loadJavaScriptFinishCallback();
+                cc.app.log.i("js load finish.");
                 // 2.等待代码加载完毕，再加载图片资源
                 cc.textureCache.removeAllTextures();// 加载前先移除
                 cc.loader.load(g_resources, (rlt, count, loadedCount) => {
                 }, () => {
+                    cc.app.log.i("res load finish.");
                     // 3.代码和资源都加载完毕，进入游戏
                     this.runAction(cc.sequence(cc.delayTime(0.5), cc.callFunc(this._loadResourcesFinishCallback)));
                 });

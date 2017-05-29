@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1495990380813",
+    "version": "1.0.1496057664847",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -98,7 +98,7 @@
             "compressed": false
         },
         "src/framework/core/log.jsc": {
-            "md5": "07a7a3b5018f865a96d902f21b0e0efc",
+            "md5": "c132445d4aa030ba5d37a851ec5f47f3",
             "compressed": false
         },
         "src/framework/core/native.jsc": {
@@ -130,7 +130,7 @@
             "compressed": false
         },
         "src/framework/hotfix/HotFixScene.jsc": {
-            "md5": "ee10f8c7160e75249d0763fd23b774e5",
+            "md5": "bddad0d0f2aa91ad4d2d595cef5bc990",
             "compressed": false
         },
         "src/framework/network/SocketHelper.jsc": {
@@ -222,7 +222,7 @@
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "123dffddcfd2b5dbc3c6ca1a59e39a84",
+            "md5": "797dc4ccc857d7835d0efe6ebb56c14b",
             "compressed": false
         },
         "src/framework/frame/ConsoleFrame.jsc": {
@@ -270,7 +270,7 @@
             "compressed": false
         },
         "src/mjoys/core/mjoys.jsc": {
-            "md5": "19d36c9210296a6149b597fa38f174b5",
+            "md5": "dad6d789b2499a42a130d854e9cbbbd6",
             "compressed": false
         },
         "res/studio/common/imgs/btn_options.png": {
@@ -342,7 +342,7 @@
             "compressed": false
         },
         "src/game/sccens/HomeScene.jsc": {
-            "md5": "49145bac564b737881433665c104c57b",
+            "md5": "ebe2686cba2ed4750c56ac5da387d345",
             "compressed": false
         },
         "src/framework/core/math.jsc": {
@@ -358,7 +358,7 @@
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "949db33ebc417d6960338efa0a47487d",
+            "md5": "26def27dcb564b4b9e57454508cf0796",
             "compressed": false
         },
         "src/framework/dialogs/dialogmgr.jsc": {
@@ -366,7 +366,7 @@
             "compressed": false
         },
         "src/framework/dialogs/_dialogmgr.jsc": {
-            "md5": "412b72f10c9394e1f29d0476378d5359",
+            "md5": "26a757bb1f94f14ee6b55bf8230e0012",
             "compressed": false
         },
         "res/studio/debug/test.json": {
@@ -382,11 +382,11 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "b158ac25ea5b954bc5e19d4b533cedbe",
+            "md5": "bd646752f3b037f8b94810eae3d71fbd",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "e9ca12981d35b7ed1ebfb7a955a7e2cc",
+            "md5": "93d734b050786b5eefcd08a9a5785966",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
@@ -415,6 +415,42 @@
         },
         "res/studio/com/fonts/JosefinSans-Light.ttf": {
             "md5": "a86bd2e875ae81268b52e4f70c70c9fd",
+            "compressed": false
+        },
+        "res/studio/debug/amts/inputHistory.json": {
+            "md5": "f477d720f20053ed5a9bdc60034efe05",
+            "compressed": false
+        },
+        "res/images/content/circle_bg.png": {
+            "md5": "c6bdb49c9aa8bc4b8bccbc4224f943f2",
+            "compressed": false
+        },
+        "res/images/content/circle_t0.png": {
+            "md5": "35ccd6430705e6e3b1bd3acba908c4a0",
+            "compressed": false
+        },
+        "res/images/content/circle_t1.png": {
+            "md5": "c4aadf8935b18e340624757189d9017b",
+            "compressed": false
+        },
+        "res/images/content/circle_t2.png": {
+            "md5": "7973d6b75de77473191e5fd482384052",
+            "compressed": false
+        },
+        "res/images/content/circle_t3.png": {
+            "md5": "8df8f40bdfadb3ca7e69a6ba400f6a68",
+            "compressed": false
+        },
+        "res/images/content/circle_t4.png": {
+            "md5": "4cee5686077d5d9aa108c2cb441c3aa9",
+            "compressed": false
+        },
+        "res/images/content/circle_t5.png": {
+            "md5": "1b6707341a4e7a4e4df3da74f1c75fe5",
+            "compressed": false
+        },
+        "res/images/content/circle_t6.png": {
+            "md5": "a9eeaae9cdef00e3bfb2bf60b8a3b69e",
             "compressed": false
         }
     },
