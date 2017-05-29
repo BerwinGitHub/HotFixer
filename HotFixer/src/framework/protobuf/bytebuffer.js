@@ -1,4 +1,3 @@
-$group("proto");
 /*
  Copyright 2013-2014 Daniel Wirtz <dcode@dcode.io>
 

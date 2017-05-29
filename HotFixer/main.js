@@ -71,21 +71,12 @@ cc.game.onStart = function () {
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
 
-    $requires([
-            $req.framework.core.app,
-            $req.mjoys.core.mjoys,
-            $req.framework.hotfix.HotFixScene],
-        ({app, HotFixScene}) => {
-            app.setUpEnvironment();
-            app.helper.vr.setupVisibleRect(640, 960);
-            //load resources
-            var hotFixScene = new HotFixScene();
-            hotFixScene.runWithCallback("res/version.manifest", () => {
-                $requires([$req.framework.AppDelegate], ({AppDelegate}) => {
-                    var appDelegate = new AppDelegate();
-                    appDelegate.applicationDidFinishLaunching();
-                });
-            });
-        });
+    var updateScene = new HotFixScene();
+    updateScene.runWithCallback("res/version.manifest", () => {
+        cc.app = new app();
+        // cc.app.visiblerect.setupVisibleRect(640, 960);
+    }, () => {
+        cc.director.runScene(new HomeScene());
+    });
 };
 cc.game.run();

@@ -104,7 +104,7 @@ var generate = {
      * jsList.js 排除的文件
      */
     FILTER_EXCLUDE_SRC: [
-        /^.*(helper\.js|HotFixScene\.js|\.DS_Store|\.json|jsList\.js|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
+        /^.*(HotFixScene\.js|\.DS_Store|\.json|jsList\.js|\.md)$/, // 排除helper.js|HotFixScene.js 在项目开始已经加载了
     ],
 
     /**
@@ -123,7 +123,7 @@ var e2j = {
     PATH_SRC: "../../xlsx",// 资源原路径（*/xlsx文件的路径）
     PATH_DES: "../src/game/datas",// 资源生成相对路径，生成的js文件放置的位置
     FORMAT_JSON: common.FORMAT_JSON,// 导出来的js文件是否格式化
-    PREFIX_TXT: "$group(\"datas\");\ncc.app.datas.",// 添加组
+    PREFIX_TXT: "cc.datas = cc.datas || {};\ncc.datas.",// 添加组
     /**
      * 用来确定 字段名&类型名&备注分别在哪行。
      */

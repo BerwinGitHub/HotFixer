@@ -13,8 +13,6 @@
     "cocostudio"
   ],
   "jsList": [
-    "src/framework/package/packageMeta.js",
-    "src/framework/package/packageManager.js",
-    "src/framework/package/package.js"
+    "src/framework/hotfix/HotFixScene.js"
   ]
 }

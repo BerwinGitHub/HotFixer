@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>studio/com/imgs/ui/btn_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{320,85}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{320,85}</string>
+			</dict>
+			<key>studio/com/imgs/ui/btn_close.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{360,2},{28,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{28,28}</string>
+			</dict>
+			<key>studio/com/imgs/ui/shadow.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,91},{768,8}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{768,8}</string>
+			</dict>
+			<key>studio/com/imgs/ui/btn_options.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{326,2},{30,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{30,30}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>ui.png</string>
+			<key>realTextureFileName</key>
+			<string>ui.png</string>
+			<key>size</key>
+			<string>{772,101}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>772</integer>
+			<key>height</key>
+			<integer>101</integer>
+		</dict>
+	</dict>
+</plist>

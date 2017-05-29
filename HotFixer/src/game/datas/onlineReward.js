@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.onlineReward = {
+cc.datas = cc.datas || {};
+cc.datas.onlineReward = {
     "Sheet1": [
         {
             "id": 0,

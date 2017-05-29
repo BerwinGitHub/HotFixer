@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ui" Type="Plist" ID="53f3499c-63c0-4a5b-8f0f-efdd38956dd3" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/com/imgs/ui/btn_bg.png" />
+      <FilePathData Path="studio/com/imgs/ui/btn_close.png" />
+      <FilePathData Path="studio/com/imgs/ui/shadow.png" />
+      <FilePathData Path="studio/com/imgs/ui/btn_options.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.buff = {
+cc.datas = cc.datas || {};
+cc.datas.buff = {
     "Sheet1": [
         {
             "id": 0,

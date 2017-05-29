@@ -1,20 +1,14 @@
 /**
- * Created by Berwin on 2017/4/29.
+ * Created by Berwin on 2017/5/28.
  */
+var datas = cc.Class.extend({
 
-$class("datas", function ($export) {
+    ctor: function () {
+        // js文件加载完了之后，将cc.datas 里面的数据转过来
+        for (var key in cc.datas) {
+            this[key] = cc.datas[key];
+        }
+        cc.datas = null;
+    },
 
-    var datas = {
-        setUpEnvironment: function () {
-            $loadGroup("datas", (err) => {
-                if (err) {
-                    cc.log("loadGroup datas 错误：" + err);
-                    return;
-                }
-                cc.log("loadGroup datas 成功.");
-            });
-        },
-    };
-
-    $public("datas", datas, $export);
 });

@@ -1,4 +1,3 @@
-$group("proto");
 /*
  Copyright 2013 Daniel Wirtz <dcode@dcode.io>
  Copyright 2009 The Closure Library Authors. All Rights Reserved.

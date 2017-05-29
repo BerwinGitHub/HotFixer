@@ -3,32 +3,42 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="fonts">
-          <TTF Name="JosefinSans-Bold.ttf" />
-          <TTF Name="JosefinSans-Light.ttf" />
-          <TTF Name="JosefinSans-Regular.ttf" />
-        </Folder>
         <Folder Name="studio">
-          <Folder Name="common">
+          <Folder Name="com">
             <Folder Name="fonts">
               <TTF Name="JosefinSans-Bold.ttf" />
               <TTF Name="JosefinSans-Light.ttf" />
               <TTF Name="JosefinSans-Regular.ttf" />
             </Folder>
             <Folder Name="imgs">
-              <Image Name="btn_bg.png" />
-              <Image Name="btn_close.png" />
-              <Image Name="shadow.png" />
+              <Folder Name="ui">
+                <Image Name="btn_bg.png" />
+                <Image Name="btn_close.png" />
+                <Image Name="btn_options.png" />
+                <Image Name="shadow.png" />
+              </Folder>
+              <PlistInfo Name="ui.csi" Type="Plist" />
             </Folder>
             <Folder Name="node">
               <Project Name="dialog_options.csd" Type="Node" />
             </Folder>
+            <Folder Name="amts" />
           </Folder>
           <Folder Name="debug">
-            <Project Name="console.csd" Type="Node" />
-            <Project Name="debug.csd" Type="Scene" />
-            <Image Name="debug.png" />
-            <Image Name="dot.png" />
+            <Folder Name="amts">
+              <Project Name="inputHistory.csd" Type="Node" />
+            </Folder>
+            <Folder Name="imgs">
+              <Folder Name="ui">
+                <Image Name="debug.png" />
+                <Image Name="dot.png" />
+              </Folder>
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+            <Folder Name="node">
+              <Project Name="console.csd" Type="Node" />
+              <Project Name="debug.csd" Type="Scene" />
+            </Folder>
           </Folder>
           <Folder Name="HallScene">
             <Folder Name="amts" />

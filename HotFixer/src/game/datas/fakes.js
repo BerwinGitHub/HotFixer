@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.fakes = {
+cc.datas = cc.datas || {};
+cc.datas.fakes = {
     "interv0": [
         {
             "count": 10,

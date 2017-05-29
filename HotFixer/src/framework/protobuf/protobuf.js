@@ -1,4 +1,3 @@
-$group("proto");
 /*!
  * protobuf.js v6.8.0 (c) 2016, Daniel Wirtz
  * Compiled Tue, 11 Apr 2017 00:13:36 UTC

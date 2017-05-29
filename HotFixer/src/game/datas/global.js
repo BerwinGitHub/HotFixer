@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.global = {
+cc.datas = cc.datas || {};
+cc.datas.global = {
     "Sheet1": [
         {
             "大厅音乐": "大厅音乐",

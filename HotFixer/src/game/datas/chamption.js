@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.chamption = {
+cc.datas = cc.datas || {};
+cc.datas.chamption = {
     "prize": [
         {
             "id": 0,

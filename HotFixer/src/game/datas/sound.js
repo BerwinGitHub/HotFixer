@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT! 
-$group("datas");
-cc.app.datas.sound = {
+cc.datas = cc.datas || {};
+cc.datas.sound = {
     "Sheet1": [
         {
             "key": "asdf",

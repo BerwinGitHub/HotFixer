@@ -17,6 +17,11 @@
           {
             "FontSize": 48,
             "LabelText": "Home Scene",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "studio/com/fonts/JosefinSans-Light.ttf",
+              "Plist": ""
+            },
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -33,8 +38,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 568.0,
-              "Y": 320.0
+              "X": 378.6215,
+              "Y": 745.4902
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -45,22 +50,22 @@
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
+              "X": 0.493,
+              "Y": 0.6562
             },
             "PreSize": {
-              "X": 0.2447,
-              "Y": 0.0844
+              "X": 0.3177,
+              "Y": 0.0423
             },
-            "LeftMargin": 429.0,
-            "RightMargin": 429.0,
-            "TopMargin": 293.0,
-            "BottomMargin": 293.0,
+            "LeftMargin": 256.6215,
+            "RightMargin": 267.3785,
+            "TopMargin": 366.5098,
+            "BottomMargin": 721.4902,
             "Tag": 5,
             "ActionTag": -248596913,
             "Size": {
-              "X": 278.0,
-              "Y": 54.0
+              "X": 244.0,
+              "Y": 48.0
             },
             "Name": "Text_1",
             "ctype": "TextObjectData"
@@ -91,8 +96,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 568.0,
-              "Y": 224.0
+              "X": 384.0,
+              "Y": 397.6
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -107,13 +112,13 @@
               "Y": 0.35
             },
             "PreSize": {
-              "X": 0.088,
-              "Y": 0.0688
+              "X": 0.1302,
+              "Y": 0.0387
             },
-            "LeftMargin": 518.0,
-            "RightMargin": 518.0,
-            "TopMargin": 394.0,
-            "BottomMargin": 202.0,
+            "LeftMargin": 334.0,
+            "RightMargin": 334.0,
+            "TopMargin": 716.4,
+            "BottomMargin": 375.6,
             "CallBackType": "Click",
             "CallBackName": "onHallClick",
             "UserData": "{home:true,hall:false}",
@@ -137,8 +142,8 @@
             "InnerActionSpeed": 1.0,
             "AnchorPoint": {},
             "Position": {
-              "X": 568.0,
-              "Y": 320.0
+              "X": 384.0,
+              "Y": 568.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -156,10 +161,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 568.0,
-            "RightMargin": 568.0,
-            "TopMargin": 320.0,
-            "BottomMargin": 320.0,
+            "LeftMargin": 384.0,
+            "RightMargin": 384.0,
+            "TopMargin": 568.0,
+            "BottomMargin": 568.0,
             "Tag": 202,
             "ActionTag": -1198800913,
             "Size": {
@@ -178,6 +183,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "../../com/fonts/JosefinSans-Light.ttf",
         "../amts/animation.json"
       ],
       "ctype": "GameFileData"

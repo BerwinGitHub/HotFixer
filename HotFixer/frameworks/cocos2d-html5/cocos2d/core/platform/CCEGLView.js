@@ -173,8 +173,8 @@ cc.EGLView = cc.Class.extend(/** @lends cc.view# */{
         var _t = this, d = document, _strategyer = cc.ContainerStrategy, _strategy = cc.ContentStrategy;
 
         __BrowserGetter.init(this);
-        // tangbowen
-        if (__BrowserGetter.adaptationType == cc.sys.BROWSER_TYPE_CHROME) {
+        /* bug fixed by tangbowen*/
+        if (false && __BrowserGetter.adaptationType == cc.sys.BROWSER_TYPE_CHROME) {
             _t._frame = cc.container.parentNode;
         } else {
             _t._frame = (cc.container.parentNode === d.body) ? d.documentElement : cc.container.parentNode;
