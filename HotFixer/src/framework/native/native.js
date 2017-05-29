@@ -17,14 +17,15 @@ var native = cc.Class.extend({
      * @param data          json对象
      */
     languageInterface: function (clsName, methodName, data = null) {
-        if (cc.sys.os == cc.sys.ANDROID) {
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
             return jsb.reflection.callStaticMethod(clsName, methodName,
                 "(Ljava/lang/String;)Ljava/lang/String;", // 参数列表
                 JSON.stringify(data));
-        } else if (cc.sys.os == cc.sys.IOS) {
+        } else if (cc.sys.os == cc.sys.OS_IOS) {
             return jsb.reflection.callStaticMethod(clsName,
-                methodName + ":withData:",
+                methodName + ":",
                 JSON.stringify(data));
+            cc.app.log.e("end");
         }
     },
 });

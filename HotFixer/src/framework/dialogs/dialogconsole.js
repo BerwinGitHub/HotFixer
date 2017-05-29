@@ -106,6 +106,11 @@ var dialogconsole = Dialog.extend({
 
         // 添加监听
         cc.app.events.on(this, cc.app.log.BROAD_CAST_LOG, this.addLog);
+
+        // event
+        this._regiserEvent("btnPrivacy", () => {
+            cc.app.native.nv.showPrivacyWithURL("http://www.baidu.com");
+        });
     },
 
     addLog: function (item) {
@@ -150,6 +155,11 @@ var dialogconsole = Dialog.extend({
         });
         this.historyList.insertCustomItem(pan, 0);
         this.historyList.jumpToTop();
+    },
+
+    _regiserEvent: function (name, callback) {
+        var btn = ccui.helper.seekNodeByName(this.node, name);
+        btn.addClickEventListener(callback);
     },
 
     onEnter: function () {

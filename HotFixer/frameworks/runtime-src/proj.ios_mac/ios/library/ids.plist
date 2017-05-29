@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppleID</key>
+	<string>1233991607</string>
+	<key>Facebook</key>
+	<dict>
+		<key>APP_ID</key>
+		<string>1819327305057871</string>
+	</dict>
+	<key>Purchase</key>
+	<dict/>
+	<key>Flurry</key>
+	<dict>
+		<key>API_KEY</key>
+		<string>BKZKQH4JG3X39BSCR3TW</string>
+	</dict>
+	<key>Advertisement</key>
+	<dict>
+		<key>APP_ID</key>
+		<string>ca-app-pub-9857609025315013~6485745481</string>
+		<key>Banner</key>
+		<string>ca-app-pub-3940256099942544/2934735716</string>
+		<key>Interstitial</key>
+		<string>ca-app-pub-3940256099942544/4411468910</string>
+		<key>RewardedVideo</key>
+		<string>ca-app-pub-3940256099942544/1712485313</string>
+		<key>TestDeviceIds</key>
+		<array>
+			<string>360bba314fc22465aabcef6274555c2719866d29</string>
+			<string>e0923bbd23d41521fde1db204b5ce35d3597172b</string>
+		</array>
+	</dict>
+</dict>
+</plist>

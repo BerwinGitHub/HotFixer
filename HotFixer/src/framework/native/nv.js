@@ -8,7 +8,7 @@ var nv = cc.Class.extend({
     ctor: function () {
         if (cc.sys.os == cc.sys.ANDROID) {
             this._clsName = "org/cocos2dx/javascript/NativeInterface";
-        } else if (cc.sys.os == cc.sys.IOS) {
+        } else {
             this._clsName = "NativeInterface";
         }
     },
