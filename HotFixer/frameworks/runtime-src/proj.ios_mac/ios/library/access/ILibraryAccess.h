@@ -7,20 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Utility.h"
 
-//typedef NS_ENUM(NSInteger, ShownType){
-//    kNORMAL     = 0x00000DF0,
-//    kDIALOG     = 0x00000DF1,
-//    kSTORE      = 0x00000DF2
-//};
+@interface ILibraryAccess : NSObject
 
-@protocol ILibraryAccess <NSObject>
+#pragma mark -变量
+/**
+ * 当前是否是debug模式
+ */
+@property(nonatomic, readwrite)BOOL debug;
 
+/**
+ * 是否是调试模式
+ */
+@property(nonatomic, strong)UIViewController *viewController;
+
+#pragma mark -方法
 // 默认是必须实现的方法
-
-@required // 必须实现的方法
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug;
 
-@optional // 可选实现的方法
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "FaceBookManager.h"
-#import "IDManager.h"
+#import "ConfigManager.h"
 
 @implementation FaceBookManager
 
@@ -34,7 +34,7 @@ static FaceBookManager *_instance = nil;
 #pragma mark - override
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    [self setViewController:viewController];
+    [super setUpEnvironment:viewController withDebug:debug];
     return YES;
 }
 
@@ -42,7 +42,7 @@ static FaceBookManager *_instance = nil;
 
 - (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    NSString *appID = [[IDManager getInstance] getFacebookValueWithKey:IDFacebookString(kFBAppID)];
+    NSString *appID = [[ConfigManager getInstance] getFacebookIdByKey:keyConfigFacebookAppId];
     [FBSDKAppEvents setLoggingOverrideAppID:appID];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -57,7 +57,7 @@ static FaceBookManager *_instance = nil;
 
 - (void)loginWithPermissions:(NSArray*)permissions andHandler:(FBSDKLoginManagerRequestTokenHandler)handler
 {
-    if(_viewController == nil){
+    if(self.viewController == nil){
         NSLog(@"_viewController is nil. Please setViewController()");
         return;
     }
@@ -71,7 +71,7 @@ static FaceBookManager *_instance = nil;
     // 默认打开方式是应用
     [loginManager setLoginBehavior:FBSDKLoginBehaviorNative];
     [loginManager logInWithReadPermissions:permissions
-                        fromViewController:_viewController
+                        fromViewController:self.viewController
                                    handler:handler];
     
     // 添加Facebook的广播监听
@@ -117,7 +117,7 @@ static FaceBookManager *_instance = nil;
 
 - (void)shareWithLink:(NSString*)link
 {
-    if(_viewController == nil){
+    if(self.viewController == nil){
         NSLog(@"_viewController is nil. Please setViewController()");
         return;
     }
@@ -126,7 +126,7 @@ static FaceBookManager *_instance = nil;
     
     FBSDKShareDialog *shareDialog = [[FBSDKShareDialog alloc] init];
     shareDialog.shareContent = shareContent;
-    shareDialog.fromViewController = _viewController;
+    shareDialog.fromViewController = self.viewController;
     [shareDialog show];
 }
 
@@ -171,7 +171,7 @@ static FaceBookManager *_instance = nil;
         [content setPromotionCode:promotCode];
         // [dialog setContent:content];
         // [dialog show];
-        [FBSDKAppInviteDialog showFromViewController:_viewController withContent:content delegate:delegate];
+        [FBSDKAppInviteDialog showFromViewController:self.viewController withContent:content delegate:delegate];
     }
 }
 
@@ -200,7 +200,7 @@ static FaceBookManager *_instance = nil;
         }
         //[dialog setShareContent:content];
         //[dialog show];
-        [FBSDKShareDialog showFromViewController:_viewController withContent:content delegate:delegate];
+        [FBSDKShareDialog showFromViewController:self.viewController withContent:content delegate:delegate];
     }
 }
 

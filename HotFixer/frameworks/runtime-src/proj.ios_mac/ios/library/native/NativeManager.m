@@ -39,11 +39,9 @@ static NativeManager *_instance = nil;
 #pragma mark - override
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    [self setViewController:viewController];
+    [super setUpEnvironment:viewController withDebug:debug];
     return YES;
 }
-
-
 
 -(BOOL)isNetworkAvaliable {
     struct sockaddr_in zeroAddress;

@@ -17,7 +17,7 @@
  */
 typedef void(^BlockAdListener)(int adType, int methodType, int amount , int err);
 
-@interface AdsManager : NSObject<ILibraryAccess>
+@interface AdsManager : ILibraryAccess
 
 + (instancetype)getInstance;
 + (void)pure;

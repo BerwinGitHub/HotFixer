@@ -6,10 +6,9 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "ILibraryAccess.h"
 
-@interface FlurryManager : NSObject<ILibraryAccess>
+@interface FlurryManager : ILibraryAccess
 
 + (instancetype)getInstance;
 + (void)pure;

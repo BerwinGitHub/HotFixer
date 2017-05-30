@@ -11,9 +11,8 @@
 
 typedef void(^AlertCompleteBlock)(NSInteger buttonIndex);
 
-@interface NativeManager : NSObject <ILibraryAccess, UIAlertViewDelegate>
+@interface NativeManager : ILibraryAccess<UIAlertViewDelegate>
 
-@property(nonatomic, strong)UIViewController *viewController;
 /**
  * alert回调监听属性(block)
  */

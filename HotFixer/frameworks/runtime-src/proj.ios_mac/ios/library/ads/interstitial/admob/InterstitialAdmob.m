@@ -25,7 +25,7 @@
     [self setViewController:viewController];
     [self setDebug:debug];
     // 初始化Interstitial && 设置ID
-    NSString *unitID = [[IDManager getInstance] getAdvertisementValueWithKey:keyWithAdType([self adType])];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobInterstitialId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:unitID];
     // 设置监听
@@ -42,7 +42,7 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[IDManager getInstance] getAdvertisementTestDevices];
+        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
     }
     [self.interstitial loadRequest:request];
 }

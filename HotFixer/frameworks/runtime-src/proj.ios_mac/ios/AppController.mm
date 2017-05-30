@@ -28,7 +28,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 
-#import "NativeManager.h"
+#import "ConfigManager.h"
 
 @implementation AppController
 
@@ -75,7 +75,7 @@ static AppDelegate s_sharedApplication;
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
     //
-    [[NativeManager getInstance] setUpEnvironment:_viewController withDebug:YES];
+    [[ConfigManager getInstance] setViewController:_viewController];
     
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);

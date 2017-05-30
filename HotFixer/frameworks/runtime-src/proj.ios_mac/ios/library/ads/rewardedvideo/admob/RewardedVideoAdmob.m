@@ -40,9 +40,9 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[IDManager getInstance] getAdvertisementTestDevices];
+        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
     }
-    NSString *unitID = [[IDManager getInstance] getAdvertisementValueWithKey:keyWithAdType([self adType])];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobRewardedVideoId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
                                            withAdUnitID:unitID];

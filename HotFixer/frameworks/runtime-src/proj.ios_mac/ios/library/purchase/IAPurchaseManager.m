@@ -42,8 +42,8 @@ static IAPurchaseManager *_instance = nil;
 #pragma mark - override
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    
-    return NO;
+    [super setUpEnvironment:viewController withDebug:debug];
+    return YES;
 }
 
 - (void)dealloc

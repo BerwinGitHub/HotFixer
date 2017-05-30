@@ -11,7 +11,7 @@
 #import "PurchasedDelegate.h"
 #import "Purchase.h"
 
-@interface IAPurchaseManager : NSObject <ILibraryAccess, PurchaseDelegate> // PurchaseDelegate这个是Purchse里面带的
+@interface IAPurchaseManager : ILibraryAccess<PurchaseDelegate> // PurchaseDelegate这个是Purchse里面带的
 {
     id<PurchasedDelegate>   _delegate;
     BOOL                    _isPurchasing;

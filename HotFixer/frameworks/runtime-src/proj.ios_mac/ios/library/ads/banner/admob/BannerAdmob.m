@@ -33,7 +33,7 @@
     AdmobListener *listener = [[AdmobListener alloc] initWithAdAccess:self];
     [self.bannerView setDelegate:listener];
     // 设置ID
-    NSString *unitID = [[IDManager getInstance] getAdvertisementValueWithKey:keyWithAdType(kAdTypeBanner)];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobBannerId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     [self.bannerView setAdUnitID:unitID];
     // 设置RootViewController
@@ -50,7 +50,7 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[IDManager getInstance] getAdvertisementTestDevices];
+        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
     }
     [self.bannerView loadRequest:request];
 }

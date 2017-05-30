@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IDManager.h"
+#import "ConfigManager.h"
 
 @protocol IAdAccess <NSObject>
 

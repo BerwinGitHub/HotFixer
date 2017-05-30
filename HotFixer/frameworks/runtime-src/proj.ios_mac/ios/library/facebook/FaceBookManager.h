@@ -13,11 +13,9 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface FaceBookManager : NSObject <ILibraryAccess>
+@interface FaceBookManager : ILibraryAccess
 {
 }
-
-@property(nonatomic, strong)UIViewController *viewController;
 
 + (instancetype)getInstance;
 + (void)pure;

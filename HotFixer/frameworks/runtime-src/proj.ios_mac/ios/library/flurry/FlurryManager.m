@@ -8,7 +8,7 @@
 
 #import "FlurryManager.h"
 #import "Flurry.h"
-#import "IDManager.h"
+#import "ConfigManager.h"
 
 @implementation FlurryManager
 
@@ -35,14 +35,14 @@ static FlurryManager *_instance = nil;
 #pragma mark - override
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    
-    return NO;
+    [super setUpEnvironment:viewController withDebug:debug];
+    return YES;
 }
 
 
 - (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    NSString *API_KEY = [[IDManager getInstance] getFlurryValueWithKey:IDFlurryString(kFlurryApiKey)];
+    NSString *API_KEY = [[ConfigManager getInstance] getFlurryIdByKey:keyConfigFlurryApiKey];
     // FlurryLogLevelNone
     FlurrySessionBuilder* builder = [[[[[FlurrySessionBuilder new]
                                         withLogLevel:FlurryLogLevelNone]

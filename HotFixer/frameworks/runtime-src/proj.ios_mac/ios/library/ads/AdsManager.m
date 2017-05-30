@@ -36,7 +36,7 @@ static AdsManager *_instance = nil;
 #pragma mark - override
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    [self setDebug:debug];
+    [super setUpEnvironment:viewController withDebug:debug];
     self.managerArray = [[NSArray alloc] initWithObjects:[BannerManager getInstance], [InterstitialManager getInstance], [RewardedVideoManager getInstance], nil];
     
     for (id<IManagerAccess> manager in self.managerArray) {

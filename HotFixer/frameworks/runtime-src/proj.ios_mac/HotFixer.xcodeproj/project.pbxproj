@@ -48,6 +48,8 @@
 		509D4AE717EBB81800697056 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AE617EBB81800697056 /* OpenGL.framework */; };
 		509D4AE917EBB82000697056 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AE817EBB82000697056 /* AppKit.framework */; };
 		509D4AEB17EBB82600697056 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AEA17EBB82600697056 /* IOKit.framework */; };
+		5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F7381EDDC4C900A0EB64 /* ConfigManager.m */; };
+		5436F73B1EDDC86F00A0EB64 /* ILibraryAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */; };
 		5475882A1EDC883A00479C6C /* AdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E21EDC883A00479C6C /* AdsManager.m */; };
 		5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E61EDC883A00479C6C /* BannerAdmob.m */; };
 		5475882C1EDC883A00479C6C /* BannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E81EDC883A00479C6C /* BannerManager.m */; };
@@ -67,8 +69,6 @@
 		5475883A1EDC883A00479C6C /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475880E1EDC883A00479C6C /* FlurryEmpty.m */; };
 		5475883B1EDC883A00479C6C /* libFlurry_8.0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 547588101EDC883A00479C6C /* libFlurry_8.0.2.a */; };
 		5475883C1EDC883A00479C6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547588111EDC883A00479C6C /* GoogleService-Info.plist */; };
-		5475883D1EDC883A00479C6C /* IDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588141EDC883A00479C6C /* IDManager.m */; };
-		5475883E1EDC883A00479C6C /* ids.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547588151EDC883A00479C6C /* ids.plist */; };
 		547588401EDC883A00479C6C /* InAppWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881B1EDC883A00479C6C /* InAppWebView.m */; };
 		547588411EDC883A00479C6C /* NativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881E1EDC883A00479C6C /* NativeManager.m */; };
 		547588421EDC883A00479C6C /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588221EDC883A00479C6C /* Purchase.m */; };
@@ -215,6 +215,9 @@
 		509D4AE617EBB81800697056 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		509D4AE817EBB82000697056 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		509D4AEA17EBB82600697056 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5436F7371EDDC4C900A0EB64 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		5436F7381EDDC4C900A0EB64 /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
+		5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILibraryAccess.m; sourceTree = "<group>"; };
 		547587DE1EDC883A00479C6C /* ILibraryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILibraryAccess.h; sourceTree = "<group>"; };
 		547587E01EDC883A00479C6C /* AdListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdListener.h; sourceTree = "<group>"; };
 		547587E11EDC883A00479C6C /* AdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsManager.h; sourceTree = "<group>"; };
@@ -253,9 +256,6 @@
 		5475880F1EDC883A00479C6C /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurrySessionBuilder.h; sourceTree = "<group>"; };
 		547588101EDC883A00479C6C /* libFlurry_8.0.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_8.0.2.a; sourceTree = "<group>"; };
 		547588111EDC883A00479C6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		547588131EDC883A00479C6C /* IDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDManager.h; sourceTree = "<group>"; };
-		547588141EDC883A00479C6C /* IDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDManager.m; sourceTree = "<group>"; };
-		547588151EDC883A00479C6C /* ids.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ids.plist; sourceTree = "<group>"; };
 		5475881A1EDC883A00479C6C /* InAppWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppWebView.h; sourceTree = "<group>"; };
 		5475881B1EDC883A00479C6C /* InAppWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppWebView.m; sourceTree = "<group>"; };
 		5475881D1EDC883A00479C6C /* NativeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeManager.h; sourceTree = "<group>"; };
@@ -415,11 +415,11 @@
 				547588011EDC883A00479C6C /* facebook */,
 				547588091EDC883A00479C6C /* flurry */,
 				547588111EDC883A00479C6C /* GoogleService-Info.plist */,
-				547588121EDC883A00479C6C /* ids */,
-				547588151EDC883A00479C6C /* ids.plist */,
 				547588181EDC883A00479C6C /* native */,
 				5475881F1EDC883A00479C6C /* purchase */,
 				547588271EDC883A00479C6C /* utility */,
+				5436F7371EDDC4C900A0EB64 /* ConfigManager.h */,
+				5436F7381EDDC4C900A0EB64 /* ConfigManager.m */,
 			);
 			name = library;
 			path = ios/library;
@@ -429,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				547587DE1EDC883A00479C6C /* ILibraryAccess.h */,
+				5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */,
 				5475884A1EDC89FC00479C6C /* INative.h */,
 				5475884B1EDC89FC00479C6C /* INative.mm */,
 			);
@@ -578,15 +579,6 @@
 				547588101EDC883A00479C6C /* libFlurry_8.0.2.a */,
 			);
 			path = libs;
-			sourceTree = "<group>";
-		};
-		547588121EDC883A00479C6C /* ids */ = {
-			isa = PBXGroup;
-			children = (
-				547588131EDC883A00479C6C /* IDManager.h */,
-				547588141EDC883A00479C6C /* IDManager.m */,
-			);
-			path = ids;
 			sourceTree = "<group>";
 		};
 		547588181EDC883A00479C6C /* native */ = {
@@ -897,7 +889,6 @@
 				1AE159EC18C9DF3600FCA372 /* project.json in Resources */,
 				1AD7E0A818C9DB93004817A6 /* main.js in Resources */,
 				509D4ABE17EBB2AB00697056 /* Default.png in Resources */,
-				5475883E1EDC883A00479C6C /* ids.plist in Resources */,
 				5091731E17ECDF7A00D62437 /* Icon-80.png in Resources */,
 				5091731F17ECDF7A00D62437 /* Icon-100.png in Resources */,
 				509D4AC117EBB2AB00697056 /* Icon-72.png in Resources */,
@@ -945,17 +936,18 @@
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				5475882D1EDC883A00479C6C /* IAdAccess.m in Sources */,
 				5475882F1EDC883A00479C6C /* InterstitialManager.m in Sources */,
-				5475883D1EDC883A00479C6C /* IDManager.m in Sources */,
 				547588391EDC883A00479C6C /* FlurryManager.m in Sources */,
 				547588331EDC883A00479C6C /* RewardedVideoManager.m in Sources */,
 				547588341EDC883A00479C6C /* FaceBookManager.m in Sources */,
 				547588421EDC883A00479C6C /* Purchase.m in Sources */,
+				5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */,
 				547588441EDC883A00479C6C /* Utility.m in Sources */,
 				547588401EDC883A00479C6C /* InAppWebView.m in Sources */,
 				5475883A1EDC883A00479C6C /* FlurryEmpty.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
 				547588491EDC88BF00479C6C /* NativeInterface.m in Sources */,
 				547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */,
+				5436F73B1EDDC86F00A0EB64 /* ILibraryAccess.m in Sources */,
 				5475882E1EDC883A00479C6C /* InterstitialAdmob.m in Sources */,
 				547588311EDC883A00479C6C /* AdmobListener.m in Sources */,
 				547588321EDC883A00479C6C /* RewardedVideoAdmob.m in Sources */,
