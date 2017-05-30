@@ -42,4 +42,13 @@
     [[NativeManager getInstance] systemShareWithTitile:title content:content imageUrl:imgUrl];
 }
 
++ (void)makeToast:(NSString*)jsonData
+{
+    NSDictionary *dict = [Utility dictionaryWithJSONString:jsonData];
+    NSString *content = [dict objectForKey:@"content"];
+    long time = [[dict objectForKey:@"time"] longValue];
+    [[NativeManager getInstance] makeToast:content withTime:time];
+    
+}
+
 @end

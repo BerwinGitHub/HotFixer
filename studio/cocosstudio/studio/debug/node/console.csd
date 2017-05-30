@@ -25,7 +25,7 @@
               <AbstractNodeData Name="Panel_3" ActionTag="-152817585" Tag="65" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="6.4000" RightMargin="134.4000" TopMargin="11.3600" BottomMargin="1056.4800" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="499.2000" Y="68.1600" />
                 <Children>
-                  <AbstractNodeData Name="textField" ActionTag="-1112460923" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-0.0001" TopMargin="-0.0001" BottomMargin="0.0001" TouchEnable="True" FontSize="20" IsCustomSize="True" LabelText="cc.winSize" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
+                  <AbstractNodeData Name="textField" ActionTag="-1112460923" Tag="66" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="-0.0001" RightMargin="0.0000" TopMargin="-0.0001" BottomMargin="0.0001" TouchEnable="True" FontSize="20" IsCustomSize="True" LabelText="cc.winSize" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
                     <Size X="499.2000" Y="68.1600" />
                     <AnchorPoint />
                     <Position X="-0.0001" Y="0.0001" />
@@ -64,27 +64,12 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnHistory" ActionTag="1590316506" Tag="69" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="2.5600" RightMargin="2.5600" TopMargin="74.9600" BottomMargin="1011.0400" TouchEnable="True" FontSize="18" ButtonText="Input History" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="122.8800" Y="50.0000" />
-                    <AnchorPoint />
-                    <Position X="2.5600" Y="1011.0400" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="165" B="0" />
-                    <PrePosition X="0.0200" Y="0.8900" />
-                    <PreSize X="0.9600" Y="0.0440" />
-                    <TextColor A="255" R="0" G="0" B="0" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-                    <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="btnInputCls" ActionTag="100808357" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="2.5600" RightMargin="2.5600" TopMargin="131.7600" BottomMargin="954.2400" TouchEnable="True" FontSize="14" ButtonText="Clear Input" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btnHistory" ActionTag="1590316506" Tag="69" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="2.5600" RightMargin="2.5600" TopMargin="131.7600" BottomMargin="954.2400" TouchEnable="True" FontSize="18" ButtonText="Input History" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="122.8800" Y="50.0000" />
                     <AnchorPoint />
                     <Position X="2.5600" Y="954.2400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="30" G="144" B="255" />
+                    <CColor A="255" R="255" G="165" B="0" />
                     <PrePosition X="0.0200" Y="0.8400" />
                     <PreSize X="0.9600" Y="0.0440" />
                     <TextColor A="255" R="0" G="0" B="0" />
@@ -94,14 +79,59 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btnClear" ActionTag="561128668" Tag="125" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="1.7408" RightMargin="3.3792" TopMargin="188.5600" BottomMargin="897.4400" TouchEnable="True" FontSize="16" ButtonText="Clear All" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btnInputCls" ActionTag="100808357" Tag="113" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="2.5600" RightMargin="2.5600" TopMargin="188.5601" BottomMargin="897.4399" TouchEnable="True" FontSize="14" ButtonText="Clear Input" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="122.8800" Y="50.0000" />
                     <AnchorPoint />
-                    <Position X="1.7408" Y="897.4400" />
+                    <Position X="2.5600" Y="897.4399" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="30" G="144" B="255" />
+                    <PrePosition X="0.0200" Y="0.7900" />
+                    <PreSize X="0.9600" Y="0.0440" />
+                    <TextColor A="255" R="0" G="0" B="0" />
+                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                    <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+                    <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="btnClear" ActionTag="561128668" Tag="125" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="1.7408" RightMargin="3.3792" TopMargin="245.3600" BottomMargin="840.6400" TouchEnable="True" FontSize="16" ButtonText="Clear All" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="122.8800" Y="50.0000" />
+                    <AnchorPoint />
+                    <Position X="1.7408" Y="840.6400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="139" G="105" B="20" />
-                    <PrePosition X="0.0136" Y="0.7900" />
+                    <PrePosition X="0.0136" Y="0.7400" />
                     <PreSize X="0.9600" Y="0.0440" />
+                    <TextColor A="255" R="0" G="0" B="0" />
+                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                    <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+                    <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="btnAutoFillLeft" ActionTag="-73934864" Tag="61" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="2.5600" RightMargin="66.5600" TopMargin="74.9600" BottomMargin="1011.0400" TouchEnable="True" FontSize="18" ButtonText="(&quot;" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="58.8800" Y="50.0000" />
+                    <AnchorPoint />
+                    <Position X="2.5600" Y="1011.0400" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="165" B="0" />
+                    <PrePosition X="0.0200" Y="0.8900" />
+                    <PreSize X="0.4600" Y="0.0440" />
+                    <TextColor A="255" R="0" G="0" B="0" />
+                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                    <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+                    <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="btnAutoFillRight" ActionTag="-2087712585" Tag="62" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="66.5600" RightMargin="2.5600" TopMargin="74.9600" BottomMargin="1011.0400" TouchEnable="True" FontSize="18" ButtonText="&quot;)" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="58.8800" Y="50.0000" />
+                    <AnchorPoint />
+                    <Position X="66.5600" Y="1011.0400" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="165" B="0" />
+                    <PrePosition X="0.5200" Y="0.8900" />
+                    <PreSize X="0.4600" Y="0.0440" />
                     <TextColor A="255" R="0" G="0" B="0" />
                     <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                     <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />

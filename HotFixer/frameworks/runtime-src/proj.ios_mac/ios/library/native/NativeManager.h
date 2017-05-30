@@ -52,4 +52,6 @@ typedef void(^AlertCompleteBlock)(NSInteger buttonIndex);
  */
 - (void)systemShareWithTitile:(NSString*)title content:(NSString*)content imageUrl:(NSString*)imgUrl;
 
+- (void)makeToast:(NSString*)msg withTime:(long)millis;
+
 @end

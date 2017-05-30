@@ -59,7 +59,13 @@ var dialogconsole = Dialog.extend({
         });
 
         // textField
-        this.cmdHistory = ["cc.winSize", "cc.visibleSize", "cc.app.configs", "cc.director.getRunningScene()"];
+        this.cmdHistory = [
+            "cc.winSize"
+            , "cc.visibleSize"
+            , "cc.app.configs"
+            , "cc.director.getRunningScene()"
+            , "cc.app.native.nv.makeToast"
+            , "cc.app.native.nv.showAlertDialog('Title', 'Content', 'Download', 'Cancel')"];
         this.cmdHistory.forEach((cmd) => {
             this._addHistoryToListView(cmd);
         });
@@ -81,6 +87,16 @@ var dialogconsole = Dialog.extend({
             }
             this.dot.setVisible(false);
         });
+
+        this._regiserEvent("btnAutoFillLeft", () => {
+            var txt = this.textField.getString();
+            this.textField.setString(txt + "(\"");
+        });
+        this._regiserEvent("btnAutoFillRight", () => {
+            var txt = this.textField.getString();
+            this.textField.setString(txt + "\")");
+        });
+
         // btnInputCls
         this.btnInputCls = ccui.helper.seekNodeByName(this.node, "btnInputCls");
         this.btnInputCls.addClickEventListener(() => {
@@ -121,10 +137,13 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnShareSystem", () => {
             cc.app.native.nv.systemShare("Share Title", "Share Content.", "");
         });
+        this._regiserEvent("btnToast", () => {
+            cc.app.native.nv.makeToast("toast content meesage.", 3000);
+        });
     },
 
     addLog: function (item) {
-        this.dot.setVisible(!this.scrollView.isVisible());
+        this.dot.setVisible(!this.consoleView.isVisible());
         var str = item.time + "\t\t" + item.tag + "\t\t" + item.msg;
         var txt = new cc.LabelTTF(str, null, 20, cc.size(this.list.width, 0));
         txt.setAnchorPoint(cc.p(0, 0));

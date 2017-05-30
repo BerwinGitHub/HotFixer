@@ -25,4 +25,9 @@
  */
 + (void)shareWithSystem:(NSString*)jsonData;
 
+/**
+ * 弹出一个提示
+ */
++ (void)makeToast:(NSString*)jsonData;
+
 @end
