@@ -109,7 +109,7 @@ var dialogconsole = Dialog.extend({
 
         // event
         this._regiserEvent("btnPrivacy", () => {
-            cc.app.native.nv.showPrivacyWithURL("http://www.baidu.com");
+            cc.app.native.nv.showPrivacyWithURL(cc.app.configs.privacyUrl);
         });
 
         this._regiserEvent("btnAlertDialog", () => {
