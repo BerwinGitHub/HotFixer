@@ -85,7 +85,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 316.2673,
+                  "X": 320.0,
                   "Y": 568.0
                 },
                 "Scale": {
@@ -97,7 +97,7 @@
                 "PositionPercentXEnabled": true,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.4942,
+                  "X": 0.5,
                   "Y": 0.5
                 },
                 "PercentWidthEnable": true,
@@ -108,8 +108,6 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "LeftMargin": -3.7327,
-                "RightMargin": 3.7327,
                 "Tag": 47,
                 "Children": [
                   {
@@ -345,6 +343,160 @@
                       "Y": 50.0
                     },
                     "Name": "btnPrivacy",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 24,
+                    "ButtonText": "showDialog",
+                    "TextColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Press.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Normal.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 16,
+                    "Scale9Height": 14,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 247.0,
+                      "Y": 1031.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.3859,
+                      "Y": 0.9076
+                    },
+                    "PreSize": {
+                      "X": 0.2344,
+                      "Y": 0.044
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 172.0,
+                    "RightMargin": 318.0,
+                    "TopMargin": 80.0,
+                    "BottomMargin": 1006.0,
+                    "Tag": 43,
+                    "ActionTag": -1468486753,
+                    "Size": {
+                      "X": 150.0,
+                      "Y": 50.0
+                    },
+                    "Name": "btnAlertDialog",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 24,
+                    "ButtonText": "ShareSystem",
+                    "TextColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Press.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Normal.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 16,
+                    "Scale9Height": 14,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 403.0,
+                      "Y": 1030.9998
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6297,
+                      "Y": 0.9076
+                    },
+                    "PreSize": {
+                      "X": 0.2344,
+                      "Y": 0.044
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 328.0,
+                    "RightMargin": 162.0,
+                    "TopMargin": 80.0002,
+                    "BottomMargin": 1005.9998,
+                    "Tag": 47,
+                    "ActionTag": -418125561,
+                    "Size": {
+                      "X": 150.0,
+                      "Y": 50.0
+                    },
+                    "Name": "btnShareSystem",
                     "ctype": "ButtonObjectData"
                   }
                 ],

@@ -9,9 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "ILibraryAccess.h"
 
-@interface NativeManager : NSObject <ILibraryAccess>
+typedef void(^AlertCompleteBlock)(NSInteger buttonIndex);
+
+@interface NativeManager : NSObject <ILibraryAccess, UIAlertViewDelegate>
 
 @property(nonatomic, strong)UIViewController *viewController;
+/**
+ * alert回调监听属性(block)
+ */
+@property(nonatomic, copy)AlertCompleteBlock alertCompleteBlock;
+
+@property (nonatomic,strong)UIPopoverController* activityPopover;
 
 + (instancetype)getInstance;
 + (void)pure;
@@ -28,8 +36,20 @@
  */
 - (NSString*)getDeviceUUID;
 
-- (void)showPrivacy:(NSString*)url;
+/**
+ * 显示AlertDialog
+ * @return NSString 设备的唯一ID
+ */
+- (void)showAlertDialog:(NSString*)titile withContent:(NSString*)content positiveName:(NSString*)positive negativeName:(NSString*)negative listener:(AlertCompleteBlock)listener;
 
+/**
+ * 在应用内显示网页
+ */
 - (void)showInAppWeb:(NSString*)url;
+
+/**
+ * 系统自带的分享
+ */
+- (void)systemShareWithTitile:(NSString*)title content:(NSString*)content imageUrl:(NSString*)imgUrl;
 
 @end

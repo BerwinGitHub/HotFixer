@@ -111,6 +111,16 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnPrivacy", () => {
             cc.app.native.nv.showPrivacyWithURL("http://www.baidu.com");
         });
+
+        this._regiserEvent("btnAlertDialog", () => {
+            cc.app.native.nv.showAlertDialog("Test", "This is test message", "OK", "Cancel", (data) => {
+                cc.app.log.i(JSON.stringify(data));
+            });
+        });
+
+        this._regiserEvent("btnShareSystem", () => {
+            cc.app.native.nv.systemShare("Share Title", "Share Content.", "");
+        });
     },
 
     addLog: function (item) {

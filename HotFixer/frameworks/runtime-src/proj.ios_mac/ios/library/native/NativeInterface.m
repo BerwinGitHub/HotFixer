@@ -17,7 +17,29 @@
 {
     NSDictionary *dict = [Utility dictionaryWithJSONString:jsonData];
     NSString *url = [dict objectForKey:@"url"];
-    [[NativeManager getInstance] showPrivacy:url];
+    [[NativeManager getInstance] showInAppWeb:url];
+}
+
++ (void)showAlertDialog:(NSString*)jsonData
+{
+    NSDictionary *dict = [Utility dictionaryWithJSONString:jsonData];
+    NSString *title = [dict objectForKey:@"title"];
+    NSString *content = [dict objectForKey:@"content"];
+    NSString *positive = [dict objectForKey:@"positive"];
+    NSString *negative = [dict objectForKey:@"negative"];
+    int cbid = [[dict objectForKey:@"cbid"] intValue];
+    [[NativeManager getInstance] showAlertDialog:title withContent:content positiveName:positive negativeName:negative listener:^(NSInteger buttonIndex) {
+        [INative nativeCallbackToJs:cbid withData:@{@"buttonIndex":[NSNumber numberWithInt:(int)buttonIndex]}];
+    }];
+}
+
++ (void)systemShare:(NSString*)jsonData
+{
+    NSDictionary *dict = [Utility dictionaryWithJSONString:jsonData];
+    NSString *title = [dict objectForKey:@"title"];
+    NSString *content = [dict objectForKey:@"content"];
+    NSString *imgUrl = [dict objectForKey:@"imgUrl"];
+    [[NativeManager getInstance] systemShareWithTitile:title content:content imageUrl:imgUrl];
 }
 
 @end

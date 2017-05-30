@@ -10,7 +10,7 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 #import <AdSupport/AdSupport.h>
-#import "PrivacyPage.h"
+#import "InAppWebView.h"
 #import "Utility.h"
 
 @implementation NativeManager
@@ -76,16 +76,57 @@ static NativeManager *_instance = nil;
     return adId;
 }
 
-- (void)showPrivacy:(NSString*)url
-{
-//    PrivacyPage *page = [[PrivacyPage alloc] initWithURL:@"http://www.baidu.com"];
-    PrivacyPage *page = [[PrivacyPage alloc] initWithURL:url];
-    [page showInView:[self viewController].view];
-}
-
 - (void)showInAppWeb:(NSString*)url
 {
+    InAppWebView *web = [[InAppWebView alloc] initWithURL:url];
+    [web showInView:[self viewController].view];
+}
+
+- (void)showAlertDialog:(NSString*)titile withContent:(NSString*)content positiveName:(NSString*)positive negativeName:(NSString*)negative listener:(AlertCompleteBlock)listener
+{
+    [self setAlertCompleteBlock:listener];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:content delegate:self cancelButtonTitle:negative otherButtonTitles:positive, nil];
+    [alert show];
+    [alert release];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (self.alertCompleteBlock != nil) {
+        self.alertCompleteBlock(buttonIndex);
+    }
+}
+
+- (void)systemShareWithTitile:(NSString*)title content:(NSString*)content imageUrl:(NSString*)imgUrl;
+{
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    if(![title isEqualToString:@""]){
+        [arr addObject:title];
+    }
+    if(![content isEqualToString:@""]){
+        [arr addObject:content];
+    }
+    if(![imgUrl isEqualToString:@""]){
+        UIImage *img = [[UIImage alloc] initWithContentsOfFile:imgUrl];
+        [arr addObject:img];
+    }
     
+    UIViewController *controller = [self viewController];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:arr applicationActivities:nil];
+    //    activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePrint, UI25ActivityTypeCopyToPasteboard, UIActivityTypeSaveToCameraRoll,UIActivityTypeAssignToContact];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [controller presentViewController:activityViewController animated:YES completion:nil];
+    } else {
+        float x = [UIScreen mainScreen].bounds.size.width / 2;
+        float y = [UIScreen mainScreen].bounds.size.height / 2;
+        if (![self.activityPopover isPopoverVisible]) {
+            self.activityPopover = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+            [self.activityPopover presentPopoverFromRect:CGRectMake(x, y,0, 0) inView:((UIViewController *)controller).view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        } else {
+            [self.activityPopover dismissPopoverAnimated:YES];
+        }
+    }
 }
 
 @end

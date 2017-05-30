@@ -69,13 +69,13 @@
 		5475883C1EDC883A00479C6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547588111EDC883A00479C6C /* GoogleService-Info.plist */; };
 		5475883D1EDC883A00479C6C /* IDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588141EDC883A00479C6C /* IDManager.m */; };
 		5475883E1EDC883A00479C6C /* ids.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547588151EDC883A00479C6C /* ids.plist */; };
-		547588401EDC883A00479C6C /* PrivacyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881B1EDC883A00479C6C /* PrivacyPage.m */; };
+		547588401EDC883A00479C6C /* InAppWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881B1EDC883A00479C6C /* InAppWebView.m */; };
 		547588411EDC883A00479C6C /* NativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881E1EDC883A00479C6C /* NativeManager.m */; };
 		547588421EDC883A00479C6C /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588221EDC883A00479C6C /* Purchase.m */; };
 		547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588251EDC883A00479C6C /* IAPurchaseManager.m */; };
 		547588441EDC883A00479C6C /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588291EDC883A00479C6C /* Utility.m */; };
 		547588491EDC88BF00479C6C /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588481EDC88BF00479C6C /* NativeInterface.m */; };
-		5475884C1EDC89FC00479C6C /* INative.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475884B1EDC89FC00479C6C /* INative.m */; };
+		5475884C1EDC89FC00479C6C /* INative.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5475884B1EDC89FC00479C6C /* INative.mm */; };
 		549BF7561ECB50B000333B9D /* libjscocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C037820918BF76AF00FE4F13 /* libjscocos2d iOS.a */; };
 		9FA3AE461BE9BBCA00FC9645 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3AE451BE9BBCA00FC9645 /* GameController.framework */; };
 		A92275421517C094001B78AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92275411517C094001B78AA /* QuartzCore.framework */; };
@@ -256,8 +256,8 @@
 		547588131EDC883A00479C6C /* IDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDManager.h; sourceTree = "<group>"; };
 		547588141EDC883A00479C6C /* IDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDManager.m; sourceTree = "<group>"; };
 		547588151EDC883A00479C6C /* ids.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ids.plist; sourceTree = "<group>"; };
-		5475881A1EDC883A00479C6C /* PrivacyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPage.h; sourceTree = "<group>"; };
-		5475881B1EDC883A00479C6C /* PrivacyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPage.m; sourceTree = "<group>"; };
+		5475881A1EDC883A00479C6C /* InAppWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppWebView.h; sourceTree = "<group>"; };
+		5475881B1EDC883A00479C6C /* InAppWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppWebView.m; sourceTree = "<group>"; };
 		5475881D1EDC883A00479C6C /* NativeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeManager.h; sourceTree = "<group>"; };
 		5475881E1EDC883A00479C6C /* NativeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeManager.m; sourceTree = "<group>"; };
 		547588211EDC883A00479C6C /* Purchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Purchase.h; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		547588471EDC88BF00479C6C /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		547588481EDC88BF00479C6C /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
 		5475884A1EDC89FC00479C6C /* INative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INative.h; sourceTree = "<group>"; };
-		5475884B1EDC89FC00479C6C /* INative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INative.m; sourceTree = "<group>"; };
+		5475884B1EDC89FC00479C6C /* INative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = INative.mm; sourceTree = "<group>"; };
 		9FA3AE451BE9BBCA00FC9645 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		A922753D1517C094001B78AA /* HotFixer-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HotFixer-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92275411517C094001B78AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -430,7 +430,7 @@
 			children = (
 				547587DE1EDC883A00479C6C /* ILibraryAccess.h */,
 				5475884A1EDC89FC00479C6C /* INative.h */,
-				5475884B1EDC89FC00479C6C /* INative.m */,
+				5475884B1EDC89FC00479C6C /* INative.mm */,
 			);
 			path = access;
 			sourceTree = "<group>";
@@ -605,8 +605,8 @@
 		547588191EDC883A00479C6C /* extends */ = {
 			isa = PBXGroup;
 			children = (
-				5475881A1EDC883A00479C6C /* PrivacyPage.h */,
-				5475881B1EDC883A00479C6C /* PrivacyPage.m */,
+				5475881A1EDC883A00479C6C /* InAppWebView.h */,
+				5475881B1EDC883A00479C6C /* InAppWebView.m */,
 			);
 			path = extends;
 			sourceTree = "<group>";
@@ -939,7 +939,7 @@
 				5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */,
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				5475882A1EDC883A00479C6C /* AdsManager.m in Sources */,
-				5475884C1EDC89FC00479C6C /* INative.m in Sources */,
+				5475884C1EDC89FC00479C6C /* INative.mm in Sources */,
 				547588411EDC883A00479C6C /* NativeManager.m in Sources */,
 				5475882C1EDC883A00479C6C /* BannerManager.m in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
@@ -951,7 +951,7 @@
 				547588341EDC883A00479C6C /* FaceBookManager.m in Sources */,
 				547588421EDC883A00479C6C /* Purchase.m in Sources */,
 				547588441EDC883A00479C6C /* Utility.m in Sources */,
-				547588401EDC883A00479C6C /* PrivacyPage.m in Sources */,
+				547588401EDC883A00479C6C /* InAppWebView.m in Sources */,
 				5475883A1EDC883A00479C6C /* FlurryEmpty.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
 				547588491EDC88BF00479C6C /* NativeInterface.m in Sources */,

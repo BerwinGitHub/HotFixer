@@ -5,6 +5,7 @@
       <RootFolder Name=".">
         <Folder Name="studio">
           <Folder Name="com">
+            <Folder Name="amts" />
             <Folder Name="fonts">
               <TTF Name="JosefinSans-Bold.ttf" />
               <TTF Name="JosefinSans-Light.ttf" />
@@ -22,7 +23,6 @@
             <Folder Name="node">
               <Project Name="dialog_options.csd" Type="Node" />
             </Folder>
-            <Folder Name="amts" />
           </Folder>
           <Folder Name="debug">
             <Folder Name="amts">

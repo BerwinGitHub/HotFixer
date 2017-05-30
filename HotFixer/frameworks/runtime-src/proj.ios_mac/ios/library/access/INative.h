@@ -10,6 +10,6 @@
 
 @interface INative : NSObject
 
-
++ (void)nativeCallbackToJs:(int)cbid withData:(NSDictionary*)jsonData;
 
 @end

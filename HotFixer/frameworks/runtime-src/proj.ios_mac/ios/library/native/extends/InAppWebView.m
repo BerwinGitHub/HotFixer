@@ -1,18 +1,18 @@
 //
-//  PrivacyPage.m
+//  InAppWebView.m
 //  PPLibrary
 //
 //  Created by tangbowen on 16/8/18.
 //
 //
 
-#import "PrivacyPage.h"
+#import "InAppWebView.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@interface PrivacyPage(Private)
+@interface InAppWebView(Private)
 @end
 
-@implementation PrivacyPage
+@implementation InAppWebView
 
 
 - (instancetype)initWithURL:(NSString*)url
@@ -124,7 +124,7 @@
     _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, _screenWidth, _screenHeight) configuration:config];
     _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _webView.backgroundColor =  UIColor(180, 186, 208, 100);
-    _webView.alpha = 1;
+    _webView.alpha = 0;
     _webView.navigationDelegate = self;
     [self addSubview: _webView];
     

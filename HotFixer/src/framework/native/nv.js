@@ -13,6 +13,25 @@ var nv = cc.Class.extend({
         }
     },
 
+    systemShare: function (title, content, imgUrl) {
+        cc.app.native.languageInterface(this._clsName, "systemShare", {
+            title: title,
+            content: content,
+            imgUrl: imgUrl
+        });
+    },
+
+    showAlertDialog: function (title, content, positive, negative, callback) {
+        var id = cc.app.native.addCallback(callback);//arguments
+        cc.app.native.languageInterface(this._clsName, "showAlertDialog", {
+            title: title,
+            content: content,
+            positive: positive,
+            negative: negative,
+            cbid: id
+        });
+    },
+
     isNetworkAvaliable: function () {
         return cc.app.native.languageInterface(this._clsName, "isNetworkAvaliable");
     },
