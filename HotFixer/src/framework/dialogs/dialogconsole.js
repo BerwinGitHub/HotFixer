@@ -140,6 +140,18 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnToast", () => {
             cc.app.native.nv.makeToast("toast content meesage.", 3000);
         });
+
+        //
+        var containor = ccui.helper.seekNodeByName(this.node, "httpSpriteContainor");
+        var hs = new HttpSprite();
+        containor.addChildToCenter(hs);
+        this._regiserEvent("btnLoadImg1", () => {
+            hs.loadSpriteByUrl("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=930562350,2384138428&fm=58");
+        });
+        this._regiserEvent("btnLoadImg2", () => {
+            hs.loadSpriteByUrl("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1500729002,1758147343&fm=58");
+        });
+
     },
 
     addLog: function (item) {

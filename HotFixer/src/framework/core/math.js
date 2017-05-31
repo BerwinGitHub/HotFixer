@@ -33,9 +33,4 @@ var math = cc.Class.extend({
     p2s: function (p) {
         return cc.size(p.x, p.y);
     },
-
-    sizeCenter: function (s) {
-        return cc.p(s.width / 2, s.height / 2);
-    },
-
 });

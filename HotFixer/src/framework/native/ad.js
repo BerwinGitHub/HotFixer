@@ -14,31 +14,31 @@ var ad = cc.Class.extend({
     },
 
     preloadAll: function () {
-        cc.app.native.languageInterface(this._clsName, "preloadAll");
+        cc.callNativeStaticMethod(this._clsName, "preloadAll");
     },
 
     show: function (type) {
-        cc.app.native.languageInterface(this._clsName, "show", {type: type});
+        cc.callNativeStaticMethod(this._clsName, "show", {type: type});
     },
 
     hide: function (type) {
-        cc.app.native.languageInterface(this._clsName, "hide", {type: type});
+        cc.callNativeStaticMethod(this._clsName, "hide", {type: type});
     },
 
     isAvailable: function (type) {
-        return cc.app.native.languageInterface(this._clsName, "isAvailable", {type: type}) == "true";
+        return cc.callNativeStaticMethod(this._clsName, "isAvailable", {type: type}) == "true";
     },
 
     isShown: function (type) {
-        return cc.app.native.languageInterface(this._clsName, "isShown", {type: type}) == "true";
+        return cc.callNativeStaticMethod(this._clsName, "isShown", {type: type}) == "true";
     },
 
     getGravity: function () {
-        var gravity = cc.app.native.languageInterface(this._clsName, "getGravity");
+        var gravity = cc.callNativeStaticMethod(this._clsName, "getGravity");
         return parseInt(gravity);
     },
 
     setGravity: function (gravity) {
-        cc.app.native.languageInterface(this._clsName, "setGravity", {gravity: gravity});
+        cc.callNativeStaticMethod(this._clsName, "setGravity", {gravity: gravity});
     },
 });

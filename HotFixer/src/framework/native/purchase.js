@@ -14,14 +14,14 @@ var purchase = cc.Class.extend({
     },
 
     purchase: function (sku) {
-        cc.app.native.languageInterface(this._clsName, "purchase", {sku: sku});
+        cc.callNativeStaticMethod(this._clsName, "purchase", {sku: sku});
     },
 
     purchaseUnmanaged: function (sku) {
-        cc.app.native.languageInterface(this._clsName, "purchaseUnmanaged", {sku: sku});
+        cc.callNativeStaticMethod(this._clsName, "purchaseUnmanaged", {sku: sku});
     },
 
     restore: function () {
-        cc.app.native.languageInterface(this._clsName, "restore");
+        cc.callNativeStaticMethod(this._clsName, "restore");
     },
 });

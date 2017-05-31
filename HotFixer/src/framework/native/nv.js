@@ -14,14 +14,14 @@ var nv = cc.Class.extend({
     },
 
     makeToast: function (content, time = 3000) {
-        cc.app.native.languageInterface(this._clsName, "makeToast", {
+        cc.callNativeStaticMethod(this._clsName, "makeToast", {
             content: content,
             time: time
         });
     },
 
     systemShare: function (title, content, imgUrl) {
-        cc.app.native.languageInterface(this._clsName, "systemShare", {
+        cc.callNativeStaticMethod(this._clsName, "systemShare", {
             title: title,
             content: content,
             imgUrl: imgUrl
@@ -31,9 +31,9 @@ var nv = cc.Class.extend({
     showAlertDialog: function (title, content, positive, negative, callback) {
         var id = -1;
         if (callback) {
-            id = cc.app.native.addCallback(callback);//arguments
+            id = cc.addCallback(callback);//arguments
         }
-        cc.app.native.languageInterface(this._clsName, "showAlertDialog", {
+        cc.callNativeStaticMethod(this._clsName, "showAlertDialog", {
             title: title,
             content: content,
             positive: positive,
@@ -43,18 +43,18 @@ var nv = cc.Class.extend({
     },
 
     isNetworkAvaliable: function () {
-        return cc.app.native.languageInterface(this._clsName, "isNetworkAvaliable");
+        return cc.callNativeStaticMethod(this._clsName, "isNetworkAvaliable");
     },
 
     getDeviceUUID: function () {
-        return cc.app.native.languageInterface(this._clsName, "getDeviceUUID");
+        return cc.callNativeStaticMethod(this._clsName, "getDeviceUUID");
     },
 
     showPrivacyWithURL: function (url) {
-        cc.app.native.languageInterface(this._clsName, "showPrivacyWithURL", {url: url});
+        cc.callNativeStaticMethod(this._clsName, "showPrivacyWithURL", {url: url});
     },
 
     showMoreGame: function () {
-        cc.app.native.languageInterface(this._clsName, "showMoreGame");
+        cc.callNativeStaticMethod(this._clsName, "showMoreGame");
     }
 });

@@ -37,18 +37,7 @@ var configs = cc.Class.extend({
         };
 
         // 将数据发送给本地代码
-        this._setNativeConfigs(this);
-    },
-
-    _setNativeConfigs: function (data) {
-        if (cc.sys.os == cc.sys.OS_ANDROID) {
-            return jsb.reflection.callStaticMethod("org/cocos2dx/javascript/ConfigManager", "setUpConfigsByJaveScript",
-                "(Ljava/lang/String;)Ljava/lang/String;", // 参数列表
-                JSON.stringify(data));
-        } else if (cc.sys.os == cc.sys.OS_IOS) {
-            return jsb.reflection.callStaticMethod("ConfigManager",
-                "setUpConfigsByJaveScript:",
-                data ? JSON.stringify(data) : "");
-        }
+        var clsName = cc.sys.os == cc.sys.OS_ANDROID ? "org/cocos2dx/javascript/ConfigManager" : "ConfigManager";
+        cc.callNativeStaticMethod(clsName, "setUpConfigsByJaveScript", this);
     },
 });

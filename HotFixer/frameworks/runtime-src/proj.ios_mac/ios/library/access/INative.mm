@@ -15,7 +15,7 @@
 + (void)nativeCallbackToJs:(int)cbid withData:(NSDictionary*)data;
 {
     NSString *dataStr = [Utility dictionaryToJSONString:data];
-    NSString *js = [NSString stringWithFormat:@"cc.app.native.nativeCallback(%d, %@)", cbid, dataStr];
+    NSString *js = [NSString stringWithFormat:@"cc.nativeCallback(%d, %@)", cbid, dataStr];
     std::string eval = [js UTF8String];
     ScriptingCore::getInstance()->evalString(eval.c_str());
 }

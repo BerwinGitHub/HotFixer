@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496068640657",
+    "version": "1.0.1496249257734",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -110,7 +110,7 @@
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "2d2b8a97e51498de178e242162fd8b62",
+            "md5": "045e7994e419c37de5231d7bd2ef1cab",
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
@@ -290,7 +290,7 @@
             "compressed": false
         },
         "src/configs/configs.jsc": {
-            "md5": "25392f0794ff227dc45daf8540e43b49",
+            "md5": "c62d2b0db135e49b861dad0d559d8617",
             "compressed": false
         },
         "src/framework/components/eventnode.jsc": {
@@ -302,27 +302,27 @@
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
-            "md5": "ac08f03d9051221fe8c0bb97bc9d1025",
+            "md5": "c5debb395f3022a7974ec8d65e766233",
             "compressed": false
         },
         "src/framework/native/facebook.jsc": {
-            "md5": "8e39b76c755cc1b910f9fe868fb07a8c",
+            "md5": "ea5be55792d8a84fc1a5db0aaac8e44d",
             "compressed": false
         },
         "src/framework/native/flurry.jsc": {
-            "md5": "01366f650f978063aba48d94c1f0426b",
+            "md5": "e425c44e971520e1d476ac5d098c0c03",
             "compressed": false
         },
         "src/framework/native/native.jsc": {
-            "md5": "be249009ee025f55e7c21e704f7c5cd5",
+            "md5": "68a44a47059d393a699097fd6d30532f",
             "compressed": false
         },
         "src/framework/native/nv.jsc": {
-            "md5": "e13bf0a5e97985f92ead5e8a79be6f6f",
+            "md5": "51098b0951118ee447531a44af957558",
             "compressed": false
         },
         "src/framework/native/purchase.jsc": {
-            "md5": "8524bda54b7413f70959b25e10ede26f",
+            "md5": "855949a9d92beceab5e36635edf8f1ce",
             "compressed": false
         },
         "src/framework/network/socket.jsc": {
@@ -330,11 +330,11 @@
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "b1c79679cd4228b27ebf72ba56cb9aeb",
+            "md5": "52b370b07ebcc1fd67e47eb455df0c6a",
             "compressed": false
         },
         "src/app/app.jsc": {
-            "md5": "0127d2cc4a77c19e1b0df3b18dc3b1fe",
+            "md5": "cfe240619a727f9cb059334658fcdc3d",
             "compressed": false
         },
         "src/game/sccens/HallScene.jsc": {
@@ -342,15 +342,15 @@
             "compressed": false
         },
         "src/game/sccens/HomeScene.jsc": {
-            "md5": "6aa2393ef1419e4ad2f3a7bd553694b3",
+            "md5": "038252ff1c52636b191f6b4068668055",
             "compressed": false
         },
         "src/framework/core/math.jsc": {
-            "md5": "c28abdc676b3ff19d3e80790d268b714",
+            "md5": "0c17886313966b811c4c35c24622bda5",
             "compressed": false
         },
         "src/framework/core/visiblerect.jsc": {
-            "md5": "5b3321e80b2452fd1e864256ed1be791",
+            "md5": "c6369b24623f65befcf95a24d98640d2",
             "compressed": false
         },
         "src/framework/core/events.jsc": {
@@ -358,7 +358,7 @@
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "26def27dcb564b4b9e57454508cf0796",
+            "md5": "bf248b45e6a123643d799e2a31eedde2",
             "compressed": false
         },
         "src/framework/dialogs/dialogmgr.jsc": {
@@ -382,11 +382,11 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "bd646752f3b037f8b94810eae3d71fbd",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "0d4717d5982fa5fece38c34a35904620",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
@@ -394,7 +394,7 @@
             "compressed": false
         },
         "res/studio/debug/imgs/ui.png": {
-            "md5": "740a0e3a692ea50fa699f1cc78bd62aa",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/com/fonts/JosefinSans-Regular.ttf": {
@@ -451,6 +451,14 @@
         },
         "res/images/content/circle_t6.png": {
             "md5": "a9eeaae9cdef00e3bfb2bf60b8a3b69e",
+            "compressed": false
+        },
+        "src/framework/components/httpsprite.jsc": {
+            "md5": "17b24855311bf0f9fbfd0b1f9bc52b17",
+            "compressed": false
+        },
+        "src/game/datas/ids.jsc": {
+            "md5": "80293138cbe2b27e9e576e656779b38a",
             "compressed": false
         }
     },
