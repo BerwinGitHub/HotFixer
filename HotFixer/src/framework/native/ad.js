@@ -19,6 +19,7 @@ var ad = cc.Class.extend({
 
     preloadAll: function () {
         cc.callNativeStaticMethod(this._clsName, "preloadAll");
+        cc.app.native.nv.makeToast("Please check log.")
     },
 
     show: function (type) {
