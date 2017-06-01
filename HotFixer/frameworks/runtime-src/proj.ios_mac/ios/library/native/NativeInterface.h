@@ -6,9 +6,9 @@
 //
 //
 
-#import "INative.h"
+#import <Foundation/Foundation.h>
 
-@interface NativeInterface : INative
+@interface NativeInterface : NSObject
 
 /**
  * 显示Privacy的页面

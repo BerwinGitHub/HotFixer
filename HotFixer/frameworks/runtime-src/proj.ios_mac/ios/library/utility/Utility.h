@@ -66,4 +66,15 @@
 + (CGRect)screenRect;
 
 + (UIColor*)colorWithR:(float)r G:(float)g B:(float)b A:(float)a;
+
+/**
+ * 调用JS回调的代码
+ */
++ (void)nativeCallbackToJs:(int)cbid withData:(NSDictionary*)jsonData;
+
+/**
+ * 执行JavaScript代码
+ */
++ (void)evalJaveScript:(NSString*)js;
+
 @end

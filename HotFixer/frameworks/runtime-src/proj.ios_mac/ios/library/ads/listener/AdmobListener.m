@@ -182,7 +182,9 @@
 - (void)showLog:(NSString*)msg
 {
     if([self.adAccess debug]){
-        NSLog(@"AdmobListener - AdType:%@\t%@", keyWithAdType([self.adAccess adType]), msg);
+        NSString *log = [NSString stringWithFormat:@"AdmobListener - AdType:%@\t%@", keyWithAdType([self.adAccess adType]), msg];
+        NSLog(@"%@", log);
+        [Utility evalJaveScript:[NSString stringWithFormat:@"cc.app.log.e('AD', '%@')", log]];
     }
 }
 

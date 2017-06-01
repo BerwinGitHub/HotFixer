@@ -180,6 +180,7 @@ static FaceBookManager *_instance = nil;
     FBSDKShareDialog *dialog = [[FBSDKShareDialog alloc] init];
     if (dialog.canShow) {
         FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+        content.contentTitle;
         [content setContentTitle:titile];
         [content setContentDescription:desc];
         [content setContentURL:[NSURL URLWithString:url]];

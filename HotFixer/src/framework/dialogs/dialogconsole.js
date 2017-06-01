@@ -152,6 +152,25 @@ var dialogconsole = Dialog.extend({
             hs.loadSpriteByUrl("https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1500729002,1758147343&fm=58");
         });
 
+        // ADS
+        this._regiserEvent("btnShowBanner", () => {
+            cc.app.native.ad.show(0);
+        });
+        this._regiserEvent("btnHideBanner", () => {
+            cc.app.native.ad.hide(0);
+        });
+        this._regiserEvent("btnShowInterstitial", () => {
+            cc.app.native.ad.show(1);
+        });
+        this._regiserEvent("btnShowRewarded", () => {
+            cc.app.native.ad.show(2);
+        });
+        this._regiserEvent("btnShowNative", () => {
+            // cc.app.native.ad.show(3);btnPreloadAll
+        });
+        this._regiserEvent("btnPreloadAll", () => {
+            cc.app.native.ad.preloadAll();
+        });
     },
 
     addLog: function (item) {

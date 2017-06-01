@@ -7,6 +7,7 @@
 //
 
 #import "Utility.h"
+#include "scripting/js-bindings/manual/ScriptingCore.h"
 
 @implementation Utility
 
@@ -121,5 +122,17 @@
     return [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a / 255.0];
 }
 
++ (void)nativeCallbackToJs:(int)cbid withData:(NSDictionary*)data;
+{
+    NSString *dataStr = [Utility dictionaryToJSONString:data];
+    NSString *js = [NSString stringWithFormat:@"cc.nativeCallback(%d, %@)", cbid, dataStr];
+    [Utility evalJaveScript:js];
+}
+
++ (void)evalJaveScript:(NSString*)js
+{
+    std::string eval = [js UTF8String];
+    ScriptingCore::getInstance()->evalString(eval.c_str());
+}
 
 @end

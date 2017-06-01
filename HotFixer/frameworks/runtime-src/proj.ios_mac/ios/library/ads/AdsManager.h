@@ -23,10 +23,6 @@ typedef void(^BlockAdListener)(int adType, int methodType, int amount , int err)
 + (void)pure;
 
 #pragma mark -property
-/**
- * 当前是否是debug模式
- */
-@property(nonatomic, readwrite)BOOL debug;
 
 /**
  * 广告的回调监听属性

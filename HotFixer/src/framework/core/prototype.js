@@ -48,7 +48,17 @@ cc.callNativeStaticMethod = function (clsName, methodName, data = null) {
     }
 };
 
+/**
+ * 回调的缓存
+ * @type {Array}
+ */
 cc.nativeCallbackCache = [];
+
+/**
+ * native执行到js里面的入口
+ * @param cbid
+ * @param data
+ */
 cc.nativeCallback = function (cbid, data) {
     if (cbid < 0 || cbid >= cc.nativeCallbackCache.length) {
         cc.app.log.e("nativeCallback cbid(CallbackID) is error arange:" + cbid);

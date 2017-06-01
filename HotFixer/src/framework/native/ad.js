@@ -13,6 +13,10 @@ var ad = cc.Class.extend({
         }
     },
 
+    preload: function (type) {
+        cc.callNativeStaticMethod(this._clsName, "preload", {type: type});
+    },
+
     preloadAll: function () {
         cc.callNativeStaticMethod(this._clsName, "preloadAll");
     },

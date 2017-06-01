@@ -50,6 +50,8 @@
 		509D4AEB17EBB82600697056 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AEA17EBB82600697056 /* IOKit.framework */; };
 		5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F7381EDDC4C900A0EB64 /* ConfigManager.m */; };
 		5436F73B1EDDC86F00A0EB64 /* ILibraryAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */; };
+		545204D61EE05CA4000D2D5F /* FacebookInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D51EE05CA4000D2D5F /* FacebookInterface.m */; };
+		545204D91EE060E8000D2D5F /* AdInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D81EE060E8000D2D5F /* AdInterface.m */; };
 		5475882A1EDC883A00479C6C /* AdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E21EDC883A00479C6C /* AdsManager.m */; };
 		5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E61EDC883A00479C6C /* BannerAdmob.m */; };
 		5475882C1EDC883A00479C6C /* BannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E81EDC883A00479C6C /* BannerManager.m */; };
@@ -73,9 +75,8 @@
 		547588411EDC883A00479C6C /* NativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5475881E1EDC883A00479C6C /* NativeManager.m */; };
 		547588421EDC883A00479C6C /* Purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588221EDC883A00479C6C /* Purchase.m */; };
 		547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588251EDC883A00479C6C /* IAPurchaseManager.m */; };
-		547588441EDC883A00479C6C /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588291EDC883A00479C6C /* Utility.m */; };
+		547588441EDC883A00479C6C /* Utility.mm in Sources */ = {isa = PBXBuildFile; fileRef = 547588291EDC883A00479C6C /* Utility.mm */; };
 		547588491EDC88BF00479C6C /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588481EDC88BF00479C6C /* NativeInterface.m */; };
-		5475884C1EDC89FC00479C6C /* INative.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5475884B1EDC89FC00479C6C /* INative.mm */; };
 		549BF7561ECB50B000333B9D /* libjscocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C037820918BF76AF00FE4F13 /* libjscocos2d iOS.a */; };
 		9FA3AE461BE9BBCA00FC9645 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3AE451BE9BBCA00FC9645 /* GameController.framework */; };
 		A92275421517C094001B78AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92275411517C094001B78AA /* QuartzCore.framework */; };
@@ -218,6 +219,10 @@
 		5436F7371EDDC4C900A0EB64 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
 		5436F7381EDDC4C900A0EB64 /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
 		5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILibraryAccess.m; sourceTree = "<group>"; };
+		545204D41EE05CA4000D2D5F /* FacebookInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookInterface.h; sourceTree = "<group>"; };
+		545204D51EE05CA4000D2D5F /* FacebookInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookInterface.m; sourceTree = "<group>"; };
+		545204D71EE060E8000D2D5F /* AdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterface.h; sourceTree = "<group>"; };
+		545204D81EE060E8000D2D5F /* AdInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterface.m; sourceTree = "<group>"; };
 		547587DE1EDC883A00479C6C /* ILibraryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILibraryAccess.h; sourceTree = "<group>"; };
 		547587E01EDC883A00479C6C /* AdListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdListener.h; sourceTree = "<group>"; };
 		547587E11EDC883A00479C6C /* AdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsManager.h; sourceTree = "<group>"; };
@@ -266,11 +271,9 @@
 		547588241EDC883A00479C6C /* IAPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPurchaseManager.h; sourceTree = "<group>"; };
 		547588251EDC883A00479C6C /* IAPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPurchaseManager.m; sourceTree = "<group>"; };
 		547588281EDC883A00479C6C /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
-		547588291EDC883A00479C6C /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		547588291EDC883A00479C6C /* Utility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utility.mm; sourceTree = "<group>"; };
 		547588471EDC88BF00479C6C /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		547588481EDC88BF00479C6C /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
-		5475884A1EDC89FC00479C6C /* INative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INative.h; sourceTree = "<group>"; };
-		5475884B1EDC89FC00479C6C /* INative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = INative.mm; sourceTree = "<group>"; };
 		9FA3AE451BE9BBCA00FC9645 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		A922753D1517C094001B78AA /* HotFixer-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HotFixer-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92275411517C094001B78AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -430,8 +433,6 @@
 			children = (
 				547587DE1EDC883A00479C6C /* ILibraryAccess.h */,
 				5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */,
-				5475884A1EDC89FC00479C6C /* INative.h */,
-				5475884B1EDC89FC00479C6C /* INative.mm */,
 			);
 			path = access;
 			sourceTree = "<group>";
@@ -443,13 +444,15 @@
 				547587E11EDC883A00479C6C /* AdsManager.h */,
 				547587E21EDC883A00479C6C /* AdsManager.m */,
 				547587E31EDC883A00479C6C /* banner */,
-				547587EA1EDC883A00479C6C /* IAdAccess.h */,
-				547587EB1EDC883A00479C6C /* IAdAccess.m */,
-				547587EC1EDC883A00479C6C /* IManagerAccess.h */,
 				547587ED1EDC883A00479C6C /* interstitial */,
 				547587F41EDC883A00479C6C /* libs */,
 				547587F61EDC883A00479C6C /* listener */,
 				547587F91EDC883A00479C6C /* rewardedvideo */,
+				547587EA1EDC883A00479C6C /* IAdAccess.h */,
+				547587EB1EDC883A00479C6C /* IAdAccess.m */,
+				547587EC1EDC883A00479C6C /* IManagerAccess.h */,
+				545204D71EE060E8000D2D5F /* AdInterface.h */,
+				545204D81EE060E8000D2D5F /* AdInterface.m */,
 			);
 			path = ads;
 			sourceTree = "<group>";
@@ -542,9 +545,11 @@
 		547588011EDC883A00479C6C /* facebook */ = {
 			isa = PBXGroup;
 			children = (
+				547588041EDC883A00479C6C /* libs */,
 				547588021EDC883A00479C6C /* FaceBookManager.h */,
 				547588031EDC883A00479C6C /* FaceBookManager.m */,
-				547588041EDC883A00479C6C /* libs */,
+				545204D41EE05CA4000D2D5F /* FacebookInterface.h */,
+				545204D51EE05CA4000D2D5F /* FacebookInterface.m */,
 			);
 			path = facebook;
 			sourceTree = "<group>";
@@ -642,7 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				547588281EDC883A00479C6C /* Utility.h */,
-				547588291EDC883A00479C6C /* Utility.m */,
+				547588291EDC883A00479C6C /* Utility.mm */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -930,18 +935,19 @@
 				5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */,
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				5475882A1EDC883A00479C6C /* AdsManager.m in Sources */,
-				5475884C1EDC89FC00479C6C /* INative.mm in Sources */,
 				547588411EDC883A00479C6C /* NativeManager.m in Sources */,
 				5475882C1EDC883A00479C6C /* BannerManager.m in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				5475882D1EDC883A00479C6C /* IAdAccess.m in Sources */,
+				545204D61EE05CA4000D2D5F /* FacebookInterface.m in Sources */,
+				545204D91EE060E8000D2D5F /* AdInterface.m in Sources */,
 				5475882F1EDC883A00479C6C /* InterstitialManager.m in Sources */,
 				547588391EDC883A00479C6C /* FlurryManager.m in Sources */,
 				547588331EDC883A00479C6C /* RewardedVideoManager.m in Sources */,
 				547588341EDC883A00479C6C /* FaceBookManager.m in Sources */,
 				547588421EDC883A00479C6C /* Purchase.m in Sources */,
 				5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */,
-				547588441EDC883A00479C6C /* Utility.m in Sources */,
+				547588441EDC883A00479C6C /* Utility.mm in Sources */,
 				547588401EDC883A00479C6C /* InAppWebView.m in Sources */,
 				5475883A1EDC883A00479C6C /* FlurryEmpty.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,

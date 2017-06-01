@@ -29,7 +29,7 @@
     NSString *negative = [dict objectForKey:@"negative"];
     int cbid = [[dict objectForKey:@"cbid"] intValue];
     [[NativeManager getInstance] showAlertDialog:title withContent:content positiveName:positive negativeName:negative listener:^(NSInteger buttonIndex) {
-        [INative nativeCallbackToJs:cbid withData:@{@"buttonIndex":[NSNumber numberWithInt:(int)buttonIndex]}];
+        [Utility nativeCallbackToJs:cbid withData:@{@"buttonIndex":[NSNumber numberWithInt:(int)buttonIndex]}];
     }];
 }
 

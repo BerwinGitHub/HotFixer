@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496249257734",
+    "version": "1.0.1496326985219",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -110,7 +110,7 @@
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "045e7994e419c37de5231d7bd2ef1cab",
+            "md5": "d17121400ef55385b5c69ca78238a831",
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
@@ -290,7 +290,7 @@
             "compressed": false
         },
         "src/configs/configs.jsc": {
-            "md5": "c62d2b0db135e49b861dad0d559d8617",
+            "md5": "003105db5412bcd8364610af3bc6ef0b",
             "compressed": false
         },
         "src/framework/components/eventnode.jsc": {
@@ -302,7 +302,7 @@
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
-            "md5": "c5debb395f3022a7974ec8d65e766233",
+            "md5": "f7b8d9a8545f65d682f7ba014101a6e1",
             "compressed": false
         },
         "src/framework/native/facebook.jsc": {
@@ -314,15 +314,15 @@
             "compressed": false
         },
         "src/framework/native/native.jsc": {
-            "md5": "68a44a47059d393a699097fd6d30532f",
+            "md5": "1532ee2866bc77f9406d86d3766d9a10",
             "compressed": false
         },
         "src/framework/native/nv.jsc": {
-            "md5": "51098b0951118ee447531a44af957558",
+            "md5": "84475a4d1f9c0ee2d770be767e0b16c6",
             "compressed": false
         },
         "src/framework/native/purchase.jsc": {
-            "md5": "855949a9d92beceab5e36635edf8f1ce",
+            "md5": "1c546b6ae5b15ee08c0f270d2ccc2c90",
             "compressed": false
         },
         "src/framework/network/socket.jsc": {
@@ -342,7 +342,7 @@
             "compressed": false
         },
         "src/game/sccens/HomeScene.jsc": {
-            "md5": "038252ff1c52636b191f6b4068668055",
+            "md5": "372f3b254d2f85e1020bd4c0afd366a3",
             "compressed": false
         },
         "src/framework/core/math.jsc": {
@@ -382,11 +382,11 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "0d5ead826121858b008ba88f44d58c6e",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "d9579e265d9965d7a8ff4ef3e602e59e",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
@@ -394,7 +394,7 @@
             "compressed": false
         },
         "res/studio/debug/imgs/ui.png": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "740a0e3a692ea50fa699f1cc78bd62aa",
             "compressed": false
         },
         "res/studio/com/fonts/JosefinSans-Regular.ttf": {
