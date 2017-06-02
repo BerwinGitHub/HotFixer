@@ -9,7 +9,7 @@
           <AbstractNodeData Name="root" ActionTag="-2133050116" Tag="46" IconVisible="False" RightMargin="128.0000" ClipAble="False" BackColorAlpha="195" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="640.0000" Y="1136.0000" />
             <Children>
-              <AbstractNodeData Name="scrollView" ActionTag="1529812459" Tag="47" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="0.8595" RightMargin="-0.8595" TouchEnable="True" ClipAble="True" BackColorAlpha="207" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="scrollView" ActionTag="1529812459" Tag="47" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="True" BackColorAlpha="207" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
                 <Size X="640.0000" Y="1136.0000" />
                 <Children>
                   <AbstractNodeData Name="btnReload" ActionTag="-1755256070" Tag="48" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="4.0000" RightMargin="486.0000" TopMargin="16.0000" BottomMargin="1070.0000" TouchEnable="True" FontSize="24" ButtonText="Relaod" Scale9Enable="True" LeftEage="20" RightEage="21" TopEage="15" BottomEage="17" Scale9OriginX="20" Scale9OriginY="15" Scale9Width="5" Scale9Height="4" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -42,7 +42,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="systemfunc" ActionTag="137580736" Tag="39" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="90.8800" BottomMargin="945.1200" TouchEnable="True" ClipAble="False" BackColorAlpha="51" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+                  <AbstractNodeData Name="systemfunc" ActionTag="137580736" Tag="39" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="90.8800" BottomMargin="945.1200" TouchEnable="True" ClipAble="False" BackColorAlpha="51" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="640.0000" Y="100.0000" />
                     <Children>
                       <AbstractNodeData Name="btnPrivacy" ActionTag="-972139613" Tag="49" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="4.0000" RightMargin="486.0000" TopMargin="7.2335" BottomMargin="42.7665" TouchEnable="True" FontSize="24" ButtonText="PrivacyPage" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -117,7 +117,7 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="images" ActionTag="-38789003" Tag="40" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="227.2001" BottomMargin="758.7999" TouchEnable="True" ClipAble="False" BackColorAlpha="51" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="images" ActionTag="-38789003" Tag="40" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="227.2000" BottomMargin="758.8000" TouchEnable="True" ClipAble="False" BackColorAlpha="51" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="640.0000" Y="150.0000" />
                     <Children>
                       <AbstractNodeData Name="btnLoadImg1" ActionTag="-906987468" Tag="37" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="4.0000" RightMargin="486.0000" TopMargin="9.4020" BottomMargin="90.5980" TouchEnable="True" FontSize="24" ButtonText="LoadImage1" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -165,7 +165,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleY="1.0000" />
-                    <Position Y="908.7999" />
+                    <Position Y="908.8000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition Y="0.8000" />
@@ -385,10 +385,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="320.8595" Y="568.0000" />
+                <Position X="320.0000" Y="568.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5013" Y="0.5000" />
+                <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="1.0000" Y="1.0000" />
                 <SingleColor A="255" R="128" G="0" B="128" />
                 <FirstColor A="255" R="255" G="150" B="100" />

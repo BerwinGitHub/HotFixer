@@ -85,7 +85,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 320.8595,
+                  "X": 320.0,
                   "Y": 568.0
                 },
                 "Scale": {
@@ -97,7 +97,7 @@
                 "PositionPercentXEnabled": true,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.5013,
+                  "X": 0.5,
                   "Y": 0.5
                 },
                 "PercentWidthEnable": true,
@@ -108,8 +108,6 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "LeftMargin": 0.8595,
-                "RightMargin": -0.8595,
                 "Tag": 47,
                 "Children": [
                   {
@@ -286,6 +284,8 @@
                     "ColorVector": {
                       "ScaleY": 1.0
                     },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleY": 1.0
@@ -663,7 +663,7 @@
                     },
                     "Position": {
                       "X": 0.0,
-                      "Y": 908.7999
+                      "Y": 908.8
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -681,8 +681,8 @@
                       "X": 1.0,
                       "Y": 0.132
                     },
-                    "TopMargin": 227.2001,
-                    "BottomMargin": 758.7999,
+                    "TopMargin": 227.2,
+                    "BottomMargin": 758.8,
                     "Tag": 40,
                     "Children": [
                       {
@@ -1681,7 +1681,7 @@
                           "Y": 0.7853
                         },
                         "PreSize": {
-                          "X": 0.2812,
+                          "X": 0.2813,
                           "Y": 0.3333
                         },
                         "HorizontalEdge": "LeftEdge",
@@ -1762,7 +1762,7 @@
                           "Y": 0.39
                         },
                         "PreSize": {
-                          "X": 0.2812,
+                          "X": 0.2813,
                           "Y": 0.3333
                         },
                         "HorizontalEdge": "LeftEdge",
@@ -1843,7 +1843,7 @@
                           "Y": 0.7853
                         },
                         "PreSize": {
-                          "X": 0.2812,
+                          "X": 0.2813,
                           "Y": 0.3333
                         },
                         "HorizontalEdge": "LeftEdge",
@@ -1924,7 +1924,7 @@
                           "Y": 0.39
                         },
                         "PreSize": {
-                          "X": 0.2812,
+                          "X": 0.2813,
                           "Y": 0.3333
                         },
                         "HorizontalEdge": "LeftEdge",
@@ -2060,7 +2060,7 @@
                     },
                     "PreSize": {
                       "X": 0.3906,
-                      "Y": 0.4062
+                      "Y": 0.4063
                     },
                     "LeftMargin": 40.7462,
                     "RightMargin": -1.7462,

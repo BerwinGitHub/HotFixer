@@ -83,16 +83,18 @@ static NativeManager *_instance = nil;
 - (void)showAlertDialog:(NSString*)titile withContent:(NSString*)content positiveName:(NSString*)positive negativeName:(NSString*)negative listener:(AlertCompleteBlock)listener
 {
     [self setAlertCompleteBlock:listener];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:content delegate:self cancelButtonTitle:negative otherButtonTitles:positive, nil];
-    [alert show];
-    [alert release];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (self.alertCompleteBlock != nil) {
-        self.alertCompleteBlock(buttonIndex);
-    }
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:titile message:content preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *negativeAction = [UIAlertAction actionWithTitle:negative style:UIAlertActionStyleCancel handler:^(UIAlertAction* action){
+        self.alertCompleteBlock(0);
+    }];
+    UIAlertAction *positiveAction = [UIAlertAction actionWithTitle:positive style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
+        self.alertCompleteBlock(1);
+    }];
+    [alertController addAction:negativeAction];
+    [alertController addAction:positiveAction];
+    [self.viewController presentViewController:alertController animated:YES completion:nil];
+    
 }
 
 - (void)systemShareWithTitile:(NSString*)title content:(NSString*)content imageUrl:(NSString*)imgUrl;

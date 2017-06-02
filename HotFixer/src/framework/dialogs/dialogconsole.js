@@ -90,11 +90,20 @@ var dialogconsole = Dialog.extend({
 
         this._regiserEvent("btnAutoFillLeft", () => {
             var txt = this.textField.getString();
-            this.textField.setString(txt + "(\"");
+            this.textField.setString(txt + "(");
         });
         this._regiserEvent("btnAutoFillRight", () => {
             var txt = this.textField.getString();
-            this.textField.setString(txt + "\")");
+            this.textField.setString(txt + ")");
+        });
+
+        this._regiserEvent("btnAutoQuot", () => {
+            var txt = this.textField.getString();
+            this.textField.setString(txt + "\"");
+        });
+        this._regiserEvent("btnAutoComma", () => {
+            var txt = this.textField.getString();
+            this.textField.setString(txt + ",");
         });
 
         // btnInputCls
