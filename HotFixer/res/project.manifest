@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496326985219",
+    "version": "1.0.1496471816219",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -110,7 +110,7 @@
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "d17121400ef55385b5c69ca78238a831",
+            "md5": "0625fb88df46848a1be80003ceec0914",
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
@@ -270,7 +270,7 @@
             "compressed": false
         },
         "src/mjoys/core/mjoys.jsc": {
-            "md5": "dad6d789b2499a42a130d854e9cbbbd6",
+            "md5": "00cb9d6b1545b8f35a02b3cfb68d9bde",
             "compressed": false
         },
         "res/studio/common/imgs/btn_options.png": {
@@ -302,15 +302,15 @@
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
-            "md5": "f7b8d9a8545f65d682f7ba014101a6e1",
+            "md5": "5fe2a86997b097c61ce2852ac2205b46",
             "compressed": false
         },
         "src/framework/native/facebook.jsc": {
-            "md5": "ea5be55792d8a84fc1a5db0aaac8e44d",
+            "md5": "3180f8f93736d2f94376fa489c516d60",
             "compressed": false
         },
         "src/framework/native/flurry.jsc": {
-            "md5": "e425c44e971520e1d476ac5d098c0c03",
+            "md5": "0af96d7c14429538e4ced5809b6cc477",
             "compressed": false
         },
         "src/framework/native/native.jsc": {
@@ -318,11 +318,11 @@
             "compressed": false
         },
         "src/framework/native/nv.jsc": {
-            "md5": "84475a4d1f9c0ee2d770be767e0b16c6",
+            "md5": "859b6af1bdeb072bae8b7b6c08494931",
             "compressed": false
         },
         "src/framework/native/purchase.jsc": {
-            "md5": "1c546b6ae5b15ee08c0f270d2ccc2c90",
+            "md5": "128aacb6847ebed13496d0643ae38513",
             "compressed": false
         },
         "src/framework/network/socket.jsc": {
@@ -330,11 +330,11 @@
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "52b370b07ebcc1fd67e47eb455df0c6a",
+            "md5": "e11d73bacd3ee424940382ffd3320c55",
             "compressed": false
         },
         "src/app/app.jsc": {
-            "md5": "cfe240619a727f9cb059334658fcdc3d",
+            "md5": "6756b7dee11a48265efb8cc892ee5fc7",
             "compressed": false
         },
         "src/game/sccens/HallScene.jsc": {
@@ -342,7 +342,7 @@
             "compressed": false
         },
         "src/game/sccens/HomeScene.jsc": {
-            "md5": "372f3b254d2f85e1020bd4c0afd366a3",
+            "md5": "df0ca1c16b3de61fdaffa66b0768d021",
             "compressed": false
         },
         "src/framework/core/math.jsc": {
@@ -358,7 +358,7 @@
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "bf248b45e6a123643d799e2a31eedde2",
+            "md5": "8a8f2f7ded2c1245c3a387d31e4e127a",
             "compressed": false
         },
         "src/framework/dialogs/dialogmgr.jsc": {
@@ -382,11 +382,11 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "0d5ead826121858b008ba88f44d58c6e",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "d9579e265d9965d7a8ff4ef3e602e59e",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
@@ -459,6 +459,10 @@
         },
         "src/game/datas/ids.jsc": {
             "md5": "80293138cbe2b27e9e576e656779b38a",
+            "compressed": false
+        },
+        "src/framework/core/core.jsc": {
+            "md5": "c7afc824cb51204d55e22c6f425b0edd",
             "compressed": false
         }
     },

@@ -27,6 +27,29 @@ cc.Node.prototype.addChildToCenter = function (child) {
 };
 
 /**
+ * 将形参和形参值封装成对象
+ * @returns {Array.<*>}
+ */
+Function.prototype.getArguments = function () {
+    var argstr = this.toString().match(/function\s.*?\(([^)]*)\)/)[1];
+    var args = argstr.replace(/\/\*.*\*\//, "").split(",");
+    var data = {};
+    for (var i = 0; i < args.length; i++) {
+        var arg = args[i].split("=")[0].trim();
+        data[arg] = this.arguments[i];
+    }
+    return data;
+};
+
+/**
+ * 调用本地方法
+ * @param clsName
+ */
+Function.prototype.native = function (clsName) {
+
+};
+
+/**
  * 整个程序中统一的的Native方法调用接口。
  * 对应实现静态方法为: public static String staticMethod(String jsonData); - Android
  * 对应实现静态方法为: +(NSString*)staticMethod:(NSString*)jsonData; - iOS
@@ -36,7 +59,12 @@ cc.Node.prototype.addChildToCenter = function (child) {
  * @param data
  * @returns {*}
  */
-cc.callNativeStaticMethod = function (clsName, methodName, data = null) {
+cc.callNativeStaticMethod = function (clsName, func, data = null) {
+    var methodName = func;
+    if (typeof func === "function") { // 如果是个方法就执行 方法的参数解析
+        data = cc.handleArgsFunction(func);
+        methodName = func.name;
+    }
     if (cc.sys.os == cc.sys.OS_ANDROID) {
         return jsb.reflection.callStaticMethod(clsName, methodName,
             "(Ljava/lang/String;)Ljava/lang/String;", // 参数列表
@@ -52,22 +80,45 @@ cc.callNativeStaticMethod = function (clsName, methodName, data = null) {
  * 回调的缓存
  * @type {Array}
  */
-cc.nativeCallbackCache = [];
+cc.nativeCallbackCache = {};
 
 /**
  * native执行到js里面的入口
  * @param cbid
  * @param data
  */
-cc.nativeCallback = function (cbid, data) {
-    if (cbid < 0 || cbid >= cc.nativeCallbackCache.length) {
-        cc.app.log.e("nativeCallback cbid(CallbackID) is error arange:" + cbid);
+cc.nativeCallback = function (cbkey, data) {
+    if (!cc.nativeCallbackCache[cbkey]) {
+        cc.app.log.w("nativeCallbackCache cbkey(Callback Key) not found:" + cbkey);
         return;
     }
-    cc.nativeCallbackCache[cbid].apply(null, [data]);
+    cc.nativeCallbackCache[cbkey].apply(null, [data]);
 };
 
-cc.addCallback = function (callback) {
-    cc.nativeCallbackCache.push(callback);
-    return (cc.nativeCallbackCache.length - 1);
+/**
+ * 注册回调方法
+ * @param callback
+ * @returns {*|number}
+ */
+cc.registerCallback = function (callback) {
+    var key = new Date().getTime() + "";
+    cc.nativeCallbackCache[key] = callback;
+    return key;
+};
+
+/**
+ * 封装方法的数据
+ * @param func
+ * @param args
+ * @returns {{}}
+ */
+cc.handleArgsFunction = function (func) {
+    var args = func.getArguments();
+    for (var key in args) {
+        if (args[key] && typeof args[key] === "function") {
+            var cbkey = cc.registerCallback(args[key]);
+            args[key] = cbkey;
+        }
+    }
+    return args;
 };

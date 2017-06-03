@@ -70,7 +70,7 @@
 /**
  * 调用JS回调的代码
  */
-+ (void)nativeCallbackToJs:(int)cbid withData:(NSDictionary*)jsonData;
++ (void)nativeCallbackToJs:(NSString*)callback withData:(NSDictionary*)jsonData;
 
 /**
  * 执行JavaScript代码

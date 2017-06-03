@@ -4,16 +4,16 @@
 var app = cc.Class.extend({
 
     ctor: function () {
+        this.core = new core();
+        this.log = new log();
         this.prototype = new prototype();
-        this.proto = new proto();
         this.configs = new configs();
         this.datas = new datas();
         this.native = new native();
-        this.log = new log();
         this.events = new events();
-        this.math = new math();
         this.helper = new helper();
         this.visiblerect = new visiblerect();
         this.dialogmgr = new dialogmgr();
+        this.proto = new proto();
     },
 });

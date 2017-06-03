@@ -31,12 +31,12 @@ var HomeLayer = cc.Layer.extend({
     _createDot: function () {
         var circleBg = new cc.Sprite("res/images/content/circle_bg.png");
 
-        var circle = new cc.Sprite("res/images/content/circle_t" + cc.app.math.randomInt(0, 6) + ".png");
+        var circle = new cc.Sprite("res/images/content/circle_t" + cc.app.core.randomInt(0, 6) + ".png");
         circleBg.addChildToCenter(circle);
 
 
         var seq = cc.sequence(cc.delayTime(5.0), cc.callFunc(() => {
-            var texture = cc.textureCache.addImage("res/images/content/circle_t" + cc.app.math.randomInt(0, 6) + ".png");
+            var texture = cc.textureCache.addImage("res/images/content/circle_t" + cc.app.core.randomInt(0, 6) + ".png");
             circle.setTexture(texture);
         }));
         circle.runAction(seq.repeatForever());

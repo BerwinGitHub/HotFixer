@@ -6,44 +6,48 @@ var ad = cc.Class.extend({
     _clsName: null,
 
     ctor: function () {
-        if (cc.sys.os == cc.sys.ANDROID) {
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
             this._clsName = "org/cocos2dx/javascript/AdInterface";
         } else {
             this._clsName = "AdInterface";
         }
     },
 
-    preload: function (type) {
-        cc.callNativeStaticMethod(this._clsName, "preload", {type: type});
+    preload: function preload(type) {
+        cc.callNativeStaticMethod(this._clsName, preload);
     },
 
-    preloadAll: function () {
-        cc.callNativeStaticMethod(this._clsName, "preloadAll");
+    preloadAll: function preloadAll() {
+        cc.callNativeStaticMethod(this._clsName, preloadAll);
         cc.app.native.nv.makeToast("Please check log.")
     },
 
-    show: function (type) {
-        cc.callNativeStaticMethod(this._clsName, "show", {type: type});
+    show: function show(type) {
+        cc.callNativeStaticMethod(this._clsName, show);
     },
 
-    hide: function (type) {
-        cc.callNativeStaticMethod(this._clsName, "hide", {type: type});
+    hide: function hide(type) {
+        cc.callNativeStaticMethod(this._clsName, hide);
     },
 
-    isAvailable: function (type) {
-        return cc.callNativeStaticMethod(this._clsName, "isAvailable", {type: type}) == "true";
+    isAvailable: function isAvailable(type) {
+        return cc.callNativeStaticMethod(this._clsName, isAvailable);
     },
 
-    isShown: function (type) {
-        return cc.callNativeStaticMethod(this._clsName, "isShown", {type: type}) == "true";
+    isShown: function isShown(type) {
+        return cc.callNativeStaticMethod(this._clsName, isShown) == "true";
     },
 
-    getGravity: function () {
-        var gravity = cc.callNativeStaticMethod(this._clsName, "getGravity");
+    getGravity: function getGravity() {
+        var gravity = cc.callNativeStaticMethod(this._clsName, getGravity);
         return parseInt(gravity);
     },
 
-    setGravity: function (gravity) {
-        cc.callNativeStaticMethod(this._clsName, "setGravity", {gravity: gravity});
+    setGravity: function setGravity(gravity) {
+        cc.callNativeStaticMethod(this._clsName, setGravity);
+    },
+
+    setDelegate: function setDelegate(delegate) {
+        cc.callNativeStaticMethod(this._clsName, setDelegate);
     },
 });

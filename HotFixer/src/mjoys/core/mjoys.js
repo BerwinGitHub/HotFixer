@@ -20,7 +20,7 @@ var mjoys = {
         {start: cc.hexToColor("518D67"), end: cc.hexToColor("729B71")}
     ],
     randGradien: function () {
-        var idx = cc.app.math.randomInt(0, this.gradient.length);
+        var idx = cc.app.core.randomInt(0, this.gradient.length);
         return this.gradient[idx];
     },
 };

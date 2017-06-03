@@ -6,55 +6,43 @@ var nv = cc.Class.extend({
     _clsName: null,
 
     ctor: function () {
-        if (cc.sys.os == cc.sys.ANDROID) {
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
             this._clsName = "org/cocos2dx/javascript/NativeInterface";
         } else {
             this._clsName = "NativeInterface";
         }
-    },
+        function abc() {
 
-    makeToast: function (content, time = 3000) {
-        cc.callNativeStaticMethod(this._clsName, "makeToast", {
-            content: content,
-            time: time
-        });
-    },
-
-    systemShare: function (title, content, imgUrl) {
-        cc.callNativeStaticMethod(this._clsName, "systemShare", {
-            title: title,
-            content: content,
-            imgUrl: imgUrl
-        });
-    },
-
-    showAlertDialog: function (title, content, positive, negative, callback) {
-        var id = -1;
-        if (callback) {
-            id = cc.addCallback(callback);//arguments
         }
-        cc.callNativeStaticMethod(this._clsName, "showAlertDialog", {
-            title: title,
-            content: content,
-            positive: positive,
-            negative: negative,
-            cbid: id
-        });
+
+        abc.name;
     },
 
-    isNetworkAvaliable: function () {
-        return cc.callNativeStaticMethod(this._clsName, "isNetworkAvaliable");
+    makeToast: function makeToast(content, time = 3000) {
+        cc.callNativeStaticMethod(this._clsName, makeToast);
     },
 
-    getDeviceUUID: function () {
-        return cc.callNativeStaticMethod(this._clsName, "getDeviceUUID");
+    systemShare: function systemShare(title, content, imgUrl) {
+        cc.callNativeStaticMethod(this._clsName, systemShare);
     },
 
-    showPrivacyWithURL: function (url) {
-        cc.callNativeStaticMethod(this._clsName, "showPrivacyWithURL", {url: url});
+    showAlertDialog: function showAlertDialog(title, content, positive, negative, callback) {
+        cc.callNativeStaticMethod(this._clsName, showAlertDialog);
     },
 
-    showMoreGame: function () {
-        cc.callNativeStaticMethod(this._clsName, "showMoreGame");
+    isNetworkAvaliable: function isNetworkAvaliable() {
+        return cc.callNativeStaticMethod(this._clsName, isNetworkAvaliable);
+    },
+
+    getDeviceUUID: function getDeviceUUID() {
+        return cc.callNativeStaticMethod(this._clsName, getDeviceUUID);
+    },
+
+    showPrivacyWithURL: function showPrivacyWithURL(url) {
+        return cc.callNativeStaticMethod(this._clsName, showPrivacyWithURL);
+    },
+
+    showMoreGame: function showMoreGame() {
+        cc.callNativeStaticMethod(this._clsName, showMoreGame);
     }
 });
