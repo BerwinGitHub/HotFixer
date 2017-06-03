@@ -165,15 +165,18 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnShowBanner", () => {
             cc.app.native.ad.show(0);
         });
+        this._handleEventVisible("btnShowBanner", AdEvent[cc.app.native.ad.AdType.Banner]);
         this._regiserEvent("btnHideBanner", () => {
             cc.app.native.ad.hide(0);
         });
         this._regiserEvent("btnShowInterstitial", () => {
             cc.app.native.ad.show(1);
         });
+        this._handleEventVisible("btnShowInterstitial", AdEvent[cc.app.native.ad.AdType.Interstitial]);
         this._regiserEvent("btnShowRewarded", () => {
             cc.app.native.ad.show(2);
         });
+        this._handleEventVisible("btnShowRewarded", AdEvent[cc.app.native.ad.AdType.RrewardedVideo]);
         this._regiserEvent("btnShowNative", () => {
             // cc.app.native.ad.show(3);btnPreloadAll
         });
@@ -229,6 +232,14 @@ var dialogconsole = Dialog.extend({
     _regiserEvent: function (name, callback) {
         var btn = ccui.helper.seekNodeByName(this.node, name);
         btn.addClickEventListener(callback);
+    },
+
+    _handleEventVisible: function (name, eventName) {
+        var btn = ccui.helper.seekNodeByName(this.node, name);
+        var dot = btn.getChildByName("dot");
+        cc.app.events.on(dot, eventName, (visible) => {
+            dot.visible = visible;
+        });
     },
 
     onEnter: function () {

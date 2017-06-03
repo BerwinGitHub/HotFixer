@@ -9,12 +9,12 @@ var events = cc.Class.extend({
 
     /**
      * 添加监听并在该节点,节点移除的时候自动移除
-     * @param target
+     * @param parent
      * @param eventName
      * @param callback
      */
-    on: function (target, eventName, callback) {
-        new eventnode(target, eventName, callback);
+    on: function (parent, eventName, callback) {
+        new eventnode(parent, eventName, callback);
     },
 
     /**

@@ -107,13 +107,13 @@ static AdsManager *_instance = nil;
     [[BannerManager getInstance] setGravity:gravity];
 }
 
-- (void)adsCallback:(int)adType methodType:(int)methodType amount:(int)amount err:(int)err
+- (void)adsCallback:(int)adType methodType:(int)methodType available:(BOOL)available amount:(int)amount err:(int)err
 {
     if(self.blockListener){
-        self.blockListener(adType, methodType, amount, err);
+        self.blockListener(adType, methodType, available, amount, err);
     }
-    if ([self listener]) {
-        [[self listener] adsCallback:adType methodType:methodType amount:amount err:err];
+    if (self.listener != nil) {
+        [self.listener adsCallback:adType methodType:methodType available:available amount:amount err:err];
     }
 }
 

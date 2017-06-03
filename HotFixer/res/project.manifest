@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496471816219",
+    "version": "1.0.1496500985711",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -110,7 +110,7 @@
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "0625fb88df46848a1be80003ceec0914",
+            "md5": "8e418322d62f24fd9ebbf43ec87faf33",
             "compressed": false
         },
         "src/framework/frame/consoleframe.jsc": {
@@ -302,7 +302,7 @@
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
-            "md5": "5fe2a86997b097c61ce2852ac2205b46",
+            "md5": "b0208a7ebf354d1b3ea2f3c52280612b",
             "compressed": false
         },
         "src/framework/native/facebook.jsc": {
@@ -310,7 +310,7 @@
             "compressed": false
         },
         "src/framework/native/flurry.jsc": {
-            "md5": "0af96d7c14429538e4ced5809b6cc477",
+            "md5": "5d70807d569ab30987ae3e9a6f10f198",
             "compressed": false
         },
         "src/framework/native/native.jsc": {
@@ -318,11 +318,11 @@
             "compressed": false
         },
         "src/framework/native/nv.jsc": {
-            "md5": "859b6af1bdeb072bae8b7b6c08494931",
+            "md5": "d96536d78d21eafb0df651d6f0c7cfd4",
             "compressed": false
         },
         "src/framework/native/purchase.jsc": {
-            "md5": "128aacb6847ebed13496d0643ae38513",
+            "md5": "b63ee193005bc3398b1b5dd10354fd2a",
             "compressed": false
         },
         "src/framework/network/socket.jsc": {
@@ -354,11 +354,11 @@
             "compressed": false
         },
         "src/framework/core/events.jsc": {
-            "md5": "1e53735408c6d162f698756962082a45",
+            "md5": "640295ff3aea1c5f8a7b46b542517c0f",
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "8a8f2f7ded2c1245c3a387d31e4e127a",
+            "md5": "d7685731c93ba8787e221602c1570831",
             "compressed": false
         },
         "src/framework/dialogs/dialogmgr.jsc": {
@@ -382,11 +382,11 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "83040ff50b88cc808053ddb0006163a5",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "d41d8cd98f00b204e9800998ecf8427e",
+            "md5": "d28d5112ccc4cc4e82232cb85edc927d",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {

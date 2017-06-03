@@ -11,7 +11,7 @@
 
 @class GADInterstitial;
 
-@interface InterstitialAdmob : NSObject<IInterstitialAccess>
+@interface InterstitialAdmob : NSObject<IInterstitialAccess, GADInterstitialDelegate>
 
 @property(nonatomic, strong)GADInterstitial *interstitial;
 

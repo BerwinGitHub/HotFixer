@@ -11,6 +11,6 @@
 
 //@class GADInterstitial;
 
-@interface RewardedVideoAdmob : NSObject<IRewardedVideoAccess>
+@interface RewardedVideoAdmob : NSObject<IRewardedVideoAccess, GADRewardBasedVideoAdDelegate>
 
 @end

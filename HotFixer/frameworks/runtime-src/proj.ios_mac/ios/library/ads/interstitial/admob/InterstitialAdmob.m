@@ -7,7 +7,7 @@
 //
 
 #import "InterstitialAdmob.h"
-#import "AdmobListener.h"
+#import "AdsManager.h"
 
 @implementation InterstitialAdmob
 
@@ -29,8 +29,7 @@
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:unitID];
     // 设置监听
-    AdmobListener *listener = [[AdmobListener alloc] initWithAdAccess:self];
-    [self.interstitial setDelegate:listener];
+    [self.interstitial setDelegate:self];
     // 设置RootViewController
     // 默认隐藏
     [self hide];
@@ -68,8 +67,67 @@
 - (void)showLog:(NSString*)msg
 {
     if (self.debug) {
-        NSLog(@"Interstitial - %@", msg);
+//        [Utility evalJaveScript:[NSString stringWithFormat:@"cc.app.log.i('%@')", msg]];
     }
+}
+
+
+#pragma mark ----------------Interstitial----------------
+#pragma mark Ad Request Lifecycle Notifications
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialDidReceiveAd"];
+    self.available = self.interstitial.isReady;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLoaded available:self.available amount:-1 err:-1];
+}
+
+- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error
+{
+    [self showLog:[NSString stringWithFormat:@"Interstitial didFailToReceiveAdWithError:%d", (int)error.code]];
+    self.available = self.interstitial.isReady;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedToLoad available:self.available amount:-1 err:(int)[error code]];
+}
+
+#pragma mark Display-Time Lifecycle Notifications
+- (void)interstitialWillPresentScreen:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialWillPresentScreen"];
+    self.available = self.interstitial.isReady;
+    self.shown = YES;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeOpen available:self.available amount:-1 err:-1];
+}
+
+- (void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialDidFailToPresentScreen"];
+    self.available = self.interstitial.isReady;
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedOpen available:self.available amount:-1 err:-1];
+}
+
+
+- (void)interstitialWillDismissScreen:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialWillDismissScreen"];
+    self.available = self.interstitial.isReady;
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeWillClose available:self.available amount:-1 err:-1];
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialDidDismissScreen"];
+    self.available = self.interstitial.isReady;
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
+}
+
+- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad
+{
+    [self showLog:@"Interstitial interstitialWillLeaveApplication"];
+    self.available = self.interstitial.isReady;
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLeftApplication available:self.available amount:-1 err:-1];
 }
 
 @end

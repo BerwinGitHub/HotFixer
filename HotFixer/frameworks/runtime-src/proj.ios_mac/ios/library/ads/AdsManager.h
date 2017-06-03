@@ -15,7 +15,7 @@
 /**
  * block 的回调监听
  */
-typedef void(^BlockAdListener)(int adType, int methodType, int amount , int err);
+typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int amount , int err);
 
 @interface AdsManager : ILibraryAccess
 
@@ -94,10 +94,11 @@ typedef void(^BlockAdListener)(int adType, int methodType, int amount , int err)
  * 广告的回调，所有的广告回调都会进入到这里进行统一管理
  * @param adType        当前广告回调的是什么类型的广告
  * @param methodType    当前回调的广告是什么回调方法(参考：AdListener->MethodType)
+ * @param available     当前回调的广告是什么回调方法(参考：AdListener->MethodType)
  * @param amount        当是视屏广告看完有奖励的时候，该参数才会有具体的数值
  * @param err           广告回调是否是错误的
  */
-- (void)adsCallback:(int)adType methodType:(int)methodType amount:(int)amount err:(int)err;
+- (void)adsCallback:(int)adType methodType:(int)methodType available:(BOOL)available amount:(int)amount err:(int)err;
 
 
 

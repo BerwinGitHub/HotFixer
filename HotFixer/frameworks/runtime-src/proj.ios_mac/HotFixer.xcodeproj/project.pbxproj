@@ -43,7 +43,6 @@
 		5475882E1EDC883A00479C6C /* InterstitialAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587F01EDC883A00479C6C /* InterstitialAdmob.m */; };
 		5475882F1EDC883A00479C6C /* InterstitialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587F31EDC883A00479C6C /* InterstitialManager.m */; };
 		547588301EDC883A00479C6C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547587F51EDC883A00479C6C /* GoogleMobileAds.framework */; };
-		547588311EDC883A00479C6C /* AdmobListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587F81EDC883A00479C6C /* AdmobListener.m */; };
 		547588321EDC883A00479C6C /* RewardedVideoAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587FC1EDC883A00479C6C /* RewardedVideoAdmob.m */; };
 		547588331EDC883A00479C6C /* RewardedVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587FF1EDC883A00479C6C /* RewardedVideoManager.m */; };
 		547588341EDC883A00479C6C /* FaceBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588031EDC883A00479C6C /* FaceBookManager.m */; };
@@ -229,8 +228,6 @@
 		547587F21EDC883A00479C6C /* InterstitialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialManager.h; sourceTree = "<group>"; };
 		547587F31EDC883A00479C6C /* InterstitialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialManager.m; sourceTree = "<group>"; };
 		547587F51EDC883A00479C6C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		547587F71EDC883A00479C6C /* AdmobListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmobListener.h; sourceTree = "<group>"; };
-		547587F81EDC883A00479C6C /* AdmobListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmobListener.m; sourceTree = "<group>"; };
 		547587FB1EDC883A00479C6C /* RewardedVideoAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoAdmob.h; sourceTree = "<group>"; };
 		547587FC1EDC883A00479C6C /* RewardedVideoAdmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoAdmob.m; sourceTree = "<group>"; };
 		547587FD1EDC883A00479C6C /* IRewardedVideoAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRewardedVideoAccess.h; sourceTree = "<group>"; };
@@ -434,7 +431,6 @@
 				547587E31EDC883A00479C6C /* banner */,
 				547587ED1EDC883A00479C6C /* interstitial */,
 				547587F41EDC883A00479C6C /* libs */,
-				547587F61EDC883A00479C6C /* listener */,
 				547587F91EDC883A00479C6C /* rewardedvideo */,
 				547587EA1EDC883A00479C6C /* IAdAccess.h */,
 				547587EB1EDC883A00479C6C /* IAdAccess.m */,
@@ -491,15 +487,6 @@
 				547587F51EDC883A00479C6C /* GoogleMobileAds.framework */,
 			);
 			path = libs;
-			sourceTree = "<group>";
-		};
-		547587F61EDC883A00479C6C /* listener */ = {
-			isa = PBXGroup;
-			children = (
-				547587F71EDC883A00479C6C /* AdmobListener.h */,
-				547587F81EDC883A00479C6C /* AdmobListener.m */,
-			);
-			path = listener;
 			sourceTree = "<group>";
 		};
 		547587F91EDC883A00479C6C /* rewardedvideo */ = {
@@ -981,7 +968,6 @@
 				547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */,
 				5436F73B1EDDC86F00A0EB64 /* ILibraryAccess.m in Sources */,
 				5475882E1EDC883A00479C6C /* InterstitialAdmob.m in Sources */,
-				547588311EDC883A00479C6C /* AdmobListener.m in Sources */,
 				547588321EDC883A00479C6C /* RewardedVideoAdmob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

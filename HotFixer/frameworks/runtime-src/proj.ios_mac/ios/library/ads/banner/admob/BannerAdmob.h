@@ -13,7 +13,7 @@
 
 @class GADBannerView;
 
-@interface BannerAdmob : NSObject <IBannerAccess>
+@interface BannerAdmob : NSObject <IBannerAccess, GADBannerViewDelegate>
 
 @property(nonatomic, strong)GADBannerView *bannerView;
 

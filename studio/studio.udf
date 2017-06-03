@@ -28,19 +28,5 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="studio/com/node/dialog_options.csd" />
-          <FilePathData Path="studio/debug/node/debug.csd" />
-          <FilePathData Path="studio/debug/imgs/ui.csi" />
-          <FilePathData Path="studio/com/imgs/ui.csi" />
-          <FilePathData Path="studio/HomeScene/node/HomeScene.csd" />
-          <FilePathData Path="studio/debug/amts/inputHistory.csd" />
-          <FilePathData Path="studio/debug/node/console.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="studio/debug/node/console.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

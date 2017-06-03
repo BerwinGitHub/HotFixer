@@ -60,4 +60,18 @@
     return [NSString stringWithFormat:@"%d", gravity];
 }
 
++ (void)setDelegate:(NSString*)data
+{
+    NSString *callback = [[Utility dictionaryWithJSONString:data] objectForKey:@"delegate"];
+    [[AdsManager getInstance] setBlockListener:^(int adType, int methodType, BOOL a, int amount , int err){
+        [Utility nativeCallbackToJs:callback withData:@{
+                                                        @"adType"       : Number(adType),
+                                                        @"methodType"   : Number(methodType),
+                                                        @"available"    : [NSNumber numberWithBool:a],
+                                                        @"amount"       : Number(amount),
+                                                        @"err"          : Number(err)
+                                                        }];
+    }];
+}
+
 @end

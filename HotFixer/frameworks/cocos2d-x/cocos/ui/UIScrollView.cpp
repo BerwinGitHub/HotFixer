@@ -179,7 +179,7 @@ void ScrollView::setInnerContainerSize(const Size &size)
     }
     if (size.height < _contentSize.height)
     {
-        CCLOG("Inner height <= scrollview height, it will be force sized!");
+//        CCLOG("Inner height <= scrollview height, it will be force sized!");
     }
     else
     {

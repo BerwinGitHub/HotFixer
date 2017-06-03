@@ -10,6 +10,7 @@
 
 #define IS_IPAD     (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)      // 当前设备是否是iPad
 #define IS_IPHONE   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)    // 当前设备是否是iPhone
+#define Number(i)   [NSNumber numberWithInt:(int)i]
 
 @interface Utility : NSObject
 

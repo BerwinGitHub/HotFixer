@@ -32,6 +32,6 @@ typedef NS_ENUM(NSInteger, MethodType){
  * @param amount        当是视屏广告看完有奖励的时候，该参数才会有具体的数值
  * @param err           广告回调是否是错误的
  */
-- (void)adsCallback:(int)adType methodType:(int)methodType amount:(int)amount err:(int)err;
+- (void)adsCallback:(int)adType methodType:(int)methodType available:(BOOL)available amount:(int)amount err:(int)err;
 
 @end

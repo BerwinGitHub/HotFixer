@@ -26,4 +26,6 @@
 
 + (void)setGravity:(NSString*)data;
 
++ (void)setDelegate:(NSString*)data;
+
 @end

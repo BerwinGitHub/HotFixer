@@ -19,7 +19,7 @@ var configs = cc.Class.extend({
             rewardedvideo_unit_id: "ca-app-pub-7242779887458735/9919657209",
             native_unit_id: "ca-app-pub-7242779887458735/3873123607",
             testDevices: [
-                "360bba314fc22465aabcef6274555c2719866d29",
+                "360bba314fc22465aabcef6274555c2719866d29", // Berwin's iPhone
                 "e0923bbd23d41521fde1db204b5ce35d3597172b"
             ]
         };

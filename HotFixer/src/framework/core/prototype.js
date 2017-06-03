@@ -42,14 +42,6 @@ Function.prototype.getArguments = function () {
 };
 
 /**
- * 调用本地方法
- * @param clsName
- */
-Function.prototype.native = function (clsName) {
-
-};
-
-/**
  * 整个程序中统一的的Native方法调用接口。
  * 对应实现静态方法为: public static String staticMethod(String jsonData); - Android
  * 对应实现静态方法为: +(NSString*)staticMethod:(NSString*)jsonData; - iOS
@@ -65,14 +57,13 @@ cc.callNativeStaticMethod = function (clsName, func, data = null) {
         data = cc.handleArgsFunction(func);
         methodName = func.name;
     }
+    var datastringify = data ? JSON.stringify(data) : "";
     if (cc.sys.os == cc.sys.OS_ANDROID) {
         return jsb.reflection.callStaticMethod(clsName, methodName,
             "(Ljava/lang/String;)Ljava/lang/String;", // 参数列表
-            JSON.stringify(data));
+            datastringify);
     } else if (cc.sys.os == cc.sys.OS_IOS) {
-        return jsb.reflection.callStaticMethod(clsName,
-            methodName + ":",
-            data ? JSON.stringify(data) : "");
+        return jsb.reflection.callStaticMethod(clsName, methodName + ":", datastringify);
     }
 };
 
@@ -84,7 +75,7 @@ cc.nativeCallbackCache = {};
 
 /**
  * native执行到js里面的入口
- * @param cbid
+ * @param cbkey
  * @param data
  */
 cc.nativeCallback = function (cbkey, data) {

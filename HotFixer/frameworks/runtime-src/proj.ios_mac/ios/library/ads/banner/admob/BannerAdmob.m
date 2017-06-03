@@ -8,7 +8,7 @@
 
 #import "BannerAdmob.h"
 #import "Utility.h"
-#import "AdmobListener.h"
+#import "AdsManager.h"
 
 @implementation BannerAdmob
 
@@ -30,8 +30,7 @@
     GADAdSize size = IS_IPHONE ? kGADAdSizeBanner : kGADAdSizeFullBanner;
     self.bannerView = [[GADBannerView alloc] initWithAdSize:size];
     // 设置监听
-    AdmobListener *listener = [[AdmobListener alloc] initWithAdAccess:self];
-    [self.bannerView setDelegate:listener];
+    [self.bannerView setDelegate:self];
     // 设置ID
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobBannerId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
@@ -85,8 +84,53 @@
 - (void)showLog:(NSString*)msg
 {
     if (self.debug) {
-        NSLog(@"Banner - %@", msg);
+//        [Utility evalJaveScript:[NSString stringWithFormat:@"cc.app.log.i('%@')", msg]];
     }
+}
+
+#pragma mark ----------------Banner----------------
+#pragma mark Ad Request Lifecycle Notifications
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView
+{
+    [self showLog:@"Banner adViewDidReceiveAd"];
+    self.available = YES;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLoaded available:self.available amount:-1 err:-1];
+}
+
+- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
+{
+    [self showLog:[NSString stringWithFormat:@"Banner didFailToReceiveAdWithError:%d", (int)error.code]];
+    self.available = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedToLoad available:self.available amount:-1 err:(int)[error code]];
+}
+
+#pragma mark Click-Time Lifecycle Notifications
+- (void)adViewWillPresentScreen:(GADBannerView *)bannerView
+{
+    [self showLog:@"Banner adViewWillPresentScreen"];
+    self.shown = YES;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeOpen available:self.available amount:-1 err:-1];
+}
+
+- (void)adViewWillDismissScreen:(GADBannerView *)bannerView
+{
+    [self showLog:@"Banner adViewWillDismissScreen"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeWillClose available:self.available amount:-1 err:-1];
+}
+
+- (void)adViewDidDismissScreen:(GADBannerView *)bannerView
+{
+    [self showLog:@"Banner adViewDidDismissScreen"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
+}
+
+- (void)adViewWillLeaveApplication:(GADBannerView *)bannerView
+{
+    [self showLog:@"Banner adViewWillLeaveApplication"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLeftApplication available:self.available amount:-1 err:-1];
 }
 
 

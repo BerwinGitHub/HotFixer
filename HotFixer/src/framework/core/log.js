@@ -4,11 +4,11 @@
 var log = cc.Class.extend({
     BROAD_CAST_LOG: "log_broadcast",
     HEX_COLOR: {
-        "assert": "FF6B68",
-        "debug": "BBBBBB",
-        "error": "FF6B68",
-        "info": "BBBBBB",
-        "warn": "BBBBBB",
+        "error": "FF000",
+        "warn": "FFE500",
+        "debug": "FF9500",
+        "assert": "FFF1DE",
+        "info": "#006FFF",
         "verbose": "BBBBBB"
     },
 
@@ -39,7 +39,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.info)};
         this._insertLog(log);
         console.log("[info]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
@@ -56,7 +56,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.debug)};
         this._insertLog(log);
         console.log("[debug]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
@@ -73,7 +73,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.warn)};
         this._insertLog(log);
         console.log("[warn]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
@@ -90,7 +90,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.error)};
         this._insertLog(log);
         console.log("[error]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
@@ -107,7 +107,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.verbose)};
         this._insertLog(log);
         console.log("[verbose]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
@@ -124,7 +124,7 @@ var log = cc.Class.extend({
             tag = "";
         }
         var d = new Date();
-        var time = d.toLocaleDateString() + " " + d.toLocaleTimeString();
+        var time = /*d.toLocaleDateString() + " " + */d.toLocaleTimeString();
         var log = {time: time, tag: tag, msg: msg, color: cc.hexToColor(this.HEX_COLOR.assert)};
         this._insertLog(log);
         console.log("[assert]" + time + "\tTAG:" + tag + "\tMSG:" + msg);
