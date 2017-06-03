@@ -61,9 +61,10 @@ var dialogconsole = Dialog.extend({
         // textField
         this.cmdHistory = [
             "cc.winSize"
+            , "cc.director.getRunningScene()"
             , "cc.visibleSize"
             , "cc.app.configs"
-            , "cc.director.getRunningScene()"
+            , "cc.app.log."
             , "cc.app.native.nv.makeToast"
             , "cc.app.native.nv.showAlertDialog('Title', 'Content', 'Download', 'Cancel')"];
         this.cmdHistory.forEach((cmd) => {
@@ -80,10 +81,11 @@ var dialogconsole = Dialog.extend({
             this._addHistoryToListView(txt);
             try {
                 var result = eval(this.textField.getString());
-                var i = JSON.stringify(result);
-                cc.app.log.i("eval", typeof(i) == "undefined" ? result : i);
+                if (typeof(result) != "undefined") {
+                    cc.app.log.i(JSON.stringify(result));
+                }
             } catch (e) {
-                cc.app.log.e("eval", e);
+                cc.app.log.e(e);
             }
             this.dot.setVisible(false);
         });
