@@ -4,12 +4,12 @@
 var log = cc.Class.extend({
     BROAD_CAST_LOG: "log_broadcast",
     HEX_COLOR: {
-        "error": "FF000",
-        "warn": "FFE500",
-        "debug": "FF9500",
-        "assert": "FFF1DE",
+        "error": "#FF0000",
+        "warn": "#FFE500",
+        "debug": "#FF9500",
+        "assert": "#FFF1DE",
         "info": "#006FFF",
-        "verbose": "BBBBBB"
+        "verbose": "#BBBBBB"
     },
 
     logCache: null,
