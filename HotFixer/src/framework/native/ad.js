@@ -53,8 +53,6 @@ var ad = cc.Class.extend({
                 cc.app.log.i("Get reward coin amount:" + amount);
             }
         });
-        // Banner放到上面
-        this.setGravity(this.BannerGravity.Top);
     },
 
     preload: function preload(type) {
