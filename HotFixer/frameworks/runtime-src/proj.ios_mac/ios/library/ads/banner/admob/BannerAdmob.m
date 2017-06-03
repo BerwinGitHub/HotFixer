@@ -26,6 +26,7 @@
     [self setAdType:kAdTypeBanner];
     [self setViewController:viewController];
     [self setDebug:debug];
+    [self setAvailable:NO];
     // 初始化Banner
     GADAdSize size = IS_IPHONE ? kGADAdSizeBanner : kGADAdSizeFullBanner;
     self.bannerView = [[GADBannerView alloc] initWithAdSize:size];
@@ -100,7 +101,6 @@
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
 {
     [self showLog:[NSString stringWithFormat:@"Banner didFailToReceiveAdWithError:%d", (int)error.code]];
-    self.available = NO;
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedToLoad available:self.available amount:-1 err:(int)[error code]];
 }
 

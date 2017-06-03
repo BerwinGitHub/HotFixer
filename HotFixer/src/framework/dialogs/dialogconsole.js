@@ -169,6 +169,14 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnHideBanner", () => {
             cc.app.native.ad.hide(0);
         });
+        this._regiserEvent("btnGravity", () => {
+            var gravity = cc.app.native.ad.getGravity();
+            if (gravity == cc.app.native.ad.BannerGravity.Top) {
+                cc.app.native.ad.setGravity(cc.app.native.ad.BannerGravity.Bottom);
+            } else {
+                cc.app.native.ad.setGravity(cc.app.native.ad.BannerGravity.Top);
+            }
+        });
         this._regiserEvent("btnShowInterstitial", () => {
             cc.app.native.ad.show(1);
         });
@@ -236,7 +244,7 @@ var dialogconsole = Dialog.extend({
 
     _handleEventVisible: function (name, eventName) {
         var btn = ccui.helper.seekNodeByName(this.node, name);
-        var dot = btn.getChildByName("dot");
+        var dot = btn.getChildByName("dot_ad");
         cc.app.events.on(dot, eventName, (visible) => {
             dot.visible = visible;
         });

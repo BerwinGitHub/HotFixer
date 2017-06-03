@@ -34,6 +34,10 @@ var ad = cc.Class.extend({
         WillClose: 7,    // 广告将要关闭 - for ios
         FailedOpen: 8     // 广告展示失败 - for ios
     },
+    BannerGravity: {
+        Top: 0, // Banner(横幅)广告在顶部显示
+        Bottom: 1,  // Banner(横幅)广告在底部显示
+    },
 
     ctor: function () {
         if (cc.sys.os == cc.sys.OS_ANDROID) {
@@ -49,8 +53,8 @@ var ad = cc.Class.extend({
                 cc.app.log.i("Get reward coin amount:" + amount);
             }
         });
-        // 预加载
-        // this.preloadAll();
+        // Banner放到上面
+        this.setGravity(this.BannerGravity.Top);
     },
 
     preload: function preload(type) {

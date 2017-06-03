@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496500985711",
+    "version": "1.0.1496503119197",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -98,7 +98,7 @@
             "compressed": false
         },
         "src/framework/core/log.jsc": {
-            "md5": "c132445d4aa030ba5d37a851ec5f47f3",
+            "md5": "90d306bec1a67c5b4f57220475ad89f5",
             "compressed": false
         },
         "src/framework/core/native.jsc": {
@@ -290,7 +290,7 @@
             "compressed": false
         },
         "src/configs/configs.jsc": {
-            "md5": "003105db5412bcd8364610af3bc6ef0b",
+            "md5": "b7675c93c9f5cb1b51ae3616a3cac37d",
             "compressed": false
         },
         "src/framework/components/eventnode.jsc": {
@@ -302,7 +302,7 @@
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
-            "md5": "b0208a7ebf354d1b3ea2f3c52280612b",
+            "md5": "df42d445166a34dd72ca25e479888f46",
             "compressed": false
         },
         "src/framework/native/facebook.jsc": {
@@ -358,7 +358,7 @@
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "d7685731c93ba8787e221602c1570831",
+            "md5": "4c4faafda613f7d9e03f7d991ae9fecb",
             "compressed": false
         },
         "src/framework/dialogs/dialogmgr.jsc": {
@@ -386,7 +386,7 @@
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "d28d5112ccc4cc4e82232cb85edc927d",
+            "md5": "e119415e028dcf4f4905628c679e8c79",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
