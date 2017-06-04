@@ -132,7 +132,7 @@ var dialogconsole = Dialog.extend({
         this.list = ccui.helper.seekNodeByName(this.node, "listView");
 
         // 添加监听
-        cc.app.events.on(this, cc.app.log.BROAD_CAST_LOG, this.addLog);
+        cc.app.events.onNode(this, cc.app.log.BROAD_CAST_LOG, this.addLog);
 
         // event
         this._regiserEvent("btnPrivacy", () => {
@@ -193,6 +193,42 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnPreloadAll", () => {
             cc.app.native.ad.preloadAll();
         });
+
+        // Facebook
+        this._regiserEvent("btnLogin", () => {
+            cc.app.native.facebook.login(["public_profile", "user_friends", "email"]);
+        });
+        this._regiserEvent("btnIsLogin", () => {
+            var login = cc.app.native.facebook.isLogin();
+            cc.app.native.nv.makeToast("登录状态:" + login, 5 * 1000);
+        });
+        this._regiserEvent("btnAccessToken", () => {
+            var token = cc.app.native.facebook.getAccessToken();
+            cc.app.log.i(token);
+            cc.app.native.nv.makeToast("Please check log.");
+        });
+        this._regiserEvent("btnShare", () => {
+            cc.app.native.facebook.share();
+        });
+        this._regiserEvent("btnInvite", () => {
+            cc.app.native.facebook.invite();
+        });
+        // 注册登录成功事件
+        cc.app.events.onNode(this, cc.app.native.facebook.EVENT_FB_LOGIN_SUCCESS, (data) => {
+            //small, normal, album, large, square
+            var url = "http://graph.facebook.com/" + data.userID + "/picture?type=normal";
+            cc.app.log.i("FBHeader", url);
+            hs.loadSpriteByUrl(url);
+        });
+        this._regiserEvent("btnHeader", () => {
+            if (cc.app.player.facebookToken) {
+                var userID = cc.app.player.facebookToken.userID;
+                var url = "http://graph.facebook.com/" + userID + "/picture?type=small";
+                hs.loadSpriteByUrl(url);
+            } else {
+                cc.app.native.nv.makeToast("请先登录Facebook.", 5 * 1000);
+            }
+        });
     },
 
     addLog: function (item) {
@@ -247,7 +283,7 @@ var dialogconsole = Dialog.extend({
     _handleEventVisible: function (name, eventName) {
         var btn = ccui.helper.seekNodeByName(this.node, name);
         var dot = btn.getChildByName("dot_ad");
-        cc.app.events.on(dot, eventName, (visible) => {
+        cc.app.events.onNode(dot, eventName, (visible) => {
             dot.visible = visible;
         });
     },

@@ -255,7 +255,8 @@ bool js_EventListenerCustom_create(JSContext *cx, uint32_t argc, jsval *vp)
                     if (!succeed && JS_IsExceptionPending(cx)) {
                         JS_ReportPendingException(cx);
                     }
-                    removeJSObject(cx, event);
+                    /* fixed by tangbowen */
+//                    removeJSObject(cx, event);
                 };
                 arg1 = lambda;
             }

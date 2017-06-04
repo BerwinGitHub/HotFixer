@@ -13,22 +13,29 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface FaceBookManager : ILibraryAccess
+typedef void(^FBInviteComplete)(NSError *err, NSDictionary *results);
+typedef void(^FBShareComplete)(NSError *err, BOOL cancelled, NSDictionary *results);
+
+@interface FaceBookManager : ILibraryAccess<FBSDKAppInviteDialogDelegate, FBSDKSharingDelegate>
 {
 }
+@property(nonatomic, copy)FBInviteComplete inviteComplete;
+@property(nonatomic, copy)FBShareComplete shareComplete;
 
 + (instancetype)getInstance;
 + (void)pure;
 
-- (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation;
-
-- (void)loginWithPermissions:(NSArray*)permissions andHandler:(FBSDKLoginManagerRequestTokenHandler)handler;
+- (void)loginWithPermissions:(NSArray*)permissions handler:(FBSDKLoginManagerRequestTokenHandler)handler;
 
 - (BOOL)isLogin;
+
+- (void)invite:(FBInviteComplete) delegate;
+
+- (void)share:(FBShareComplete) delegate;
+
+- (void)graphRequest:(NSString*)graphPath parameters:(NSDictionary *)parameters handler:(FBSDKGraphRequestHandler)handler httpMethod:(NSString*)method;
+
+- (FBSDKProfile*)getCurrentProile;
 
 - (void)logEvent:(NSString*)eventName withParameters:(NSDictionary*)params;
 
@@ -36,16 +43,18 @@
 
 - (void)logEvent:(NSString*)eventName;
 
-- (void)shareWithLink:(NSString*)link;
-
-- (void)graphRequest:(NSString*)graphPath parameters:(NSDictionary *)parameters handler:(FBSDKGraphRequestHandler)handler httpMethod:(NSString*)method;
-
-- (FBSDKProfile*)getCurrentProile;
-
-- (void)invite:(NSString*)appLinkUrl previewImageUrl:(NSString*)imgUrl destinationIdx:(int)destIdx promotTxt:(NSString*)promotTxt promotCode:promotCode delegate:(id<FBSDKAppInviteDialogDelegate>) delegate;
-
-- (void)share:(NSString*)titile description:(NSString*)desc contentUrl:(NSString*)url quote:(NSString*)quote imageUrl:(NSString*)imgUrl peopleIds:(NSArray*)peopleIds placeId:(NSString*)placeId ref:(NSString*)ref delegate:(id<FBSDKSharingDelegate>) delegate;
-
 - (FBSDKAccessToken*)currentAccessToken;
-    
+
+#pragma -mark delegate
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didCompleteWithResults:(NSDictionary *)results;
+
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didFailWithError:(NSError *)error;
+
+// Share
+- (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults:(NSDictionary *)results;
+
+- (void)sharer:(id<FBSDKSharing>)sharer didFailWithError:(NSError *)error;
+
+- (void)sharerDidCancel:(id<FBSDKSharing>)sharer;
+
 @end

@@ -33,7 +33,7 @@
     // 设置监听
     [self.bannerView setDelegate:self];
     // 设置ID
-    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobBannerId];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobBannerId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     [self.bannerView setAdUnitID:unitID];
     // 设置RootViewController

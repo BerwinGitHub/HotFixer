@@ -42,7 +42,7 @@ static FlurryManager *_instance = nil;
 
 - (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    NSString *API_KEY = [[ConfigManager getInstance] getFlurryIdByKey:keyConfigFlurryApiKey];
+    NSString *API_KEY = [[ConfigManager getInstance] getFlurryIdByKey:kConfigFlurryApiKey];
     // FlurryLogLevelNone
     FlurrySessionBuilder* builder = [[[[[FlurrySessionBuilder new]
                                         withLogLevel:FlurryLogLevelNone]

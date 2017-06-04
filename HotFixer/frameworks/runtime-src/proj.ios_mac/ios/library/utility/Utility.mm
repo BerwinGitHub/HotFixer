@@ -122,6 +122,13 @@
     return [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a / 255.0];
 }
 
++ (void)emitJavaScriptEvent:(NSString*)eventName data:(NSDictionary*)data
+{
+    NSString *dataStr = [Utility dictionaryToJSONString:data];
+    NSString *js = [NSString stringWithFormat:@"cc.app.events.emit(\"%@\", %@)", eventName, dataStr];
+    [Utility evalJaveScript:js];
+}
+
 + (void)nativeCallbackToJs:(NSString*)callback withData:(NSDictionary*)data;
 {
     NSString *dataStr = [Utility dictionaryToJSONString:data];

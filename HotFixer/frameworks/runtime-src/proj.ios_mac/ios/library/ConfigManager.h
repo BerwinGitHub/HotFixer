@@ -8,22 +8,34 @@
 
 #import "ILibraryAccess.h"
 
-#define keyConfigAppleId                @"appleId"
-#define keyConfigDebug                  @"debug"
-#define keyConfigPrivacyUrl             @"privacyUrl"
-#define keyConfigAdmob                  @"admob"
-#define keyConfigAdmobTestDevices       @"testDevices"
-#define keyConfigAdmobAppId             @"app_id"
-#define keyConfigAdmobBannerId          @"banner_unit_id"
-#define keyConfigAdmobInterstitialId    @"interstitial_unit_id"
-#define keyConfigAdmobRewardedVideoId   @"rewardedvideo_unit_id"
-#define keyConfigAdmobNativeId          @"native_unit_id"
-#define keyConfigFacebook               @"facebook"
-#define keyConfigFacebookAppId          @"app_id"
-#define keyConfigFlurry                 @"flurry"
-#define keyConfigFlurryApiKey           @"api_key"
-#define keyConfigPurchase               @"purchase"
-#define keyConfigPurchaseSkus           @"skus"
+#define kConfigApple                    @"apple"
+#define kConfigAppleAppId               @"app_id"
+#define kConfigAppleAppUrl              @"app_url"
+#define kConfigDebug                    @"debug"
+#define kConfigPrivacyUrl               @"privacyUrl"
+// Admob
+#define kConfigAdmob                    @"admob"
+#define kConfigAdmobTestDevices         @"testDevices"
+#define kConfigAdmobAppId               @"app_id"
+#define kConfigAdmobBannerId            @"banner_unit_id"
+#define kConfigAdmobInterstitialId      @"interstitial_unit_id"
+#define kConfigAdmobRewardedVideoId     @"rewardedvideo_unit_id"
+#define kConfigAdmobNativeId            @"native_unit_id"
+// Facebook
+#define kConfigFB                       @"facebook"
+#define kConfigFBAppId                  @"app_id"
+#define kConfigFBAppId                  @"app_id"
+#define kConfigFBInviteAppUrl           @"invite_app_url"
+#define kConfigFBInviteImageUrl         @"invite_image_url"
+#define kConfigFBInvitePromotText       @"invite_promot_text"
+#define kConfigFBInvitePromotCode       @"invite_promot_code"
+#define kConfigFBShareAppUrl            @"share_app_url"
+// Flurry
+#define kConfigFlurry                   @"flurry"
+#define kConfigFlurryApiKey             @"api_key"
+ // Purchase
+#define kConfigPurchase                 @"purchase"
+#define kConfigPurchaseSkus             @"skus"
 
 @interface ConfigManager : ILibraryAccess
 
@@ -42,6 +54,8 @@
 - (NSString*)getAppleId;
 
 - (NSString*)getPrivacyUrl;
+
+- (NSString*)getAppleIdByKey:(NSString*)key;
 
 - (NSString*)getAdmobIdByKey:(NSString*)key;
 

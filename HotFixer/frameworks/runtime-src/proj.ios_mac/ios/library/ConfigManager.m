@@ -40,19 +40,25 @@ static ConfigManager *_instance = nil;
 {
     // 解析configs数据
     self.configsDict = [Utility dictionaryWithJSONString:configs];
-    [super setUpEnvironment:viewController withDebug:[[self.configsDict objectForKey:keyConfigDebug] boolValue]];
+    [super setUpEnvironment:viewController withDebug:[[self.configsDict objectForKey:kConfigDebug] boolValue]];
     
     if(self.debug) {
-        NSLog(@"getAppleId:%@",[self getAppleId]);
+        NSLog(@"kConfigAppleAppId:%@",[self getAppleIdByKey:kConfigAppleAppId]);
+        NSLog(@"kConfigAppleAppUrl:%@",[self getAppleIdByKey:kConfigAppleAppUrl]);
         NSLog(@"getPrivacyUrl:%@",[self getPrivacyUrl]);
-        NSLog(@"keyConfigAdmobAppId:%@",[self getAdmobIdByKey:keyConfigAdmobAppId]);
-        NSLog(@"keyConfigAdmobBannerId:%@",[self getAdmobIdByKey:keyConfigAdmobBannerId]);
-        NSLog(@"keyConfigAdmobInterstitialId:%@",[self getAdmobIdByKey:keyConfigAdmobInterstitialId]);
-        NSLog(@"keyConfigAdmobRewardedVideoId:%@",[self getAdmobIdByKey:keyConfigAdmobRewardedVideoId]);
-        NSLog(@"keyConfigAdmobNativeId:%@",[self getAdmobIdByKey:keyConfigAdmobNativeId]);
+        NSLog(@"kConfigAdmobAppId:%@",[self getAdmobIdByKey:kConfigAdmobAppId]);
+        NSLog(@"kConfigAdmobBannerId:%@",[self getAdmobIdByKey:kConfigAdmobBannerId]);
+        NSLog(@"kConfigAdmobInterstitialId:%@",[self getAdmobIdByKey:kConfigAdmobInterstitialId]);
+        NSLog(@"kConfigAdmobRewardedVideoId:%@",[self getAdmobIdByKey:kConfigAdmobRewardedVideoId]);
+        NSLog(@"kConfigAdmobNativeId:%@",[self getAdmobIdByKey:kConfigAdmobNativeId]);
         NSLog(@"getAdmobTestDevices:%@",[self getAdmobTestDevices]);
-        NSLog(@"keyConfigFacebookAppId:%@",[self getFacebookIdByKey:keyConfigFacebookAppId]);
-        NSLog(@"keyConfigFlurryApiKey:%@",[self getFlurryIdByKey:keyConfigFlurryApiKey]);
+        NSLog(@"kConfigFBAppId:%@",[self getFacebookIdByKey:kConfigFBAppId]);
+        NSLog(@"kConfigFBInviteAppUrl:%@",[self getFacebookIdByKey:kConfigFBInviteAppUrl]);
+        NSLog(@"kConfigFBInviteImageUrl:%@",[self getFacebookIdByKey:kConfigFBInviteImageUrl]);
+        NSLog(@"kConfigFBInvitePromotText:%@",[self getFacebookIdByKey:kConfigFBInvitePromotText]);
+        NSLog(@"kConfigFBInvitePromotCode:%@",[self getFacebookIdByKey:kConfigFBInvitePromotCode]);
+        NSLog(@"kConfigFBShareAppUrl:%@",[self getFacebookIdByKey:kConfigFBShareAppUrl]);
+        NSLog(@"kConfigFlurryApiKey:%@",[self getFlurryIdByKey:kConfigFlurryApiKey]);
         NSLog(@"getPurchaseSkus:%@",[self getPurchaseSkus]);
     }
     return YES;
@@ -72,50 +78,51 @@ static ConfigManager *_instance = nil;
     [[AdsManager getInstance] setUpEnvironment:controller withDebug:debug];
 }
 
-- (NSString*)getAppleId
-{
-    return [self.configsDict objectForKey:keyConfigAppleId];
-}
-
 - (NSString*)getPrivacyUrl
 {
-    return [self.configsDict objectForKey:keyConfigPrivacyUrl];
+    return [self.configsDict objectForKey:kConfigPrivacyUrl];
+}
+
+- (NSString*)getAppleIdByKey:(NSString*)key
+{
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigApple];
+    return [dict objectForKey:key];
 }
 
 - (NSString*)getAdmobIdByKey:(NSString*)key
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigAdmob];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigAdmob];
     return [dict objectForKey:key];
 }
 
 - (NSArray*)getAdmobTestDevices
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigAdmob];
-    return [dict objectForKey:keyConfigAdmobTestDevices];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigAdmob];
+    return [dict objectForKey:kConfigAdmobTestDevices];
 }
 
 - (NSString*)getFacebookIdByKey:(NSString*)key
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigFacebook];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigFB];
     return [dict objectForKey:key];
 }
 
 - (NSString*)getFlurryIdByKey:(NSString*)key
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigFlurry];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigFlurry];
     return [dict objectForKey:key];
 }
 
 - (NSString*)getPurchaseIdByKey:(NSString*)key
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigPurchase];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigPurchase];
     return [dict objectForKey:key];
 }
 
 - (NSArray*)getPurchaseSkus
 {
-    NSDictionary *dict = [self.configsDict objectForKey:keyConfigPurchase];
-    return [dict objectForKey:keyConfigPurchaseSkus];
+    NSDictionary *dict = [self.configsDict objectForKey:kConfigPurchase];
+    return [dict objectForKey:kConfigPurchaseSkus];
 }
 
 @end

@@ -1315,7 +1315,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 415.0366,
+                          "X": 390.0,
                           "Y": 109.0
                         },
                         "Scale": {
@@ -1328,7 +1328,7 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.6485,
+                          "X": 0.6094,
                           "Y": 0.7267
                         },
                         "PreSize": {
@@ -1337,8 +1337,8 @@
                         },
                         "HorizontalEdge": "LeftEdge",
                         "VerticalEdge": "TopEdge",
-                        "LeftMargin": 340.0366,
-                        "RightMargin": 149.9634,
+                        "LeftMargin": 315.0,
+                        "RightMargin": 175.0,
                         "TopMargin": 16.0,
                         "BottomMargin": 84.0,
                         "Tag": 54,
@@ -1351,55 +1351,84 @@
                         "ctype": "ButtonObjectData"
                       },
                       {
-                        "ClipAble": false,
-                        "BackColorAlpha": 102,
-                        "ComboBoxIndex": 1,
-                        "SingleColor": {
-                          "R": 150,
-                          "G": 200
+                        "FontSize": 24,
+                        "ButtonText": "AccessToken",
+                        "TextColor": {
+                          "R": 0,
+                          "G": 0,
+                          "B": 0
                         },
-                        "FirstColor": {
-                          "R": 150,
-                          "G": 200
+                        "DisabledFileData": {
+                          "Type": "Default",
+                          "Path": "Default/Button_Disable.png",
+                          "Plist": ""
                         },
-                        "EndColor": {},
-                        "ColorVector": {
-                          "ScaleY": 1.0
+                        "PressedFileData": {
+                          "Type": "Default",
+                          "Path": "Default/Button_Press.png",
+                          "Plist": ""
                         },
-                        "Scale9Width": 1,
-                        "Scale9Height": 1,
+                        "NormalFileData": {
+                          "Type": "Default",
+                          "Path": "Default/Button_Normal.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 16,
+                        "Scale9Height": 14,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
                         "TouchEnable": true,
-                        "AnchorPoint": {},
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
                         "Position": {
-                          "X": 499.2819,
-                          "Y": 12.0122
+                          "X": 390.0,
+                          "Y": 55.0
                         },
                         "Scale": {
                           "ScaleX": 1.0,
                           "ScaleY": 1.0
                         },
-                        "CColor": {},
+                        "CColor": {
+                          "G": 192,
+                          "B": 203
+                        },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.7801,
-                          "Y": 0.0801
+                          "X": 0.6094,
+                          "Y": 0.3667
                         },
                         "PreSize": {
-                          "X": 0.1891,
-                          "Y": 0.8067
+                          "X": 0.2344,
+                          "Y": 0.3333
                         },
-                        "LeftMargin": 499.2819,
-                        "RightMargin": 19.7181,
-                        "TopMargin": 16.9878,
-                        "BottomMargin": 12.0122,
-                        "Tag": 53,
-                        "ActionTag": 1277712738,
+                        "HorizontalEdge": "LeftEdge",
+                        "VerticalEdge": "TopEdge",
+                        "LeftMargin": 315.0,
+                        "RightMargin": 175.0,
+                        "TopMargin": 70.0,
+                        "BottomMargin": 30.0,
+                        "Tag": 61,
+                        "ActionTag": -978175858,
                         "Size": {
-                          "X": 121.0,
-                          "Y": 121.0
+                          "X": 150.0,
+                          "Y": 50.0
                         },
-                        "Name": "fbHeaderContainor",
-                        "ctype": "PanelObjectData"
+                        "Name": "btnAccessToken",
+                        "ctype": "ButtonObjectData"
                       }
                     ],
                     "ActionTag": -82487155,

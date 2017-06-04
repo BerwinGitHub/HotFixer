@@ -3,15 +3,12 @@
  */
 var native = cc.Class.extend({
 
-    _callbackCache: null,
-
-    ctor: function () {
+    ctor: function (app) {
         this.ad = new ad();
-        this.facebook = new facebook();
+        this.facebook = new facebook(app);
         this.flurry = new flurry();
         this.nv = new nv();
         this.purchase = new purchase();
-        this._callbackCache = [];
     },
 
 

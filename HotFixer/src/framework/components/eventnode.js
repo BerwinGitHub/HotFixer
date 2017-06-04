@@ -18,11 +18,6 @@ var eventnode = cc.Node.extend({
     _target: null,
 
     /**
-     * 监听
-     */
-    _listener: null,
-
-    /**
      *
      * @param eventName
      * @param callback
@@ -34,6 +29,22 @@ var eventnode = cc.Node.extend({
         this._eventName = eventName;
         this._callback = callback;
         this._target.addChild(this);
+        this._registerEvent();
+    },
+
+    _registerEvent: function () {
+        this._listener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: this._eventName,
+            callback: (event) => {
+                if (this._target) {
+                    this._callback.apply(this._target, [event.getUserData()]);
+                } else {
+                    this._callback && this._callback(event.getUserData());
+                }
+            }
+        });
+        cc.eventManager.addListener(this._listener, 1);
     },
 
     /**
@@ -49,22 +60,10 @@ var eventnode = cc.Node.extend({
 
     onEnter: function () {
         this._super();
-        this._listener = cc.EventListener.create({
-            event: cc.EventListener.CUSTOM,
-            eventName: this._eventName,
-            callback: (event) => {
-                if (this._target) {
-                    this._callback.apply(this._target, [event.getUserData()]);
-                } else {
-                    this._callback && this.callback(event.getUserData());
-                }
-            }
-        });
-        cc.eventManager.addListener(this._listener, 1);
     },
 
     onExit: function () {
-        cc.eventManager.removeListener(this._listener);
+        this._listener && cc.eventManager.removeListener(this._listener);
         this._super();
     },
 });

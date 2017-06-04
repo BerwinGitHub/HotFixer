@@ -25,7 +25,7 @@
     [self setViewController:viewController];
     [self setDebug:debug];
     // 初始化Interstitial && 设置ID
-    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobInterstitialId];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobInterstitialId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:unitID];
     // 设置监听

@@ -9,11 +9,12 @@ var app = cc.Class.extend({
         this.prototype = new prototype();
         this.configs = new configs();
         this.datas = new datas();
-        this.native = new native();
-        this.events = new events();
+        this.events = new events(); // native中需要用到events
+        this.native = new native(this);
         this.helper = new helper();
         this.visiblerect = new visiblerect();
         this.dialogmgr = new dialogmgr();
         this.proto = new proto();
+        this.player = new player();
     },
 });

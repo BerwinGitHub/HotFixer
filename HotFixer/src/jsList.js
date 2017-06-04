@@ -1,6 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT! 
 var jsList = [
     "src/app/app.js",
+    "src/app/player.js",
     "src/configs/configs.js",
     "src/framework/components/eventnode.js",
     "src/framework/components/httpsprite.js",

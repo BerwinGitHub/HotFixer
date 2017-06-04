@@ -25,7 +25,6 @@ var HomeLayer = cc.Layer.extend({
         var dot = this._createDot();
         dot.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
         this.addChild(dot);
-
     },
 
     _createDot: function () {
@@ -62,7 +61,7 @@ var HomeLayer = cc.Layer.extend({
 
     onEnter: function () {
         this._super();
-        cc.app.events.emit("abc", {test: "test", id: 1});
+        // cc.app.events.emit("abc", {test: "test", id: 1});
     },
 
     onExit: function () {

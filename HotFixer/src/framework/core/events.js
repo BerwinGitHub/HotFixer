@@ -13,17 +13,29 @@ var events = cc.Class.extend({
      * @param eventName
      * @param callback
      */
-    on: function (parent, eventName, callback) {
+    onNode: function (parent, eventName, callback) {
         new eventnode(parent, eventName, callback);
+    },
+
+    register: function (eventName, callback) {
+        var listener = cc.EventListener.create({
+            event: cc.EventListener.CUSTOM,
+            eventName: eventName,
+            callback: function (event) {
+                callback && callback(event.getUserData());
+            }.bind(this),
+        });
+        cc.eventManager.addListener(listener.clone(), 1);
+        return listener;
     },
 
     /**
      * 移除事件 暂时不需要这个东西，因为上面的的方法会自动在移除节点的时候remove掉自己
      * @param listener
      */
-    // off: function (listener) {
-    //     cc.eventManager.removeListener(listener);
-    // },
+    unRegister: function (listener) {
+        cc.eventManager.removeListener(listener);
+    },
 
     /**
      * 开始广播

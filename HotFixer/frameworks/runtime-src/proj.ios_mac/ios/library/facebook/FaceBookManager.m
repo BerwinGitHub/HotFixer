@@ -35,27 +35,13 @@ static FaceBookManager *_instance = nil;
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
     [super setUpEnvironment:viewController withDebug:debug];
+    NSString *appID = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBAppId];
+    [FBSDKAppEvents setLoggingOverrideAppID:appID];
     return YES;
 }
 
 #pragma mark - method
-
-- (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-{
-    NSString *appID = [[ConfigManager getInstance] getFacebookIdByKey:keyConfigFacebookAppId];
-    [FBSDKAppEvents setLoggingOverrideAppID:appID];
-    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
-}
-
-- (void)loginWithPermissions:(NSArray*)permissions andHandler:(FBSDKLoginManagerRequestTokenHandler)handler
+- (void)loginWithPermissions:(NSArray*)permissions handler:(FBSDKLoginManagerRequestTokenHandler)handler
 {
     if(self.viewController == nil){
         NSLog(@"_viewController is nil. Please setViewController()");
@@ -115,21 +101,6 @@ static FaceBookManager *_instance = nil;
     return [FBSDKAccessToken currentAccessToken];
 }
 
-- (void)shareWithLink:(NSString*)link
-{
-    if(self.viewController == nil){
-        NSLog(@"_viewController is nil. Please setViewController()");
-        return;
-    }
-    FBSDKShareLinkContent *shareContent = [[FBSDKShareLinkContent alloc] init];
-    shareContent.contentURL = [NSURL URLWithString:link];
-    
-    FBSDKShareDialog *shareDialog = [[FBSDKShareDialog alloc] init];
-    shareDialog.shareContent = shareContent;
-    shareDialog.fromViewController = self.viewController;
-    [shareDialog show];
-}
-
 - (void)graphRequest:(NSString*)graphPath parameters:(NSDictionary *)parameters handler:(FBSDKGraphRequestHandler)handler httpMethod:(NSString*)method;
 {
     if([self isLogin]){
@@ -159,49 +130,83 @@ static FaceBookManager *_instance = nil;
     return [FBSDKProfile currentProfile];
 }
 
-- (void)invite:(NSString*)appLinkUrl previewImageUrl:(NSString*)imgUrl destinationIdx:(int)destIdx promotTxt:(NSString*)promotTxt promotCode:promotCode delegate:(id<FBSDKAppInviteDialogDelegate>) delegate
+- (void)invite:(FBInviteComplete) delegate
 {
-    FBSDKAppInviteDialog *dialog = [[FBSDKAppInviteDialog alloc] init];
-    if(dialog.canShow){
-        FBSDKAppInviteContent *content = [[FBSDKAppInviteContent alloc] init];
-        NSLog(@"appLinkUrl:%@", appLinkUrl);
-        content.appLinkURL = [NSURL URLWithString:appLinkUrl];
-        [content setDestination: (destIdx == 0 ? FBSDKAppInviteDestinationFacebook : FBSDKAppInviteDestinationMessenger)];
+    NSString *appUrl = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBInviteAppUrl];
+    NSString *imgUrl = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBInviteImageUrl];
+    NSString *promotTxt = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBInvitePromotText];
+    NSString *promotCode = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBInvitePromotCode];
+    [self setInviteComplete:delegate];
+    FBSDKAppInviteContent *content = [[FBSDKAppInviteContent alloc] init];
+    [content setDestination: FBSDKAppInviteDestinationFacebook]; // 邀请是Facebook || Messager
+    if(![appUrl isEqualToString:@""]){
+        NSLog(@"appUrl:%@", appUrl);
+        content.appLinkURL = [NSURL URLWithString:appUrl];
+    }
+    if(![promotTxt isEqualToString:@""]){ // 和应用内优惠信息有关
         [content setPromotionText:promotTxt];
+    }
+    if(![promotCode isEqualToString:@""]){ // 和应用内优惠信息有关
         [content setPromotionCode:promotCode];
-        // [dialog setContent:content];
-        // [dialog show];
-        [FBSDKAppInviteDialog showFromViewController:self.viewController withContent:content delegate:delegate];
+    }
+    if(![imgUrl isEqualToString:@""]){
+        [content setAppInvitePreviewImageURL:[NSURL URLWithString:imgUrl]];
+    }
+    [FBSDKAppInviteDialog showFromViewController:self.viewController withContent:content delegate:self];
+}
+
+- (void)share:(FBShareComplete)delegate
+{
+    [self setShareComplete:delegate];
+    NSString *appUrl = [[ConfigManager getInstance] getFacebookIdByKey:kConfigFBShareAppUrl];
+    
+    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+    content.contentURL = [NSURL URLWithString:appUrl];
+//    UIImage* image = [[UIImage alloc] initWithContentsOfFile:@"res/HelloWorld.png"];
+//    FBSDKSharePhoto *photo = [[FBSDKSharePhoto alloc] init];
+//    photo.image = image;
+//    photo.userGenerated = YES;
+//    FBSDKSharePhotoContent *pContent = [[FBSDKSharePhotoContent alloc] init];
+//    pContent.photos = @[photo];
+//    
+//    FBSDKShareMediaContent *media = [[FBSDKShareMediaContent alloc] init];
+//    media.media = @[content];
+    [FBSDKShareDialog showFromViewController:self.viewController withContent:content delegate:self];
+}
+
+#pragma -mark delegate
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didCompleteWithResults:(NSDictionary *)results
+{
+    if(self.inviteComplete != nil){
+        self.inviteComplete(nil, results);
     }
 }
 
-- (void)share:(NSString*)titile description:(NSString*)desc contentUrl:(NSString*)url quote:(NSString*)quote imageUrl:(NSString*)imgUrl peopleIds:(NSArray*)peopleIds placeId:(NSString*)placeId ref:(NSString*)ref delegate:(id<FBSDKSharingDelegate>) delegate
+- (void)appInviteDialog:(FBSDKAppInviteDialog *)appInviteDialog didFailWithError:(NSError *)error
 {
-    FBSDKShareDialog *dialog = [[FBSDKShareDialog alloc] init];
-    if (dialog.canShow) {
-        FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-        content.contentTitle;
-        [content setContentTitle:titile];
-        [content setContentDescription:desc];
-        [content setContentURL:[NSURL URLWithString:url]];
-        if(quote){
-            [content setQuote:quote];
-        }
-        if(imgUrl){
-            [content setImageURL:[NSURL URLWithString:imgUrl]];
-        }
-        if (peopleIds) {
-            [content setPeopleIDs:peopleIds];
-        }
-        if(placeId){
-            [content setPlaceID:placeId];
-        }
-        if(ref){
-            [content setRef:ref];
-        }
-        //[dialog setShareContent:content];
-        //[dialog show];
-        [FBSDKShareDialog showFromViewController:self.viewController withContent:content delegate:delegate];
+    if(self.inviteComplete != nil){
+        self.inviteComplete(error, nil);
+    }
+}
+
+- (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults:(NSDictionary *)results
+{
+    if(self.shareComplete != nil){
+        self.shareComplete(nil, NO, results);
+    }
+}
+
+- (void)sharer:(id<FBSDKSharing>)sharer didFailWithError:(NSError *)error
+{
+    if(self.shareComplete != nil){
+        self.shareComplete(error, NO, nil);
+    }
+}
+
+- (void)sharerDidCancel:(id<FBSDKSharing>)sharer
+{
+    if(self.shareComplete != nil){
+        self.shareComplete(nil, YES, nil);
     }
 }
 

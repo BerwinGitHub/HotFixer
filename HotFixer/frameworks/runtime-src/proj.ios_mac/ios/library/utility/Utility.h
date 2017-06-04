@@ -69,6 +69,11 @@
 + (UIColor*)colorWithR:(float)r G:(float)g B:(float)b A:(float)a;
 
 /**
+ * 调用eval发送事件
+ */
++ (void)emitJavaScriptEvent:(NSString*)eventName data:(NSDictionary*)data;
+
+/**
  * 调用JS回调的代码
  */
 + (void)nativeCallbackToJs:(NSString*)callback withData:(NSDictionary*)jsonData;

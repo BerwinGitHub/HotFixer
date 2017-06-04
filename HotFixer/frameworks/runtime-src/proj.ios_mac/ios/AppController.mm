@@ -29,6 +29,7 @@
 #import "RootViewController.h"
 
 #import "ConfigManager.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @implementation AppController
 
@@ -76,6 +77,9 @@ static AppDelegate s_sharedApplication;
     
     //
     [[ConfigManager getInstance] setViewController:_viewController];
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
     
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
@@ -85,6 +89,18 @@ static AppDelegate s_sharedApplication;
     app->run();
 
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:sourceApplication
+                                                               annotation:annotation
+                    ];
+    // 在此添加任意自定义逻辑。
+    return handled;
 }
 
 

@@ -41,7 +41,7 @@
     if(self.debug){
         request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
     }
-    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:keyConfigAdmobRewardedVideoId];
+    NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobRewardedVideoId];
     [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
                                            withAdUnitID:unitID];

@@ -14,6 +14,10 @@
 
 + (NSString*)isLogin:(NSString*)data;
 
++ (void)invite:(NSString*)data;
+
++ (void)share:(NSString*)data;
+
 + (NSString*)getAccessToken:(NSString*)data;
 
 @end
