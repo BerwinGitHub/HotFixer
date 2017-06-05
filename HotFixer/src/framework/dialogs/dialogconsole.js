@@ -244,7 +244,7 @@ var dialogconsole = Dialog.extend({
         });
         this._regiserEvent("btnEndTimed", () => {
             cc.app.native.flurry.endEvent("timed");
-            cc.app.native.nv.makeToast("#Flurry->:timed end"), 3000;
+            cc.app.native.nv.makeToast("#Flurry->:timed end", 3000);
         });
         this._regiserEvent("btnEventParamsTimed", () => {
             cc.app.native.flurry.logEventWithParmsAndTimes("params&timed", {"params1": 1, "timed": true}, true);
