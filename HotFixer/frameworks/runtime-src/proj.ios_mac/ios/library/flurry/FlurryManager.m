@@ -36,21 +36,45 @@ static FlurryManager *_instance = nil;
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
     [super setUpEnvironment:viewController withDebug:debug];
+    NSString *API_KEY = [[ConfigManager getInstance] getFlurryIdByKey:kConfigFlurryApiKey];
+    // FlurryLogLevelNone
+    FlurrySessionBuilder* builder = [[[[[FlurrySessionBuilder new]
+                                        withLogLevel:FlurryLogLevelNone]
+                                       withCrashReporting:YES]
+                                      withSessionContinueSeconds:10]
+                                     withAppVersion:@"1.0"];
+    [Flurry startSession:API_KEY withSessionBuilder:builder];
     return YES;
 }
 
 
 - (void)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    NSString *version = [Utility getApplicationVersion];
     NSString *API_KEY = [[ConfigManager getInstance] getFlurryIdByKey:kConfigFlurryApiKey];
     // FlurryLogLevelNone
     FlurrySessionBuilder* builder = [[[[[FlurrySessionBuilder new]
                                         withLogLevel:FlurryLogLevelNone]
-                                       withCrashReporting:NO]
+                                       withCrashReporting:YES]
                                       withSessionContinueSeconds:10]
-                                     withAppVersion:@"1.0"];
+                                     withAppVersion:version];
     [Flurry startSession:API_KEY withSessionBuilder:builder];
     
+}
+
+- (void)logEvent:(NSString*)name
+{
+    [Flurry logEvent:name];
+}
+
+- (void)logEvent:(NSString *)name timed:(BOOL)timed
+{
+    [Flurry logEvent:name timed:timed];
+}
+
+- (void)logEvent:(NSString*)name withParameters:(NSDictionary*)params
+{
+    [Flurry logEvent:name withParameters:params];
 }
 
 - (void)logEvent:(NSString*)name withParameters:(NSDictionary*)params timed:(BOOL)timed
@@ -61,51 +85,6 @@ static FlurryManager *_instance = nil;
 - (void)endEvent:(NSString*)event withParameters:(NSDictionary*)params
 {
     [Flurry endTimedEvent:event withParameters:params];
-}
-
-- (void)setUserId:(NSString*)Id
-{
-    [Flurry setUserID:Id];
-}
-
-- (void)setAge:(int)age
-{
-    [Flurry setAge:age];
-}
-
-- (void)setLogEnabled:(BOOL)enable
-{
-    [Flurry setShowErrorInLogEnabled:enable];
-}
-
-- (void)setLogEvents:(BOOL)le
-{
-    // for android
-}
-
-- (void)setCaptureUncaughtExceptions:(BOOL)exce
-{
-    // for android
-}
-
-- (void)setContinueSessionMillis:(long)millis
-{
-    // for android
-}
-
-- (void)setLocation:(double)d1 with:(double)d2
-{
-    [Flurry setLatitude:d1 longitude:d2 horizontalAccuracy:0 verticalAccuracy:0];
-}
-
-- (void)setVersionName:(NSString*)v
-{
-    [Flurry setAppVersion:v];
-}
-
-- (void)setGender:(NSString*)gender
-{
-    [Flurry setGender:gender];
 }
 
 @end

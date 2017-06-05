@@ -223,11 +223,39 @@ var dialogconsole = Dialog.extend({
         this._regiserEvent("btnHeader", () => {
             if (cc.app.player.facebookToken) {
                 var userID = cc.app.player.facebookToken.userID;
-                var url = "http://graph.facebook.com/" + userID + "/picture?type=small";
+                var url = "http://graph.facebook.com/" + userID + "/picture?type=normal";
                 hs.loadSpriteByUrl(url);
             } else {
                 cc.app.native.nv.makeToast("请先登录Facebook.", 5 * 1000);
             }
+        });
+        // Flurry
+        this._regiserEvent("btnEvent", () => {
+            cc.app.native.flurry.logEvent("click");
+            cc.app.native.nv.makeToast("#Flurry->:click");
+        });
+        this._regiserEvent("btnEventParams", () => {
+            cc.app.native.flurry.logEventWithParams("params", {"params1": 1, "params2": true});
+            cc.app.native.nv.makeToast("#Flurry->:params " + JSON.stringify({"params1": 1, "params2": true}));
+        });
+        this._regiserEvent("btnEventTimed", () => {
+            cc.app.native.flurry.logEventWithTimed("timed", true);
+            cc.app.native.nv.makeToast("#Flurry->:timed start");
+        });
+        this._regiserEvent("btnEndTimed", () => {
+            cc.app.native.flurry.endEvent("timed");
+            cc.app.native.nv.makeToast("#Flurry->:timed end");
+        });
+        this._regiserEvent("btnEventParamsTimed", () => {
+            cc.app.native.flurry.logEventWithParmsAndTimes("params&timed", {"params1": 1, "timed": true}, true);
+            cc.app.native.nv.makeToast("#Flurry->:params&timed start" + JSON.stringify({
+                    "params1": 1,
+                    "timed": true
+                }) + "-true");
+            this.runAction(cc.sequence(cc.delayTime(3.0), cc.callFunc(() => {
+                cc.app.native.flurry.endEvent("params&timed");
+                cc.app.native.nv.makeToast("#Flurry->:params&timed end");
+            })));
         });
     },
 

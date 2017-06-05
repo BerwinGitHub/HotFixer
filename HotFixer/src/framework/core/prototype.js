@@ -106,7 +106,7 @@ cc.registerCallback = function (callback) {
 cc.handleArgsFunction = function (func) {
     var args = func.getArguments();
     for (var key in args) {
-        if (args[key] && typeof args[key] === "function") {
+        if (typeof args[key] === "function") {
             var cbkey = cc.registerCallback(args[key]);
             args[key] = cbkey;
         }

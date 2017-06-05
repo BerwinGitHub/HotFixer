@@ -68,6 +68,10 @@
 
 + (UIColor*)colorWithR:(float)r G:(float)g B:(float)b A:(float)a;
 
++ (NSString*)getApplicationVersion;
+
++ (NSString*)getApplicationBuild;
+
 /**
  * 调用eval发送事件
  */

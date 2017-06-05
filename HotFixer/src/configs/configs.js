@@ -39,7 +39,7 @@ var configs = cc.Class.extend({
         };
         // flurry分析统计
         this.flurry = {
-            api_key: "1238990102321"
+            api_key: "PZSQZPBST9SVTV229M5Q"
         };
         // 内购的相关信息
         this.purchase = {

@@ -122,6 +122,17 @@
     return [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a / 255.0];
 }
 
++ (NSString*)getApplicationVersion
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+//    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
+
++ (NSString*)getApplicationBuild
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
 + (void)emitJavaScriptEvent:(NSString*)eventName data:(NSDictionary*)data
 {
     NSString *dataStr = [Utility dictionaryToJSONString:data];

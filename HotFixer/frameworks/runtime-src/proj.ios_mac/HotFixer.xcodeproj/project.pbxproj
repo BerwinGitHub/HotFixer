@@ -36,6 +36,7 @@
 		5436F73B1EDDC86F00A0EB64 /* ILibraryAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F73A1EDDC86F00A0EB64 /* ILibraryAccess.m */; };
 		545204D61EE05CA4000D2D5F /* FacebookInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D51EE05CA4000D2D5F /* FacebookInterface.m */; };
 		545204D91EE060E8000D2D5F /* AdInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D81EE060E8000D2D5F /* AdInterface.m */; };
+		5467F6F41EE5B66800F114AE /* FlurryInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5467F6F31EE5B66800F114AE /* FlurryInterface.m */; };
 		5475882A1EDC883A00479C6C /* AdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E21EDC883A00479C6C /* AdsManager.m */; };
 		5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E61EDC883A00479C6C /* BannerAdmob.m */; };
 		5475882C1EDC883A00479C6C /* BannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E81EDC883A00479C6C /* BannerManager.m */; };
@@ -210,6 +211,8 @@
 		545204D51EE05CA4000D2D5F /* FacebookInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookInterface.m; sourceTree = "<group>"; };
 		545204D71EE060E8000D2D5F /* AdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterface.h; sourceTree = "<group>"; };
 		545204D81EE060E8000D2D5F /* AdInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterface.m; sourceTree = "<group>"; };
+		5467F6F21EE5B66800F114AE /* FlurryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryInterface.h; sourceTree = "<group>"; };
+		5467F6F31EE5B66800F114AE /* FlurryInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryInterface.m; sourceTree = "<group>"; };
 		547587DE1EDC883A00479C6C /* ILibraryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILibraryAccess.h; sourceTree = "<group>"; };
 		547587E01EDC883A00479C6C /* AdListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdListener.h; sourceTree = "<group>"; };
 		547587E11EDC883A00479C6C /* AdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsManager.h; sourceTree = "<group>"; };
@@ -546,6 +549,8 @@
 				5475880A1EDC883A00479C6C /* FlurryManager.h */,
 				5475880B1EDC883A00479C6C /* FlurryManager.m */,
 				5475880C1EDC883A00479C6C /* libs */,
+				5467F6F21EE5B66800F114AE /* FlurryInterface.h */,
+				5467F6F31EE5B66800F114AE /* FlurryInterface.m */,
 			);
 			path = flurry;
 			sourceTree = "<group>";
@@ -959,6 +964,7 @@
 				547588331EDC883A00479C6C /* RewardedVideoManager.m in Sources */,
 				547588341EDC883A00479C6C /* FaceBookManager.m in Sources */,
 				547588421EDC883A00479C6C /* Purchase.m in Sources */,
+				5467F6F41EE5B66800F114AE /* FlurryInterface.m in Sources */,
 				5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */,
 				547588441EDC883A00479C6C /* Utility.mm in Sources */,
 				547588401EDC883A00479C6C /* InAppWebView.m in Sources */,
