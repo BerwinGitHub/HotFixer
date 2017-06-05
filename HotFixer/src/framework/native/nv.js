@@ -18,7 +18,8 @@ var nv = cc.Class.extend({
         abc.name;
     },
 
-    makeToast: function makeToast(content, time = 3000) {
+    makeToast: function makeToast(content, time) {
+        // TODO 处理默认参数解析的问题
         cc.callNativeStaticMethod(this._clsName, makeToast);
     },
 
