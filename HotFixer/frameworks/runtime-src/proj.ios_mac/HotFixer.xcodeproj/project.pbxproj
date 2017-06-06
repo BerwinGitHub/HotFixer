@@ -61,6 +61,8 @@
 		547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588251EDC883A00479C6C /* IAPurchaseManager.m */; };
 		547588441EDC883A00479C6C /* Utility.mm in Sources */ = {isa = PBXBuildFile; fileRef = 547588291EDC883A00479C6C /* Utility.mm */; };
 		547588491EDC88BF00479C6C /* NativeInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 547588481EDC88BF00479C6C /* NativeInterface.m */; };
+		549093421EE703C700E6533B /* NativeAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 549093411EE703C700E6533B /* NativeAdManager.m */; };
+		549093491EE7050400E6533B /* NativeAdAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 549093481EE7050400E6533B /* NativeAdAdmob.m */; };
 		549BF7561ECB50B000333B9D /* libjscocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C037820918BF76AF00FE4F13 /* libjscocos2d iOS.a */; };
 		54D239FD1EE1CC27000865E6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D239E71EE1CC27000865E6 /* Default-568h@2x.png */; };
 		54D239FE1EE1CC27000865E6 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D239E81EE1CC27000865E6 /* Default-667h@2x.png */; };
@@ -262,6 +264,11 @@
 		547588291EDC883A00479C6C /* Utility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utility.mm; sourceTree = "<group>"; };
 		547588471EDC88BF00479C6C /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		547588481EDC88BF00479C6C /* NativeInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterface.m; sourceTree = "<group>"; };
+		549093401EE703C700E6533B /* NativeAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdManager.h; sourceTree = "<group>"; };
+		549093411EE703C700E6533B /* NativeAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdManager.m; sourceTree = "<group>"; };
+		549093431EE703DC00E6533B /* INativeAdAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INativeAdAccess.h; sourceTree = "<group>"; };
+		549093471EE7050400E6533B /* NativeAdAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdAdmob.h; sourceTree = "<group>"; };
+		549093481EE7050400E6533B /* NativeAdAdmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdAdmob.m; sourceTree = "<group>"; };
 		54D239E71EE1CC27000865E6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		54D239E81EE1CC27000865E6 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		54D239E91EE1CC27000865E6 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
@@ -431,9 +438,10 @@
 				547587E01EDC883A00479C6C /* AdListener.h */,
 				547587E11EDC883A00479C6C /* AdsManager.h */,
 				547587E21EDC883A00479C6C /* AdsManager.m */,
+				547587F41EDC883A00479C6C /* libs */,
+				5490933F1EE7038100E6533B /* native */,
 				547587E31EDC883A00479C6C /* banner */,
 				547587ED1EDC883A00479C6C /* interstitial */,
-				547587F41EDC883A00479C6C /* libs */,
 				547587F91EDC883A00479C6C /* rewardedvideo */,
 				547587EA1EDC883A00479C6C /* IAdAccess.h */,
 				547587EB1EDC883A00479C6C /* IAdAccess.m */,
@@ -630,6 +638,26 @@
 				547588291EDC883A00479C6C /* Utility.mm */,
 			);
 			path = utility;
+			sourceTree = "<group>";
+		};
+		5490933F1EE7038100E6533B /* native */ = {
+			isa = PBXGroup;
+			children = (
+				549093461EE704DE00E6533B /* admob */,
+				549093431EE703DC00E6533B /* INativeAdAccess.h */,
+				549093401EE703C700E6533B /* NativeAdManager.h */,
+				549093411EE703C700E6533B /* NativeAdManager.m */,
+			);
+			path = native;
+			sourceTree = "<group>";
+		};
+		549093461EE704DE00E6533B /* admob */ = {
+			isa = PBXGroup;
+			children = (
+				549093471EE7050400E6533B /* NativeAdAdmob.h */,
+				549093481EE7050400E6533B /* NativeAdAdmob.m */,
+			);
+			path = admob;
 			sourceTree = "<group>";
 		};
 		54D239E61EE1CC27000865E6 /* Defaults */ = {
@@ -954,6 +982,7 @@
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				5475882A1EDC883A00479C6C /* AdsManager.m in Sources */,
 				547588411EDC883A00479C6C /* NativeManager.m in Sources */,
+				549093421EE703C700E6533B /* NativeAdManager.m in Sources */,
 				5475882C1EDC883A00479C6C /* BannerManager.m in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				5475882D1EDC883A00479C6C /* IAdAccess.m in Sources */,
@@ -969,6 +998,7 @@
 				547588441EDC883A00479C6C /* Utility.mm in Sources */,
 				547588401EDC883A00479C6C /* InAppWebView.m in Sources */,
 				5475883A1EDC883A00479C6C /* FlurryEmpty.m in Sources */,
+				549093491EE7050400E6533B /* NativeAdAdmob.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
 				547588491EDC88BF00479C6C /* NativeInterface.m in Sources */,
 				547588431EDC883A00479C6C /* IAPurchaseManager.m in Sources */,

@@ -57,13 +57,13 @@ cc.callNativeStaticMethod = function (clsName, func, data = null) {
         data = cc.handleArgsFunction(func);
         methodName = func.name;
     }
-    var datastringify = data ? JSON.stringify(data) : "";
     if (cc.sys.os == cc.sys.OS_ANDROID) {
         return jsb.reflection.callStaticMethod(clsName, methodName,
             "(Ljava/lang/String;)Ljava/lang/String;", // 参数列表
-            datastringify);
+            data ? JSON.stringify(data) : "");
     } else if (cc.sys.os == cc.sys.OS_IOS) {
-        return jsb.reflection.callStaticMethod(clsName, methodName + ":", datastringify);
+        console.log("methodName:" + methodName);
+        return jsb.reflection.callStaticMethod(clsName, methodName + ":", data ? JSON.stringify(data) : "");
     }
 };
 

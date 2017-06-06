@@ -10,6 +10,7 @@
 #import "BannerManager.h"
 #import "InterstitialManager.h"
 #import "RewardedVideoManager.h"
+#import "NativeAdManager.h"
 
 @implementation AdsManager
 
@@ -37,7 +38,7 @@ static AdsManager *_instance = nil;
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
     [super setUpEnvironment:viewController withDebug:debug];
-    self.managerArray = [[NSArray alloc] initWithObjects:[BannerManager getInstance], [InterstitialManager getInstance], [RewardedVideoManager getInstance], nil];
+    self.managerArray = [[NSArray alloc] initWithObjects:[NativeAdManager getInstance], [BannerManager getInstance], [InterstitialManager getInstance], [RewardedVideoManager getInstance], nil];
     
     for (id<IManagerAccess> manager in self.managerArray) {
         [manager setUpEnvironment:viewController withDebug:debug];

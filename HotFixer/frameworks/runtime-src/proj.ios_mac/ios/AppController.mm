@@ -27,6 +27,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "NativeAdManager.h"
 
 #import "ConfigManager.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -76,6 +77,7 @@ static AppDelegate s_sharedApplication;
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
     //
+    [[NativeAdManager getInstance] showNativeRoot:_viewController];
     [[ConfigManager getInstance] setViewController:_viewController];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

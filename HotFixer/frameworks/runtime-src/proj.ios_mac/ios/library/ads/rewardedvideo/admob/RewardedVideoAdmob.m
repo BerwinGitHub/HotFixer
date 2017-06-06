@@ -118,6 +118,8 @@
     [self showLog:@"RewardedVideo rewardBasedVideoAdDidClose"];
     self.shown = NO;
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
+    // 关闭重新加载
+    [self preload];
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd

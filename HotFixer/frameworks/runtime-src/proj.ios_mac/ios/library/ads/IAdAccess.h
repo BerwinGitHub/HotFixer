@@ -15,7 +15,8 @@
 typedef NS_ENUM(NSInteger, AdType){
     kAdTypeBanner          = 0,    // Banner(横幅)广告
     kAdTypeInterstitial    = 1,    // Interstitial(全屏/非插页式)广告
-    kAdTypeRewardedVideo   = 2     // RewardedVideo(视频/激励)广告
+    kAdTypeRewardedVideo   = 2,    // RewardedVideo(视频/激励)广告
+    kAdTypeNativeAd        = 3     // NativeAd(原生广告)广告
 };
 #define keyWithAdType(enum)  [@[@"Banner", @"Interstitial", @"RewardedVideo"] objectAtIndex:enum]
 
