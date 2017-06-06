@@ -18,7 +18,8 @@ var ad = cc.Class.extend({
     AdType: {
         Banner: 0,    // Banner(横幅)广告
         Interstitial: 1,    // Interstitial(全屏/非插页式)广告
-        RrewardedVideo: 2     // RewardedVideo(视频/激励)广告
+        RrewardedVideo: 2,     // RewardedVideo(视频/激励)广告
+        NativeAd: 3             // NativeAd(原生)广告
     },
     /**
      * 方法类型

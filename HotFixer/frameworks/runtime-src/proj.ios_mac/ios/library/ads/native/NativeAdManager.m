@@ -45,6 +45,7 @@ static NativeAdManager *_instance = nil;
 
 - (void)showNativeRoot:(UIViewController*)viewController
 {
+    [self setViewController:viewController];
     if(self.rootView == nil){
         self.rootView = [[UIView alloc] initWithFrame:[Utility screenRect]];
         self.rootView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.8];
@@ -63,6 +64,7 @@ static NativeAdManager *_instance = nil;
 
 - (BOOL)show
 {
+    [self.viewController.view addSubview:self.rootView];
     for (id<INativeAdAccess> nativeAd in _adArray) {
         if([nativeAd show]){
             return YES;

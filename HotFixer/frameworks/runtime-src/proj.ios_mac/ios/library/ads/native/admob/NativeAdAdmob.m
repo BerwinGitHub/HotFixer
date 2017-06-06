@@ -42,10 +42,7 @@
     [self preload];
     
     //
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:15.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        [timer invalidate];
-        [self.rootView removeFromSuperview];
-    }];
+    [self show];
     
     return YES;
 }
@@ -61,6 +58,11 @@
 
 - (BOOL)show
 {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:15.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        [self preload];
+        [timer invalidate];
+        [self.rootView removeFromSuperview];
+    }];
     
     return NO;
 }
@@ -103,6 +105,7 @@ didFailToReceiveAdWithError:(GADRequestError *)error
 
 - (void)nativeExpressAdViewDidDismissScreen:(GADNativeExpressAdView *)nativeExpressAdView
 {
+    [self preload];
     [self showLog:@"nativeExpressAdViewDidDismissScreen"];
 }
 

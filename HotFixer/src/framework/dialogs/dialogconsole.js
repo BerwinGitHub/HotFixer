@@ -188,7 +188,7 @@ var dialogconsole = Dialog.extend({
         });
         this._handleEventVisible("btnShowRewarded", AdEvent[cc.app.native.ad.AdType.RrewardedVideo]);
         this._regiserEvent("btnShowNative", () => {
-            // cc.app.native.ad.show(3);btnPreloadAll
+            cc.app.native.ad.show(3);
         });
         this._regiserEvent("btnPreloadAll", () => {
             cc.app.native.ad.preloadAll();

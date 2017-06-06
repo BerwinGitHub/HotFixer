@@ -11,6 +11,7 @@
 @interface NativeAdManager : NSObject<IManagerAccess>
 
 @property(nonatomic, strong)UIView *rootView;
+@property(nonatomic, strong)UIViewController *viewController;
 
 + (instancetype)getInstance;
 + (void)pure;
