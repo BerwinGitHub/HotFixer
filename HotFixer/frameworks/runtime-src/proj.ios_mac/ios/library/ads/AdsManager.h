@@ -6,11 +6,10 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import "ILibraryAccess.h"
 #import "AdListener.h"
 #import "IAdAccess.h"
 #import "IManagerAccess.h"
+#import "ILibraryAccess.h"
 
 /**
  * block 的回调监听
@@ -22,8 +21,7 @@ typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int a
 + (instancetype)getInstance;
 + (void)pure;
 
-#pragma mark -property
-
+#pragma mark -变量
 /**
  * 广告的回调监听属性
  */
@@ -40,6 +38,9 @@ typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int a
 @property(nonatomic, strong)NSArray *managerArray;
 
 #pragma mark -method
+
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSDictionary*)dictQueue andDebug:(BOOL)debug;
+
 /**
  * 预加载所有的广告项目
  */

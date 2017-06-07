@@ -11,8 +11,6 @@
 
 @implementation BannerManager
 
-@synthesize adArray = _adArray;
-
 static BannerManager *_instance = nil;
 
 + (instancetype)getInstance
@@ -33,69 +31,26 @@ static BannerManager *_instance = nil;
     }
 }
 
-- (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSArray*)queue andDebug:(BOOL)debug
 {
-    id<IBannerAccess> adomb = [[BannerAdmob alloc] init];
+    [super setUpEnvironment:viewController withQueue:queue andDebug:debug];
+    IBannerAccess *adomb = [[BannerAdmob alloc] init];
     [adomb setUpEnvironment:viewController withDebug:debug];
-    self.adArray = [NSArray arrayWithObjects:adomb, nil];
+    [self.adArray addObject:adomb];
     return YES;
-}
-
-- (void)preload
-{
-    for (id<IBannerAccess> banner in _adArray) {
-        [banner preload];
-    }
-}
-
-- (BOOL)show
-{
-    for (id<IBannerAccess> banner in _adArray) {
-        if([banner show]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (void)hide
-{
-    for (id<IBannerAccess> banner in _adArray) {
-        [banner hide];
-    }
-}
-
-- (BOOL)isAvailable
-{
-    for (id<IBannerAccess> banner in _adArray) {
-        if([banner available]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (BOOL)isShown
-{
-    for (id<IBannerAccess> banner in _adArray) {
-        if([banner show]){
-            return YES;
-        }
-    }
-    return NO;
 }
 
 - (int)getGravity
 {
-    for (id<IBannerAccess> banner in _adArray) {
-        return [banner getGravity];
+    for (IBannerAccess *banner in self.adArray) {
+        return [banner gravity];
     }
     return kGravityBottom;
 }
 
 - (void)setGravity:(int)gravity
 {
-    for (id<IBannerAccess> banner in _adArray) {
+    for (IBannerAccess *banner in self.adArray) {
         [banner setGravity:gravity];
     }
 }

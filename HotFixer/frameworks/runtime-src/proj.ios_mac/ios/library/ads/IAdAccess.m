@@ -10,15 +10,24 @@
 
 @implementation IAdAccess
 
-- (BOOL)setUpEnvironment:(BOOL)debug
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    
-    return NO;
+    self.viewController = viewController;
+    self.debug = debug;
+    self.available = NO;
+    self.shown = NO;
+    return YES;
 }
 
 - (void)preload
 {
     
+}
+
+- (void)preloadWithCallback:(AvailableBlock) block
+{
+    self.availableBlock = block;
+    [self preload];
 }
 
 - (BOOL)show
@@ -32,7 +41,7 @@
     
 }
 
-- (void)showLog:(NSObject*) msg
+- (void)log:(NSObject*) msg
 {
     if ([self debug]) {
         NSLog(@"Ads\t:%@", msg);

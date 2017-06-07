@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "ConfigManager.h"
 
-@protocol IAdAccess <NSObject>
+@interface IAdAccess : NSObject
+
+// 用于查看该视频是否加载好，方便判断是否加载后面的广告
+typedef void(^AvailableBlock)(IAdAccess *ad, BOOL available);
 
 // 广告类型
 typedef NS_ENUM(NSInteger, AdType){
@@ -17,6 +20,12 @@ typedef NS_ENUM(NSInteger, AdType){
     kAdTypeInterstitial    = 1,    // Interstitial(全屏/非插页式)广告
     kAdTypeRewardedVideo   = 2,    // RewardedVideo(视频/激励)广告
     kAdTypeNativeAd        = 3     // NativeAd(原生广告)广告
+};
+
+// 广告代理商
+typedef NS_ENUM(NSInteger, AdAgent){
+    kAdAgentAdmob           = 0,    // 广告代理商：Admob
+    kAdAgentFacebook        = 1,    // 广告代理商：Facebook
 };
 #define keyWithAdType(enum)  [@[@"Banner", @"Interstitial", @"RewardedVideo"] objectAtIndex:enum]
 
@@ -51,15 +60,23 @@ typedef NS_ENUM(NSInteger, AdType){
  */
 @property(nonatomic, readwrite)BOOL foreReload;
 
+/**
+ * 查看是否preload成功回调
+ */
+@property(nonatomic, copy)AvailableBlock availableBlock;
+
 #pragma mark -method
-@required
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug;
 
 - (void)preload;
 
+- (void)preloadWithCallback:(AvailableBlock) block;
+
 - (BOOL)show;
 
 - (void)hide;
+
+- (void)log:(NSObject*) msg;
 
 
 @end

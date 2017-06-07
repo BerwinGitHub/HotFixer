@@ -8,7 +8,7 @@
 
 #import "IAdAccess.h"
 
-@protocol IBannerAccess <NSObject, IAdAccess>
+@interface IBannerAccess : IAdAccess
 
 // Banner的位置类型
 typedef NS_ENUM(NSInteger, Gravity){
@@ -20,18 +20,5 @@ typedef NS_ENUM(NSInteger, Gravity){
  * 广告的位置信息，
  */
 @property(nonatomic, readwrite)int gravity;
-
-@required
-/**
- * 设置Banner在应用中显示的位置
- * @param   gravity Banner显示的位置(参考：IBannerAccess->Gravity)
- */
-- (void)setGravity:(int)gravity;
-
-/**
- * 得到Banner在当前应用中的位置
- * @return gravity Banner显示的位置(参考：IBannerAccess->Gravity)
- */
-- (int)getGravity;
 
 @end

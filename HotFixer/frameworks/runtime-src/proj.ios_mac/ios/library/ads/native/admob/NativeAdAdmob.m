@@ -7,22 +7,22 @@
 //
 
 #import "NativeAdAdmob.h"
+#import "AdsManager.h"
 
 @implementation NativeAdAdmob
 
 // 将父类的变量重新指定一遍
-@synthesize viewController  = _viewController;
-@synthesize debug           = _debug;
-@synthesize available       = _available;
-@synthesize adType          = _adType;
-@synthesize shown           = _shown;
-@synthesize foreReload      = _foreReload;
+//@synthesize viewController  = _viewController;
+//@synthesize debug           = _debug;
+//@synthesize available       = _available;
+//@synthesize adType          = _adType;
+//@synthesize shown           = _shown;
+//@synthesize foreReload      = _foreReload;
 
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
-    [self setAdType:kAdTypeRewardedVideo];
-    [self setViewController:viewController];
-    [self setDebug:debug];
+    [super setUpEnvironment:viewController withDebug:debug];
+    [self setAdType:kAdTypeNativeAd];
     
     // 初始化RewardedVideo && 设置ID
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobNativeId];
@@ -69,75 +69,85 @@
 
 - (void)hide
 {
-    if (self.debug) {
-        NSLog(@"RewardedVideo hide not implements. Please hide in interstitial view");
-    }
-}
-
-- (void)showLog:(NSString*)msg
-{
-    if (self.debug) {
-        //        [Utility evalJaveScript:[NSString stringWithFormat:@"cc.app.log.i('%@')", msg]];
-    }
+    [self log:@"RewardedVideo hide not implements. Please hide in interstitial view"];
 }
 
 #pragma mark Ad Request Lifecycle Notifications
 - (void)nativeExpressAdViewDidReceiveAd:(GADNativeExpressAdView *)nativeExpressAdView
 {
-    [self showLog:@"nativeExpressAdViewDidReceiveAd"];
+    [self log:@"nativeExpressAdViewDidReceiveAd"];
+    self.available = YES;
+    if(self.availableBlock){
+        self.availableBlock(self, self.available);
+    }
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLoaded available:self.available amount:-1 err:-1];
 }
 
 - (void)nativeExpressAdView:(GADNativeExpressAdView *)nativeExpressAdView
 didFailToReceiveAdWithError:(GADRequestError *)error
 {
-    [self showLog:@"didFailToReceiveAdWithError"];
+    [self log:@"didFailToReceiveAdWithError"];
+    self.available = NO;
+    if(self.availableBlock){
+        self.availableBlock(self, self.available);
+    }
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedToLoad available:self.available amount:-1 err:(int)[error code]];
+    
 }
 #pragma mark Click-Time Lifecycle Notifications
 - (void)nativeExpressAdViewWillPresentScreen:(GADNativeExpressAdView *)nativeExpressAdView
 {
-    [self showLog:@"nativeExpressAdViewWillPresentScreen"];
+    [self log:@"nativeExpressAdViewWillPresentScreen"];
+    self.shown = YES;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeOpen available:self.available amount:-1 err:-1];
 }
 
 - (void)nativeExpressAdViewWillDismissScreen:(GADNativeExpressAdView *)nativeExpressAdView
 {
-    [self showLog:@"nativeExpressAdViewWillDismissScreen"];
+    [self preload];
+    [self log:@"nativeExpressAdViewWillDismissScreen"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeWillClose available:self.available amount:-1 err:-1];
 }
 
 - (void)nativeExpressAdViewDidDismissScreen:(GADNativeExpressAdView *)nativeExpressAdView
 {
-    [self preload];
-    [self showLog:@"nativeExpressAdViewDidDismissScreen"];
+    [self log:@"nativeExpressAdViewDidDismissScreen"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
 }
 
 - (void)nativeExpressAdViewWillLeaveApplication:(GADNativeExpressAdView *)nativeExpressAdView
 {
-    [self showLog:@"nativeExpressAdViewWillLeaveApplication"];
+    [self log:@"nativeExpressAdViewWillLeaveApplication"];
+    self.shown = NO;
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLeftApplication available:self.available amount:-1 err:-1];
 }
 
 #pragma mark Native Video
 - (void)videoControllerDidPlayVideo:(GADVideoController *)videoController
 {
-    [self showLog:@"videoControllerDidPlayVideo"];
+    [self log:@"videoControllerDidPlayVideo"];
 }
 
 - (void)videoControllerDidPauseVideo:(GADVideoController *)videoController
 {
-    [self showLog:@"videoControllerDidPauseVideo"];
+    [self log:@"videoControllerDidPauseVideo"];
 }
 
 - (void)videoControllerDidEndVideoPlayback:(GADVideoController *)videoController
 {
-    [self showLog:@"videoControllerDidEndVideoPlayback"];
+    [self log:@"videoControllerDidEndVideoPlayback"];
 }
 
 - (void)videoControllerDidMuteVideo:(GADVideoController *)videoController
 {
-    [self showLog:@"videoControllerDidMuteVideo"];
+    [self log:@"videoControllerDidMuteVideo"];
 }
 
 - (void)videoControllerDidUnmuteVideo:(GADVideoController *)videoController
 {
-    [self showLog:@"videoControllerDidUnmuteVideo"];
+    [self log:@"videoControllerDidUnmuteVideo"];
 }
 
 @end

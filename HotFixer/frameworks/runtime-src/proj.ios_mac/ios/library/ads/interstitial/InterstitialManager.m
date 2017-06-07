@@ -12,8 +12,6 @@
 
 @implementation InterstitialManager
 
-@synthesize adArray = _adArray;
-
 static InterstitialManager *_instance = nil;
 
 + (instancetype)getInstance
@@ -34,56 +32,13 @@ static InterstitialManager *_instance = nil;
     }
 }
 
-- (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSArray*)queue andDebug:(BOOL)debug
 {
-    id<IInterstitialAccess> adomb = [[InterstitialAdmob alloc] init];
+    [super setUpEnvironment:viewController withQueue:queue andDebug:debug];
+    IInterstitialAccess *adomb = [[InterstitialAdmob alloc] init];
     [adomb setUpEnvironment:viewController withDebug:debug];
-    self.adArray = [NSArray arrayWithObjects:adomb, nil];
+    [self.adArray addObject:adomb];
     return YES;
-}
-
-- (void)preload
-{
-    for (id<IInterstitialAccess> interstitial in _adArray) {
-        [interstitial preload];
-    }
-}
-
-- (BOOL)show
-{
-    for (id<IInterstitialAccess> interstitial in _adArray) {
-        if([interstitial show]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (void)hide
-{
-    for (id<IInterstitialAccess> interstitial in _adArray) {
-        [interstitial hide];
-    }
-}
-
-- (BOOL)isAvailable
-{
-    for (id<IInterstitialAccess> interstitial in _adArray) {
-        if([interstitial available]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (BOOL)isShown
-{
-    for (id<IInterstitialAccess> interstitial in _adArray) {
-        if([interstitial show]){
-            return YES;
-        }
-    }
-    return NO;
 }
 
 @end

@@ -6,11 +6,10 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "IBannerAccess.h"
 #import "IManagerAccess.h"
 
-@interface BannerManager : NSObject <IManagerAccess>
+@interface BannerManager : IManagerAccess
 
 + (instancetype)getInstance;
 + (void)pure;

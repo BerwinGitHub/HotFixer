@@ -8,7 +8,6 @@
 
 #import "IAdAccess.h"
 
-@protocol IRewardedVideoAccess <NSObject, IAdAccess>
-
+@interface IRewardedVideoAccess : IAdAccess
 
 @end

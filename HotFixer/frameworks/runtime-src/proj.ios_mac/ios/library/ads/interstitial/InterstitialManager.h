@@ -8,8 +8,7 @@
 
 #import "IManagerAccess.h"
 
-@interface InterstitialManager : NSObject<IManagerAccess>
-
+@interface InterstitialManager : IManagerAccess
 
 + (instancetype)getInstance;
 + (void)pure;

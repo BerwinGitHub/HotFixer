@@ -7,8 +7,7 @@
 //
 #import "IManagerAccess.h"
 
-@interface RewardedVideoManager : NSObject<IManagerAccess>
-
+@interface RewardedVideoManager : IManagerAccess
 
 + (instancetype)getInstance;
 + (void)pure;

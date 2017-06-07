@@ -75,7 +75,18 @@ static ConfigManager *_instance = nil;
     [[FlurryManager getInstance] setUpEnvironment:controller withDebug:debug];
     [[FaceBookManager getInstance] setUpEnvironment:controller withDebug:debug];
     [[IAPurchaseManager getInstance] setUpEnvironment:controller withDebug:debug];
-    [[AdsManager getInstance] setUpEnvironment:controller withDebug:debug];
+    [[AdsManager getInstance] setUpEnvironment:controller
+                                     withQueue:@{
+                                                 [NSString stringWithFormat:@"%ld", (long)kAdTypeNativeAd] // key
+                                                 :@[[NSNumber numberWithInt:kAdAgentAdmob]], // Queue
+                                                 [NSString stringWithFormat:@"%ld", (long)kAdTypeBanner] // key
+                                                 :@[[NSNumber numberWithInt:kAdAgentAdmob]], // Queue
+                                                 [NSString stringWithFormat:@"%ld", (long)kAdTypeInterstitial] // key
+                                                 :@[[NSNumber numberWithInt:kAdAgentAdmob]], // Queue
+                                                 [NSString stringWithFormat:@"%ld", (long)kAdTypeRewardedVideo] // key
+                                                 :@[[NSNumber numberWithInt:kAdAgentAdmob]], // Queue
+                                                 }
+                                      andDebug:debug];
 }
 
 - (NSString*)getPrivacyUrl

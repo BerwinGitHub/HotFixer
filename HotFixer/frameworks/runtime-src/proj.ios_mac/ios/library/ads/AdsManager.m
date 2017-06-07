@@ -38,10 +38,24 @@ static AdsManager *_instance = nil;
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
     [super setUpEnvironment:viewController withDebug:debug];
-    self.managerArray = [[NSArray alloc] initWithObjects:[BannerManager getInstance], [InterstitialManager getInstance], [RewardedVideoManager getInstance], [NativeAdManager getInstance], nil];
+    return YES;
+}
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSDictionary*)dictQueue andDebug:(BOOL)debug
+{
+    [self setUpEnvironment:viewController withDebug:debug];
+    self.managerArray = [[NSArray alloc] initWithObjects: [BannerManager getInstance], [InterstitialManager getInstance], [RewardedVideoManager getInstance], [NativeAdManager getInstance], nil];
+    NSArray *queueKey = [[NSArray alloc] initWithObjects:
+                         [NSString stringWithFormat:@"%ld", (long)kAdTypeBanner],
+                         [NSString stringWithFormat:@"%ld", (long)kAdTypeInterstitial],
+                         [NSString stringWithFormat:@"%ld", (long)kAdTypeRewardedVideo],
+                         [NSString stringWithFormat:@"%ld", (long)kAdTypeNativeAd],
+                         nil];
     
-    for (id<IManagerAccess> manager in self.managerArray) {
-        [manager setUpEnvironment:viewController withDebug:debug];
+    for (int i = 0; i < [self.managerArray count]; i++) {
+        IManagerAccess *manager = [self.managerArray objectAtIndex:i];
+        NSString *key = [queueKey objectAtIndex:i];
+        NSArray *queue = [dictQueue objectForKey:key];
+        [manager setUpEnvironment:viewController withQueue:queue andDebug:debug];
     }
     
     return YES;
@@ -50,14 +64,14 @@ static AdsManager *_instance = nil;
 #pragma mark -实现广告的方法
 - (void)preloadAll
 {
-    for (id<IManagerAccess> manager in self.managerArray) {
+    for (IManagerAccess *manager in self.managerArray) {
         [manager preload];
     }
 }
 
 - (void)preload:(int)type
 {
-    id<IManagerAccess> manager = [self getManagerByType:type];
+    IManagerAccess *manager = [self getManagerByType:type];
     if (manager) {
         [manager preload];
     }
@@ -65,7 +79,7 @@ static AdsManager *_instance = nil;
 
 - (BOOL)show:(int)type
 {
-    id<IManagerAccess> manager = [self getManagerByType:type];
+    IManagerAccess *manager = [self getManagerByType:type];
     if (manager) {
         return [manager show];
     }
@@ -74,7 +88,7 @@ static AdsManager *_instance = nil;
 
 - (void)hide:(int)type
 {
-    id<IManagerAccess> manager = [self getManagerByType:type];
+    IManagerAccess *manager = [self getManagerByType:type];
     if (manager) {
         [manager hide];
     }
@@ -82,7 +96,7 @@ static AdsManager *_instance = nil;
 
 - (BOOL)isAvailable:(int)type
 {
-    id<IManagerAccess> manager = [self getManagerByType:type];
+    IManagerAccess *manager = [self getManagerByType:type];
     if (manager) {
         return [manager isAvailable];
     }
@@ -91,7 +105,7 @@ static AdsManager *_instance = nil;
 
 - (BOOL)isShown:(int)type
 {
-    id<IManagerAccess> manager = [self getManagerByType:type];
+    IManagerAccess *manager = [self getManagerByType:type];
     if (manager) {
         return [manager isShown];
     }
@@ -119,7 +133,7 @@ static AdsManager *_instance = nil;
 }
 
 #pragma mark -private
-- (id<IManagerAccess>)getManagerByType:(int)type
+- (IManagerAccess*)getManagerByType:(int)type
 {
     if(type < 0 || type >= [self.managerArray count]) {
         return nil;

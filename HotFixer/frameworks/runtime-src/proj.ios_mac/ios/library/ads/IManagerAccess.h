@@ -6,26 +6,34 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#include "IAdAccess.h"
 
-@protocol IManagerAccess <NSObject>
+@interface IManagerAccess : NSObject
 
-@property(nonatomic, strong)NSArray *adArray;
+@property(nonatomic, strong)NSMutableArray *adArray;
 
-@required
+// 当前加载的下标
+@property(nonatomic, assign)int loadIndex;
+
 /**
  * 预加载广告项目
  * @param viewController  承载广告的页面
  * @param debug 是否是调试模式
  * @return BOOL 是否初始化成功
  */
-- (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug;
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSArray*)queue andDebug:(BOOL)debug;
 
 /**
  * 预加载广告项目
  * @param type  需要加载的广告类型(参考：IAdAccess->AdType)
  */
 - (void)preload;
+
+/**
+ * 预加载广告项目并回调
+ * @param block  该广告加载成功/失败的回调，方便进行下个广告的加载
+ */
+//- (void)preloadWithCallback:(AvailableBlock) block;
 
 /**
  * 显示广告项目
@@ -53,5 +61,8 @@
  * #return BOOL 指定的广告类型是否是正在展示
  */
 - (BOOL)isShown;
+
+// 广告排序
+- (void)sortAdWithAgentQueue:(NSArray*)agentQueue;
 
 @end

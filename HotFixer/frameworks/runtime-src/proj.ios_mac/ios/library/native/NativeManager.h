@@ -6,7 +6,6 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "ILibraryAccess.h"
 
 typedef void(^AlertCompleteBlock)(NSInteger buttonIndex);

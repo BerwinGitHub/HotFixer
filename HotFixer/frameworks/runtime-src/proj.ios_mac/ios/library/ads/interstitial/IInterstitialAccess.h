@@ -8,8 +8,7 @@
 
 #import "IAdAccess.h"
 
-@protocol IInterstitialAccess <NSObject, IAdAccess>
-
+@interface IInterstitialAccess : IAdAccess
 
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation NativeAdManager
 
-@synthesize adArray = _adArray;
+//@synthesize adArray = _adArray;
 
 static NativeAdManager *_instance = nil;
 
@@ -34,12 +34,13 @@ static NativeAdManager *_instance = nil;
     }
 }
 
-- (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
+- (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSArray*)queue andDebug:(BOOL)debug
 {
-    id<INativeAdAccess> adomb = [[NativeAdAdmob alloc] init];
+    [super setUpEnvironment:viewController withQueue:queue andDebug:debug];
+    INativeAdAccess *adomb = [[NativeAdAdmob alloc] init];
     [(NativeAdAdmob*)adomb setRootView:self.rootView];
     [adomb setUpEnvironment:viewController withDebug:debug];
-    self.adArray = [NSArray arrayWithObjects:adomb, nil];
+    [self.adArray addObject:adomb];
     return YES;
 }
 
@@ -52,52 +53,6 @@ static NativeAdManager *_instance = nil;
         [viewController.view addSubview:self.rootView];
     }
     
-}
-
-
-- (void)preload
-{
-    for (id<INativeAdAccess> nativeAd in _adArray) {
-        [nativeAd preload];
-    }
-}
-
-- (BOOL)show
-{
-    [self.viewController.view addSubview:self.rootView];
-    for (id<INativeAdAccess> nativeAd in _adArray) {
-        if([nativeAd show]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (void)hide
-{
-    for (id<INativeAdAccess> nativeAd in _adArray) {
-        [nativeAd hide];
-    }
-}
-
-- (BOOL)isAvailable
-{
-    for (id<INativeAdAccess> nativeAd in _adArray) {
-        if([nativeAd available]){
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (BOOL)isShown
-{
-    for (id<INativeAdAccess> nativeAd in _adArray) {
-        if([nativeAd show]){
-            return YES;
-        }
-    }
-    return NO;
 }
 
 @end

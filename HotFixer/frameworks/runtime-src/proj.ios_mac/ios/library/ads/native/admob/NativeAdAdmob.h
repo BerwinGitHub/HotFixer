@@ -9,7 +9,7 @@
 #import "INativeAdAccess.h"
 @import GoogleMobileAds;
 
-@interface NativeAdAdmob : NSObject<INativeAdAccess, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate>
+@interface NativeAdAdmob : INativeAdAccess<GADNativeExpressAdViewDelegate, GADVideoControllerDelegate>
 
 @property(nonatomic, strong)GADNativeExpressAdView *nativeAdView;
 @property(nonatomic, strong)UIView *rootView;

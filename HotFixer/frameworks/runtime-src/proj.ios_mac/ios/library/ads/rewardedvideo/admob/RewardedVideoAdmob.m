@@ -12,18 +12,17 @@
 @implementation RewardedVideoAdmob
 
 // 将父类的变量重新指定一遍
-@synthesize viewController  = _viewController;
-@synthesize debug           = _debug;
-@synthesize available       = _available;
-@synthesize adType          = _adType;
-@synthesize shown           = _shown;
-@synthesize foreReload      = _foreReload;
+//@synthesize viewController  = _viewController;
+//@synthesize debug           = _debug;
+//@synthesize available       = _available;
+//@synthesize adType          = _adType;
+//@synthesize shown           = _shown;
+//@synthesize foreReload      = _foreReload;
 
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withDebug:(BOOL)debug
 {
+    [super setUpEnvironment:viewController withDebug:debug];
     [self setAdType:kAdTypeRewardedVideo];
-    [self setViewController:viewController];
-    [self setDebug:debug];
     // 初始化RewardedVideo && 设置ID
     [GADRewardBasedVideoAd sharedInstance];
     // 设置监听
@@ -42,7 +41,7 @@
         request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
     }
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobRewardedVideoId];
-    [self showLog:[NSString stringWithFormat:@"UnitID:%@", unitID]];
+    [self log:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
                                            withAdUnitID:unitID];
 }
@@ -52,54 +51,54 @@
     if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
         [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:self.viewController];
     } else {
-        [self showLog:@"RewardedVideo is not ready"];
+        [self log:@"RewardedVideo is not ready"];
     }
     return NO;
 }
 
 - (void)hide
 {
-    if (self.debug) {
-        NSLog(@"RewardedVideo hide not implements. Please hide in interstitial view");
-    }
-}
-
-- (void)showLog:(NSString*)msg
-{
-    if (self.debug) {
-//        [Utility evalJaveScript:[NSString stringWithFormat:@"cc.app.log.i('%@')", msg]];
-    }
+    [self log:@"RewardedVideo hide not implements. Please hide in interstitial view"];
 }
 
 #pragma mark ----------------RewardedVideo----------------
+// 看完视频得到奖励
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
    didRewardUserWithReward:(GADAdReward *)reward
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAd:didRewardUserWithReward"];
+    [self log:@"RewardedVideo rewardBasedVideoAd:didRewardUserWithReward"];
     self.shown = NO;
     self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeRewarded available:self.available amount:[reward.amount intValue] err:-1];
     
 }
 
+// 加载失败
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
     didFailToLoadWithError:(NSError *)error
 {
-    [self showLog:[NSString stringWithFormat:@"RewardedVideo didFailToLoadWithError:%d", (int)error.code]];
-    self.available = NO;
+    [self log:[NSString stringWithFormat:@"RewardedVideo didFailToLoadWithError:%d", (int)error.code]];
+    self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
+    if(self.availableBlock){
+        self.availableBlock(self, self.available);
+    }
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeFailedToLoad available:self.available amount:-1 err:(int)[error code]];
 }
 
+// 加载成功
 - (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAdDidReceiveAd"];
+    [self log:@"RewardedVideo rewardBasedVideoAdDidReceiveAd"];
     self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
+    if(self.availableBlock){
+        self.availableBlock(self, self.available);
+    }
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLoaded available:self.available amount:-1 err:-1];
 }
 
 - (void)rewardBasedVideoAdDidOpen:(GADRewardBasedVideoAd *)rewardBasedVideoAd
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAdDidOpen"];
+    [self log:@"RewardedVideo rewardBasedVideoAdDidOpen"];
     self.shown = YES;
     self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeOpen available:self.available amount:-1 err:-1];
@@ -107,7 +106,7 @@
 
 - (void)rewardBasedVideoAdDidStartPlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAdDidStartPlaying"];
+    [self log:@"RewardedVideo rewardBasedVideoAdDidStartPlaying"];
     self.shown = YES;
     self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeStarted available:self.available amount:-1 err:-1];
@@ -115,17 +114,19 @@
 
 - (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAdDidClose"];
-    self.shown = NO;
-    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
     // 关闭重新加载
     [self preload];
+    [self log:@"RewardedVideo rewardBasedVideoAdDidClose"];
+    self.shown = NO;
+    self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
+    [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeClosed available:self.available amount:-1 err:-1];
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd
 {
-    [self showLog:@"RewardedVideo rewardBasedVideoAdWillLeaveApplication"];
+    [self log:@"RewardedVideo rewardBasedVideoAdWillLeaveApplication"];
     self.shown = NO;
+    self.available = [[GADRewardBasedVideoAd sharedInstance] isReady];
     [[AdsManager getInstance] adsCallback:self.adType methodType:kMethodTypeLeftApplication available:self.available amount:-1 err:-1];
 }
 

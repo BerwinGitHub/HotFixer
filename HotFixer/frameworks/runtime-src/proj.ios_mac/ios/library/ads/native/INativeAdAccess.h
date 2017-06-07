@@ -8,6 +8,6 @@
 
 #import "IAdAccess.h"
 
-@protocol INativeAdAccess <NSObject, IAdAccess>
+@interface INativeAdAccess : IAdAccess
 
 @end

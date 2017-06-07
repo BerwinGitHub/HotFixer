@@ -8,7 +8,7 @@
 
 #import "IManagerAccess.h"
 
-@interface NativeAdManager : NSObject<IManagerAccess>
+@interface NativeAdManager : IManagerAccess
 
 @property(nonatomic, strong)UIView *rootView;
 @property(nonatomic, strong)UIViewController *viewController;
