@@ -13,6 +13,5 @@
 
 @property(nonatomic, strong)GADNativeExpressAdView *nativeAdView;
 @property(nonatomic, strong)UIView *rootView;
-@property(nonatomic, strong)NSTimer *timer;
 
 @end

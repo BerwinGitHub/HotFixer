@@ -33,7 +33,7 @@
 - (BOOL)show
 {
 
-    return NO;
+    return YES;
 }
 
 - (void)hide

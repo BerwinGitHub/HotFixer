@@ -23,6 +23,7 @@
 {
     [super setUpEnvironment:viewController withDebug:debug];
     [self setAdType:kAdTypeInterstitial];
+    [self setAdAgent:kAdAgentAdmob];
     // 初始化Interstitial && 设置ID
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobInterstitialId];
     [self log:[NSString stringWithFormat:@"UnitID:%@", unitID]];
@@ -40,7 +41,9 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
+        NSMutableArray *arr = (NSMutableArray*)[[ConfigManager getInstance] getAdmobTestDevices];
+        [arr addObject:kGADSimulatorID]; // 添加模拟器
+        request.testDevices = arr;
     }
     [self.interstitial loadRequest:request];
 }
@@ -58,9 +61,7 @@
 
 - (void)hide
 {
-    if (self.debug) {
-        NSLog(@"Interstitial hide not implements. Please hide in interstitial view");
-    }
+    [self log:@"RewardedVideo hide not implements. Please hide rewardedVideo re view"];
 }
 
 

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @protocol AdListener <NSObject>
 
 // 回调的方法类型

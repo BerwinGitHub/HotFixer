@@ -8,6 +8,7 @@
 
 #import "AdInterface.h"
 #import "AdsManager.h"
+#import "Utility.h"
 
 @implementation AdInterface
 

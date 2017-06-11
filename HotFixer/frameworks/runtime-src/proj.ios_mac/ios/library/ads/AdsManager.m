@@ -40,6 +40,7 @@ static AdsManager *_instance = nil;
     [super setUpEnvironment:viewController withDebug:debug];
     return YES;
 }
+
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSDictionary*)dictQueue andDebug:(BOOL)debug
 {
     [self setUpEnvironment:viewController withDebug:debug];

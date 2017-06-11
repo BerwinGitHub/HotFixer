@@ -7,7 +7,6 @@
 //
 
 #import "BannerAdmob.h"
-#import "Utility.h"
 #import "AdsManager.h"
 
 @implementation BannerAdmob
@@ -25,6 +24,7 @@
 {
     [super setUpEnvironment:viewController withDebug:debug];
     [self setAdType:kAdTypeBanner];
+    [self setAdAgent:kAdAgentAdmob];
     // 初始化Banner
     GADAdSize size = IS_IPHONE ? kGADAdSizeBanner : kGADAdSizeFullBanner;
     self.bannerView = [[GADBannerView alloc] initWithAdSize:size];

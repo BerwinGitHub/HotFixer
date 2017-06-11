@@ -6,20 +6,17 @@
 //
 //
 
+#import "ILibraryAccess.h"
 #import "AdListener.h"
 #import "IAdAccess.h"
 #import "IManagerAccess.h"
-#import "ILibraryAccess.h"
+
+@interface AdsManager : ILibraryAccess
 
 /**
  * block 的回调监听
  */
 typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int amount , int err);
-
-@interface AdsManager : ILibraryAccess
-
-+ (instancetype)getInstance;
-+ (void)pure;
 
 #pragma mark -变量
 /**
@@ -38,6 +35,8 @@ typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int a
 @property(nonatomic, strong)NSArray *managerArray;
 
 #pragma mark -method
++ (instancetype)getInstance;
++ (void)pure;
 
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withQueue:(NSDictionary*)dictQueue andDebug:(BOOL)debug;
 
@@ -100,7 +99,5 @@ typedef void(^BlockAdListener)(int adType, int methodType, BOOL available, int a
  * @param err           广告回调是否是错误的
  */
 - (void)adsCallback:(int)adType methodType:(int)methodType available:(BOOL)available amount:(int)amount err:(int)err;
-
-
 
 @end

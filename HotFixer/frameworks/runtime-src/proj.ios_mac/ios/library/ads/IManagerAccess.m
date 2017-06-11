@@ -79,7 +79,7 @@
     [self.adArray removeAllObjects];
     for (NSNumber *agent in agentQueue) {
         for (IAdAccess *ad in temp) {
-            if([agent intValue] == [ad adType]){
+            if([agent intValue] == [ad adAgent]){
                 [self.adArray addObject:ad];
             }
         }

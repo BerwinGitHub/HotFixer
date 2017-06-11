@@ -23,6 +23,7 @@
 {
     [super setUpEnvironment:viewController withDebug:debug];
     [self setAdType:kAdTypeRewardedVideo];
+    [self setAdAgent:kAdAgentAdmob];
     // 初始化RewardedVideo && 设置ID
     [GADRewardBasedVideoAd sharedInstance];
     // 设置监听
@@ -38,7 +39,9 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
+        NSMutableArray *arr = (NSMutableArray*)[[ConfigManager getInstance] getAdmobTestDevices];
+        [arr addObject:kGADSimulatorID]; // 添加模拟器
+        request.testDevices = arr;
     }
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobRewardedVideoId];
     [self log:[NSString stringWithFormat:@"UnitID:%@", unitID]];
@@ -58,7 +61,7 @@
 
 - (void)hide
 {
-    [self log:@"RewardedVideo hide not implements. Please hide in interstitial view"];
+    [self log:@"RewardedVideo hide not implements. Please hide rewardedVideo re view"];
 }
 
 #pragma mark ----------------RewardedVideo----------------

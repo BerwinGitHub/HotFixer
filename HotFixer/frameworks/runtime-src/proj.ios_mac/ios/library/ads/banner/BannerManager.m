@@ -37,6 +37,7 @@ static BannerManager *_instance = nil;
     IBannerAccess *adomb = [[BannerAdmob alloc] init];
     [adomb setUpEnvironment:viewController withDebug:debug];
     [self.adArray addObject:adomb];
+    [self sortAdWithAgentQueue:queue];
     return YES;
 }
 

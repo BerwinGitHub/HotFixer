@@ -87,6 +87,7 @@ static ConfigManager *_instance = nil;
                                                  :@[[NSNumber numberWithInt:kAdAgentAdmob]], // Queue
                                                  }
                                       andDebug:debug];
+    [[AdsManager getInstance] show:kAdTypeNativeAd];
 }
 
 - (NSString*)getPrivacyUrl

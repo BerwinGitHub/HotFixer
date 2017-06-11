@@ -38,6 +38,7 @@ static RewardedVideoManager *_instance = nil;
     IRewardedVideoAccess *adomb = [[RewardedVideoAdmob alloc] init];
     [adomb setUpEnvironment:viewController withDebug:debug];
     [self.adArray addObject:adomb];
+    [self sortAdWithAgentQueue:queue];
     return YES;
 }
 

@@ -51,8 +51,6 @@
 
 - (BOOL)setUpEnvironment:(UIViewController*)viewController withConfigs:(NSString*)configs withDebug:(BOOL)debug;
 
-- (NSString*)getAppleId;
-
 - (NSString*)getPrivacyUrl;
 
 - (NSString*)getAppleIdByKey:(NSString*)key;

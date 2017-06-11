@@ -23,7 +23,7 @@
 /**
  * 调用系统分享
  */
-+ (void)shareWithSystem:(NSString*)jsonData;
++ (void)systemShare:(NSString*)jsonData;
 
 /**
  * 弹出一个提示

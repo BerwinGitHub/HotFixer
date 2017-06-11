@@ -76,8 +76,8 @@ static AppDelegate s_sharedApplication;
 
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
-    //
-    [[NativeAdManager getInstance] showNativeRoot:_viewController];
+    // 初始化native广告，进来就显示Native广告
+    [[NativeAdManager getInstance] getNativeAdRootViewInstance:_viewController];
     [[ConfigManager getInstance] setViewController:_viewController];
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

@@ -10,11 +10,17 @@
 
 @interface IManagerAccess : NSObject
 
+#pragma mark -成员变量
+/**
+ * 在排序中的广告上代理集合
+ */
 @property(nonatomic, strong)NSMutableArray *adArray;
-
-// 当前加载的下标
+/**
+ * 当前代理商加载的下标
+ */
 @property(nonatomic, assign)int loadIndex;
 
+#pragma mark -方法
 /**
  * 预加载广告项目
  * @param viewController  承载广告的页面

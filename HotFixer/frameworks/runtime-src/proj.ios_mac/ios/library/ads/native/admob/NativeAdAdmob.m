@@ -23,9 +23,11 @@
 {
     [super setUpEnvironment:viewController withDebug:debug];
     [self setAdType:kAdTypeNativeAd];
+    [self setAdAgent:kAdAgentAdmob];
     
     // 初始化RewardedVideo && 设置ID
     NSString *unitID = [[ConfigManager getInstance] getAdmobIdByKey:kConfigAdmobNativeId];
+    [self log:[NSString stringWithFormat:@"UnitID:%@", unitID]];
     self.nativeAdView = [[GADNativeExpressAdView alloc] initWithAdSize:GADAdSizeFromCGSize([Utility screenSize])];
     self.nativeAdView.adUnitID = unitID;
     self.nativeAdView.rootViewController = self.viewController;
@@ -39,10 +41,7 @@
     
     // 设置RootViewController
     // 默认隐藏
-    [self preload];
-    
-    //
-    [self show];
+//    [self preload];
     
     return YES;
 }
@@ -51,25 +50,26 @@
 {
     GADRequest *request = [GADRequest request];
     if(self.debug){
-        request.testDevices = [[ConfigManager getInstance] getAdmobTestDevices];
+        NSMutableArray *arr = (NSMutableArray*)[[ConfigManager getInstance] getAdmobTestDevices];
+        [arr addObject:kGADSimulatorID]; // 添加模拟器
+        request.testDevices = arr;
     }
     [self.nativeAdView loadRequest:request];
 }
 
 - (BOOL)show
 {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:15.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        [self preload];
-        [timer invalidate];
-        [self.rootView removeFromSuperview];
-    }];
-    
-    return NO;
+    if(self.nativeAdView != nil){
+        [self.nativeAdView setHidden:NO];
+    }
+    return YES;
 }
 
 - (void)hide
 {
-    [self log:@"RewardedVideo hide not implements. Please hide in interstitial view"];
+    if(self.nativeAdView != nil){
+        [self.nativeAdView setHidden:YES];
+    }
 }
 
 #pragma mark Ad Request Lifecycle Notifications

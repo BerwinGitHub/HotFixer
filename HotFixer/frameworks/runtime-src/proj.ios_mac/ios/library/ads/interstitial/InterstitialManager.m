@@ -38,6 +38,7 @@ static InterstitialManager *_instance = nil;
     IInterstitialAccess *adomb = [[InterstitialAdmob alloc] init];
     [adomb setUpEnvironment:viewController withDebug:debug];
     [self.adArray addObject:adomb];
+    [self sortAdWithAgentQueue:queue];
     return YES;
 }
 

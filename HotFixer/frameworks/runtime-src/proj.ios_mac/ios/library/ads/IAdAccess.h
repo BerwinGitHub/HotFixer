@@ -6,8 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "ConfigManager.h"
+#import "Utility.h"
 
 @interface IAdAccess : NSObject
 
@@ -27,7 +27,6 @@ typedef NS_ENUM(NSInteger, AdAgent){
     kAdAgentAdmob           = 0,    // 广告代理商：Admob
     kAdAgentFacebook        = 1,    // 广告代理商：Facebook
 };
-#define keyWithAdType(enum)  [@[@"Banner", @"Interstitial", @"RewardedVideo"] objectAtIndex:enum]
 
 #pragma mark -property
 /**
@@ -44,6 +43,11 @@ typedef NS_ENUM(NSInteger, AdAgent){
  * 广告的类型，一般为AdType enum的枚举值。方便JavaScript传递参数，所有用int表示
  */
 @property(nonatomic, readwrite)int adType;
+
+/**
+ * 广告的代理，现在主要为kAdAgentAdmob/kAdAgentFacebook
+ */
+@property(nonatomic, readwrite)int adAgent;
 
 /**
  * 广告是否可用
