@@ -57,14 +57,14 @@ static NativeAdManager *_instance = nil;
 {
     self.meetMinTime = NO;
     [[self getNativeAdRootViewInstance:self.viewController] setHidden:NO];// 显示节点
-    dispatch_time_t time1 = dispatch_time(DISPATCH_TIME_NOW, NATIVEAD_TIME * NSEC_PER_SEC);
-    dispatch_after(time1, dispatch_get_main_queue(), ^{
+    dispatch_time_t time0 = dispatch_time(DISPATCH_TIME_NOW, NATIVEAD_TIME * NSEC_PER_SEC);
+    dispatch_after(time0, dispatch_get_main_queue(), ^{
         self.meetMinTime = YES;
         [self shouldHideNativeAd];
     });
     // for test
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, NATIVEAD_TIME * 0.7 * NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
+    dispatch_time_t time1 = dispatch_time(DISPATCH_TIME_NOW, NATIVEAD_TIME * 0.7 * NSEC_PER_SEC);
+    dispatch_after(time1, dispatch_get_main_queue(), ^{
         [self updateProgress:1.0f];
     });
     return [super show];
