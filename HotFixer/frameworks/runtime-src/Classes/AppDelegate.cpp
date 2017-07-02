@@ -43,6 +43,8 @@
 #include "cocos/scripting/js-bindings/manual/platform/ios/JavaScriptObjCBridge.h"
 #endif
 
+#include "custom_socketutility_auto.hpp"
+
 USING_NS_CC;
 using namespace CocosDenshion;
 
@@ -80,6 +82,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0f / 60);
 
     ScriptingCore* sc = ScriptingCore::getInstance();
+    sc->addRegisterCallback(register_all_custom_socketutility);
+    
     sc->addRegisterCallback(register_all_cocos2dx);
     sc->addRegisterCallback(register_cocos2dx_js_core);
     sc->addRegisterCallback(jsb_register_system);
@@ -158,7 +162,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineProtocol *engine = ScriptingCore::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     ScriptingCore::getInstance()->runScript("main.js");
-
+    
     return true;
 }
 

@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1496581832291",
+    "version": "1.0.1498892964840",
     "engineVersion": "3.10",
     "assets": {
         "res/debug_info.png": {
@@ -382,15 +382,15 @@
             "compressed": false
         },
         "res/studio/debug/node/console.json": {
-            "md5": "83040ff50b88cc808053ddb0006163a5",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/node/debug.json": {
-            "md5": "7b74e2454e772e6bcbd4ae6219572543",
+            "md5": "2d312a0c9884f4ae40c2eb21de6a8660",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.plist": {
-            "md5": "6a0d7f835e26bef63494ee740d4ab423",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/debug/imgs/ui.png": {

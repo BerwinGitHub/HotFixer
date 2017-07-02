@@ -32,6 +32,6 @@ var res = {
     "studio_debug_node_debug_json": "res/studio/debug/node/debug.json"
 }
 var g_resources = [];
-for (var i in res) { 
-	g_resources.push(res[i]);
- }
+for (var i in res) {
+    g_resources.push(res[i]);
+}

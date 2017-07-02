@@ -9,7 +9,7 @@
 #import "IManagerAccess.h"
 
 #define     PROGRESS_VIEW_HEIGHT    60
-#define     NATIVEAD_TIME           15
+#define     NATIVEAD_TIME           30
 
 @interface NativeAdManager : IManagerAccess
 

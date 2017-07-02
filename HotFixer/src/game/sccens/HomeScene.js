@@ -25,6 +25,9 @@ var HomeLayer = cc.Layer.extend({
         var dot = this._createDot();
         dot.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
         this.addChild(dot);
+
+        console.log("Start Connect Server.");
+        cc.SocketUtility.getInstance().connect("127.0.0.1", 8867);
     },
 
     _createDot: function () {
