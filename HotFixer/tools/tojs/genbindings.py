@@ -149,7 +149,7 @@ def main():
 
     try:
         tojs_root = '%s/tools/tojs' % project_root
-        output_dir = '%s/cocos/scripting/js-bindings/auto' % runtime_src
+        output_dir = '%s/Classes/scripting/js-bindings/auto' % runtime_src
 
         cmd_args = {'custom_socketutility.ini' : ('custom_socketutility', 'custom_socketutility_auto'), \
            }

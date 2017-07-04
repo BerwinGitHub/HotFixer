@@ -35,13 +35,12 @@
 		5436F7391EDDC4C900A0EB64 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5436F7381EDDC4C900A0EB64 /* ConfigManager.m */; };
 		545204D61EE05CA4000D2D5F /* FacebookInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D51EE05CA4000D2D5F /* FacebookInterface.m */; };
 		545204D91EE060E8000D2D5F /* AdInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 545204D81EE060E8000D2D5F /* AdInterface.m */; };
+		545B9F751F0BE24900A0F8C8 /* custom_socketutility_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 545B9F721F0BE24900A0F8C8 /* custom_socketutility_auto.cpp */; };
 		5467F6F41EE5B66800F114AE /* FlurryInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 5467F6F31EE5B66800F114AE /* FlurryInterface.m */; };
 		546BCCEA1F0929EA00017D25 /* ODSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 546BCCE21F0929EA00017D25 /* ODSocket.cpp */; };
 		546BCCEB1F0929EA00017D25 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 546BCCE41F0929EA00017D25 /* stdafx.cpp */; };
 		546BCCEC1F0929EA00017D25 /* SocketUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 546BCCE81F0929EA00017D25 /* SocketUtility.cpp */; };
 		546BCCEF1F092A5800017D25 /* SocketChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 546BCCED1F092A5800017D25 /* SocketChannel.cpp */; };
-		546BCD1E1F094FEA00017D25 /* custom_socketutility_auto_api.js in Resources */ = {isa = PBXBuildFile; fileRef = 546BCD1B1F094FEA00017D25 /* custom_socketutility_auto_api.js */; };
-		546BCD1F1F094FEA00017D25 /* custom_socketutility_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 546BCD1C1F094FEA00017D25 /* custom_socketutility_auto.cpp */; };
 		5475882A1EDC883A00479C6C /* AdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E21EDC883A00479C6C /* AdsManager.m */; };
 		5475882B1EDC883A00479C6C /* BannerAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E61EDC883A00479C6C /* BannerAdmob.m */; };
 		5475882C1EDC883A00479C6C /* BannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 547587E81EDC883A00479C6C /* BannerManager.m */; };
@@ -223,6 +222,8 @@
 		545204D51EE05CA4000D2D5F /* FacebookInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookInterface.m; sourceTree = "<group>"; };
 		545204D71EE060E8000D2D5F /* AdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdInterface.h; sourceTree = "<group>"; };
 		545204D81EE060E8000D2D5F /* AdInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdInterface.m; sourceTree = "<group>"; };
+		545B9F721F0BE24900A0F8C8 /* custom_socketutility_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = custom_socketutility_auto.cpp; sourceTree = "<group>"; };
+		545B9F731F0BE24900A0F8C8 /* custom_socketutility_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = custom_socketutility_auto.hpp; sourceTree = "<group>"; };
 		5467F6F21EE5B66800F114AE /* FlurryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryInterface.h; sourceTree = "<group>"; };
 		5467F6F31EE5B66800F114AE /* FlurryInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryInterface.m; sourceTree = "<group>"; };
 		546BCCE21F0929EA00017D25 /* ODSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ODSocket.cpp; sourceTree = "<group>"; };
@@ -235,9 +236,6 @@
 		546BCCE91F0929EA00017D25 /* SocketUtility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketUtility.hpp; sourceTree = "<group>"; };
 		546BCCED1F092A5800017D25 /* SocketChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketChannel.cpp; sourceTree = "<group>"; };
 		546BCCEE1F092A5800017D25 /* SocketChannel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketChannel.hpp; sourceTree = "<group>"; };
-		546BCD1B1F094FEA00017D25 /* custom_socketutility_auto_api.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = custom_socketutility_auto_api.js; sourceTree = "<group>"; };
-		546BCD1C1F094FEA00017D25 /* custom_socketutility_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = custom_socketutility_auto.cpp; sourceTree = "<group>"; };
-		546BCD1D1F094FEA00017D25 /* custom_socketutility_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = custom_socketutility_auto.hpp; sourceTree = "<group>"; };
 		547587E01EDC883A00479C6C /* AdListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdListener.h; sourceTree = "<group>"; };
 		547587E11EDC883A00479C6C /* AdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsManager.h; sourceTree = "<group>"; };
 		547587E21EDC883A00479C6C /* AdsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsManager.m; sourceTree = "<group>"; };
@@ -434,6 +432,31 @@
 			path = mac;
 			sourceTree = "<group>";
 		};
+		545B9F6D1F0BE24900A0F8C8 /* scripting */ = {
+			isa = PBXGroup;
+			children = (
+				545B9F6E1F0BE24900A0F8C8 /* js-bindings */,
+			);
+			path = scripting;
+			sourceTree = "<group>";
+		};
+		545B9F6E1F0BE24900A0F8C8 /* js-bindings */ = {
+			isa = PBXGroup;
+			children = (
+				545B9F6F1F0BE24900A0F8C8 /* auto */,
+			);
+			path = "js-bindings";
+			sourceTree = "<group>";
+		};
+		545B9F6F1F0BE24900A0F8C8 /* auto */ = {
+			isa = PBXGroup;
+			children = (
+				545B9F721F0BE24900A0F8C8 /* custom_socketutility_auto.cpp */,
+				545B9F731F0BE24900A0F8C8 /* custom_socketutility_auto.hpp */,
+			);
+			path = auto;
+			sourceTree = "<group>";
+		};
 		546BCCE01F0929EA00017D25 /* SocketUtility */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,49 +480,6 @@
 				546BCCE71F0929EA00017D25 /* tchar.h */,
 			);
 			path = ODSocket;
-			sourceTree = "<group>";
-		};
-		546BCD161F094FEA00017D25 /* cocos */ = {
-			isa = PBXGroup;
-			children = (
-				546BCD171F094FEA00017D25 /* scripting */,
-			);
-			name = cocos;
-			path = ../cocos;
-			sourceTree = "<group>";
-		};
-		546BCD171F094FEA00017D25 /* scripting */ = {
-			isa = PBXGroup;
-			children = (
-				546BCD181F094FEA00017D25 /* js-bindings */,
-			);
-			path = scripting;
-			sourceTree = "<group>";
-		};
-		546BCD181F094FEA00017D25 /* js-bindings */ = {
-			isa = PBXGroup;
-			children = (
-				546BCD191F094FEA00017D25 /* auto */,
-			);
-			path = "js-bindings";
-			sourceTree = "<group>";
-		};
-		546BCD191F094FEA00017D25 /* auto */ = {
-			isa = PBXGroup;
-			children = (
-				546BCD1A1F094FEA00017D25 /* api */,
-				546BCD1C1F094FEA00017D25 /* custom_socketutility_auto.cpp */,
-				546BCD1D1F094FEA00017D25 /* custom_socketutility_auto.hpp */,
-			);
-			path = auto;
-			sourceTree = "<group>";
-		};
-		546BCD1A1F094FEA00017D25 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				546BCD1B1F094FEA00017D25 /* custom_socketutility_auto_api.js */,
-			);
-			path = api;
 			sourceTree = "<group>";
 		};
 		547587DC1EDC883A00479C6C /* library */ = {
@@ -804,7 +784,6 @@
 				C037820118BF76AF00FE4F13 /* cocos2d_js_bindings.xcodeproj */,
 				1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */,
 				BAF426FA19484B3E002B22EF /* script */,
-				546BCD161F094FEA00017D25 /* cocos */,
 				D4545214156E28EF00887EB5 /* Classes */,
 				A92275401517C094001B78AA /* Frameworks */,
 				D45446CC156DE73F00887EB5 /* ios */,
@@ -883,6 +862,7 @@
 		D4545214156E28EF00887EB5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				545B9F6D1F0BE24900A0F8C8 /* scripting */,
 				546BCCE01F0929EA00017D25 /* SocketUtility */,
 				D4545215156E28EF00887EB5 /* AppDelegate.cpp */,
 				D4545216156E28EF00887EB5 /* AppDelegate.h */,
@@ -1045,7 +1025,6 @@
 				54D23A101EE1CC27000865E6 /* Icon-80.png in Resources */,
 				1AE159EC18C9DF3600FCA372 /* project.json in Resources */,
 				1AD7E0A818C9DB93004817A6 /* main.js in Resources */,
-				546BCD1E1F094FEA00017D25 /* custom_socketutility_auto_api.js in Resources */,
 				C03780EB18BEE0E400FE4F13 /* src in Resources */,
 				54D23A091EE1CC27000865E6 /* Icon-29.png in Resources */,
 				C0799CB918BAE62000E9C828 /* res in Resources */,
@@ -1097,7 +1076,7 @@
 				54F3BAF21EE856AB00C27AD6 /* IRewardedVideoAccess.m in Sources */,
 				5475882F1EDC883A00479C6C /* InterstitialManager.m in Sources */,
 				547588391EDC883A00479C6C /* FlurryManager.m in Sources */,
-				546BCD1F1F094FEA00017D25 /* custom_socketutility_auto.cpp in Sources */,
+				545B9F751F0BE24900A0F8C8 /* custom_socketutility_auto.cpp in Sources */,
 				546BCCEC1F0929EA00017D25 /* SocketUtility.cpp in Sources */,
 				547588331EDC883A00479C6C /* RewardedVideoManager.m in Sources */,
 				547588341EDC883A00479C6C /* FaceBookManager.m in Sources */,

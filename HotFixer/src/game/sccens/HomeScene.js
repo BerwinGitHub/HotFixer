@@ -27,7 +27,20 @@ var HomeLayer = cc.Layer.extend({
         this.addChild(dot);
 
         console.log("Start Connect Server.");
-        cc.SocketUtility.getInstance().connect("127.0.0.1", 8867);
+        this.testProto();
+        cc.SocketUtility.getInstance().connectWithCallback("127.0.0.1", 8867, (data, d2) => {
+            // console.log("js :" + JSON.stringify(data));
+            console.log("js :" + JSON.stringify(d2));
+            // var msg = cc.app.proto.decode(d2);
+            // console.log("->:" + JSON.stringify(msg));
+        });
+        var button = ccui.Button.create("res/images/content/circle_bg.png");
+        button.addTouchEventListener((d1, d2) => {
+            console.log(JSON.stringify(d1));
+            console.log(JSON.stringify(d2));
+        });
+        button.setPosition(cc.p(200, 200));
+        this.addChild(button);
     },
 
     _createDot: function () {

@@ -38,14 +38,20 @@ void SocketUtility::pure()
 
 std::string SocketUtility::connect(const char *ip, int port)
 {
+    return this->connectWithCallback(ip, port, nullptr);
+}
+
+std::string SocketUtility::connectWithCallback(const char *ip, int port, const SocketCallback &callback)
+{
     std::string keyChannel;
     std::stringstream ss;
-    ss << ip << port;
+    ss << ip << '-' << port;
     ss >> keyChannel;
-    CCLOG("key channel is:%s", keyChannel.c_str());
-    auto it = _channelCache.find(keyChannel);
-    if(it == _channelCache.end()){ // 以前没有创建过，那么就新创建
+    CCLOG("SocketUtility - KeyChannel:%s", keyChannel.c_str());
+    SocketChannel *channel = this->getSocketChannelByKey(keyChannel);
+    if(!channel) { // 以前没有创建过，那么就新创建
         SocketChannel *channel = new SocketChannel();
+        channel->setCallback(callback);
         channel->connect(ip, port); // 开始链接到指定的ip-port
         // 添加到缓存
         _channelCache.insert(std::pair<std::string, SocketChannel*>(keyChannel, channel));
@@ -55,8 +61,39 @@ std::string SocketUtility::connect(const char *ip, int port)
     return keyChannel;
 }
 
-void SocketUtility::receiveData()
+void SocketUtility::setCallback(const std::string &keyChannel, const SocketCallback& callback)
 {
-    
+    SocketChannel *channel = this->getSocketChannelByKey(keyChannel);
+    if(channel){
+        channel->setCallback(callback);
+    }
+}
+
+void SocketUtility::closeChannel(const std::string &keyChannel)
+{
+    auto it = _channelCache.find(keyChannel);
+    if(it != _channelCache.end()){
+        it->second->close();
+        delete it->second;
+        _channelCache.erase(it);
+    }
+}
+
+
+void SocketUtility::sendData(const std::string &keyChannel, const char *buf, int len)
+{
+    SocketChannel *channel = this->getSocketChannelByKey(keyChannel);
+    if(channel){
+        channel->sendData(buf, len);
+    }
+}
+
+SocketChannel* SocketUtility::getSocketChannelByKey(const std::string &key)
+{
+    auto it = _channelCache.find(key);
+    if(it != _channelCache.end()){
+        return it->second;
+    }
+    return nullptr;
 }
 
