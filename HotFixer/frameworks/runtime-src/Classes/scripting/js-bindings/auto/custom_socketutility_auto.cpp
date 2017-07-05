@@ -50,20 +50,18 @@ bool js_custom_socketutility_SocketUtility_sendData(JSContext *cx, uint32_t argc
     js_proxy_t *proxy = jsb_get_js_proxy(obj);
     SocketUtility* cobj = (SocketUtility *)(proxy ? proxy->ptr : NULL);
     JSB_PRECONDITION2( cobj, cx, false, "js_custom_socketutility_SocketUtility_sendData : Invalid Native Object");
-    if (argc == 3) {
+    if (argc == 2) {
         std::string arg0;
-        const char* arg1 = nullptr;
-        int arg2 = 0;
+        std::string arg1;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        std::string arg1_tmp; ok &= jsval_to_std_string(cx, args.get(1), &arg1_tmp); arg1 = arg1_tmp.c_str();
-        ok &= jsval_to_int32(cx, args.get(2), (int32_t *)&arg2);
+        ok &= jsval_to_std_string(cx, args.get(1), &arg1);
         JSB_PRECONDITION2(ok, cx, false, "js_custom_socketutility_SocketUtility_sendData : Error processing arguments");
-        cobj->sendData(arg0, arg1, arg2);
+        cobj->sendData(arg0, arg1);
         args.rval().setUndefined();
         return true;
     }
 
-    JS_ReportError(cx, "js_custom_socketutility_SocketUtility_sendData : wrong number of arguments: %d, was expecting %d", argc, 3);
+    JS_ReportError(cx, "js_custom_socketutility_SocketUtility_sendData : wrong number of arguments: %d, was expecting %d", argc, 2);
     return false;
 }
 bool js_custom_socketutility_SocketUtility_connectWithCallback(JSContext *cx, uint32_t argc, jsval *vp)
@@ -234,7 +232,7 @@ void js_register_custom_socketutility_SocketUtility(JSContext *cx, JS::HandleObj
 
     static JSFunctionSpec funcs[] = {
         JS_FN("closeChannel", js_custom_socketutility_SocketUtility_closeChannel, 1, JSPROP_PERMANENT | JSPROP_ENUMERATE),
-        JS_FN("sendData", js_custom_socketutility_SocketUtility_sendData, 3, JSPROP_PERMANENT | JSPROP_ENUMERATE),
+        JS_FN("sendData", js_custom_socketutility_SocketUtility_sendData, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("connectWithCallback", js_custom_socketutility_SocketUtility_connectWithCallback, 3, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("connect", js_custom_socketutility_SocketUtility_connect, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
         JS_FN("setCallback", js_custom_socketutility_SocketUtility_setCallback, 2, JSPROP_PERMANENT | JSPROP_ENUMERATE),
