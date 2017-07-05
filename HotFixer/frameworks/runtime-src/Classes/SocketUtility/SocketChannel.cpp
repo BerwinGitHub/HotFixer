@@ -15,8 +15,9 @@ _port(0),
 _socket(0),
 _keyChannel(""),
 _ip(nullptr),
-_queueing(false),
-_callback(nullptr)
+_callback(nullptr),
+_sendQueueing(false),
+_receiveQueueing(false)
 {
     
 }
@@ -49,15 +50,15 @@ void SocketChannel::threadConnect()
     
     if (res) {
         CCLOG("SocketUtility - Connect Successfully.");
-        insertDataToQueueWaitForHandle("1");
-        // 因为是强联网,所以可以一直检测服务端是否有数据传来
+        this->insertDataToReceiveQueueWaitForHandle(CODE_CONNECT_SUCCESS);
+        // 因为是强联网,所以可以一直检测服务端是否有数据传来 直到传来的数据长度小于等于0
         while (true) {
             // 接收数据 Recv
-            char data[512] = "";
-            int result = _socket.Recv(data, 512, 0);
+            char data[DATA_BUFFER_LENGTH] = "";
+            int result = _socket.Recv(data, DATA_BUFFER_LENGTH, 0);
 //            CCLOG("SocketUtility - Receive data is:%s", data);
 //            CCLOG("SocketUtility - Receive result is:%d", result);
-            insertDataToQueueWaitForHandle(data);
+            this->insertDataToReceiveQueueWaitForHandle(data);
             // 与服务器的连接断开了
             if (result <= 0) break;
         }
@@ -65,45 +66,65 @@ void SocketChannel::threadConnect()
         this->close();
         CCLOG("SocketUtility - Close socket.");
     } else {
-        insertDataToQueueWaitForHandle("-1");
+        this->insertDataToReceiveQueueWaitForHandle(CODE_CONNECT_FAILED);
         CCLOG("SocketUtility - Connect Failed.");
     }
 }
 
-void SocketChannel::sendData(const char *buf, int len)
+void SocketChannel::sendData(const std::string &data)
 {
-    _socket.Send(buf, len);
+    this->insertDataToSendQueueWaitForHandle(data.c_str());
 }
 
 void SocketChannel::close()
 {
     _socket.Close();
-    insertDataToQueueWaitForHandle("0");
+    this->insertDataToReceiveQueueWaitForHandle(CODE_CONNECT_CLOSED);
 }
 
-void SocketChannel::insertDataToQueueWaitForHandle(const char *data)
+void SocketChannel::insertDataToReceiveQueueWaitForHandle(const char *data)
 {
     std::string tmpStr(data);
-    _dataQueue.push_back(tmpStr);
-    this->handleData();
+    _receiveDataQueue.push_back(tmpStr);
+    this->handleReceiveData();
 }
 
-void SocketChannel::handleData()
+void SocketChannel::handleReceiveData()
 {
-    if(_queueing)
+    if(_receiveQueueing)
         return;
-    _queueing = true;
+    _receiveQueueing = true;
     cocos2d::Director::getInstance()->getScheduler()->performFunctionInCocosThread([=](){
-        // 在主线程中访问，不然会死得很惨
-        auto iter = _dataQueue.begin();
-        while (iter != _dataQueue.end()) {
+        // 在Cocos线程中处理队列回调，不然会死得很惨
+        auto iter = _receiveDataQueue.begin();
+        while (iter != _receiveDataQueue.end()) {
             if(_callback)
                 _callback(_keyChannel, *iter);
-            _dataQueue.erase(iter);
-            iter = _dataQueue.begin();
+            _receiveDataQueue.erase(iter);
+            iter = _receiveDataQueue.begin();
         }
-        _queueing = false;
+        _receiveQueueing = false;
     });
+}
+
+void SocketChannel::insertDataToSendQueueWaitForHandle(const char *data)
+{
+    _sendDataQueue.push_back(data);
+    this->handleSendData();
+}
+
+void SocketChannel::handleSendData()
+{
+    if(_sendQueueing)
+        return;
+    _sendQueueing = true;
+    auto iter = _sendDataQueue.begin();
+    while (iter != _sendDataQueue.end()) {
+        _socket.Send(*iter, sizeof(*iter));
+        _sendDataQueue.erase(iter);
+        iter = _sendDataQueue.begin();
+    }
+    _sendQueueing = false;
 }
 
 void SocketChannel::setCallback(const SocketCallback &callback)

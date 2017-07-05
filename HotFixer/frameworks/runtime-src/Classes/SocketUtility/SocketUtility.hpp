@@ -46,10 +46,9 @@ public:
     /**
      * 发送消息
      * @param   keyChannel  向哪个通道发送消息
-     * @param   buf         发送的内容
-     * @param   len         发送内容的长度
+     * @param   data        发送的内容
      */
-    void sendData(const std::string &keyChannel, const char *buf, int len);
+    void sendData(const std::string &keyChannel, const std::string &data);
     
     /**
      * 关闭通道
