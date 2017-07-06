@@ -15,9 +15,7 @@ var res = {
     "loading_js": "res/loading.js",
     "mjoys_audio_Tick_mp3": "res/mjoys/audio/Tick.mp3",
     "mjoys_audio_TinyButton_mp3": "res/mjoys/audio/TinyButton.mp3",
-    "protos_DataTransferProto_proto": "res/protos/DataTransferProto.proto",
-    "protos_Enum_proto": "res/protos/Enum.proto",
-    "protos_Login_proto": "res/protos/Login.proto",
+    "protos_transfer_proto": "res/protos/transfer.proto",
     "studio_HallScene_node_HallScene_json": "res/studio/HallScene/node/HallScene.json",
     "studio_HomeScene_amts_animation_json": "res/studio/HomeScene/amts/animation.json",
     "studio_HomeScene_imgs_ui_plist": "res/studio/HomeScene/imgs/ui.plist",
@@ -32,6 +30,6 @@ var res = {
     "studio_debug_node_debug_json": "res/studio/debug/node/debug.json"
 }
 var g_resources = [];
-for (var i in res) {
-    g_resources.push(res[i]);
-}
+for (var i in res) { 
+	g_resources.push(res[i]);
+ }

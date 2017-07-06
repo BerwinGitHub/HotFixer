@@ -58,7 +58,7 @@ var proto = cc.Class.extend({
         cc.loader.register(["proto"], loader);
     },
     /**
-     * 转换到DataTransferProto Buffer用于网络传输
+     * 转换到TransferData Buffer用于网络传输
      * @param messageName
      * @param payload
      * @returns {*}
@@ -72,7 +72,7 @@ var proto = cc.Class.extend({
             errorCode: errorCode,
             data: buffer
         };
-        var dtpBuffer = this._toBuffer("DataTransferProto", dtpPayload);
+        var dtpBuffer = this._toBuffer("TransferData", dtpPayload);
         return dtpBuffer;
     },
 
@@ -83,7 +83,7 @@ var proto = cc.Class.extend({
      * @returns {*}
      */
     decode: function (buffer) {
-        var data = this._toMessage("DataTransferProto", buffer);
+        var data = this._toMessage("TransferData", buffer);
         var msg = this._toMessage(data.messageName, data.data);
         return msg;
     },

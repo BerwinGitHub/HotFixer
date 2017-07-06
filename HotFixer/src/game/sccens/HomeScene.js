@@ -60,7 +60,8 @@ var HomeLayer = cc.Layer.extend({
     },
 
     onHallClick: function (data) {
-        var buffer = cc.app.proto.encode("Login", {name: "tangbowen", passwd: "password"});
+        var user = {userId: 1, userName: ""};
+        var buffer = cc.app.proto.encode("Login", {u: user});
         cc.app.log.i("Tag", "Buffer:" + buffer);
         var msg = cc.app.proto.decode(buffer);
         console.log(msg);
@@ -68,7 +69,8 @@ var HomeLayer = cc.Layer.extend({
     },
 
     testProto: function () {
-        var buffer = cc.app.proto.encode("Login", {name: "tangbowen", passwd: "password"});
+        var user = {userId: 1, userName: ""};
+        var buffer = cc.app.proto.encode("Login", {u: user});
         cc.app.log.i("proto", "Buffer:" + buffer);
         var msg = cc.app.proto.decode(buffer);
         console.log(msg);
