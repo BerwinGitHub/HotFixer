@@ -16,5 +16,8 @@ var app = cc.Class.extend({
         this.dialogmgr = new dialogmgr();
         this.proto = new proto();
         this.player = new player();
+
+        this.viewmgr = ViewManager.getInstance();
+        this.socketUtility = new SocketUtility();
     },
 });

@@ -71,9 +71,9 @@ void SocketChannel::threadConnect()
     }
 }
 
-void SocketChannel::sendData(const std::string &data)
+void SocketChannel::sendData(const char* data)
 {
-    this->insertDataToSendQueueWaitForHandle(data.c_str());
+    this->insertDataToSendQueueWaitForHandle(data);
 }
 
 void SocketChannel::close()

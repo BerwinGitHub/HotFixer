@@ -21,11 +21,11 @@ str
 /**
  * @method sendData
  * @param {String} arg0
- * @param {String} arg1
+ * @param {char} arg1
  */
 sendData : function (
 str, 
-str 
+char 
 )
 {
 },

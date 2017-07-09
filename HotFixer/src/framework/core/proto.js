@@ -5,6 +5,18 @@ var proto = cc.Class.extend({
 
     roots: null,
 
+    ACTION_MAPPING: {
+        ACTION_CONNECT: {code: 0, name: ""},	// socket连接
+        ACTION_CLOSED: {code: 1, name: ""},	// socket关闭
+        ACTION_LOGIN: {code: 2, name: "Login"},	// 登录
+        ACTION_MATCH: {code: 3, name: "Match"},	// 匹配
+        ACTION_MATCH_CANCEL: {code: 4, name: "Match"},	// 匹配取消
+        ACTION_MATCH_FAILED: {code: 5, name: "Match"},	// 匹配失败
+        ACTION_MATCHED: {code: 6, name: "Match"},	// 匹配到了
+        ACTION_GAMING: {code: 7, name: "Gaming"},	// 游戏中
+        ACTION_GAMEND: {code: 8, name: "Gaming"},	// 游戏结束
+    },
+
     ctor: function () {
         // register loader *.proto
         this.roots = [];
@@ -63,13 +75,13 @@ var proto = cc.Class.extend({
      * @param payload
      * @returns {*}
      */
-    encode: function (messageName, payload, errorCode = 0) {
+    encode: function (action, payload) {
         // 1.先创建目标对象proto
+        var messageName = this.getActionMessageNameByActionCode(action);
         var buffer = this._toBuffer(messageName, payload);
         // 2.创建dtp对象
         var dtpPayload = {
-            messageName: messageName,
-            errorCode: errorCode,
+            action: action,
             data: buffer
         };
         var dtpBuffer = this._toBuffer("TransferData", dtpPayload);
@@ -78,13 +90,12 @@ var proto = cc.Class.extend({
 
     /**
      * 将网络上的数据 转成对应的Message
-     * @param messageName
      * @param buffer
      * @returns {*}
      */
     decode: function (buffer) {
         var data = this._toMessage("TransferData", buffer);
-        var msg = this._toMessage(data.messageName, data.data);
+        var msg = this._toMessage(this.getActionMessageNameByActionCode(data.action), data.data);
         return msg;
     },
 
@@ -153,6 +164,16 @@ var proto = cc.Class.extend({
             }
         }
         cc.log("Not find proto message:" + name + "\tlenght:" + this.roots.length);
+        return null;
+    },
+
+    getActionMessageNameByActionCode: function (actionCode) {
+        for (var key in this.ACTION_MAPPING) {
+            var item = this.ACTION_MAPPING[key];
+            if (item.code == actionCode) {
+                return item.name;
+            }
+        }
         return null;
     },
 

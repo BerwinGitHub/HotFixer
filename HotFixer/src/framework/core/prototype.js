@@ -113,3 +113,73 @@ cc.handleArgsFunction = function (func) {
     }
     return args;
 };
+
+/**
+ * 基础View
+ */
+cc.View = cc.Layer.extend({
+    ZORDER: {
+        Background: 0,
+        Content: 10,
+        Ui: 20,
+        Dialog: 30,
+        Prompt: 40
+    },
+    _layers: {
+        background: null,
+        content: null,
+        ui: null,
+        dialog: null,
+        prompt: null,
+    },
+    ctor: function () {
+        this._super();
+        // 初始化各个层次 Background
+        this._layers.background = new cc.Layer();
+        this.addChild(this._layers.background, this.ZORDER.Background);
+        // Content
+        this._layers.content = new cc.Layer();
+        this.addChild(this._layers.content, this.ZORDER.Content);
+        // Ui
+        this._layers.ui = new cc.Layer();
+        this.addChild(this._layers.ui, this.ZORDER.Ui);
+        // Dialog
+        this._layers.dialog = new cc.Layer();
+        this.addChild(this._layers.dialog, this.ZORDER.Dialog);
+        // Prompt
+        this._layers.prompt = new cc.Layer();
+        this.addChild(this._layers.prompt, this.ZORDER.Prompt);
+    },
+
+    addChildToBackground: function (child, localZOrder, tag) {
+        this._layers.background.addChild(child, localZOrder, tag);
+    },
+
+    addChildToContent: function (child, localZOrder, tag) {
+        this._layers.content.addChild(child, localZOrder, tag);
+    },
+
+    addChildToUi: function (child, localZOrder, tag) {
+        this._layers.ui.addChild(child, localZOrder, tag);
+    },
+
+    addChildToDialog: function (child, localZOrder, tag) {
+        this._layers.dialog.addChild(child, localZOrder, tag);
+    },
+
+    addChildToPrompt: function (child, localZOrder, tag) {
+        this._layers.prompt.addChild(child, localZOrder, tag);
+    },
+
+    onEnter: function () {
+        this._super();
+    },
+
+    onExit: function () {
+        this._super();
+        if (cc.sys.isNative) { // 移除没有使用的资源
+            cc.spriteFrameCache.removeUnusedSpriteFrames();
+            cc.textureCache.removeUnusedTextures();
+        }
+    },
+});

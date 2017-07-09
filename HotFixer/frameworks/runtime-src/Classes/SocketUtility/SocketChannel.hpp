@@ -50,7 +50,7 @@ public:
      * 发送消息
      * @param   data        发送的内容
      */
-    void sendData(const std::string &data);
+    void sendData(const char* data);
     
     /**
      * 关闭socket通道

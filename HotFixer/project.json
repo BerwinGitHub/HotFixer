@@ -1,7 +1,7 @@
 {
   "project_type": "javascript",
   "debugMode": 1,
-  "showFPS": false,
+  "showFPS": true,
   "frameRate": 60,
   "noCache": false,
   "id": "gameCanvas",
@@ -10,7 +10,8 @@
   "modules": [
     "cocos2d",
     "extensions",
-    "cocostudio"
+    "cocostudio",
+    "external"
   ],
   "jsList": [
     "src/framework/hotfix/HotFixScene.js"

@@ -80,7 +80,7 @@ void SocketUtility::closeChannel(const std::string &keyChannel)
 }
 
 
-void SocketUtility::sendData(const std::string &keyChannel, const std::string &data)
+void SocketUtility::sendData(const std::string &keyChannel, const char *data)
 {
     SocketChannel *channel = this->getSocketChannelByKey(keyChannel);
     if(channel){

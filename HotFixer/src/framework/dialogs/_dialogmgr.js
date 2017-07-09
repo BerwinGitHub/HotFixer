@@ -12,14 +12,30 @@ var dialogmgr = cc.Class.extend({
             console.log("This dialog is null. Please sure this dialog is not null.");
             return;
         }
-        dialog.showWithCreate = () => {//callback, target, interval, repeat, delay, paused, key
+        dialog.showWithLocal = () => {
             cc.director.getScheduler().schedule(() => {
                 var dia = new dialog();
-                var scene = cc.director.getRunningScene();
-                scene.addChild(dia);
+                var view = cc.app.viewmgr.getRunningView();
+                view.addChildToDialog(dia);
                 dia.show();
-            }, this, 0, 0, 0, false, "dialog_show_in_scene");
+            }, this, 0, 0, 0, false, "dialog_show_in_local");
         };
+        dialog.showWithGlobal = () => {
+            cc.director.getScheduler().schedule(() => {
+                var dia = new dialog();
+                var view = cc.app.viewmgr.getRootView();
+                view.addChild(dia);
+                dia.show();
+            }, this, 0, 0, 0, false, "dialog_show_in_global");
+        };
+        // dialog.showWithCreate = () => {//callback, target, interval, repeat, delay, paused, key
+        //     cc.director.getScheduler().schedule(() => {
+        //         var dia = new dialog();
+        //         var scene = cc.director.getRunningScene();
+        //         scene.addChild(dia);
+        //         dia.show();
+        //     }, this, 0, 0, 0, false, "dialog_show_in_scene");
+        // };
         return dialog;
     },
 

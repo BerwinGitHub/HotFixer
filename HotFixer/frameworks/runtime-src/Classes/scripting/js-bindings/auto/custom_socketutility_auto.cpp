@@ -52,9 +52,9 @@ bool js_custom_socketutility_SocketUtility_sendData(JSContext *cx, uint32_t argc
     JSB_PRECONDITION2( cobj, cx, false, "js_custom_socketutility_SocketUtility_sendData : Invalid Native Object");
     if (argc == 2) {
         std::string arg0;
-        std::string arg1;
+        const char* arg1 = nullptr;
         ok &= jsval_to_std_string(cx, args.get(0), &arg0);
-        ok &= jsval_to_std_string(cx, args.get(1), &arg1);
+        std::string arg1_tmp; ok &= jsval_to_std_string(cx, args.get(1), &arg1_tmp); arg1 = arg1_tmp.c_str();
         JSB_PRECONDITION2(ok, cx, false, "js_custom_socketutility_SocketUtility_sendData : Error processing arguments");
         cobj->sendData(arg0, arg1);
         args.rval().setUndefined();

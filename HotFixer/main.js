@@ -73,11 +73,13 @@ cc.game.onStart = function () {
 
     var updateScene = new HotFixScene();
     updateScene.runWithCallback("res/version.manifest", () => {
-        cc.app = new app();
+        cc.app = app = new app();
         if (cc.sys.isNative)
             cc.app.visiblerect.setupVisibleRect(640, 960);
     }, () => {
-        cc.director.runScene(new HomeScene());
+        // cc.director.runScene(new HomeScene());
+        cc.app.viewmgr.runWithView(new HomeView());
+        // ViewManager.getInstance().runWithView(new HomeView());
     });
 };
 cc.game.run();

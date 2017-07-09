@@ -1,7 +1,10 @@
 /**
- * Created by Berwin on 2017/5/28.
+ * Created by Berwin on 2017/7/8.
  */
-var HomeLayer = cc.Layer.extend({
+
+var HomeView = cc.View.extend({
+
+    _keyChannel: null,
 
     ctor: function () {
         this._super();
@@ -19,28 +22,45 @@ var HomeLayer = cc.Layer.extend({
         // this.nodeAmt = cc.app.helper.ui.findNodeByName(data.node, "amtNode");
         // this.nodeAmt.action.play("ani", true);
         //
-        cc.app.dialogmgr.dialogconsole.showWithCreate();
+        // cc.app.dialogmgr.dialogconsole.showWithGlobal();
 
         //
         var dot = this._createDot();
         dot.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
         this.addChild(dot);
 
-        console.log("Start Connect Server.");
-        this.testProto();
-        cc.SocketUtility.getInstance().connectWithCallback("127.0.0.1", 8867, (data, d2) => {
-            // console.log("js :" + JSON.stringify(data));
-            console.log("js :" + JSON.stringify(d2));
-            // var msg = cc.app.proto.decode(d2);
-            // console.log("->:" + JSON.stringify(msg));
-        });
+        // console.log("Start Connect Server.");
+        // this.testProto();
+        // cc.SocketUtility.getInstance().connectWithCallback("127.0.0.1", 8868, () => {
+        // });
+        // this._keyChannel = cc.app.socketUtility.connect("127.0.0.1", 8868);
+        // this._keyChannel = cc.app.socketUtility.connect("192.168.1.80", 8868);
+        var socket = new SocketIoPipe("192.168.1.80", 8867);
+        socket.connect();
+
         var button = ccui.Button.create("res/images/content/circle_bg.png");
-        button.addTouchEventListener((d1, d2) => {
-            console.log(JSON.stringify(d1));
-            console.log(JSON.stringify(d2));
+        button.addClickEventListener(() => { // 登录
+            var user = {userId: 1, userName: "Berwin", passWord: "123456", score: 0};
+            var buffer = cc.app.proto.encode(app.proto.ACTION_MAPPING.ACTION_LOGIN.code, {user: user});
+            app.log.i(JSON.stringify(buffer));
+            socket.emit("Login", JSON.stringify(buffer));
+            // app.socketUtility.send(this._keyChannel, buffer);
+        });
+        button.setPosition(cc.p(200, 400));
+        this.addChild(button);
+        var button = ccui.Button.create("res/images/content/circle_bg.png");
+        button.addClickEventListener(() => { // 开始匹配
+
         });
         button.setPosition(cc.p(200, 200));
         this.addChild(button);
+
+        // this.testProto();
+    },
+
+    _receive: function (key, data) {
+        console.log("key:" + JSON.stringify(key));
+        console.log("data:" + JSON.stringify(data));
     },
 
     _createDot: function () {
@@ -69,8 +89,8 @@ var HomeLayer = cc.Layer.extend({
     },
 
     testProto: function () {
-        var user = {userId: 1, userName: ""};
-        var buffer = cc.app.proto.encode("Login", {u: user});
+        var user = {userId: 1, userName: "Berwin", passWord: "123456", score: 0};
+        var buffer = cc.app.proto.encode(app.proto.ACTION_MAPPING.ACTION_LOGIN.code, {user: user});
         cc.app.log.i("proto", "Buffer:" + buffer);
         var msg = cc.app.proto.decode(buffer);
         console.log(msg);
@@ -79,19 +99,11 @@ var HomeLayer = cc.Layer.extend({
 
     onEnter: function () {
         this._super();
-        // cc.app.events.emit("abc", {test: "test", id: 1});
+
     },
 
     onExit: function () {
         this._super();
+
     },
-
-});
-
-var HomeScene = cc.Scene.extend({
-    onEnter: function () {
-        this._super();
-        var layer = new HomeLayer();
-        this.addChild(layer);
-    }
 });
