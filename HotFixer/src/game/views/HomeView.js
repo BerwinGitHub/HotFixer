@@ -35,15 +35,18 @@ var HomeView = cc.View.extend({
         // });
         // this._keyChannel = cc.app.socketUtility.connect("127.0.0.1", 8868);
         // this._keyChannel = cc.app.socketUtility.connect("192.168.1.80", 8868);
-        var socket = new SocketIoPipe("192.168.1.80", 8867);
+
+        var socket = new SocketIoPipe("127.0.0.1", 8867);
+        // var socket = new SocketIoPipe("192.168.1.80", 8867);
         socket.connect();
 
         var button = ccui.Button.create("res/images/content/circle_bg.png");
         button.addClickEventListener(() => { // 登录
             var user = {userId: 1, userName: "Berwin", passWord: "123456", score: 0};
             var buffer = cc.app.proto.encode(app.proto.ACTION_MAPPING.ACTION_LOGIN.code, {user: user});
-            app.log.i(JSON.stringify(buffer));
-            socket.emit("Login", JSON.stringify(buffer));
+            app.log.i(buffer);
+            // socket.send(buffer);
+            socket.emit("login", JSON.stringify(buffer));
             // app.socketUtility.send(this._keyChannel, buffer);
         });
         button.setPosition(cc.p(200, 400));
